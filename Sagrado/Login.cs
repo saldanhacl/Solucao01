@@ -20,7 +20,6 @@ namespace Sagrado
         }
 
 
-
         private string logar()
         {
             DataBaseConnection bd = new DataBaseConnection();
@@ -51,25 +50,14 @@ namespace Sagrado
             
         }
 
+                
 
-        private void label2_Click(object sender, EventArgs e)
+        private void BTN_CONFIRMAR_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnAdm_Click(object sender, EventArgs e)
-        {
-            if(textBox1.Text.Length < 1 || textBox2.Text.Length < 1 || (button1.BackColor == Color.White && button2.BackColor == Color.White))
+            if (textBox1.Text.Length < 1 || textBox2.Text.Length < 1)
             {
                 MessageBox.Show("Preencha os campos.");
-            }else if( textBox1.Text.Length > 11)
-            {
-                MessageBox.Show("Digite apenas os 11 dígitos do CPF.");
-            }
-            else if(textBox2.Text.Length > 8)
-            {
-                MessageBox.Show("Senha com máximo de 8 dígitos.");
-
             }
             else
             {
@@ -78,12 +66,12 @@ namespace Sagrado
 
                 if (getLogar != "S")
                 {
-                    if(getLogar == "A" && button1.BackColor == Color.LightBlue)
+                    if (getLogar == "A" && radioButton1.Checked == true)
                     {
                         new MenuAdm().Show();
                         this.Hide();
                     }
-                    else if (getLogar == "B" && button2.BackColor == Color.LightBlue)
+                    else if (getLogar == "B" && radioButton2.Checked == true)
                     {
                         new MenuFunc().Show();
                         this.Hide();
@@ -92,44 +80,14 @@ namespace Sagrado
                     {
                         MessageBox.Show("Tipo de usuário incorreto.");
                     }
-                    
                 }
                 else
                 {
                     MessageBox.Show("Senha ou usuário incorreto.");
                 }
-
-                
             }
-            
 
-        }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            button1.BackColor = Color.White;
-            button2.BackColor = Color.LightBlue;
-          
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            button2.BackColor = Color.White;
-            button1.BackColor = Color.LightBlue;
-            
-        }
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
 
         }
     }

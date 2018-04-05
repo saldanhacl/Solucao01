@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,24 +46,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastroFunc.cs">
+    <Compile Include="CadastrarFunc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastroFunc.Designer.cs">
-      <DependentUpon>CadastroFunc.cs</DependentUpon>
+    <Compile Include="CadastrarFunc.Designer.cs">
+      <DependentUpon>CadastrarFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarUser.Designer.cs">
+      <DependentUpon>ConsultarUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultSaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultSaldo.Designer.cs">
+      <DependentUpon>ConsultSaldo.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBaseConnection.cs" />
-    <Compile Include="GerenciaFunc.cs">
+    <Compile Include="ExcluirUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GerenciaFunc.Designer.cs">
-      <DependentUpon>GerenciaFunc.cs</DependentUpon>
+    <Compile Include="ExcluirUser.Designer.cs">
+      <DependentUpon>ExcluirUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="GerenciamentoDeUsuario.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="GerenciamentoDeUsuario.designer.cs">
-      <DependentUpon>GerenciamentoDeUsuario.cs</DependentUpon>
+    <Compile Include="RegEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegEntrada.Designer.cs">
+      <DependentUpon>RegEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlterarFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlterarFunc.Designer.cs">
+      <DependentUpon>AlterarFunc.cs</DependentUpon>
     </Compile>
     <Compile Include="GerenUser.cs">
       <SubType>Form</SubType>
@@ -89,40 +112,31 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaAberturaCaixaAntiga.cs">
+    <Compile Include="RegRetirada.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaAberturaCaixaAntiga.Designer.cs">
-      <DependentUpon>TelaAberturaCaixaAntiga.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FundoCaixa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FundoCaixa.Designer.cs">
-      <DependentUpon>FundoCaixa.cs</DependentUpon>
+    <Compile Include="RegRetirada.Designer.cs">
+      <DependentUpon>RegRetirada.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Comanda.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Comanda.Designer.cs">
-      <DependentUpon>Comanda.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controle.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controle.Designer.cs">
-      <DependentUpon>Controle.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="CadastroFunc.resx">
-      <DependentUpon>CadastroFunc.cs</DependentUpon>
+    <EmbeddedResource Include="CadastrarFunc.resx">
+      <DependentUpon>CadastrarFunc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GerenciaFunc.resx">
-      <DependentUpon>GerenciaFunc.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultarUser.resx">
+      <DependentUpon>ConsultarUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GerenciamentoDeUsuario.resx">
-      <DependentUpon>GerenciamentoDeUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="ConsultSaldo.resx">
+      <DependentUpon>ConsultSaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirUser.resx">
+      <DependentUpon>ExcluirUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegEntrada.resx">
+      <DependentUpon>RegEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlterarFunc.resx">
+      <DependentUpon>AlterarFunc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GerenUser.resx">
       <DependentUpon>GerenUser.cs</DependentUpon>
@@ -136,27 +150,13 @@
     <EmbeddedResource Include="MenuFunc.resx">
       <DependentUpon>MenuFunc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaAberturaCaixaAntiga.resx">
-      <DependentUpon>TelaAberturaCaixaAntiga.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FundoCaixa.resx">
-      <DependentUpon>FundoCaixa.cs</DependentUpon>
+    <EmbeddedResource Include="RegRetirada.resx">
+      <DependentUpon>RegRetirada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="Comanda.resx">
-      <DependentUpon>Comanda.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controle.resx">
-      <DependentUpon>Controle.cs</DependentUpon>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="bdsagradoDataSet.xsc">
       <DependentUpon>bdsagradoDataSet.xsd</DependentUpon>
@@ -184,34 +184,49 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cadastrofuniconario.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\semfoto.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\addfoto.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\addfoto1.jpg" />
+    <None Include="Resources\BTN_MONEY.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\if_check_49827.png" />
+    <None Include="Resources\BTN_CHECK.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\if_check_498271.png" />
+    <None Include="Resources\BTN_CANCEL.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\confirmar.png" />
+    <None Include="Resources\BTN_ADD_USER.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\x.png" />
+    <None Include="Resources\BTN_LOGIN.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\x1.png" />
+    <None Include="Resources\BTN_EDIT_USER.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\gerenciarfuncionario.jpg" />
+    <None Include="Resources\BTN_EXCLUIR_USER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_CONSULTAR_USER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_CAIXA2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_RETIRAR_DINHEIRO2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_SALDO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_ADDCLIENTE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_GERENCIAR_USUARIO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

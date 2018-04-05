@@ -52,5 +52,35 @@ namespace Sagrado
         {
 
         }
+
+        private void btnGerencia_Click(object sender, EventArgs e)
+        {
+            new RegEntrada().Show();
+        }
+
+        private void btnGerenUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void tROCARUSUÁRIOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void eNCERRARToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

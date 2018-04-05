@@ -17,19 +17,43 @@ namespace Sagrado
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void pAINELToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            new MenuAdm().Show();
             this.Close();
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void tROCARUSUÁRIOToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Restart();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void eNCERRARSISTEMAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void BTN_ADD_USER_Click(object sender, EventArgs e)
+        {
+            new CadastrarFunc().Show();
+        }
+
+        private void BTN_EDIT_USER_Click(object sender, EventArgs e)
+        {
+            //essa função está com erro do UPDATE
+            new AlterarFunc().Show();
+        }
+
+        private void BTN_EXCLUIR_USER_Click(object sender, EventArgs e)
+        {
+            //FAZER
+            new ExcluirUser().Show();
+        }
+
+        private void BTN_CONSUL_USER_Click(object sender, EventArgs e)
+        {
+            new ConsultarUser().Show();
         }
     }
 }

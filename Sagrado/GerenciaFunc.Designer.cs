@@ -48,6 +48,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cpffunc = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,7 +62,7 @@
             this.pbFoto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pbFoto.Image = global::Sagrado.Properties.Resources.semfoto;
-            this.pbFoto.Location = new System.Drawing.Point(695, 12);
+            this.pbFoto.Location = new System.Drawing.Point(648, 12);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(86, 120);
             this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -70,7 +73,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 12);
+            this.label2.Location = new System.Drawing.Point(30, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 18);
             this.label2.TabIndex = 5;
@@ -80,7 +83,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 54);
+            this.label3.Location = new System.Drawing.Point(30, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 18);
             this.label3.TabIndex = 6;
@@ -90,7 +93,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 129);
+            this.label4.Location = new System.Drawing.Point(30, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 18);
             this.label4.TabIndex = 7;
@@ -100,7 +103,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 93);
+            this.label5.Location = new System.Drawing.Point(30, 163);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 18);
             this.label5.TabIndex = 8;
@@ -110,7 +113,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 164);
+            this.label6.Location = new System.Drawing.Point(30, 234);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 18);
             this.label6.TabIndex = 9;
@@ -120,7 +123,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(25, 200);
+            this.label7.Location = new System.Drawing.Point(30, 270);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 18);
             this.label7.TabIndex = 10;
@@ -128,42 +131,42 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(225, 198);
+            this.textBox1.Location = new System.Drawing.Point(230, 268);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(199, 20);
             this.textBox1.TabIndex = 11;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(225, 165);
+            this.textBox2.Location = new System.Drawing.Point(230, 235);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(199, 20);
             this.textBox2.TabIndex = 12;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(225, 130);
+            this.textBox3.Location = new System.Drawing.Point(230, 200);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(199, 20);
             this.textBox3.TabIndex = 13;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(225, 94);
+            this.textBox4.Location = new System.Drawing.Point(230, 164);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(199, 20);
             this.textBox4.TabIndex = 14;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(225, 55);
+            this.textBox5.Location = new System.Drawing.Point(230, 125);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(199, 20);
             this.textBox5.TabIndex = 15;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(225, 13);
+            this.textBox6.Location = new System.Drawing.Point(230, 83);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(199, 20);
             this.textBox6.TabIndex = 16;
@@ -173,7 +176,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Image = global::Sagrado.Properties.Resources.addfoto1;
-            this.pictureBox2.Location = new System.Drawing.Point(724, 150);
+            this.pictureBox2.Location = new System.Drawing.Point(677, 150);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(31, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -195,7 +198,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(225, 256);
+            this.button1.Location = new System.Drawing.Point(230, 326);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 47);
             this.button1.TabIndex = 23;
@@ -209,7 +212,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox3.Image = global::Sagrado.Properties.Resources.confirmar;
-            this.pictureBox3.Location = new System.Drawing.Point(238, 260);
+            this.pictureBox3.Location = new System.Drawing.Point(196, 330);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(31, 39);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -224,7 +227,7 @@
             this.button2.FlatAppearance.BorderSize = 2;
             this.button2.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(452, 256);
+            this.button2.Location = new System.Drawing.Point(457, 326);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 47);
             this.button2.TabIndex = 25;
@@ -238,7 +241,7 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox4.Image = global::Sagrado.Properties.Resources.x1;
-            this.pictureBox4.Location = new System.Drawing.Point(466, 260);
+            this.pictureBox4.Location = new System.Drawing.Point(424, 330);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(31, 39);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -258,18 +261,48 @@
             "@uol.com",
             "@outlook.com",
             "@teknisa.com"});
-            this.comboBox1.Location = new System.Drawing.Point(456, 200);
+            this.comboBox1.Location = new System.Drawing.Point(461, 270);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 31;
             this.comboBox1.Text = "@gmail.com";
+            // 
+            // cpffunc
+            // 
+            this.cpffunc.Location = new System.Drawing.Point(196, 23);
+            this.cpffunc.Name = "cpffunc";
+            this.cpffunc.Size = new System.Drawing.Size(199, 20);
+            this.cpffunc.TabIndex = 32;
+            this.cpffunc.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(70, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 13);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "CPF do Funcionario:";
+            // 
+            // buscar
+            // 
+            this.buscar.Location = new System.Drawing.Point(424, 21);
+            this.buscar.Name = "buscar";
+            this.buscar.Size = new System.Drawing.Size(75, 23);
+            this.buscar.TabIndex = 34;
+            this.buscar.Text = "Buscar";
+            this.buscar.UseVisualStyleBackColor = true;
+            this.buscar.Click += new System.EventHandler(this.buscar_Click);
             // 
             // GerenciaFunc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.ClientSize = new System.Drawing.Size(737, 562);
+            this.Controls.Add(this.buscar);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cpffunc);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.button2);
@@ -324,5 +357,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox cpffunc;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buscar;
     }
 }
