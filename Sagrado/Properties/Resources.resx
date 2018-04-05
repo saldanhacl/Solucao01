@@ -127,14 +127,8 @@
   <data name="BTN_ADDCLIENTE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_ADDCLIENTE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="BTN_CONSULTAR_USER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_CONSULTAR_USER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="x1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BTN_CAIXA21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_CAIXA2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,9 +139,6 @@
   <data name="BTN_SALDO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_SALDO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="addfoto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\addfoto1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="BTN_LOGIN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_LOGIN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,27 +148,11 @@
   <data name="BTN_ADD_USER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_ADD_USER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="confirmar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\confirmar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gerenciarfuncionario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gerenciarfuncionario.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="addfoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\addfoto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  
   <data name="BTN_MONEY" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_MONEY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="semfoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\semfoto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="if_check_49827" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_check_49827.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cadastrofuniconario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cadastrofuniconario.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  
   <data name="BTN_CHECK" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_CHECK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -187,9 +162,7 @@
   <data name="BTN_CAIXA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_CAIXA2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="if_check_498271" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\if_check_498271.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+ 
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

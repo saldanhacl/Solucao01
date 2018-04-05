@@ -71,6 +71,11 @@
     <Compile Include="ExcluirUser.Designer.cs">
       <DependentUpon>ExcluirUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RegEntrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,14 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="bdsagradoDataSet.xsc">
       <DependentUpon>bdsagradoDataSet.xsd</DependentUpon>
     </None>
@@ -184,34 +184,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cadastrofuniconario.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\semfoto.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\addfoto.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\addfoto1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\if_check_49827.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\if_check_498271.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\confirmar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\x1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gerenciarfuncionario.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BTN_MONEY.png" />
