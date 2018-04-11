@@ -52,6 +52,13 @@
     <Compile Include="CadastrarFunc.Designer.cs">
       <DependentUpon>CadastrarFunc.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaPesquisaVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaPesquisaVendas.designer.cs">
+      <DependentUpon>TelaPesquisaVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validador.cs" />
     <Compile Include="ConsultarUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,7 +75,7 @@
     <Compile Include="ExcluirUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExcluirUser.Designer.cs">
+    <Compile Include="ExcluirUser.designer.cs">
       <DependentUpon>ExcluirUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -227,6 +234,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TelaPesquisaVendas.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

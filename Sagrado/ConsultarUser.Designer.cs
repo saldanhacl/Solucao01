@@ -83,6 +83,7 @@
             this.TXT_CPF.Name = "TXT_CPF";
             this.TXT_CPF.Size = new System.Drawing.Size(200, 27);
             this.TXT_CPF.TabIndex = 1;
+            this.TXT_CPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CPF_KeyPress);
             // 
             // BTN_SEARCH
             // 

@@ -162,6 +162,9 @@ namespace Sagrado
             this.Close();
         }
 
-       
+        private void boxPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

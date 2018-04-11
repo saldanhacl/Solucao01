@@ -251,6 +251,7 @@
             this.TXT_TEL.Name = "TXT_TEL";
             this.TXT_TEL.Size = new System.Drawing.Size(241, 24);
             this.TXT_TEL.TabIndex = 8;
+            this.TXT_TEL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_TEL_KeyPress);
             // 
             // TXT_CEL
             // 
@@ -263,6 +264,7 @@
             this.TXT_CEL.Name = "TXT_CEL";
             this.TXT_CEL.Size = new System.Drawing.Size(195, 24);
             this.TXT_CEL.TabIndex = 9;
+            this.TXT_CEL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CEL_KeyPress);
             // 
             // TXT_EMAIL
             // 
@@ -287,6 +289,7 @@
             this.TXT_RG.Name = "TXT_RG";
             this.TXT_RG.Size = new System.Drawing.Size(186, 23);
             this.TXT_RG.TabIndex = 5;
+            this.TXT_RG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_RG_KeyPress);
             // 
             // TXT_DATE
             // 
@@ -327,6 +330,7 @@
             this.TXT_NOME.Name = "TXT_NOME";
             this.TXT_NOME.Size = new System.Drawing.Size(527, 23);
             this.TXT_NOME.TabIndex = 4;
+            this.TXT_NOME.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_NOME_KeyPress);
             // 
             // label5
             // 
@@ -348,6 +352,8 @@
             this.TXT_CPF.Name = "TXT_CPF";
             this.TXT_CPF.Size = new System.Drawing.Size(200, 27);
             this.TXT_CPF.TabIndex = 1;
+            this.TXT_CPF.TextChanged += new System.EventHandler(this.TXT_CPF_TextChanged);
+            this.TXT_CPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CPF_KeyPress);
             // 
             // BTN_CONFIRMAR
             // 

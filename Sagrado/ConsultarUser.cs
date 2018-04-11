@@ -58,5 +58,20 @@ namespace Sagrado
         {
             this.Close();
         }
+
+        private void TXT_CPF_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char keypress = e.KeyChar;
+            if (char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back))
+            {
+
+
+            }
+            else
+            {
+                MessageBox.Show("Letras não são permitidas aqui!");
+                e.Handled = true;
+            }
+        }
     }
 }

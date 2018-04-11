@@ -98,6 +98,7 @@
             this.boxPrice.Name = "boxPrice";
             this.boxPrice.Size = new System.Drawing.Size(185, 23);
             this.boxPrice.TabIndex = 3;
+            this.boxPrice.TextChanged += new System.EventHandler(this.boxPrice_TextChanged);
             this.boxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.boxPrice_KeyPress);
             // 
             // label1
