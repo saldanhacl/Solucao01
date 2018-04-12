@@ -51,12 +51,12 @@ namespace Sagrado
 
                 if (nome.Length < 0 || adm.Equals(nivel))
                 {
-                    System.Windows.Forms.MessageBox.Show("Este funcionario não pode ser excluido.");
+                    System.Windows.Forms.MessageBox.Show("USUÁRIO NÃO EXCLUÍDO");
                 }
                 else
                 {
-                    DialogResult dr = System.Windows.Forms.MessageBox.Show("Deseja excluir este funcionario?",
-                      "Comfirma:", MessageBoxButtons.YesNo);
+                    DialogResult dr = System.Windows.Forms.MessageBox.Show("DESEJA EXCLUIR?",
+                      "CONFIRMA:", MessageBoxButtons.YesNo);
                     switch (dr)
                     {
                         case DialogResult.Yes:
@@ -64,12 +64,12 @@ namespace Sagrado
                             bdDelete.openConnection();
                             MySqlCommand cmdDelete = new MySqlCommand(queryDelete, bdDelete.retornaConexao());
                             cmdDelete.ExecuteNonQuery();
-                            System.Windows.Forms.MessageBox.Show("O funcionario " + nome + ", foi excluido com sucesso.");
+                            System.Windows.Forms.MessageBox.Show("USUÁRIO EXCLUÍDO COM SUCESSO");
                             new GerenUser().Show();
                             this.Hide();
                             break;
                         case DialogResult.No:
-                            System.Windows.Forms.MessageBox.Show("Exclusão cancelada.");
+                            System.Windows.Forms.MessageBox.Show("EXCLUSÃO CANCELADA");
                             break;
                     }
                 }
@@ -89,7 +89,7 @@ namespace Sagrado
             }
             else
             {
-                MessageBox.Show("Letras não são permitidas aqui!");
+                MessageBox.Show("DIGITE APENAS NÚMEROS");
                 e.Handled = true;
             }
         }

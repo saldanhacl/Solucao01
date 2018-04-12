@@ -57,7 +57,7 @@ namespace Sagrado
 
             if (textBox1.Text.Length < 1 || textBox2.Text.Length < 1)
             {
-                MessageBox.Show("Preencha os campos.");
+                MessageBox.Show("PREENCHA OS CAMPOS");
             }
             else
             {
@@ -78,12 +78,12 @@ namespace Sagrado
                     }
                     else
                     {
-                        MessageBox.Show("Tipo de usuário incorreto.");
+                        MessageBox.Show("TIPO DE USUÁRIO INCORRETO");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Senha ou usuário incorreto.");
+                    MessageBox.Show("SENHA OU CPF INCORRETO");
                 }
             }
 

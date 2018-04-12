@@ -38,6 +38,8 @@
             this.BTN_CANCELAR = new System.Windows.Forms.PictureBox();
             this.BTN_CONFIRMAR = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TXT_SALDOATUAL = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).BeginInit();
@@ -49,7 +51,7 @@
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Location = new System.Drawing.Point(113, 187);
+            this.panel1.Location = new System.Drawing.Point(113, 228);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(347, 49);
             this.panel1.TabIndex = 0;
@@ -93,19 +95,18 @@
             // 
             this.boxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.boxPrice.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.boxPrice.Location = new System.Drawing.Point(275, 271);
+            this.boxPrice.Location = new System.Drawing.Point(275, 285);
             this.boxPrice.MaxLength = 3;
             this.boxPrice.Name = "boxPrice";
             this.boxPrice.Size = new System.Drawing.Size(185, 23);
             this.boxPrice.TabIndex = 3;
-            this.boxPrice.TextChanged += new System.EventHandler(this.boxPrice_TextChanged);
             this.boxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.boxPrice_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(110, 277);
+            this.label1.Location = new System.Drawing.Point(110, 291);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 17);
             this.label1.TabIndex = 3;
@@ -114,7 +115,7 @@
             // BTN_CANCELAR
             // 
             this.BTN_CANCELAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANCELAR.Location = new System.Drawing.Point(340, 330);
+            this.BTN_CANCELAR.Location = new System.Drawing.Point(340, 340);
             this.BTN_CANCELAR.Name = "BTN_CANCELAR";
             this.BTN_CANCELAR.Size = new System.Drawing.Size(50, 50);
             this.BTN_CANCELAR.TabIndex = 8;
@@ -124,7 +125,7 @@
             // BTN_CONFIRMAR
             // 
             this.BTN_CONFIRMAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
-            this.BTN_CONFIRMAR.Location = new System.Drawing.Point(410, 329);
+            this.BTN_CONFIRMAR.Location = new System.Drawing.Point(410, 339);
             this.BTN_CONFIRMAR.Name = "BTN_CONFIRMAR";
             this.BTN_CONFIRMAR.Size = new System.Drawing.Size(50, 50);
             this.BTN_CONFIRMAR.TabIndex = 7;
@@ -134,11 +135,32 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_MONEY;
-            this.pictureBox1.Location = new System.Drawing.Point(182, 57);
+            this.pictureBox1.Location = new System.Drawing.Point(182, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 100);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // TXT_SALDOATUAL
+            // 
+            this.TXT_SALDOATUAL.BackColor = System.Drawing.Color.White;
+            this.TXT_SALDOATUAL.Cursor = System.Windows.Forms.Cursors.Default;
+            this.TXT_SALDOATUAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.TXT_SALDOATUAL.Location = new System.Drawing.Point(314, 170);
+            this.TXT_SALDOATUAL.Name = "TXT_SALDOATUAL";
+            this.TXT_SALDOATUAL.ReadOnly = true;
+            this.TXT_SALDOATUAL.Size = new System.Drawing.Size(139, 35);
+            this.TXT_SALDOATUAL.TabIndex = 18;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            this.label3.Location = new System.Drawing.Point(126, 173);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 29);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "SALDO (R$):";
             // 
             // RegEntrada
             // 
@@ -146,6 +168,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.TXT_SALDOATUAL);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.BTN_CANCELAR);
             this.Controls.Add(this.BTN_CONFIRMAR);
             this.Controls.Add(this.pictureBox1);
@@ -177,5 +201,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox BTN_CONFIRMAR;
         private System.Windows.Forms.PictureBox BTN_CANCELAR;
+        private System.Windows.Forms.TextBox TXT_SALDOATUAL;
+        private System.Windows.Forms.Label label3;
     }
 }

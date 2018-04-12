@@ -69,7 +69,7 @@ namespace Sagrado
             }
             else
             {
-                MessageBox.Show("Letras não são permitidas aqui!");
+                MessageBox.Show("DIGITE APENAS NÚMEROS");
                 e.Handled = true;
             }
         }

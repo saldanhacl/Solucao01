@@ -130,20 +130,21 @@ namespace Sagrado
                     int numRowAfetada = cmd.ExecuteNonQuery();
                     if (numRowAfetada > 0)
                     {
-                        System.Windows.Forms.MessageBox.Show("O usuário " + nome + ", foi alterado com sucesso.");
+                        System.Windows.Forms.MessageBox.Show("DADOS ALTERADOS COM SUCESSO");
                         new GerenUser().Show();
                         this.Hide();
                     }
                 }
                 catch (MySqlException ex)
                 {
-                    System.Windows.Forms.MessageBox.Show("Error ao alterar funcionario.");
+                    MessageBox.Show(ex.ToString());   
+                    System.Windows.Forms.MessageBox.Show("ERRO NA ALTERAÇÃO");
                 }
 
             }
             else
             {
-                MessageBox.Show("Campos Nome, RG e Senha são obrigatórios");
+                MessageBox.Show("PREENCHA OS CAMPOS OBRIGATÓRIOS");
             }
 
             bd.closeConnection();
@@ -170,7 +171,7 @@ namespace Sagrado
             }
             else
             {
-                MessageBox.Show("Letras não são permitidas aqui!");
+                MessageBox.Show("DIGITE APENAS NÚMEROS");
                 e.Handled = true;
             }
         }
@@ -185,7 +186,7 @@ namespace Sagrado
             }
             else
             {
-                MessageBox.Show("Letras não são permitidas aqui!");
+                MessageBox.Show("DIGITE APENAS NÚMEROS");
                 e.Handled = true;
             }
         }
@@ -200,7 +201,7 @@ namespace Sagrado
             }
             else
             {
-                MessageBox.Show("Letras não são permitidas aqui!");
+                MessageBox.Show("DIGITE APENAS NÚMEROS");
                 e.Handled = true;
             }
         }
@@ -215,7 +216,7 @@ namespace Sagrado
             }
             else
             {
-                MessageBox.Show("Letras não são permitidas aqui!");
+                MessageBox.Show("DIGITE APENAS NÚMEROS");
                 e.Handled = true;
             }
         }

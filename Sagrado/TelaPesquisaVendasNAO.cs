@@ -23,6 +23,8 @@ namespace TelaPesquisaVendas
         string theData;
         string marcado;
         private MySqlDataAdapter mySqlDataAdapter;
+
+
         private void botaoPesquisa(object sender, EventArgs e)
         {
             DataBaseConnection bd = new DataBaseConnection();
@@ -47,6 +49,8 @@ namespace TelaPesquisaVendas
 
             bd.closeConnection();
         }
+
+
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             theData = dateTimePicker1.Value.ToString("yyyy-MM-dd");
@@ -55,6 +59,8 @@ namespace TelaPesquisaVendas
                 MessageBox.Show("Por favor selecione uma data!");
             }
         }
+
+
         private string checkMarcado()
         {
             //Retorna a letra de cada compra selecionada para a pesquisa no banco de dados
@@ -69,5 +75,7 @@ namespace TelaPesquisaVendas
 
             return marcado;
         }
+
+       
     }
 }

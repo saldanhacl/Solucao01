@@ -139,7 +139,7 @@ namespace Sagrado
 
                     MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Registro realizado com sucesso!!");
+                    MessageBox.Show("REGISTRO CADASTRADO COM SUCESSO");
 
                     atualizarSaldoTela();
                     TXT_VALOR_RETIRADA.Text = "";
@@ -147,14 +147,14 @@ namespace Sagrado
                 }
                 else
                 {
-                    MessageBox.Show("Digite um preço válido");
+                    MessageBox.Show("DIGITE UM VALOR VÁLIDO");
                     TXT_VALOR_RETIRADA.Text = "";
                 }
 
             }
             catch (MySqlException)
             {
-                MessageBox.Show("Error de conexão com o banco de dados.");
+                MessageBox.Show("ERRO NO BANCO DE DADOS");
             }
 
             bd.closeConnection();
@@ -178,6 +178,9 @@ namespace Sagrado
                 saveRegister(ultSaldoF);
             }
         }
+
+
+        
     }
 
 }

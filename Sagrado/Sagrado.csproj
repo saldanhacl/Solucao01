@@ -52,11 +52,11 @@
     <Compile Include="CadastrarFunc.Designer.cs">
       <DependentUpon>CadastrarFunc.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaPesquisaVendas.cs">
+    <Compile Include="TelaPesquisaVendasNAO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaPesquisaVendas.designer.cs">
-      <DependentUpon>TelaPesquisaVendas.cs</DependentUpon>
+    <Compile Include="TelaPesquisaVendasNAO.designer.cs">
+      <DependentUpon>TelaPesquisaVendasNAO.cs</DependentUpon>
     </Compile>
     <Compile Include="Validador.cs" />
     <Compile Include="ConsultarUser.cs">
@@ -164,6 +164,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaPesquisaVendasNAO.resx">
+      <DependentUpon>TelaPesquisaVendasNAO.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bdsagradoDataSet.xsc">
       <DependentUpon>bdsagradoDataSet.xsd</DependentUpon>

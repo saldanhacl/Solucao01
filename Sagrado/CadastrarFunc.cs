@@ -88,19 +88,19 @@ namespace Sagrado
 
                     MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
                     cmd.ExecuteNonQuery();
-                    System.Windows.Forms.MessageBox.Show("Funcionario cadastrado com sucesso!!");
+                    System.Windows.Forms.MessageBox.Show("USUÁRIO CADASTRADO COM SUCESSO");
 
                     this.Close();
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("A senha e confirma senha, não estão iguais. Digite novamente");
+                    System.Windows.Forms.MessageBox.Show("AS SENHAS DEVEM SER IGUAIS");
                     textBox7.Text = "";
                     textBox8.Text = "";
                 }
             } else
             {
-                MessageBox.Show("Campos Nome, RG, CPF, Senha e Confirma Senha são obrigatórios");
+                MessageBox.Show("PREENCHA OS CAMPOS OBRIGATÓRIOS");
             }
 
 
@@ -123,7 +123,7 @@ namespace Sagrado
             }
             else
             {
-                MessageBox.Show("Letras não são permitidas aqui!");
+                MessageBox.Show("DIGITE APENAS NÚMEROS");
                 e.Handled = true;
             }
         }
@@ -143,7 +143,7 @@ namespace Sagrado
             }
             else
             {
-                MessageBox.Show("Letras não são permitidas aqui!");
+                MessageBox.Show("DIGITE APENAS NÚMEROS");
                 e.Handled = true;
             }
         }
@@ -158,7 +158,7 @@ namespace Sagrado
             }
             else
             {
-                MessageBox.Show("Letras não são permitidas aqui!");
+                MessageBox.Show("DIGITE APENAS NÚMEROS");
                 e.Handled = true;
             }
         }
@@ -173,7 +173,7 @@ namespace Sagrado
             }
             else
             {
-                MessageBox.Show("Letras não são permitidas aqui!");
+                MessageBox.Show("DIGITE APENAS NÚMEROS");
                 e.Handled = true;
             }
         }

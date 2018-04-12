@@ -16,6 +16,7 @@ namespace Sagrado
         public RegEntrada()
         {
             InitializeComponent();
+            this.atualizarSaldoTela();
         }
 
         private void boxPrice_KeyPress(object sender, KeyPressEventArgs e)
@@ -116,21 +117,21 @@ namespace Sagrado
 
                     MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Registro realizado com sucesso!!");
+                    MessageBox.Show("REGISTRO CADASTRADO COM SUCESSO");
 
                     new RegEntrada().Show();
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Digite um preço válido");
+                    MessageBox.Show("DIGITE UM VALOR VÁLIDO");
                     boxPrice.Text = "";
                 }
 
             }
             catch (MySqlException)
             {
-                MessageBox.Show("Error de conexão com o banco de dados.");
+                MessageBox.Show("ERRO NO BANCO DE DADOS");
             }
 
             bd.closeConnection();
@@ -162,9 +163,28 @@ namespace Sagrado
             this.Close();
         }
 
-        private void boxPrice_TextChanged(object sender, EventArgs e)
+      
+        private void atualizarSaldoTela()
         {
 
+            String numero = getLastIndex();
+            //MessageBox.Show("Número de retorno vazio" + numero);
+
+            //se não houver registros, não ha saldo anterior para somar.
+            if (numero == "")
+            {
+                TXT_SALDOATUAL.Text = "0";
+            }
+            else
+            {
+                String ultSaldo = getLastValue(numero);
+                TXT_SALDOATUAL.Text = ultSaldo;
+            }
+
+
         }
+
+
+
     }
 }
