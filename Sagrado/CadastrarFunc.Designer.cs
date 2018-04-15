@@ -129,7 +129,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(159, 23);
             this.dateTimePicker1.TabIndex = 8;
             this.dateTimePicker1.Value = new System.DateTime(2018, 3, 28, 0, 0, 0, 0);
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // textBox2
             // 

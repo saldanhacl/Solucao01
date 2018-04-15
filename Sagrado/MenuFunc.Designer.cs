@@ -40,7 +40,7 @@
             this.tROCARUSUÁRIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eNCERRARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnGerencia = new System.Windows.Forms.Button();
-            this.btnGerenUser = new System.Windows.Forms.Button();
+            this.BTN_GEREN_CLIENTE = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(191, 307);
+            this.label7.Location = new System.Drawing.Point(185, 307);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(156, 16);
             this.label7.TabIndex = 43;
@@ -59,12 +59,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(439, 306);
+            this.label8.Location = new System.Drawing.Point(433, 306);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(153, 17);
+            this.label8.Size = new System.Drawing.Size(149, 17);
             this.label8.TabIndex = 41;
-            this.label8.Text = "CADASTRAR CLIENTE";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.label8.Text = "GERENCIAR CLIENTE";
             // 
             // menuStrip1
             // 
@@ -77,7 +76,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
-            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
@@ -100,22 +99,22 @@
             this.btnGerencia.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CAIXA2;
             this.btnGerencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnGerencia.ForeColor = System.Drawing.Color.White;
-            this.btnGerencia.Location = new System.Drawing.Point(171, 203);
+            this.btnGerencia.Location = new System.Drawing.Point(165, 203);
             this.btnGerencia.Name = "btnGerencia";
             this.btnGerencia.Size = new System.Drawing.Size(200, 100);
-            this.btnGerencia.TabIndex = 1;
+            this.btnGerencia.TabIndex = 2;
             this.btnGerencia.UseVisualStyleBackColor = true;
             this.btnGerencia.Click += new System.EventHandler(this.btnGerencia_Click);
             // 
-            // btnGerenUser
+            // BTN_GEREN_CLIENTE
             // 
-            this.btnGerenUser.Image = global::Sagrado.Properties.Resources.BTN_ADDCLIENTE;
-            this.btnGerenUser.Location = new System.Drawing.Point(415, 203);
-            this.btnGerenUser.Name = "btnGerenUser";
-            this.btnGerenUser.Size = new System.Drawing.Size(200, 100);
-            this.btnGerenUser.TabIndex = 2;
-            this.btnGerenUser.UseVisualStyleBackColor = true;
-            this.btnGerenUser.Click += new System.EventHandler(this.btnGerenUser_Click);
+            this.BTN_GEREN_CLIENTE.Image = global::Sagrado.Properties.Resources.BTN_ACERTO_CLIENTE;
+            this.BTN_GEREN_CLIENTE.Location = new System.Drawing.Point(409, 203);
+            this.BTN_GEREN_CLIENTE.Name = "BTN_GEREN_CLIENTE";
+            this.BTN_GEREN_CLIENTE.Size = new System.Drawing.Size(200, 100);
+            this.BTN_GEREN_CLIENTE.TabIndex = 3;
+            this.BTN_GEREN_CLIENTE.UseVisualStyleBackColor = true;
+            this.BTN_GEREN_CLIENTE.Click += new System.EventHandler(this.BTN_GEREN_CLIENTE_Click);
             // 
             // MenuFunc
             // 
@@ -125,7 +124,7 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.btnGerencia);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnGerenUser);
+            this.Controls.Add(this.BTN_GEREN_CLIENTE);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -144,7 +143,7 @@
         #endregion
         private System.Windows.Forms.Button btnGerencia;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnGerenUser;
+        private System.Windows.Forms.Button BTN_GEREN_CLIENTE;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tROCARUSUÁRIOToolStripMenuItem;

@@ -48,21 +48,12 @@ namespace Sagrado
             Application.Exit();
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGerencia_Click(object sender, EventArgs e)
         {
             new RegEntrada().Show();
         }
 
-        private void btnGerenUser_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -81,6 +72,12 @@ namespace Sagrado
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BTN_GEREN_CLIENTE_Click(object sender, EventArgs e)
+        {
+            new GerenClienteUser().Show();
+            this.Close();
         }
     }
 }

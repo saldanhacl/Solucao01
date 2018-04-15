@@ -108,10 +108,7 @@ namespace Sagrado
             
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void textBox3_KeyPressed(object sender, KeyPressEventArgs e)
         {

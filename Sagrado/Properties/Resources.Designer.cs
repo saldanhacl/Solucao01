@@ -63,9 +63,39 @@ namespace Sagrado.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BTN_ACERTO_CLIENTE {
+            get {
+                object obj = ResourceManager.GetObject("BTN_ACERTO_CLIENTE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_ADD_CLIENTE {
+            get {
+                object obj = ResourceManager.GetObject("BTN_ADD_CLIENTE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BTN_ADD_USER {
             get {
                 object obj = ResourceManager.GetObject("BTN_ADD_USER", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_ADD_USER2 {
+            get {
+                object obj = ResourceManager.GetObject("BTN_ADD_USER2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +153,39 @@ namespace Sagrado.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BTN_CONSULTAR_CLIENTE {
+            get {
+                object obj = ResourceManager.GetObject("BTN_CONSULTAR_CLIENTE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BTN_CONSULTAR_USER {
             get {
                 object obj = ResourceManager.GetObject("BTN_CONSULTAR_USER", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_CONSULTAR_USER2 {
+            get {
+                object obj = ResourceManager.GetObject("BTN_CONSULTAR_USER2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_EDIT_CLIENTE {
+            get {
+                object obj = ResourceManager.GetObject("BTN_EDIT_CLIENTE", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +203,36 @@ namespace Sagrado.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BTN_EDIT_USER2 {
+            get {
+                object obj = ResourceManager.GetObject("BTN_EDIT_USER2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_EDIT_USER22 {
+            get {
+                object obj = ResourceManager.GetObject("BTN_EDIT_USER22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_EXCLUIR {
+            get {
+                object obj = ResourceManager.GetObject("BTN_EXCLUIR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BTN_EXCLUIR_USER {
             get {
                 object obj = ResourceManager.GetObject("BTN_EXCLUIR_USER", resourceCulture);
@@ -153,9 +243,29 @@ namespace Sagrado.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BTN_EXCLUIR1 {
+            get {
+                object obj = ResourceManager.GetObject("BTN_EXCLUIR1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BTN_GERENCIAR_USUARIO {
             get {
                 object obj = ResourceManager.GetObject("BTN_GERENCIAR_USUARIO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_GERENCIAR_USUARIO2 {
+            get {
+                object obj = ResourceManager.GetObject("BTN_GERENCIAR_USUARIO2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

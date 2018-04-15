@@ -12,9 +12,9 @@ using MySql.Data.MySqlClient;
 
 namespace Sagrado
 {
-    public partial class ConsultSaldo : Form
+    public partial class MovimentacaoCaixa : Form
     {
-        public ConsultSaldo()
+        public MovimentacaoCaixa()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace Sagrado
 {
-    partial class ConsultSaldo
+    partial class MovimentacaoCaixa
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultSaldo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MovimentacaoCaixa));
             this.IMG_CARTEIRA = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -157,7 +157,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConsultSaldo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CONSULTAR SALDO";
+            this.Text = "MOVIMENTAÇÃO DE CAIXA";
             ((System.ComponentModel.ISupportInitialize)(this.IMG_CARTEIRA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

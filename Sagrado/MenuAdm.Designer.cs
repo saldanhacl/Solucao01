@@ -126,11 +126,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(569, 211);
+            this.label3.Location = new System.Drawing.Point(543, 211);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 16);
+            this.label3.Size = new System.Drawing.Size(181, 16);
             this.label3.TabIndex = 53;
-            this.label3.Text = "CONSULTAR SALDO";
+            this.label3.Text = "MOVIMENTAÇÃO DO CAIXA";
             // 
             // BTN_CONSULTA_MOVI
             // 
@@ -158,7 +158,7 @@
             // 
             // BTN_GERENCIAR_USER
             // 
-            this.BTN_GERENCIAR_USER.Image = global::Sagrado.Properties.Resources.BTN_GERENCIAR_USUARIO;
+            this.BTN_GERENCIAR_USER.Image = global::Sagrado.Properties.Resources.BTN_GERENCIAR_USUARIO2;
             this.BTN_GERENCIAR_USER.Location = new System.Drawing.Point(292, 283);
             this.BTN_GERENCIAR_USER.Name = "BTN_GERENCIAR_USER";
             this.BTN_GERENCIAR_USER.Size = new System.Drawing.Size(200, 100);
@@ -180,7 +180,7 @@
             // 
             // BTN_GERENCIAR_CLIENTE
             // 
-            this.BTN_GERENCIAR_CLIENTE.Image = global::Sagrado.Properties.Resources.BTN_ADDCLIENTE;
+            this.BTN_GERENCIAR_CLIENTE.Image = global::Sagrado.Properties.Resources.BTN_ACERTO_CLIENTE;
             this.BTN_GERENCIAR_CLIENTE.Location = new System.Drawing.Point(48, 283);
             this.BTN_GERENCIAR_CLIENTE.Name = "BTN_GERENCIAR_CLIENTE";
             this.BTN_GERENCIAR_CLIENTE.Size = new System.Drawing.Size(200, 100);
@@ -210,6 +210,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuAdm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PAINEL ADMINISTRADOR";
             this.Load += new System.EventHandler(this.MenuAdm_Load);
             this.menuStrip1.ResumeLayout(false);

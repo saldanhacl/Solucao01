@@ -46,11 +46,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlterarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlterarCliente.Designer.cs">
+      <DependentUpon>AlterarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarCliente.Designer.cs">
+      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastrarFunc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CadastrarFunc.Designer.cs">
       <DependentUpon>CadastrarFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarCliente.Designer.cs">
+      <DependentUpon>ConsultarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcluirCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirCliente.Designer.cs">
+      <DependentUpon>ExcluirCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerenClienteAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerenClienteAdm.Designer.cs">
+      <DependentUpon>GerenClienteAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerenClienteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerenClienteUser.Designer.cs">
+      <DependentUpon>GerenClienteUser.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaPesquisaVendasNAO.cs">
       <SubType>Form</SubType>
@@ -65,11 +101,11 @@
     <Compile Include="ConsultarUser.Designer.cs">
       <DependentUpon>ConsultarUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConsultSaldo.cs">
+    <Compile Include="MovimentacaoCaixa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultSaldo.Designer.cs">
-      <DependentUpon>ConsultSaldo.cs</DependentUpon>
+    <Compile Include="MovimentacaoCaixa.Designer.cs">
+      <DependentUpon>MovimentacaoCaixa.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBaseConnection.cs" />
     <Compile Include="ExcluirUser.cs">
@@ -127,17 +163,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AlterarCliente.resx">
+      <DependentUpon>AlterarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarCliente.resx">
+      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastrarFunc.resx">
       <DependentUpon>CadastrarFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarCliente.resx">
+      <DependentUpon>ConsultarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarUser.resx">
       <DependentUpon>ConsultarUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ConsultSaldo.resx">
-      <DependentUpon>ConsultSaldo.cs</DependentUpon>
+    <EmbeddedResource Include="MovimentacaoCaixa.resx">
+      <DependentUpon>MovimentacaoCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirCliente.resx">
+      <DependentUpon>ExcluirCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExcluirUser.resx">
       <DependentUpon>ExcluirUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerenClienteAdm.resx">
+      <DependentUpon>GerenClienteAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerenClienteUser.resx">
+      <DependentUpon>GerenClienteUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegEntrada.resx">
       <DependentUpon>RegEntrada.cs</DependentUpon>
@@ -239,6 +293,16 @@
     <None Include="Resources\search.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\BTN_ADD_CLIENTE.png" />
+    <None Include="Resources\BTN_EDIT_CLIENTE.png" />
+    <None Include="Resources\BTN_EXCLUIR.png" />
+    <None Include="Resources\BTN_CONSULTAR_CLIENTE.png" />
+    <None Include="Resources\BTN_ACERTO_CLIENTE.png" />
+    <None Include="Resources\BTN_GERENCIAR_USUARIO2.png" />
+    <None Include="Resources\BTN_ADD_USER2.png" />
+    <None Include="Resources\BTN_EDIT_USER2.png" />
+    <None Include="Resources\BTN_CONSULTAR_USER2.png" />
+    <None Include="Resources\BTN_EDIT_USER22.png" />
     <Content Include="TelaPesquisaVendas.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
