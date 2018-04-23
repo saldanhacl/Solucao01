@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-//   TODO - ALTERAR TODA A PARTE DE BD QUANDO A TABELA DE CLIENTE FOR CRIADA
 
 namespace Sagrado
 {
@@ -35,42 +34,50 @@ namespace Sagrado
             {
                 String nome = "";
 
-                String query = "SELECT * FROM USUARIO WHERE CPF_USER ='" + TXT_CPF_CLIENTE.Text + "'";
-                String queryDelete = "DELETE FROM USUARIO WHERE CPF_USER ='" + TXT_CPF_CLIENTE.Text + "'";
+                String query = "SELECT * FROM CLIENTE WHERE CPF_CLIENTE ='" + TXT_CPF_CLIENTE.Text + "'";
+                String queryDelete = "DELETE FROM CLIENTE WHERE CPF_CLIENTE ='" + TXT_CPF_CLIENTE.Text + "'";
                 MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
-                while (reader.Read())
+                if (reader.Read())
                 {
-                    nome = reader["NOME_USER"].ToString();
-                }
-                bd.closeConnection();
+                    while (reader.Read())
+                    {
+                        nome = reader["NOME_CLIENTE"].ToString();
+                    }
+                    bd.closeConnection();
 
-                if (nome.Length < 0)
-                {
-                    System.Windows.Forms.MessageBox.Show("USUÁRIO NÃO EXCLUÍDO");
+                    if (nome.Length < 0)
+                    {
+                        System.Windows.Forms.MessageBox.Show("CLIENTE NÃO EXCLUÍDO");
+                    }
+                    else
+                    {
+                        DialogResult dr = System.Windows.Forms.MessageBox.Show("DESEJA EXCLUIR CLIENTE " + nome.ToUpper() + " ?",
+                          "CONFIRMA:", MessageBoxButtons.YesNo);
+                        switch (dr)
+                        {
+                            case DialogResult.Yes:
+                                DataBaseConnection bdDelete = new DataBaseConnection();
+                                bdDelete.openConnection();
+                                MySqlCommand cmdDelete = new MySqlCommand(queryDelete, bdDelete.retornaConexao());
+                                cmdDelete.ExecuteNonQuery();
+                                System.Windows.Forms.MessageBox.Show("CLIENTE EXCLUÍDO COM SUCESSO");
+                                this.Hide();
+                                break;
+                            case DialogResult.No:
+                                System.Windows.Forms.MessageBox.Show("EXCLUSÃO CANCELADA");
+                                break;
+                        }
+                    }
                 }
                 else
                 {
-                    DialogResult dr = System.Windows.Forms.MessageBox.Show("DESEJA EXCLUIR?",
-                      "CONFIRMA:", MessageBoxButtons.YesNo);
-                    switch (dr)
-                    {
-                        case DialogResult.Yes:
-                            DataBaseConnection bdDelete = new DataBaseConnection();
-                            bdDelete.openConnection();
-                            MySqlCommand cmdDelete = new MySqlCommand(queryDelete, bdDelete.retornaConexao());
-                            cmdDelete.ExecuteNonQuery();
-                            System.Windows.Forms.MessageBox.Show("USUÁRIO EXCLUÍDO COM SUCESSO");
-                            new GerenUser().Show();
-                            this.Hide();
-                            break;
-                        case DialogResult.No:
-                            System.Windows.Forms.MessageBox.Show("EXCLUSÃO CANCELADA");
-                            break;
-                    }
+                    System.Windows.Forms.MessageBox.Show("CLIENTE NÃO ENCONTRADO");
                 }
+
+                
 
             }
             bd.closeConnection();
