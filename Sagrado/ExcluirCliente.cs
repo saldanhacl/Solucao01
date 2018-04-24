@@ -12,41 +12,50 @@ using MySql.Data.MySqlClient;
 
 namespace Sagrado
 {
-    public partial class ExcluirCliente : Form
+public partial class ExcluirCliente : Form
+{
+    private bool encontrouCliente = false;
+
+    public ExcluirCliente()
     {
-        public ExcluirCliente()
+        InitializeComponent();
+        this.CenterToScreen();
+
+        TextBox TXT_CPF_CLIENTE = new TextBox();
+        TXT_CPF_CLIENTE.MaxLength = 11;
+
+    }
+
+    private void BTN_CONFIRMAR_CLIENTE_Click(object sender, EventArgs e)
+    {
+        DataBaseConnection bd = new DataBaseConnection();
+
+        bd.openConnection();
+
+        if (TXT_CPF_CLIENTE.TextLength > 0)
         {
-            InitializeComponent();
-            this.CenterToScreen();
+            String nome = "";
 
-            TextBox TXT_CPF_CLIENTE = new TextBox();
-            TXT_CPF_CLIENTE.MaxLength = 11;
+            String query = "SELECT * FROM CLIENTE WHERE CPF_CLIENTE ='" + TXT_CPF_CLIENTE.Text + "'";
+            String queryDelete = "DELETE FROM CLIENTE WHERE CPF_CLIENTE ='" + TXT_CPF_CLIENTE.Text + "'";
+            MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
 
-        }
+            MySqlDataReader reader = cmd.ExecuteReader();
 
-        private void BTN_CONFIRMAR_CLIENTE_Click(object sender, EventArgs e)
-        {
-            DataBaseConnection bd = new DataBaseConnection();
 
-            bd.openConnection();
-
-            if (TXT_CPF_CLIENTE.TextLength > 0)
-            {
-                String nome = "";
-
-                String query = "SELECT * FROM CLIENTE WHERE CPF_CLIENTE ='" + TXT_CPF_CLIENTE.Text + "'";
-                String queryDelete = "DELETE FROM CLIENTE WHERE CPF_CLIENTE ='" + TXT_CPF_CLIENTE.Text + "'";
-                MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
-
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read())
+                while (reader.Read())
                 {
-                    while (reader.Read())
-                    {
-                        nome = reader["NOME_CLIENTE"].ToString();
-                    }
-                    bd.closeConnection();
+                    encontrouCliente = true;
+                    nome = reader["NOME_CLIENTE"].ToString();
+                }
+
+                if (!encontrouCliente)
+                {
+                    System.Windows.Forms.MessageBox.Show("CLIENTE NÃO ENCONTRADO");
+                    encontrouCliente = false;
+                }
+                else
+                {
 
                     if (nome.Length < 0)
                     {
@@ -55,7 +64,7 @@ namespace Sagrado
                     else
                     {
                         DialogResult dr = System.Windows.Forms.MessageBox.Show("DESEJA EXCLUIR CLIENTE " + nome.ToUpper() + " ?",
-                          "CONFIRMA:", MessageBoxButtons.YesNo);
+                            "CONFIRMA:", MessageBoxButtons.YesNo);
                         switch (dr)
                         {
                             case DialogResult.Yes:
@@ -72,35 +81,30 @@ namespace Sagrado
                         }
                     }
                 }
-                else
-                {
-                    System.Windows.Forms.MessageBox.Show("CLIENTE NÃO ENCONTRADO");
-                }
 
-                
 
-            }
-            bd.closeConnection();
         }
+        bd.closeConnection();
+    }
 
-        private void TXT_CPF_CLIENTE_KeyPress(object sender, KeyPressEventArgs e)
+    private void TXT_CPF_CLIENTE_KeyPress(object sender, KeyPressEventArgs e)
+    {
+        char keypress = e.KeyChar;
+        if (char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back))
         {
-            char keypress = e.KeyChar;
-            if (char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back))
-            {
 
 
-            }
-            else
-            {
-                MessageBox.Show("DIGITE APENAS NÚMEROS");
-                e.Handled = true;
-            }
         }
-
-        private void BTN_CANCELAR_CLIENTE_Click(object sender, EventArgs e)
+        else
         {
-            this.Close();
+            MessageBox.Show("DIGITE APENAS NÚMEROS");
+            e.Handled = true;
         }
     }
+
+    private void BTN_CANCELAR_CLIENTE_Click(object sender, EventArgs e)
+    {
+        this.Close();
+    }
+}
 }
