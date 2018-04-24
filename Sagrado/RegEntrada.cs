@@ -184,7 +184,9 @@ namespace Sagrado
 
         }
 
+        private void RegEntrada_Load(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

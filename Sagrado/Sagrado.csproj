@@ -79,6 +79,12 @@
     <Compile Include="ExcluirCliente.Designer.cs">
       <DependentUpon>ExcluirCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaDeConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaDeConsultaCliente.Designer.cs">
+      <DependentUpon>TelaDeConsultaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="GerenClienteAdm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaDeConsultaCliente.resx">
+      <DependentUpon>TelaDeConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaPesquisaVendasNAO.resx">
       <DependentUpon>TelaPesquisaVendasNAO.cs</DependentUpon>

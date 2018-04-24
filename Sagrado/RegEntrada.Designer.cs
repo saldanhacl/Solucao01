@@ -35,11 +35,11 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.boxPrice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.TXT_SALDOATUAL = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.BTN_CANCELAR = new System.Windows.Forms.PictureBox();
             this.BTN_CONFIRMAR = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TXT_SALDOATUAL = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).BeginInit();
@@ -112,6 +112,27 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "DIGITE O VALOR (R$) :";
             // 
+            // TXT_SALDOATUAL
+            // 
+            this.TXT_SALDOATUAL.BackColor = System.Drawing.Color.White;
+            this.TXT_SALDOATUAL.Cursor = System.Windows.Forms.Cursors.Default;
+            this.TXT_SALDOATUAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.TXT_SALDOATUAL.Location = new System.Drawing.Point(314, 170);
+            this.TXT_SALDOATUAL.Name = "TXT_SALDOATUAL";
+            this.TXT_SALDOATUAL.ReadOnly = true;
+            this.TXT_SALDOATUAL.Size = new System.Drawing.Size(139, 35);
+            this.TXT_SALDOATUAL.TabIndex = 18;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            this.label3.Location = new System.Drawing.Point(126, 173);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 29);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "SALDO (R$):";
+            // 
             // BTN_CANCELAR
             // 
             this.BTN_CANCELAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
@@ -141,27 +162,6 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // TXT_SALDOATUAL
-            // 
-            this.TXT_SALDOATUAL.BackColor = System.Drawing.Color.White;
-            this.TXT_SALDOATUAL.Cursor = System.Windows.Forms.Cursors.Default;
-            this.TXT_SALDOATUAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.TXT_SALDOATUAL.Location = new System.Drawing.Point(314, 170);
-            this.TXT_SALDOATUAL.Name = "TXT_SALDOATUAL";
-            this.TXT_SALDOATUAL.ReadOnly = true;
-            this.TXT_SALDOATUAL.Size = new System.Drawing.Size(139, 35);
-            this.TXT_SALDOATUAL.TabIndex = 18;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.label3.Location = new System.Drawing.Point(126, 173);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 29);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "SALDO (R$):";
-            // 
             // RegEntrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,6 +180,7 @@
             this.Name = "RegEntrada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "REGISTRAR ENTRADA";
+            this.Load += new System.EventHandler(this.RegEntrada_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).EndInit();

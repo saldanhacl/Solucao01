@@ -170,5 +170,10 @@ namespace Sagrado
                 e.Handled = true;
             }
         }
+
+        private void AlterarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

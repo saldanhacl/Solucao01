@@ -203,6 +203,7 @@
             this.Name = "AlterarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ALTERAR CLIENTE";
+            this.Load += new System.EventHandler(this.AlterarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR_CLIENTE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR_CLIENTE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_SEARCH_CLIENTE)).EndInit();

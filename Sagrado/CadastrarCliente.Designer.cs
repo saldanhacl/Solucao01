@@ -40,8 +40,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.BTN_CANCELAR = new System.Windows.Forms.PictureBox();
             this.BTN_CONFIRMAR = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).BeginInit();
@@ -99,7 +97,6 @@
             this.label12.Size = new System.Drawing.Size(41, 18);
             this.label12.TabIndex = 52;
             this.label12.Text = "CEL:";
-
             // 
             // label2
             // 
@@ -148,7 +145,7 @@
             // BTN_CANCELAR
             // 
             this.BTN_CANCELAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANCELAR.Location = new System.Drawing.Point(539, 439);
+            this.BTN_CANCELAR.Location = new System.Drawing.Point(538, 342);
             this.BTN_CANCELAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BTN_CANCELAR.Name = "BTN_CANCELAR";
             this.BTN_CANCELAR.Size = new System.Drawing.Size(51, 50);
@@ -159,7 +156,7 @@
             // BTN_CONFIRMAR
             // 
             this.BTN_CONFIRMAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
-            this.BTN_CONFIRMAR.Location = new System.Drawing.Point(617, 439);
+            this.BTN_CONFIRMAR.Location = new System.Drawing.Point(611, 342);
             this.BTN_CONFIRMAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BTN_CONFIRMAR.Name = "BTN_CONFIRMAR";
             this.BTN_CONFIRMAR.Size = new System.Drawing.Size(51, 51);
@@ -167,35 +164,12 @@
             this.BTN_CONFIRMAR.TabStop = false;
             this.BTN_CONFIRMAR.Click += new System.EventHandler(this.BTN_CONFIRMAR_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label4.Location = new System.Drawing.Point(41, 320);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 18);
-            this.label4.TabIndex = 63;
-            this.label4.Text = "E-MAIL:";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.textBox5.Location = new System.Drawing.Point(196, 320);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.MaxLength = 10;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(526, 24);
-            this.textBox5.TabIndex = 64;
-            // 
             // CadastrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.BTN_CONFIRMAR);
             this.Controls.Add(this.BTN_CANCELAR);
             this.Controls.Add(this.textBox4);
@@ -211,6 +185,7 @@
             this.Name = "CadastrarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CADASTRAR CLIENTE";
+            this.Load += new System.EventHandler(this.CadastrarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).EndInit();
@@ -232,7 +207,5 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.PictureBox BTN_CANCELAR;
         private System.Windows.Forms.PictureBox BTN_CONFIRMAR;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
     }
 }
