@@ -47,7 +47,8 @@ namespace Sagrado
             String cpf = textBox4.Text;
             String tel = textBox6.Text;
             String cel = textBox2.Text;
-            String email = textBox5.Text;
+            float saldo = 0;
+
 
             if ((Validador.campoPreenchido(cpf) &&
                 Validador.campoPreenchido(nome) &&
@@ -59,10 +60,9 @@ namespace Sagrado
 
                 
                 {
-                    String query = "INSERT INTO     CLIENTE " +
-                    "(CPF_CLIENTE, NOME_CLIENTE, TELEFONE_CLIENTE, CEL_CLIENTE, EMAIL_CLIENTE)" +
-                    " VALUES ('" + cpf + "','" + nome + "','" + tel + "','" + cel + "','" +
-                    email + "')";
+                    String query = "INSERT INTO CLIENTE " +
+                    "(CPF_CLIENTE, NOME_CLIENTE, TELEFONE_CLIENTE, CEL_CLIENTE, SALDO_ATUAL_CLIENTE)" +
+                    " VALUES ('" + cpf + "','" + nome + "','" + tel + "','" + cel + "','" + saldo+"')";
 
                     //MessageBox.Show(query);
 
@@ -129,5 +129,9 @@ namespace Sagrado
             }
         }
 
+        private void CadastrarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
