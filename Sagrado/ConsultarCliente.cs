@@ -19,6 +19,7 @@ namespace Sagrado
             InitializeComponent();
         }
         string cpf;
+        //Mesma ideia do consultar user
         private void botaoConsultar(object sender, EventArgs e)
         {
             cpf = textBox1.Text;
