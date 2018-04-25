@@ -18,41 +18,31 @@ namespace Sagrado
         {
             InitializeComponent();
         }
-        private MySqlDataAdapter mySqlDataAdapter;
         string cpf;
-        string seq;
         private void botaoConsultar(object sender, EventArgs e)
         {
             cpf = textBox1.Text;
-            DataBaseConnection bd = new DataBaseConnection();
-
-            bd.openConnection();
-
-            //Pega o cpf do usuário e o associa a um numero sequencial(NRSEQ_USER) do bd
-            string Query1 = "SELECT NRSEQ_CLIENTE FROM CLIENTE WHERE CPF_CLIENTE = '" + this.cpf + "'";
-            MySqlCommand cmd = new MySqlCommand(Query1, bd.retornaConexao());
-            MySqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            if (cpf.Equals(""))
             {
-                seq = reader["NRSEQ_CLIENTE"].ToString();//armazenar o número sequencial em uma variavel
+                MessageBox.Show("Campo de CPF vazio!");
             }
-            reader.Close();
-            //Montar a query com o numero sequencial que pega os dados do cliente
-            string Query2 = "SELECT NOME_CLIENTE, TELEFONE_CLIENTE, CPF_CLIENTE, SALDO_ATUAL_CLIENTE, CEL_CLIENTE FROM CLIENTE WHERE NRSEQ_CLIENTE = '" + this.seq + "'";
-
-            //Realizar a busca dos dados no banco de dados
-            if (cpf.Equals(""))//verifica se o campo está vazio
+            else
             {
-                MessageBox.Show("Campo Vazio!Por favor digite um nome!");
+                DataBaseConnection bd = new DataBaseConnection();
+                bd.openConnection();
+                string Query = "SELECT * FROM CLIENTE WHERE CPF_CLIENTE = '" + this.cpf + "'";
+                MySqlCommand cmd = new MySqlCommand(Query, bd.retornaConexao());
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    textBox2.Text = reader["NOME_CLIENTE"].ToString();
+                    textBox3.Text = reader["CPF_CLIENTE"].ToString();
+                    textBox4.Text = reader["TELEFONE_CLIENTE"].ToString();
+                    textBox6.Text = reader["SALDO_ATUAL_CLIENTE"].ToString();
+                    textBox7.Text = reader["CEL_CLIENTE"].ToString();
+                }
+                bd.closeConnection();
             }
-            else//procura no banco de dados pessoas com o nome digitado
-            {
-                mySqlDataAdapter = new MySqlDataAdapter(Query2, bd.retornaConexao());
-                DataSet DS = new DataSet();
-                mySqlDataAdapter.Fill(DS);
-                dataGridView1.DataSource = DS.Tables[0];
-            }
-            bd.closeConnection();
         }
     }
 }
