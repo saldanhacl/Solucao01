@@ -47,7 +47,7 @@
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.BackgroundImage = global::Sagrado.Properties.Resources.search;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(535, 294);
+            this.button1.Location = new System.Drawing.Point(615, 238);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 0;

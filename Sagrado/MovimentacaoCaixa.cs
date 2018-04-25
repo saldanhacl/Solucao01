@@ -21,8 +21,10 @@ namespace Sagrado
 
         string theData;
         string marcado;
+        string cpf;
+        string seq;
         private MySqlDataAdapter mySqlDataAdapter;
-
+        private MySqlDataAdapter mySqlDataAdapter2;
         private void BNT_SEARCH_Click(object sender, EventArgs e)
         {
             DataBaseConnection bd = new DataBaseConnection();
@@ -72,9 +74,37 @@ namespace Sagrado
             return marcado;
         }
 
+        //Buscar por CPF
+        private void botaoBuscar(object sender, EventArgs e)
+        {          
+                cpf = textBox1.Text;
 
+                DataBaseConnection bd = new DataBaseConnection();
+                bd.openConnection();
 
+                string Query1 = "SELECT NRSEQ_USER FROM USUARIO WHERE CPF_USER = '" + this.cpf + "'";
+                MySqlCommand cmd = new MySqlCommand(Query1, bd.retornaConexao());
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    seq = reader["NRSEQ_USER"].ToString();
+                }
+                reader.Close();
+                string Query2 = "SELECT CPF_USER,NOME_USER, TEL_USER, CEL_USER, EMAIL_USER, NIVEL_USER, DTNASCIMENTO_USER, SEXO_USER, RG_USER, SENHA_USER from USUARIO WHERE NRSEQ_USER = '" + this.seq + "'";
 
-
+                if (cpf.Equals(""))//verfica se a o campo do nome não está
+                {
+                    MessageBox.Show("Campo vazio!Por favor digite um CPF!");
+                }
+                else//coloca os dados na tabela
+                {
+                    mySqlDataAdapter2 = new MySqlDataAdapter(Query2, bd.retornaConexao());
+                    DataSet DS = new DataSet();
+                    mySqlDataAdapter2.Fill(DS);
+                    dataGridView1.DataSource = DS.Tables[0];
+                }
+                bd.closeConnection();
+            
+        }
     }
 }
