@@ -18,7 +18,6 @@ namespace Sagrado
         {
             InitializeComponent();
         }
-        //TODO - ter uma table de clientes pra buscar
         private MySqlDataAdapter mySqlDataAdapter;
         string cpf;
         string seq;
