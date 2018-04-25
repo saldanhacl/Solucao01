@@ -179,8 +179,10 @@ namespace Sagrado
             }
         }
 
+        private void RegRetirada_Load(object sender, EventArgs e)
+        {
 
-        
+        }
     }
 
 }

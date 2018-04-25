@@ -17,16 +17,17 @@ namespace Sagrado
         public ConsultarCliente()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
         string cpf;
         //Mesma ideia do consultar user
         private void botaoConsultar(object sender, EventArgs e)
         {
             cpf = textBox1.Text;
-            if (cpf.Equals(""))
+            if (cpf.Equals("")) ;
             {
                 MessageBox.Show("Campo de CPF vazio!");
-            }
+            } 
             else
             {
                 DataBaseConnection bd = new DataBaseConnection();
@@ -39,11 +40,22 @@ namespace Sagrado
                     textBox2.Text = reader["NOME_CLIENTE"].ToString();
                     textBox3.Text = reader["CPF_CLIENTE"].ToString();
                     textBox4.Text = reader["TELEFONE_CLIENTE"].ToString();
-                    textBox6.Text = reader["SALDO_ATUAL_CLIENTE"].ToString();
+                    TXT_DIVIDA_CLIENTE.Text = reader["SALDO_ATUAL_CLIENTE"].ToString();
                     textBox7.Text = reader["CEL_CLIENTE"].ToString();
                 }
                 bd.closeConnection();
             }
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_CANCELAR_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
+
 }
