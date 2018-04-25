@@ -22,6 +22,7 @@ namespace Sagrado
 
         private string logar()
         {
+            String cpf="",nome="",email="",cel="",telefone="",sequencial="";
             DataBaseConnection bd = new DataBaseConnection();
             bd.openConnection();
             String query = "SELECT * FROM USUARIO WHERE CPF_USER =" + textBox1.Text;
@@ -33,13 +34,37 @@ namespace Sagrado
 
             if (reader.Read())
             {
+                cpf = reader["CPF_USER"].ToString();
+                nome = reader["NOME_USER"].ToString();
+                email = reader["EMAIL_USER"].ToString();
+                cel = reader["CEL_USER"].ToString();
+                telefone = reader["TEL_USER"].ToString();
+                sequencial = reader["NRSEQ_USER"].ToString();
+                
                 senhaConsultada = reader["SENHA_USER"].ToString();
                 nivel = reader["NIVEL_USER"].ToString();
             }
 
             if(senhaConsultada == textBox2.Text)
             {
-                //MessageBox.Show(senhaConsultada);
+                DataBaseConnection conexaoDeControle = new DataBaseConnection();
+                conexaoDeControle.openConnection();
+
+                query = "INSERT INTO controle_log (NOME_USER_LOG, " +
+                    "CPF_USER_LOG, " +
+                    "CEL_USER_LOG, " +
+                    "TEL_USER_LOG, " +
+                    "EMAIL_USER_LOG, " +
+                    "NRSEQ_USER)" +
+                    "VALUES" +
+                    "('"+ nome+"','" + cpf + "','" + cel + "','" + telefone + 
+                    "','" + email + "','" + sequencial+"')";
+
+                MySqlCommand cmdDeControle = new MySqlCommand(query, conexaoDeControle.retornaConexao());
+                cmdDeControle.ExecuteNonQuery();
+
+                conexaoDeControle.closeConnection();
+
                 bd.closeConnection();
                 return nivel;        
             }
