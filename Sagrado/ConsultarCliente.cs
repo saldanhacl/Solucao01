@@ -24,7 +24,7 @@ namespace Sagrado
         private void botaoConsultar(object sender, EventArgs e)
         {
             cpf = textBox1.Text;
-            if (cpf.Equals("")) ;
+            if (cpf.Equals("")) 
             {
                 MessageBox.Show("Campo de CPF vazio!");
             } 
@@ -55,6 +55,11 @@ namespace Sagrado
         private void BTN_CANCELAR_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ConsultarCliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 
