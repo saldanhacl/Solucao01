@@ -316,6 +316,7 @@
     <None Include="Resources\BTN_CONSULTAR_USER2.png" />
     <None Include="Resources\BTN_EDIT_USER22.png" />
     <None Include="Resources\BTN_PLUS.png" />
+    <None Include="Resources\BTN_PLUS2.png" />
     <Content Include="TelaPesquisaVendas.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

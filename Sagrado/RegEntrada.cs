@@ -17,6 +17,7 @@ namespace Sagrado
         {
             InitializeComponent();
             this.atualizarSaldoTela();
+            this.atualizarListaCliente();
         }
 
         private void boxPrice_KeyPress(object sender, KeyPressEventArgs e)
@@ -139,22 +140,33 @@ namespace Sagrado
 
         private void BTN_CONFIRMAR_Click(object sender, EventArgs e)
         {
+            if (boxPrice.Text.Length == 0) MessageBox.Show("DIGITE UM VALOR");
+            else{
+                String valorTextBox = boxPrice.Text.ToString();
+                String numero = getLastIndex();
+                //MessageBox.Show("Número de retorno vazio"+numero);
 
-            String numero = getLastIndex();
-            //MessageBox.Show("Número de retorno vazio"+numero);
+                //se não houver registros, não ha saldo anterior para somar.
+                if (numero == "")
+                {
+                    saveRegister(0);
+                }
+                else
+                {
+                    String ultSaldo = getLastValue(numero);
+                    float ultSaldoF = float.Parse(ultSaldo);
+                    saveRegister(ultSaldoF);
+                }
+
+                if(radioButton2.Checked == true)
+                {
+                    String nomeCliente = LISTA_CLIENTES.SelectedItem.ToString();
+                    saveCliente(nomeCliente, valorTextBox);
+                }
+
+            }
+
             
-            //se não houver registros, não ha saldo anterior para somar.
-            if(numero == "") 
-            {
-                saveRegister(0);
-            }
-            else
-            {
-                String ultSaldo = getLastValue(numero);
-                float ultSaldoF = float.Parse(ultSaldo);
-                //MessageBox.Show("Saldo anterior: " + ultSaldo);
-                saveRegister(ultSaldoF);
-            }
             
         }
 
@@ -163,14 +175,10 @@ namespace Sagrado
             this.Close();
         }
 
-      
         private void atualizarSaldoTela()
         {
-
             String numero = getLastIndex();
-            //MessageBox.Show("Número de retorno vazio" + numero);
-
-            //se não houver registros, não ha saldo anterior para somar.
+            
             if (numero == "")
             {
                 TXT_SALDOATUAL.Text = "0";
@@ -180,18 +188,93 @@ namespace Sagrado
                 String ultSaldo = getLastValue(numero);
                 TXT_SALDOATUAL.Text = ultSaldo;
             }
-
-
         }
-
-        private void RegEntrada_Load(object sender, EventArgs e)
+         
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            LISTA_CLIENTES.Enabled = false;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            LISTA_CLIENTES.Enabled = false;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            LISTA_CLIENTES.Enabled = true;
+        }
+
+ 
+        private void atualizarListaCliente()
+        {
+            LISTA_CLIENTES.Items.Clear();
+
+            DataBaseConnection bd = new DataBaseConnection();
+            bd.openConnection();
+
+            String query = "SELECT * FROM cliente";
+            MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            String nome = null;
+
+            while (reader.Read())
+            {
+                nome = reader["CPF_CLIENTE"].ToString();
+                LISTA_CLIENTES.Items.Add(nome);
+            }
+            bd.closeConnection();
+        }
+
+
+        private void saveCliente(String cpf, String saldo)
+        {
+            DataBaseConnection bd = new DataBaseConnection();
+            bd.openConnection();
+
+            String query = "UPDATE CLIENTE SET " +
+                "SALDO_ATUAL_CLIENTE = SALDO_ATUAL_CLIENTE + '" + float.Parse(saldo) +
+                "' WHERE CPF_CLIENTE = " + cpf;
+
+
+            if (cpf != null)
+            {
+
+                MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+                try
+                {
+                    int numRowAfetada = cmd.ExecuteNonQuery();
+                    if (numRowAfetada > 0)
+                    {
+                        this.Hide();
+                    }
+                }
+                catch (MySqlException)
+                {
+                    MessageBox.Show("SALDO DO CLIENTE NÃO ALTERADO");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("PREENCHA OS CAMPOS OBRIGATÓRIOS");
+            }
+
+            bd.closeConnection();
+
 
         }
 
-        private void BTN_PLUS_Click(object sender, EventArgs e)
+        private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             new CadastrarCliente().Show();
+        }
+
+        private void LISTA_CLIENTES_Click(object sender, EventArgs e)
+        {
+            atualizarListaCliente();
         }
     }
 }

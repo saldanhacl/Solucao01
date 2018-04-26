@@ -37,12 +37,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TXT_SALDOATUAL = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.BTN_ADDCLIENTE = new System.Windows.Forms.Button();
+            this.LISTA_CLIENTES = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BTN_CANCELAR = new System.Windows.Forms.PictureBox();
             this.BTN_CONFIRMAR = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,6 +69,7 @@
             this.radioButton3.TabIndex = 2;
             this.radioButton3.Text = "FUNDO DE CAIXA";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -79,6 +81,7 @@
             this.radioButton2.TabIndex = 1;
             this.radioButton2.Text = "FIADO";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -92,6 +95,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "VENDA";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // boxPrice
             // 
@@ -119,7 +123,7 @@
             this.TXT_SALDOATUAL.BackColor = System.Drawing.Color.White;
             this.TXT_SALDOATUAL.Cursor = System.Windows.Forms.Cursors.Default;
             this.TXT_SALDOATUAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.TXT_SALDOATUAL.Location = new System.Drawing.Point(314, 170);
+            this.TXT_SALDOATUAL.Location = new System.Drawing.Point(321, 170);
             this.TXT_SALDOATUAL.Name = "TXT_SALDOATUAL";
             this.TXT_SALDOATUAL.ReadOnly = true;
             this.TXT_SALDOATUAL.Size = new System.Drawing.Size(139, 35);
@@ -135,26 +139,28 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "SALDO (R$):";
             // 
-            // comboBox1
+            // LISTA_CLIENTES
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(165, 281);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(295, 24);
-            this.comboBox1.TabIndex = 19;
+            this.LISTA_CLIENTES.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
+            this.LISTA_CLIENTES.Enabled = false;
+            this.LISTA_CLIENTES.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.LISTA_CLIENTES.ItemHeight = 16;
+            this.LISTA_CLIENTES.Location = new System.Drawing.Point(165, 281);
+            this.LISTA_CLIENTES.Name = "LISTA_CLIENTES";
+            this.LISTA_CLIENTES.Size = new System.Drawing.Size(295, 24);
+            this.LISTA_CLIENTES.TabIndex = 19;
+            this.LISTA_CLIENTES.Click += new System.EventHandler(this.LISTA_CLIENTES_Click);
             // 
-            // BTN_ADDCLIENTE
+            // pictureBox2
             // 
-            this.BTN_ADDCLIENTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BTN_ADDCLIENTE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BTN_ADDCLIENTE.Image = global::Sagrado.Properties.Resources.BTN_PLUS;
-            this.BTN_ADDCLIENTE.Location = new System.Drawing.Point(113, 277);
-            this.BTN_ADDCLIENTE.Margin = new System.Windows.Forms.Padding(0);
-            this.BTN_ADDCLIENTE.Name = "BTN_ADDCLIENTE";
-            this.BTN_ADDCLIENTE.Size = new System.Drawing.Size(30, 30);
-            this.BTN_ADDCLIENTE.TabIndex = 112;
-            this.BTN_ADDCLIENTE.UseVisualStyleBackColor = true;
+            this.pictureBox2.BackgroundImage = global::Sagrado.Properties.Resources.BTN_PLUS2;
+            this.pictureBox2.InitialImage = global::Sagrado.Properties.Resources.BTN_PLUS2;
+            this.pictureBox2.Location = new System.Drawing.Point(113, 275);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // BTN_CANCELAR
             // 
@@ -191,8 +197,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 461);
-            this.Controls.Add(this.BTN_ADDCLIENTE);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.LISTA_CLIENTES);
             this.Controls.Add(this.TXT_SALDOATUAL);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BTN_CANCELAR);
@@ -205,9 +211,9 @@
             this.Name = "RegEntrada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "REGISTRAR ENTRADA";
-            this.Load += new System.EventHandler(this.RegEntrada_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -229,7 +235,7 @@
         private System.Windows.Forms.PictureBox BTN_CANCELAR;
         private System.Windows.Forms.TextBox TXT_SALDOATUAL;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button BTN_ADDCLIENTE;
+        private System.Windows.Forms.ComboBox LISTA_CLIENTES;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -71,6 +71,7 @@
             this.textBox2.PasswordChar = 'x';
             this.textBox2.Size = new System.Drawing.Size(236, 20);
             this.textBox2.TabIndex = 4;
+            this.textBox2.Text = "1";
             // 
             // textBox1
             // 
@@ -79,6 +80,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(236, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "2";
             // 
             // panel1
             // 
@@ -92,6 +94,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.radioButton2.Location = new System.Drawing.Point(177, 16);
             this.radioButton2.Name = "radioButton2";
@@ -109,7 +112,6 @@
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(140, 21);
             this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "ADMINISTRADOR";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 

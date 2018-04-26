@@ -10,9 +10,8 @@
 
 namespace Sagrado.Properties {
     using System;
-    using System.Drawing;
-
-
+    
+    
     /// <summary>
     ///   Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
     /// </summary>
@@ -32,9 +31,7 @@ namespace Sagrado.Properties {
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-
-        public static Image BTN_PLUS { get; internal set; }
-
+        
         /// <summary>
         ///   Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
         /// </summary>
@@ -289,6 +286,26 @@ namespace Sagrado.Properties {
         internal static System.Drawing.Bitmap BTN_MONEY {
             get {
                 object obj = ResourceManager.GetObject("BTN_MONEY", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_PLUS {
+            get {
+                object obj = ResourceManager.GetObject("BTN_PLUS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_PLUS2 {
+            get {
+                object obj = ResourceManager.GetObject("BTN_PLUS2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
