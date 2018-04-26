@@ -22,35 +22,6 @@ namespace Sagrado
         string theData;
         string marcado;
         string cpf;
-        private void BNT_SEARCH_Click(object sender, EventArgs e)
-        {
-            if (marcado.Equals(""))//verfica se a radio box foi selecionada
-            {
-                MessageBox.Show("SELECIONE UM TIPO DE BUSCA");
-            }
-            else
-            {
-                DataBaseConnection bd = new DataBaseConnection();
-                bd.openConnection();
-                string Query = "SELECT VALOR_ENTRADA_CAIXA AS ENTRADA, DATE_MODIFY_CAIXA AS DATA FROM CAIXA WHERE TYPE_ENTRADA_CAIXA ='" + this.checkMarcado() + "' AND DATE_MODIFY_CAIXA = '" + this.theData + "'";
-                MySqlCommand cmd = new MySqlCommand(Query, bd.retornaConexao());
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    textBox2.Text = reader["VALOR_ENTRADA_CAIXA"].ToString();                
-                }
-                bd.closeConnection();
-            }
-        }
-
-        private void BTN_DATE_ValueChanged(object sender, EventArgs e)
-        {
-            theData = BTN_DATE.Value.ToString("yyyy-MM-dd");
-            if (theData.Equals(null))
-            {
-                MessageBox.Show("SELECIONE UMA DATA");
-            }
-        }
 
         private string checkMarcado()
         {
@@ -67,6 +38,37 @@ namespace Sagrado
             return marcado;
         }
 
+        private void BTN_DATE_ValueChanged(object sender, EventArgs e)
+        {
+            theData = BTN_DATE.Value.ToString("yyyy-MM-dd");
+            if (theData.Equals(null))
+            {
+                MessageBox.Show("SELECIONE UMA DATA");
+            }
+        }
+
+        private void BNT_SEARCH_Click(object sender, EventArgs e)
+        {
+            this.checkMarcado();
+            if (marcado.Equals(""))//verfica se a radio box foi selecionada
+            {
+                MessageBox.Show("SELECIONE UM TIPO DE BUSCA");
+            }
+            else
+            {
+                DataBaseConnection bd = new DataBaseConnection();
+                bd.openConnection();
+                string Query = "SELECT VALOR_ENTRADA_CAIXA AS ENTRADA, DATE_MODIFY_CAIXA AS DATA FROM CAIXA WHERE TYPE_ENTRADA_CAIXA ='" + this.checkMarcado() + "' AND DATE_MODIFY_CAIXA = '" + this.theData + "'";
+                MySqlCommand cmd = new MySqlCommand(Query, bd.retornaConexao());
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    textBox2.Text = reader["VALOR_ENTRADA_CAIXA"].ToString();
+                }
+                bd.closeConnection();
+            }
+        }
+
         //FALTA UM CAMPO CPF NA TABELA DE CAIXA!
         //Buscar por CPF
         private void botaoBuscar(object sender, EventArgs e)
@@ -80,7 +82,7 @@ namespace Sagrado
                 DataBaseConnection bd = new DataBaseConnection();
                 bd.openConnection();
                 //Query não pega nada pois não há campo de CPF no caixa
-                string Query1 = "SELECT VALOR_ENTRADA_CAIXA FROM CAIXA WHERE CPF_USER = '" + this.cpf + "'";
+                string Query1 = "SELECT VALOR_ENTRADA_CAIXA FROM CAIXA WHERE CPF_FUNCIONARIO = '" + this.cpf + "'";
                 MySqlCommand cmd = new MySqlCommand(Query1, bd.retornaConexao());
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
