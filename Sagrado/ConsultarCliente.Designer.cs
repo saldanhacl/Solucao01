@@ -46,7 +46,8 @@
             this.TXT_DIVIDA_CLIENTE = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.boxPrice = new System.Windows.Forms.TextBox();
+            this.text_Willer = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).BeginInit();
             this.SuspendLayout();
@@ -163,12 +164,13 @@
             this.BTN_CONFIRMAR.Size = new System.Drawing.Size(50, 50);
             this.BTN_CONFIRMAR.TabIndex = 25;
             this.BTN_CONFIRMAR.TabStop = false;
+            this.BTN_CONFIRMAR.Click += new System.EventHandler(this.BTN_CONFIRMAR_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.label2.Location = new System.Drawing.Point(171, 312);
+            this.label2.Location = new System.Drawing.Point(171, 318);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 29);
             this.label2.TabIndex = 26;
@@ -179,7 +181,7 @@
             this.TXT_DIVIDA_CLIENTE.BackColor = System.Drawing.Color.White;
             this.TXT_DIVIDA_CLIENTE.Cursor = System.Windows.Forms.Cursors.Default;
             this.TXT_DIVIDA_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.TXT_DIVIDA_CLIENTE.Location = new System.Drawing.Point(334, 312);
+            this.TXT_DIVIDA_CLIENTE.Location = new System.Drawing.Point(334, 315);
             this.TXT_DIVIDA_CLIENTE.Name = "TXT_DIVIDA_CLIENTE";
             this.TXT_DIVIDA_CLIENTE.ReadOnly = true;
             this.TXT_DIVIDA_CLIENTE.Size = new System.Drawing.Size(139, 35);
@@ -205,15 +207,26 @@
             this.label8.TabIndex = 29;
             this.label8.Text = "DIGITE O VALOR (R$) :";
             // 
-            // boxPrice
+            // text_Willer
             // 
-            this.boxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.boxPrice.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.boxPrice.Location = new System.Drawing.Point(334, 399);
-            this.boxPrice.MaxLength = 3;
-            this.boxPrice.Name = "boxPrice";
-            this.boxPrice.Size = new System.Drawing.Size(185, 23);
-            this.boxPrice.TabIndex = 30;
+            this.text_Willer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.text_Willer.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.text_Willer.Location = new System.Drawing.Point(334, 399);
+            this.text_Willer.MaxLength = 3;
+            this.text_Willer.Name = "text_Willer";
+            this.text_Willer.Size = new System.Drawing.Size(185, 23);
+            this.text_Willer.TabIndex = 30;
+            this.text_Willer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_Willer_KeyPressed);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            this.label9.Location = new System.Drawing.Point(168, 318);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(160, 29);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "SALDO (R$):";
             // 
             // ConsultarCliente
             // 
@@ -221,7 +234,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.boxPrice);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.text_Willer);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TXT_DIVIDA_CLIENTE);
@@ -270,6 +284,7 @@
         private System.Windows.Forms.TextBox TXT_DIVIDA_CLIENTE;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox boxPrice;
+        private System.Windows.Forms.TextBox text_Willer;
+        private System.Windows.Forms.Label label9;
     }
 }

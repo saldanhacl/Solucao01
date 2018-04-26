@@ -50,7 +50,7 @@ namespace Sagrado
             bd.openConnection();
 
             String query = "SELECT MAX(NRSEQABERTURA) FROM caixa";
-            MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+             MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
 
             MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -114,43 +114,48 @@ namespace Sagrado
             try
             {
                 bd.openConnection();
-
-                String preco = TXT_VALOR_RETIRADA.Text;
-                String operacao = "r";
-
-                //MessageBox.Show("Preço na tela: " + preco);
-
-                float precoFloat = float.Parse(preco);
-                float saldoAtual;
-
-                if (TXT_VALOR_RETIRADA.Text.Length != 0 && saldoAnt >= precoFloat)
-                {
-
-                    saldoAtual = saldoAnt - precoFloat;
-
-                    //MessageBox.Show("Saldo atual: " + saldoAtual.ToString());
-
-      
-                    String query = "INSERT INTO CAIXA " +
-                    "(TYPE_ENTRADA_CAIXA, DATE_MODIFY_CAIXA, VALOR_ENTRADA_CAIXA, VALOR_ATUAL_CAIXA)" +
-                    " VALUES ('" + operacao + "', now()," + precoFloat + "," + saldoAtual + ")";
-
-                    //MessageBox.Show(query);
-
-                    MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("REGISTRO CADASTRADO COM SUCESSO");
-
-                    atualizarSaldoTela();
-                    TXT_VALOR_RETIRADA.Text = "";
-
-                }
+                if (TXT_VALOR_RETIRADA.Text.Equals(""))
+                    MessageBox.Show("DIGITE UM VALOR VÁLIDO");
                 else
                 {
-                    MessageBox.Show("DIGITE UM VALOR VÁLIDO");
-                    TXT_VALOR_RETIRADA.Text = "";
-                }
 
+                    String preco = TXT_VALOR_RETIRADA.Text;
+                    String operacao = "r";
+
+                    //MessageBox.Show("Preço na tela: " + preco);
+
+                    float precoFloat = float.Parse(preco);
+                    float saldoAtual;
+
+                    if (TXT_VALOR_RETIRADA.Text.Length != 0 && saldoAnt >= precoFloat)
+                    {
+
+                        saldoAtual = saldoAnt - precoFloat;
+
+                        //MessageBox.Show("Saldo atual: " + saldoAtual.ToString());
+
+
+                        String query = "INSERT INTO CAIXA " +
+                        "(TYPE_ENTRADA_CAIXA, DATE_MODIFY_CAIXA, VALOR_ENTRADA_CAIXA, VALOR_ATUAL_CAIXA)" +
+                        " VALUES ('" + operacao + "', now()," + precoFloat + "," + saldoAtual + ")";
+
+                        //MessageBox.Show(query);
+
+                        MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("REGISTRO CADASTRADO COM SUCESSO");
+
+                        atualizarSaldoTela();
+                        TXT_VALOR_RETIRADA.Text = "";
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("DIGITE UM VALOR VÁLIDO");
+                        TXT_VALOR_RETIRADA.Text = "";
+                    }
+
+                }
             }
             catch (MySqlException)
             {
