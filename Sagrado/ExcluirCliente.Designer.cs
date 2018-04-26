@@ -29,31 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcluirCliente));
-            this.BTN_CONFIRMAR_CLIENTE = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TXT_CPF_CLIENTE = new System.Windows.Forms.TextBox();
-            this.BTN_EXCLUIR_CLIENTE = new System.Windows.Forms.Button();
             this.BTN_CANCELAR_CLIENTE = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR_CLIENTE)).BeginInit();
+            this.BTN_EXCLUIR_CLIENTE = new System.Windows.Forms.Button();
+            this.BTN_CONFIRMAR_CLIENTE = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR_CLIENTE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR_CLIENTE)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BTN_CONFIRMAR_CLIENTE
-            // 
-            this.BTN_CONFIRMAR_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
-            this.BTN_CONFIRMAR_CLIENTE.Location = new System.Drawing.Point(464, 358);
-            this.BTN_CONFIRMAR_CLIENTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BTN_CONFIRMAR_CLIENTE.Name = "BTN_CONFIRMAR_CLIENTE";
-            this.BTN_CONFIRMAR_CLIENTE.Size = new System.Drawing.Size(51, 50);
-            this.BTN_CONFIRMAR_CLIENTE.TabIndex = 55;
-            this.BTN_CONFIRMAR_CLIENTE.TabStop = false;
-            this.BTN_CONFIRMAR_CLIENTE.Click += new System.EventHandler(this.BTN_CONFIRMAR_CLIENTE_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label5.Location = new System.Drawing.Point(269, 301);
+            this.label5.Location = new System.Drawing.Point(243, 252);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 18);
@@ -63,32 +52,43 @@
             // TXT_CPF_CLIENTE
             // 
             this.TXT_CPF_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_CPF_CLIENTE.Location = new System.Drawing.Point(320, 295);
+            this.TXT_CPF_CLIENTE.Location = new System.Drawing.Point(293, 246);
             this.TXT_CPF_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_CPF_CLIENTE.MaxLength = 11;
             this.TXT_CPF_CLIENTE.Name = "TXT_CPF_CLIENTE";
             this.TXT_CPF_CLIENTE.Size = new System.Drawing.Size(195, 24);
-            this.TXT_CPF_CLIENTE.TabIndex = 53;
+            this.TXT_CPF_CLIENTE.TabIndex = 1;
             this.TXT_CPF_CLIENTE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CPF_CLIENTE_KeyPress);
-            // 
-            // BTN_EXCLUIR_CLIENTE
-            // 
-            this.BTN_EXCLUIR_CLIENTE.Image = global::Sagrado.Properties.Resources.BTN_EXCLUIR;
-            this.BTN_EXCLUIR_CLIENTE.Location = new System.Drawing.Point(320, 141);
-            this.BTN_EXCLUIR_CLIENTE.Name = "BTN_EXCLUIR_CLIENTE";
-            this.BTN_EXCLUIR_CLIENTE.Size = new System.Drawing.Size(200, 100);
-            this.BTN_EXCLUIR_CLIENTE.TabIndex = 65;
-            this.BTN_EXCLUIR_CLIENTE.UseVisualStyleBackColor = true;
             // 
             // BTN_CANCELAR_CLIENTE
             // 
             this.BTN_CANCELAR_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANCELAR_CLIENTE.Location = new System.Drawing.Point(397, 358);
+            this.BTN_CANCELAR_CLIENTE.Location = new System.Drawing.Point(370, 309);
             this.BTN_CANCELAR_CLIENTE.Name = "BTN_CANCELAR_CLIENTE";
             this.BTN_CANCELAR_CLIENTE.Size = new System.Drawing.Size(50, 50);
             this.BTN_CANCELAR_CLIENTE.TabIndex = 123;
             this.BTN_CANCELAR_CLIENTE.TabStop = false;
             this.BTN_CANCELAR_CLIENTE.Click += new System.EventHandler(this.BTN_CANCELAR_CLIENTE_Click);
+            // 
+            // BTN_EXCLUIR_CLIENTE
+            // 
+            this.BTN_EXCLUIR_CLIENTE.Image = global::Sagrado.Properties.Resources.BTN_EXCLUIR;
+            this.BTN_EXCLUIR_CLIENTE.Location = new System.Drawing.Point(288, 104);
+            this.BTN_EXCLUIR_CLIENTE.Name = "BTN_EXCLUIR_CLIENTE";
+            this.BTN_EXCLUIR_CLIENTE.Size = new System.Drawing.Size(200, 100);
+            this.BTN_EXCLUIR_CLIENTE.TabIndex = 65;
+            this.BTN_EXCLUIR_CLIENTE.UseVisualStyleBackColor = true;
+            // 
+            // BTN_CONFIRMAR_CLIENTE
+            // 
+            this.BTN_CONFIRMAR_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
+            this.BTN_CONFIRMAR_CLIENTE.Location = new System.Drawing.Point(437, 309);
+            this.BTN_CONFIRMAR_CLIENTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BTN_CONFIRMAR_CLIENTE.Name = "BTN_CONFIRMAR_CLIENTE";
+            this.BTN_CONFIRMAR_CLIENTE.Size = new System.Drawing.Size(51, 50);
+            this.BTN_CONFIRMAR_CLIENTE.TabIndex = 55;
+            this.BTN_CONFIRMAR_CLIENTE.TabStop = false;
+            this.BTN_CONFIRMAR_CLIENTE.Click += new System.EventHandler(this.BTN_CONFIRMAR_CLIENTE_Click);
             // 
             // ExcluirCliente
             // 
@@ -105,8 +105,8 @@
             this.Name = "ExcluirCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EXCLUIR CLIENTE";
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR_CLIENTE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR_CLIENTE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR_CLIENTE)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

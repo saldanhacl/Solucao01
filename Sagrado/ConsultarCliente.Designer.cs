@@ -40,15 +40,15 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.BTN_CANCELAR = new System.Windows.Forms.PictureBox();
-            this.BTN_CONFIRMAR = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TXT_DIVIDA_CLIENTE = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.boxPrice = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
+            this.BTN_CONFIRMAR = new System.Windows.Forms.PictureBox();
+            this.BTN_CANCELAR = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -145,25 +145,6 @@
             this.textBox7.Size = new System.Drawing.Size(159, 20);
             this.textBox7.TabIndex = 22;
             // 
-            // BTN_CANCELAR
-            // 
-            this.BTN_CANCELAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANCELAR.Location = new System.Drawing.Point(511, 441);
-            this.BTN_CANCELAR.Name = "BTN_CANCELAR";
-            this.BTN_CANCELAR.Size = new System.Drawing.Size(50, 50);
-            this.BTN_CANCELAR.TabIndex = 24;
-            this.BTN_CANCELAR.TabStop = false;
-            this.BTN_CANCELAR.Click += new System.EventHandler(this.BTN_CANCELAR_Click);
-            // 
-            // BTN_CONFIRMAR
-            // 
-            this.BTN_CONFIRMAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
-            this.BTN_CONFIRMAR.Location = new System.Drawing.Point(585, 441);
-            this.BTN_CONFIRMAR.Name = "BTN_CONFIRMAR";
-            this.BTN_CONFIRMAR.Size = new System.Drawing.Size(50, 50);
-            this.BTN_CONFIRMAR.TabIndex = 25;
-            this.BTN_CONFIRMAR.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -215,6 +196,25 @@
             this.boxPrice.Size = new System.Drawing.Size(185, 23);
             this.boxPrice.TabIndex = 30;
             // 
+            // BTN_CONFIRMAR
+            // 
+            this.BTN_CONFIRMAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
+            this.BTN_CONFIRMAR.Location = new System.Drawing.Point(678, 413);
+            this.BTN_CONFIRMAR.Name = "BTN_CONFIRMAR";
+            this.BTN_CONFIRMAR.Size = new System.Drawing.Size(50, 50);
+            this.BTN_CONFIRMAR.TabIndex = 25;
+            this.BTN_CONFIRMAR.TabStop = false;
+            // 
+            // BTN_CANCELAR
+            // 
+            this.BTN_CANCELAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
+            this.BTN_CANCELAR.Location = new System.Drawing.Point(605, 413);
+            this.BTN_CANCELAR.Name = "BTN_CANCELAR";
+            this.BTN_CANCELAR.Size = new System.Drawing.Size(50, 50);
+            this.BTN_CANCELAR.TabIndex = 24;
+            this.BTN_CANCELAR.TabStop = false;
+            this.BTN_CANCELAR.Click += new System.EventHandler(this.BTN_CANCELAR_Click);
+            // 
             // ConsultarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,8 +244,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CONSULTAR CLIENTE";
             this.Load += new System.EventHandler(this.ConsultarCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

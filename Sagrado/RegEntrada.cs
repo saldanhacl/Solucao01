@@ -188,5 +188,10 @@ namespace Sagrado
         {
 
         }
+
+        private void BTN_PLUS_Click(object sender, EventArgs e)
+        {
+            new CadastrarCliente().Show();
+        }
     }
 }

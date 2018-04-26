@@ -129,9 +129,7 @@ namespace Sagrado
             }
         }
 
-        private void CadastrarCliente_Load(object sender, EventArgs e)
-        {
-
-        }
+      
+        
     }
 }

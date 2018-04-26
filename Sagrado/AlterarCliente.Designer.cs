@@ -29,48 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlterarCliente));
-            this.BTN_CONFIRMAR_CLIENTE = new System.Windows.Forms.PictureBox();
-            this.BTN_CANCELAR_CLIENTE = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.TXT_TEL_CLIENTE = new System.Windows.Forms.TextBox();
             this.TXT_CEL_CLIENTE = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.TXT_NOME_CLIENTE = new System.Windows.Forms.TextBox();
-            this.BTN_SEARCH_CLIENTE = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TXT_CPF_CLIENTE = new System.Windows.Forms.TextBox();
             this.BTN_EDIT_CLIENTE = new System.Windows.Forms.Button();
+            this.BTN_CONFIRMAR_CLIENTE = new System.Windows.Forms.PictureBox();
+            this.BTN_CANCELAR_CLIENTE = new System.Windows.Forms.PictureBox();
+            this.BTN_SEARCH_CLIENTE = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR_CLIENTE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR_CLIENTE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_SEARCH_CLIENTE)).BeginInit();
             this.SuspendLayout();
             // 
-            // BTN_CONFIRMAR_CLIENTE
-            // 
-            this.BTN_CONFIRMAR_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
-            this.BTN_CONFIRMAR_CLIENTE.Location = new System.Drawing.Point(687, 480);
-            this.BTN_CONFIRMAR_CLIENTE.Name = "BTN_CONFIRMAR_CLIENTE";
-            this.BTN_CONFIRMAR_CLIENTE.Size = new System.Drawing.Size(50, 50);
-            this.BTN_CONFIRMAR_CLIENTE.TabIndex = 123;
-            this.BTN_CONFIRMAR_CLIENTE.TabStop = false;
-            this.BTN_CONFIRMAR_CLIENTE.Click += new System.EventHandler(this.BTN_CONFIRMAR_CLIENTE_Click);
-            // 
-            // BTN_CANCELAR_CLIENTE
-            // 
-            this.BTN_CANCELAR_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANCELAR_CLIENTE.Location = new System.Drawing.Point(619, 480);
-            this.BTN_CANCELAR_CLIENTE.Name = "BTN_CANCELAR_CLIENTE";
-            this.BTN_CANCELAR_CLIENTE.Size = new System.Drawing.Size(50, 50);
-            this.BTN_CANCELAR_CLIENTE.TabIndex = 122;
-            this.BTN_CANCELAR_CLIENTE.TabStop = false;
-            this.BTN_CANCELAR_CLIENTE.Click += new System.EventHandler(this.BTN_CANCELAR_CLIENTE_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label8.Location = new System.Drawing.Point(154, 372);
+            this.label8.Location = new System.Drawing.Point(461, 328);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 18);
@@ -95,9 +75,9 @@
             this.TXT_TEL_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.TXT_TEL_CLIENTE.Location = new System.Drawing.Point(210, 322);
             this.TXT_TEL_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_TEL_CLIENTE.MaxLength = 10;
+            this.TXT_TEL_CLIENTE.MaxLength = 3;
             this.TXT_TEL_CLIENTE.Name = "TXT_TEL_CLIENTE";
-            this.TXT_TEL_CLIENTE.Size = new System.Drawing.Size(241, 24);
+            this.TXT_TEL_CLIENTE.Size = new System.Drawing.Size(220, 24);
             this.TXT_TEL_CLIENTE.TabIndex = 103;
             this.TXT_TEL_CLIENTE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_TEL_CLIENTE_KeyPress);
             // 
@@ -106,12 +86,12 @@
             this.TXT_CEL_CLIENTE.BackColor = System.Drawing.Color.White;
             this.TXT_CEL_CLIENTE.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TXT_CEL_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_CEL_CLIENTE.Location = new System.Drawing.Point(209, 366);
+            this.TXT_CEL_CLIENTE.Location = new System.Drawing.Point(516, 322);
             this.TXT_CEL_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_CEL_CLIENTE.MaxLength = 11;
             this.TXT_CEL_CLIENTE.Name = "TXT_CEL_CLIENTE";
-            this.TXT_CEL_CLIENTE.Size = new System.Drawing.Size(242, 24);
-            this.TXT_CEL_CLIENTE.TabIndex = 104;
+            this.TXT_CEL_CLIENTE.Size = new System.Drawing.Size(220, 24);
+            this.TXT_CEL_CLIENTE.TabIndex = 4;
             this.TXT_CEL_CLIENTE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CEL_CLIENTE_KeyPress);
             // 
             // label11
@@ -135,18 +115,7 @@
             this.TXT_NOME_CLIENTE.MaxLength = 50;
             this.TXT_NOME_CLIENTE.Name = "TXT_NOME_CLIENTE";
             this.TXT_NOME_CLIENTE.Size = new System.Drawing.Size(527, 23);
-            this.TXT_NOME_CLIENTE.TabIndex = 101;
-            // 
-            // BTN_SEARCH_CLIENTE
-            // 
-            this.BTN_SEARCH_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.search;
-            this.BTN_SEARCH_CLIENTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BTN_SEARCH_CLIENTE.Location = new System.Drawing.Point(509, 225);
-            this.BTN_SEARCH_CLIENTE.Name = "BTN_SEARCH_CLIENTE";
-            this.BTN_SEARCH_CLIENTE.Size = new System.Drawing.Size(30, 30);
-            this.BTN_SEARCH_CLIENTE.TabIndex = 110;
-            this.BTN_SEARCH_CLIENTE.TabStop = false;
-            this.BTN_SEARCH_CLIENTE.Click += new System.EventHandler(this.BTN_SEARCH_CLIENTE_Click);
+            this.TXT_NOME_CLIENTE.TabIndex = 2;
             // 
             // label5
             // 
@@ -167,7 +136,7 @@
             this.TXT_CPF_CLIENTE.MaxLength = 11;
             this.TXT_CPF_CLIENTE.Name = "TXT_CPF_CLIENTE";
             this.TXT_CPF_CLIENTE.Size = new System.Drawing.Size(200, 27);
-            this.TXT_CPF_CLIENTE.TabIndex = 100;
+            this.TXT_CPF_CLIENTE.TabIndex = 1;
             this.TXT_CPF_CLIENTE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CPF_CLIENTE_KeyPress);
             // 
             // BTN_EDIT_CLIENTE
@@ -180,6 +149,37 @@
             this.BTN_EDIT_CLIENTE.Size = new System.Drawing.Size(200, 100);
             this.BTN_EDIT_CLIENTE.TabIndex = 124;
             this.BTN_EDIT_CLIENTE.UseVisualStyleBackColor = true;
+            // 
+            // BTN_CONFIRMAR_CLIENTE
+            // 
+            this.BTN_CONFIRMAR_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
+            this.BTN_CONFIRMAR_CLIENTE.Location = new System.Drawing.Point(686, 413);
+            this.BTN_CONFIRMAR_CLIENTE.Name = "BTN_CONFIRMAR_CLIENTE";
+            this.BTN_CONFIRMAR_CLIENTE.Size = new System.Drawing.Size(50, 50);
+            this.BTN_CONFIRMAR_CLIENTE.TabIndex = 123;
+            this.BTN_CONFIRMAR_CLIENTE.TabStop = false;
+            this.BTN_CONFIRMAR_CLIENTE.Click += new System.EventHandler(this.BTN_CONFIRMAR_CLIENTE_Click);
+            // 
+            // BTN_CANCELAR_CLIENTE
+            // 
+            this.BTN_CANCELAR_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
+            this.BTN_CANCELAR_CLIENTE.Location = new System.Drawing.Point(605, 413);
+            this.BTN_CANCELAR_CLIENTE.Name = "BTN_CANCELAR_CLIENTE";
+            this.BTN_CANCELAR_CLIENTE.Size = new System.Drawing.Size(50, 50);
+            this.BTN_CANCELAR_CLIENTE.TabIndex = 122;
+            this.BTN_CANCELAR_CLIENTE.TabStop = false;
+            this.BTN_CANCELAR_CLIENTE.Click += new System.EventHandler(this.BTN_CANCELAR_CLIENTE_Click);
+            // 
+            // BTN_SEARCH_CLIENTE
+            // 
+            this.BTN_SEARCH_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.search;
+            this.BTN_SEARCH_CLIENTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTN_SEARCH_CLIENTE.Location = new System.Drawing.Point(509, 225);
+            this.BTN_SEARCH_CLIENTE.Name = "BTN_SEARCH_CLIENTE";
+            this.BTN_SEARCH_CLIENTE.Size = new System.Drawing.Size(30, 30);
+            this.BTN_SEARCH_CLIENTE.TabIndex = 110;
+            this.BTN_SEARCH_CLIENTE.TabStop = false;
+            this.BTN_SEARCH_CLIENTE.Click += new System.EventHandler(this.BTN_SEARCH_CLIENTE_Click);
             // 
             // AlterarCliente
             // 
