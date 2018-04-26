@@ -71,7 +71,6 @@
             this.textBox2.PasswordChar = 'x';
             this.textBox2.Size = new System.Drawing.Size(236, 20);
             this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "1";
             // 
             // textBox1
             // 
@@ -80,7 +79,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(236, 20);
             this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "2";
             // 
             // panel1
             // 

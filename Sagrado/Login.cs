@@ -13,6 +13,19 @@ namespace Sagrado
 {
     public partial class Login : Form
     {
+
+        private String cpf = null;
+        private String nome = null;
+        private String email = null;
+        private String cel = null;
+        private String telefone = null;
+        private String sequencial = null;
+        private String senhaConsultada = null;
+        private String nivel = null;
+
+
+       
+
         public Login()
         {
             InitializeComponent();
@@ -20,58 +33,56 @@ namespace Sagrado
         }
 
 
+        private void saveLog()
+        {
+            DataBaseConnection conexaoDeControle = new DataBaseConnection();
+            conexaoDeControle.openConnection();
+
+            String query = "INSERT INTO controle_log (NOME_USER_LOG, " +
+                "CPF_USER_LOG, " +
+                "CEL_USER_LOG, " +
+                "TEL_USER_LOG, " +
+                "EMAIL_USER_LOG, " +
+                "NRSEQ_USER)" +
+                "VALUES" +
+                "('" + this.nome + "','" + this.cpf + "','" + this.cel + "','" + this.telefone +
+                "','" + this.email + "','" + this.sequencial + "')";
+
+            MySqlCommand cmdDeControle = new MySqlCommand(query, conexaoDeControle.retornaConexao());
+            cmdDeControle.ExecuteNonQuery();
+
+            conexaoDeControle.closeConnection();
+            conexaoDeControle.closeConnection();
+        }
+
         private string logar()
         {
-            String cpf="",nome="",email="",cel="",telefone="",sequencial="";
+
             DataBaseConnection bd = new DataBaseConnection();
             bd.openConnection();
             String query = "SELECT * FROM USUARIO WHERE CPF_USER =" + textBox1.Text;
             MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
             MySqlDataReader reader = cmd.ExecuteReader();
 
-            string senhaConsultada = null;
-            string nivel = null ;
-
+           
             if (reader.Read())
             {
-                cpf = reader["CPF_USER"].ToString();
-                nome = reader["NOME_USER"].ToString();
-                email = reader["EMAIL_USER"].ToString();
-                cel = reader["CEL_USER"].ToString();
-                telefone = reader["TEL_USER"].ToString();
-                sequencial = reader["NRSEQ_USER"].ToString();
-                
-                senhaConsultada = reader["SENHA_USER"].ToString();
-                nivel = reader["NIVEL_USER"].ToString();
+                this.cpf = reader["CPF_USER"].ToString();
+                this.nome = reader["NOME_USER"].ToString();
+                this.email = reader["EMAIL_USER"].ToString();
+                this.cel = reader["CEL_USER"].ToString();
+                this.telefone = reader["TEL_USER"].ToString();
+                this.sequencial = reader["NRSEQ_USER"].ToString();
+
+                this.senhaConsultada = reader["SENHA_USER"].ToString();
+                this.nivel = reader["NIVEL_USER"].ToString();
             }
 
-            if(senhaConsultada == textBox2.Text)
-            {
-                DataBaseConnection conexaoDeControle = new DataBaseConnection();
-                conexaoDeControle.openConnection();
+            bd.closeConnection();
 
-                query = "INSERT INTO controle_log (NOME_USER_LOG, " +
-                    "CPF_USER_LOG, " +
-                    "CEL_USER_LOG, " +
-                    "TEL_USER_LOG, " +
-                    "EMAIL_USER_LOG, " +
-                    "NRSEQ_USER)" +
-                    "VALUES" +
-                    "('"+ nome+"','" + cpf + "','" + cel + "','" + telefone + 
-                    "','" + email + "','" + sequencial+"')";
-
-                MySqlCommand cmdDeControle = new MySqlCommand(query, conexaoDeControle.retornaConexao());
-                cmdDeControle.ExecuteNonQuery();
-
-                conexaoDeControle.closeConnection();
-
-                bd.closeConnection();
-                return nivel;        
-            }
-            else {
-                bd.closeConnection();
-                return "S";
-            }
+            if (this.senhaConsultada == textBox2.Text) return nivel;
+            else return "S";
+            
             
         }
 
@@ -86,7 +97,6 @@ namespace Sagrado
             }
             else
             {
-
                 string getLogar = logar();
 
                 if (getLogar != "S")
@@ -94,11 +104,13 @@ namespace Sagrado
                     if (getLogar == "A" && radioButton1.Checked == true)
                     {
                         new MenuAdm().Show();
+                        saveLog();
                         this.Hide();
                     }
                     else if (getLogar == "B" && radioButton2.Checked == true)
                     {
                         new MenuFunc().Show();
+                        saveLog();
                         this.Hide();
                     }
                     else
