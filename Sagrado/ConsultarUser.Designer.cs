@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarUser));
             this.label5 = new System.Windows.Forms.Label();
             this.TXT_CPF = new System.Windows.Forms.TextBox();
-            this.BTN_SEARCH = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BTN_CANCELAR = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,11 +53,14 @@
             this.TXT_DATE = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.TXT_NOME = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_SEARCH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
+            this.BTN_CANCELAR = new System.Windows.Forms.PictureBox();
+            this.BTN_SEARCH = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BTN_SEARCH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -84,36 +84,6 @@
             this.TXT_CPF.Size = new System.Drawing.Size(200, 27);
             this.TXT_CPF.TabIndex = 1;
             this.TXT_CPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CPF_KeyPress);
-            // 
-            // BTN_SEARCH
-            // 
-            this.BTN_SEARCH.BackgroundImage = global::Sagrado.Properties.Resources.search;
-            this.BTN_SEARCH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BTN_SEARCH.Location = new System.Drawing.Point(498, 149);
-            this.BTN_SEARCH.Name = "BTN_SEARCH";
-            this.BTN_SEARCH.Size = new System.Drawing.Size(30, 30);
-            this.BTN_SEARCH.TabIndex = 51;
-            this.BTN_SEARCH.TabStop = false;
-            this.BTN_SEARCH.Click += new System.EventHandler(this.BTN_SEARCH_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CONSULTAR_USER;
-            this.pictureBox1.Location = new System.Drawing.Point(289, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 100);
-            this.pictureBox1.TabIndex = 48;
-            this.pictureBox1.TabStop = false;
-            // 
-            // BTN_CANCELAR
-            // 
-            this.BTN_CANCELAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANCELAR.Location = new System.Drawing.Point(683, 477);
-            this.BTN_CANCELAR.Name = "BTN_CANCELAR";
-            this.BTN_CANCELAR.Size = new System.Drawing.Size(50, 50);
-            this.BTN_CANCELAR.TabIndex = 75;
-            this.BTN_CANCELAR.TabStop = false;
-            this.BTN_CANCELAR.Click += new System.EventHandler(this.BTN_CANCELAR_Click);
             // 
             // label7
             // 
@@ -384,6 +354,36 @@
             this.TXT_NOME.Size = new System.Drawing.Size(527, 23);
             this.TXT_NOME.TabIndex = 4;
             // 
+            // BTN_CANCELAR
+            // 
+            this.BTN_CANCELAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
+            this.BTN_CANCELAR.Location = new System.Drawing.Point(683, 477);
+            this.BTN_CANCELAR.Name = "BTN_CANCELAR";
+            this.BTN_CANCELAR.Size = new System.Drawing.Size(50, 50);
+            this.BTN_CANCELAR.TabIndex = 75;
+            this.BTN_CANCELAR.TabStop = false;
+            this.BTN_CANCELAR.Click += new System.EventHandler(this.BTN_CANCELAR_Click);
+            // 
+            // BTN_SEARCH
+            // 
+            this.BTN_SEARCH.BackgroundImage = global::Sagrado.Properties.Resources.search;
+            this.BTN_SEARCH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTN_SEARCH.Location = new System.Drawing.Point(498, 149);
+            this.BTN_SEARCH.Name = "BTN_SEARCH";
+            this.BTN_SEARCH.Size = new System.Drawing.Size(30, 30);
+            this.BTN_SEARCH.TabIndex = 51;
+            this.BTN_SEARCH.TabStop = false;
+            this.BTN_SEARCH.Click += new System.EventHandler(this.BTN_SEARCH_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CONSULTAR_USER2;
+            this.pictureBox1.Location = new System.Drawing.Point(289, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 100);
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
             // ConsultarUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,13 +417,13 @@
             this.Name = "ConsultarUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CONSULTAR USUÁRIO";
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_SEARCH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BTN_SEARCH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

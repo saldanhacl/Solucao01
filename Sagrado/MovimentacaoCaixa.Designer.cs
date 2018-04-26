@@ -29,30 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MovimentacaoCaixa));
-            this.IMG_CARTEIRA = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.BTN_DATE = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.BNT_SEARCH = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.IMG_CARTEIRA = new System.Windows.Forms.PictureBox();
+            this.BNT_SEARCH = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IMG_CARTEIRA)).BeginInit();
             this.SuspendLayout();
-            // 
-            // IMG_CARTEIRA
-            // 
-            this.IMG_CARTEIRA.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SALDO;
-            this.IMG_CARTEIRA.Location = new System.Drawing.Point(289, 31);
-            this.IMG_CARTEIRA.Name = "IMG_CARTEIRA";
-            this.IMG_CARTEIRA.Size = new System.Drawing.Size(200, 100);
-            this.IMG_CARTEIRA.TabIndex = 18;
-            this.IMG_CARTEIRA.TabStop = false;
             // 
             // label3
             // 
@@ -119,18 +110,6 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "SELECIONE O TIPO DE PESQUISA:";
             // 
-            // BNT_SEARCH
-            // 
-            this.BNT_SEARCH.BackColor = System.Drawing.Color.White;
-            this.BNT_SEARCH.BackgroundImage = global::Sagrado.Properties.Resources.search;
-            this.BNT_SEARCH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BNT_SEARCH.Location = new System.Drawing.Point(608, 241);
-            this.BNT_SEARCH.Name = "BNT_SEARCH";
-            this.BNT_SEARCH.Size = new System.Drawing.Size(50, 50);
-            this.BNT_SEARCH.TabIndex = 10;
-            this.BNT_SEARCH.UseVisualStyleBackColor = false;
-            this.BNT_SEARCH.Click += new System.EventHandler(this.BNT_SEARCH_Click);
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(465, 301);
@@ -144,17 +123,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(301, 306);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(220, 301);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.Size = new System.Drawing.Size(38, 17);
             this.label1.TabIndex = 20;
             this.label1.Text = "CPF:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(350, 303);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.textBox1.Location = new System.Drawing.Point(264, 298);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(171, 23);
             this.textBox1.TabIndex = 21;
             // 
             // label4
@@ -173,6 +154,28 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(185, 20);
             this.textBox2.TabIndex = 23;
+            // 
+            // IMG_CARTEIRA
+            // 
+            this.IMG_CARTEIRA.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SALDO;
+            this.IMG_CARTEIRA.Location = new System.Drawing.Point(289, 31);
+            this.IMG_CARTEIRA.Name = "IMG_CARTEIRA";
+            this.IMG_CARTEIRA.Size = new System.Drawing.Size(200, 100);
+            this.IMG_CARTEIRA.TabIndex = 18;
+            this.IMG_CARTEIRA.TabStop = false;
+            // 
+            // BNT_SEARCH
+            // 
+            this.BNT_SEARCH.BackColor = System.Drawing.Color.White;
+            this.BNT_SEARCH.BackgroundImage = global::Sagrado.Properties.Resources.search;
+            this.BNT_SEARCH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BNT_SEARCH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BNT_SEARCH.Location = new System.Drawing.Point(601, 246);
+            this.BNT_SEARCH.Name = "BNT_SEARCH";
+            this.BNT_SEARCH.Size = new System.Drawing.Size(30, 30);
+            this.BNT_SEARCH.TabIndex = 10;
+            this.BNT_SEARCH.UseVisualStyleBackColor = false;
+            this.BNT_SEARCH.Click += new System.EventHandler(this.BNT_SEARCH_Click);
             // 
             // MovimentacaoCaixa
             // 

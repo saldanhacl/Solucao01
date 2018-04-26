@@ -392,7 +392,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_ADD_USER;
+            this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_ADD_USER2;
             this.pictureBox1.Location = new System.Drawing.Point(289, 28);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";

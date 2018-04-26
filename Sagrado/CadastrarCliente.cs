@@ -47,7 +47,7 @@ namespace Sagrado
             String cpf = textBox4.Text;
             String tel = textBox6.Text;
             String cel = textBox2.Text;
-            float saldo = 0;
+            float saldo = 1000;
 
 
             if ((Validador.campoPreenchido(cpf) &&

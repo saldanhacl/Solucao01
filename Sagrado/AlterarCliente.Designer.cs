@@ -75,10 +75,10 @@
             this.TXT_TEL_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.TXT_TEL_CLIENTE.Location = new System.Drawing.Point(210, 322);
             this.TXT_TEL_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_TEL_CLIENTE.MaxLength = 3;
+            this.TXT_TEL_CLIENTE.MaxLength = 10;
             this.TXT_TEL_CLIENTE.Name = "TXT_TEL_CLIENTE";
             this.TXT_TEL_CLIENTE.Size = new System.Drawing.Size(220, 24);
-            this.TXT_TEL_CLIENTE.TabIndex = 103;
+            this.TXT_TEL_CLIENTE.TabIndex = 4;
             this.TXT_TEL_CLIENTE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_TEL_CLIENTE_KeyPress);
             // 
             // TXT_CEL_CLIENTE
@@ -88,10 +88,10 @@
             this.TXT_CEL_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.TXT_CEL_CLIENTE.Location = new System.Drawing.Point(516, 322);
             this.TXT_CEL_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_CEL_CLIENTE.MaxLength = 11;
+            this.TXT_CEL_CLIENTE.MaxLength = 10;
             this.TXT_CEL_CLIENTE.Name = "TXT_CEL_CLIENTE";
             this.TXT_CEL_CLIENTE.Size = new System.Drawing.Size(220, 24);
-            this.TXT_CEL_CLIENTE.TabIndex = 4;
+            this.TXT_CEL_CLIENTE.TabIndex = 5;
             this.TXT_CEL_CLIENTE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CEL_CLIENTE_KeyPress);
             // 
             // label11
@@ -112,7 +112,7 @@
             this.TXT_NOME_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.TXT_NOME_CLIENTE.Location = new System.Drawing.Point(209, 276);
             this.TXT_NOME_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_NOME_CLIENTE.MaxLength = 50;
+            this.TXT_NOME_CLIENTE.MaxLength = 45;
             this.TXT_NOME_CLIENTE.Name = "TXT_NOME_CLIENTE";
             this.TXT_NOME_CLIENTE.Size = new System.Drawing.Size(527, 23);
             this.TXT_NOME_CLIENTE.TabIndex = 2;

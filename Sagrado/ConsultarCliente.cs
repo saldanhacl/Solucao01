@@ -18,16 +18,17 @@ namespace Sagrado
         {
             InitializeComponent();
             this.CenterToScreen();
+            
         }
         string cpf;
         //Mesma ideia do consultar user
         private void botaoConsultar(object sender, EventArgs e)
         {
             cpf = textBox1.Text;
-            if (cpf.Equals("")) 
+            if (cpf.Equals(""))
             {
-                MessageBox.Show("Campo de CPF vazio!");
-            } 
+                MessageBox.Show("DIGITE O CPF");
+            }
             else
             {
                 DataBaseConnection bd = new DataBaseConnection();
@@ -44,23 +45,72 @@ namespace Sagrado
                     textBox7.Text = reader["CEL_CLIENTE"].ToString();
                 }
                 bd.closeConnection();
+                if (float.Parse(TXT_DIVIDA_CLIENTE.Text) < 0.0) { 
+                //label2.Hide();
+                label9.Show();
+            }
             }
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void BTN_CANCELAR_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void ConsultarCliente_Load(object sender, EventArgs e)
+       
+        private void text_Willer_KeyPressed(object sender, KeyPressEventArgs e)
+        {
+            char keypress = e.KeyChar;
+            if (char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back))
+            {
+
+
+            }
+            else
+            {
+                MessageBox.Show("DIGITE APENAS NÚMEROS");
+                e.Handled = true;
+            }
+        }
+
+        private void BTN_CONFIRMAR_Click(object sender, EventArgs e)
         {
 
+            if (text_Willer.Text.Equals(""))
+                MessageBox.Show("DIGITE UM VALOR PARA RETIRADA");
+            else
+            {
+                float valor = float.Parse(text_Willer.Text);
+                float divida = float.Parse(TXT_DIVIDA_CLIENTE.Text);
+
+
+                if (valor > divida || valor < 0) MessageBox.Show("DIGITE UM VALOR VÁLIDO");
+        
+                else
+                {
+                DataBaseConnection bd = new DataBaseConnection();
+                        bd.openConnection();
+                        divida = divida - valor;
+                        string query = "UPDATE CLIENTE SET SALDO_ATUAL_CLIENTE = '" + divida + "'WHERE CPF_CLIENTE = '" + this.cpf + "'";
+                        MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+                        cmd.ExecuteNonQuery();
+                        bd.closeConnection();
+                        MessageBox.Show("SALDO FOI ATUALIZADO COM SUCESSO");
+                        this.Close();
+                }
+            }
+            
+        }
+
+        private void TXT_DIVIDA_CLIENTE_TextChanged(object sender, EventArgs e)
+        {
+            if ((TXT_DIVIDA_CLIENTE.Text).ToString() == "0") TXT_DIVIDA_CLIENTE.ForeColor = Color.MediumSeaGreen;
+            else TXT_DIVIDA_CLIENTE.ForeColor = Color.OrangeRed;
         }
     }
 
+
 }
+

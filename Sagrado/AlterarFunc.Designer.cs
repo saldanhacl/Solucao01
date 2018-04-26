@@ -388,7 +388,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EDIT_USER;
+            this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EDIT_USER22;
             this.pictureBox1.Location = new System.Drawing.Point(292, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 100);

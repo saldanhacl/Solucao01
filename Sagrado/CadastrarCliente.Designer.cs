@@ -61,7 +61,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.textBox1.Location = new System.Drawing.Point(202, 253);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.MaxLength = 50;
+            this.textBox1.MaxLength = 45;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(527, 23);
             this.textBox1.TabIndex = 1;
@@ -107,7 +107,7 @@
             this.textBox6.MaxLength = 10;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(220, 24);
-            this.textBox6.TabIndex = 2;
+            this.textBox6.TabIndex = 3;
             this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPressed);
             // 
             // textBox2
@@ -118,7 +118,7 @@
             this.textBox2.MaxLength = 10;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(220, 24);
-            this.textBox2.TabIndex = 3;
+            this.textBox2.TabIndex = 4;
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPressed);
             // 
             // textBox4
@@ -126,10 +126,10 @@
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.textBox4.Location = new System.Drawing.Point(202, 215);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.MaxLength = 10;
+            this.textBox4.MaxLength = 11;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(241, 24);
-            this.textBox4.TabIndex = 4;
+            this.textBox4.TabIndex = 1;
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPressed);
             // 
             // BTN_CONFIRMAR
@@ -156,7 +156,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_ADD_USER;
+            this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_ADD_CLIENTE;
             this.pictureBox1.Location = new System.Drawing.Point(288, 80);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";

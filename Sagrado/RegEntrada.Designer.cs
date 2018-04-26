@@ -38,12 +38,11 @@
             this.TXT_SALDOATUAL = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.BTN_PLUS = new System.Windows.Forms.PictureBox();
+            this.BTN_ADDCLIENTE = new System.Windows.Forms.Button();
             this.BTN_CANCELAR = new System.Windows.Forms.PictureBox();
             this.BTN_CONFIRMAR = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_PLUS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -140,20 +139,22 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(165, 283);
+            this.comboBox1.Location = new System.Drawing.Point(165, 281);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(295, 24);
             this.comboBox1.TabIndex = 19;
             // 
-            // BTN_PLUS
+            // BTN_ADDCLIENTE
             // 
-            this.BTN_PLUS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BTN_PLUS.Location = new System.Drawing.Point(116, 277);
-            this.BTN_PLUS.Name = "BTN_PLUS";
-            this.BTN_PLUS.Size = new System.Drawing.Size(30, 30);
-            this.BTN_PLUS.TabIndex = 111;
-            this.BTN_PLUS.TabStop = false;
-            this.BTN_PLUS.Click += new System.EventHandler(this.BTN_PLUS_Click);
+            this.BTN_ADDCLIENTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BTN_ADDCLIENTE.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BTN_ADDCLIENTE.Image = global::Sagrado.Properties.Resources.BTN_PLUS;
+            this.BTN_ADDCLIENTE.Location = new System.Drawing.Point(113, 277);
+            this.BTN_ADDCLIENTE.Margin = new System.Windows.Forms.Padding(0);
+            this.BTN_ADDCLIENTE.Name = "BTN_ADDCLIENTE";
+            this.BTN_ADDCLIENTE.Size = new System.Drawing.Size(30, 30);
+            this.BTN_ADDCLIENTE.TabIndex = 112;
+            this.BTN_ADDCLIENTE.UseVisualStyleBackColor = true;
             // 
             // BTN_CANCELAR
             // 
@@ -190,7 +191,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 461);
-            this.Controls.Add(this.BTN_PLUS);
+            this.Controls.Add(this.BTN_ADDCLIENTE);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.TXT_SALDOATUAL);
             this.Controls.Add(this.label3);
@@ -207,7 +208,6 @@
             this.Load += new System.EventHandler(this.RegEntrada_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_PLUS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -230,6 +230,6 @@
         private System.Windows.Forms.TextBox TXT_SALDOATUAL;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.PictureBox BTN_PLUS;
+        private System.Windows.Forms.Button BTN_ADDCLIENTE;
     }
 }
