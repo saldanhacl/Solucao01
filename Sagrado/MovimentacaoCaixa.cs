@@ -22,78 +22,46 @@ namespace Sagrado
         string theData;
         string marcado;
         string cpf;
-        private void BNT_SEARCH_Click(object sender, EventArgs e)
+               
+
+        private void BTN_BUSCAR_Click(object sender, EventArgs e)
         {
-            if (marcado.Equals(""))//verfica se a radio box foi selecionada
+            String query = "";
+
+            //if (comboBox1.SelectedIndex.ToString().Length == 0) query = "SELECT * FROM CAIXA";
+            //else if (comboBox1.SelectedIndex.ToString() == "VENDA") = "SELECT * FROM CAIXA where TYPE_ENTRADA_CAIXA = 'v'";
+
+            DataBaseConnection bd = new DataBaseConnection();
+            bd.openConnection();
+
+            query = "SELECT * FROM CAIXA";
+
+            MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            int i = 0;
+
+            while (reader.Read())
             {
-                MessageBox.Show("SELECIONE UM TIPO DE BUSCA");
+
+                dg.Rows.Add();
+                dg.Rows[i].Cells["TIPO"].Value = reader["TYPE_ENTRADA_CAIXA"].ToString();
+                dg.Rows[i].Cells["VALOR"].Value = reader["VALOR_ENTRADA_CAIXA"].ToString();
+                dg.Rows[i].Cells["FUNCIONÁRIO"].Value = reader["CPF_FUNCIONARIO"].ToString();
+
+                i++; ;
             }
-            else
-            {
-                DataBaseConnection bd = new DataBaseConnection();
-                bd.openConnection();
-                string Query = "SELECT VALOR_ENTRADA_CAIXA AS ENTRADA, DATE_MODIFY_CAIXA AS DATA FROM CAIXA WHERE TYPE_ENTRADA_CAIXA ='" + this.checkMarcado() + "' AND DATE_MODIFY_CAIXA = '" + this.theData + "'";
-                MySqlCommand cmd = new MySqlCommand(Query, bd.retornaConexao());
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    textBox2.Text = reader["VALOR_ENTRADA_CAIXA"].ToString();                
-                }
-                bd.closeConnection();
-            }
+
+
+            bd.closeConnection();
+
+
         }
 
-        private void BTN_DATE_ValueChanged(object sender, EventArgs e)
+        private void MovimentacaoCaixa_Load(object sender, EventArgs e)
         {
-            theData = BTN_DATE.Value.ToString("yyyy-MM-dd");
-            if (theData.Equals(null))
-            {
-                MessageBox.Show("SELECIONE UMA DATA");
-            }
+
         }
-
-        private string checkMarcado()
-        {
-            //Retorna a letra de cada compra selecionada para a pesquisa no banco de dados
-            if (radioButton1.Checked) marcado = "v";
-            if (radioButton2.Checked) marcado = "f";
-            if (radioButton3.Checked) marcado = "e";
-            // Retorna vazio se nada for selecionado
-            if (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked)
-            {
-                marcado = "";
-            }
-
-            return marcado;
-        }
-
-        //FALTA UM CAMPO CPF NA TABELA DE CAIXA!
-        //Buscar por CPF
-        private void botaoBuscar(object sender, EventArgs e)
-        {
-            cpf = textBox1.Text;
-            if (cpf.Equals(""))//verfica se a o campo do nome não está
-            {
-                MessageBox.Show("Campo vazio!Por favor digite um CPF!");
-            }
-            else { 
-                DataBaseConnection bd = new DataBaseConnection();
-                bd.openConnection();
-                //Query não pega nada pois não há campo de CPF no caixa
-                string Query1 = "SELECT VALOR_ENTRADA_CAIXA FROM CAIXA WHERE CPF_USER = '" + this.cpf + "'";
-                MySqlCommand cmd = new MySqlCommand(Query1, bd.retornaConexao());
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    textBox2.Text = reader["VALOR_ENTRADA_CAIXA"].ToString();
-                }
-                reader.Close();
-                
-                  
-
-                bd.closeConnection();
-            }
-        }
-
     }
 }

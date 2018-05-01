@@ -208,19 +208,19 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label8.Location = new System.Drawing.Point(336, 375);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(179, 20);
+            this.label8.Size = new System.Drawing.Size(165, 20);
             this.label8.TabIndex = 29;
-            this.label8.Text = "RETIRAR VALOR (R$):";
+            this.label8.Text = "PAGAR DÍVIDA (R$):";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label9.Location = new System.Drawing.Point(412, 335);
+            this.label9.Location = new System.Drawing.Point(313, 335);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 20);
+            this.label9.Size = new System.Drawing.Size(188, 20);
             this.label9.TabIndex = 31;
-            this.label9.Text = "SALDO (R$):";
+            this.label9.Text = "SALDO DEVEDOR (R$):";
             // 
             // TXT_DIVIDA_CLIENTE
             // 
