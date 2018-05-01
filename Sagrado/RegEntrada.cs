@@ -32,7 +32,7 @@ namespace Sagrado
             String query = "SELECT CPF_USER_LOG FROM controle_log ORDER BY NRSEQLOGIN_LOG DESC LIMIT 1";
 
             MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
-
+            
             MySqlDataReader reader = cmd.ExecuteReader();
 
            
