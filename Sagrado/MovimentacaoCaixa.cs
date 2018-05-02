@@ -26,27 +26,38 @@ namespace Sagrado
 
         private void BTN_BUSCAR_Click(object sender, EventArgs e)
         {
-            String query = "";
 
-            //if (comboBox1.SelectedIndex.ToString().Length == 0) query = "SELECT * FROM CAIXA";
-            //else if (comboBox1.SelectedIndex.ToString() == "VENDA") = "SELECT * FROM CAIXA where TYPE_ENTRADA_CAIXA = 'v'";
+            String query = "";
+            dg.Rows.Clear(); 
+
+            if (comboBox1.SelectedItem == null || comboBox1.SelectedItem.ToString() == "") query = "SELECT * FROM caixa";
+            else if (comboBox1.SelectedItem.ToString() == "VENDA") query = "SELECT * FROM CAIXA WHERE TYPE_ENTRADA_CAIXA = 'v'";
+            else if (comboBox1.SelectedItem.ToString() == "ENTRADA") query = "SELECT * FROM CAIXA WHERE TYPE_ENTRADA_CAIXA = 'e'";
+            else if (comboBox1.SelectedItem.ToString() == "RETIRADA") query = "SELECT * FROM CAIXA WHERE TYPE_ENTRADA_CAIXA = 'r'";
+            else if (comboBox1.SelectedItem.ToString() == "FIADO") query = "SELECT * FROM CAIXA WHERE TYPE_ENTRADA_CAIXA = 'f'";
+
+
 
             DataBaseConnection bd = new DataBaseConnection();
             bd.openConnection();
 
-            query = "SELECT * FROM CAIXA";
-
             MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
-
             MySqlDataReader reader = cmd.ExecuteReader();
 
             int i = 0;
 
             while (reader.Read())
             {
+                String tipo = "";
+                String leituraTipo = reader["TYPE_ENTRADA_CAIXA"].ToString();
+
+                if (leituraTipo == "v") tipo = "VENDA";
+                else if (leituraTipo == "r") tipo = "RETIRADA";
+                else if (leituraTipo == "f") tipo = "FIADO";
+                else if (leituraTipo == "e") tipo = "FUNDO DE CAIXA";
 
                 dg.Rows.Add();
-                dg.Rows[i].Cells["TIPO"].Value = reader["TYPE_ENTRADA_CAIXA"].ToString();
+                dg.Rows[i].Cells["TIPO"].Value = tipo;
                 dg.Rows[i].Cells["VALOR"].Value = reader["VALOR_ENTRADA_CAIXA"].ToString();
                 dg.Rows[i].Cells["FUNCIONÁRIO"].Value = reader["CPF_FUNCIONARIO"].ToString();
 
@@ -55,13 +66,11 @@ namespace Sagrado
 
 
             bd.closeConnection();
-
-
         }
 
-        private void MovimentacaoCaixa_Load(object sender, EventArgs e)
+        private void BTN_CANC_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

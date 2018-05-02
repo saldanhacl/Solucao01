@@ -38,12 +38,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.TXT_CPF_CLIENTE = new System.Windows.Forms.TextBox();
             this.BTN_EDIT_CLIENTE = new System.Windows.Forms.Button();
-            this.BTN_CONFIRMAR_CLIENTE = new System.Windows.Forms.PictureBox();
-            this.BTN_CANCELAR_CLIENTE = new System.Windows.Forms.PictureBox();
-            this.BTN_SEARCH_CLIENTE = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR_CLIENTE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR_CLIENTE)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_SEARCH_CLIENTE)).BeginInit();
+            this.BTN_CANC = new System.Windows.Forms.Button();
+            this.BTN_CONF = new System.Windows.Forms.Button();
+            this.BTN_SEARCH = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label8
@@ -115,7 +112,7 @@
             this.TXT_NOME_CLIENTE.MaxLength = 45;
             this.TXT_NOME_CLIENTE.Name = "TXT_NOME_CLIENTE";
             this.TXT_NOME_CLIENTE.Size = new System.Drawing.Size(527, 23);
-            this.TXT_NOME_CLIENTE.TabIndex = 2;
+            this.TXT_NOME_CLIENTE.TabIndex = 3;
             // 
             // label5
             // 
@@ -150,36 +147,44 @@
             this.BTN_EDIT_CLIENTE.TabIndex = 124;
             this.BTN_EDIT_CLIENTE.UseVisualStyleBackColor = true;
             // 
-            // BTN_CONFIRMAR_CLIENTE
+            // BTN_CANC
             // 
-            this.BTN_CONFIRMAR_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
-            this.BTN_CONFIRMAR_CLIENTE.Location = new System.Drawing.Point(686, 413);
-            this.BTN_CONFIRMAR_CLIENTE.Name = "BTN_CONFIRMAR_CLIENTE";
-            this.BTN_CONFIRMAR_CLIENTE.Size = new System.Drawing.Size(50, 50);
-            this.BTN_CONFIRMAR_CLIENTE.TabIndex = 123;
-            this.BTN_CONFIRMAR_CLIENTE.TabStop = false;
-            this.BTN_CONFIRMAR_CLIENTE.Click += new System.EventHandler(this.BTN_CONFIRMAR_CLIENTE_Click);
+            this.BTN_CANC.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
+            this.BTN_CANC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_CANC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_CANC.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_CANC.Location = new System.Drawing.Point(612, 405);
+            this.BTN_CANC.Name = "BTN_CANC";
+            this.BTN_CANC.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CANC.TabIndex = 6;
+            this.BTN_CANC.UseVisualStyleBackColor = true;
+            this.BTN_CANC.Click += new System.EventHandler(this.BTN_CANC_Click);
             // 
-            // BTN_CANCELAR_CLIENTE
+            // BTN_CONF
             // 
-            this.BTN_CANCELAR_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANCELAR_CLIENTE.Location = new System.Drawing.Point(605, 413);
-            this.BTN_CANCELAR_CLIENTE.Name = "BTN_CANCELAR_CLIENTE";
-            this.BTN_CANCELAR_CLIENTE.Size = new System.Drawing.Size(50, 50);
-            this.BTN_CANCELAR_CLIENTE.TabIndex = 122;
-            this.BTN_CANCELAR_CLIENTE.TabStop = false;
-            this.BTN_CANCELAR_CLIENTE.Click += new System.EventHandler(this.BTN_CANCELAR_CLIENTE_Click);
+            this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
+            this.BTN_CONF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_CONF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_CONF.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_CONF.Location = new System.Drawing.Point(685, 405);
+            this.BTN_CONF.Name = "BTN_CONF";
+            this.BTN_CONF.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CONF.TabIndex = 7;
+            this.BTN_CONF.UseVisualStyleBackColor = true;
+            this.BTN_CONF.Click += new System.EventHandler(this.BTN_CONF_Click);
             // 
-            // BTN_SEARCH_CLIENTE
+            // BTN_SEARCH
             // 
-            this.BTN_SEARCH_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.search;
-            this.BTN_SEARCH_CLIENTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BTN_SEARCH_CLIENTE.Location = new System.Drawing.Point(509, 225);
-            this.BTN_SEARCH_CLIENTE.Name = "BTN_SEARCH_CLIENTE";
-            this.BTN_SEARCH_CLIENTE.Size = new System.Drawing.Size(30, 30);
-            this.BTN_SEARCH_CLIENTE.TabIndex = 110;
-            this.BTN_SEARCH_CLIENTE.TabStop = false;
-            this.BTN_SEARCH_CLIENTE.Click += new System.EventHandler(this.BTN_SEARCH_CLIENTE_Click);
+            this.BTN_SEARCH.BackgroundImage = global::Sagrado.Properties.Resources.search;
+            this.BTN_SEARCH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_SEARCH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_SEARCH.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_SEARCH.Location = new System.Drawing.Point(516, 225);
+            this.BTN_SEARCH.Name = "BTN_SEARCH";
+            this.BTN_SEARCH.Size = new System.Drawing.Size(30, 30);
+            this.BTN_SEARCH.TabIndex = 2;
+            this.BTN_SEARCH.UseVisualStyleBackColor = true;
+            this.BTN_SEARCH.Click += new System.EventHandler(this.BTN_SEARCH_Click);
             // 
             // AlterarCliente
             // 
@@ -187,44 +192,39 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.BTN_SEARCH);
+            this.Controls.Add(this.BTN_CANC);
+            this.Controls.Add(this.BTN_CONF);
             this.Controls.Add(this.BTN_EDIT_CLIENTE);
-            this.Controls.Add(this.BTN_CONFIRMAR_CLIENTE);
-            this.Controls.Add(this.BTN_CANCELAR_CLIENTE);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.TXT_TEL_CLIENTE);
             this.Controls.Add(this.TXT_CEL_CLIENTE);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.TXT_NOME_CLIENTE);
-            this.Controls.Add(this.BTN_SEARCH_CLIENTE);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TXT_CPF_CLIENTE);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AlterarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ALTERAR CLIENTE";
-            this.Load += new System.EventHandler(this.AlterarCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR_CLIENTE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR_CLIENTE)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_SEARCH_CLIENTE)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox BTN_CONFIRMAR_CLIENTE;
-        private System.Windows.Forms.PictureBox BTN_CANCELAR_CLIENTE;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox TXT_TEL_CLIENTE;
         private System.Windows.Forms.TextBox TXT_CEL_CLIENTE;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox TXT_NOME_CLIENTE;
-        private System.Windows.Forms.PictureBox BTN_SEARCH_CLIENTE;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TXT_CPF_CLIENTE;
         private System.Windows.Forms.Button BTN_EDIT_CLIENTE;
+        private System.Windows.Forms.Button BTN_CANC;
+        private System.Windows.Forms.Button BTN_CONF;
+        private System.Windows.Forms.Button BTN_SEARCH;
     }
 }

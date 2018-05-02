@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sagrado
 {
-    public partial class GerenClienteAdm : Form
+    public partial class GerenProduto : Form
     {
-        public GerenClienteAdm()
+        public GerenProduto()
         {
             InitializeComponent();
         }
@@ -33,24 +33,24 @@ namespace Sagrado
             Application.Exit();
         }
 
-        private void BTN_ADD_CLIENTE_Click(object sender, EventArgs e)
+        private void BTN_ADD_PRODUTO_Click(object sender, EventArgs e)
         {
-            new CadastrarCliente().Show();
+            new CadastrarProd().Show();
         }
 
-        private void BTN_EDIT_CLIENTE_Click(object sender, EventArgs e)
+        private void BTN_EDIT_PRODUTO_Click(object sender, EventArgs e)
         {
-            new AlterarCliente().Show();
+            new AlterarProd().Show();
         }
 
-        private void BTN_EXCLUIR_CLIENTE_Click(object sender, EventArgs e)
+        private void BTN_EXCLUIR_PRODUTO_Click(object sender, EventArgs e)
         {
-            new ExcluirCliente().Show();
+            new ExcluirProd().Show();
         }
-        
-        private void BTN_CONSUL_CLIENTE_Click(object sender, EventArgs e)
+
+        private void BTN_CONSUL_PRODUTO_Click(object sender, EventArgs e)
         {
-            new ConsultarCliente().Show();
+            new ConsultarProd().Show();
         }
 
        

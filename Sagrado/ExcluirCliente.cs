@@ -16,31 +16,47 @@ public partial class ExcluirCliente : Form
 {
     private bool encontrouCliente = false;
 
-    public ExcluirCliente()
-    {
-        InitializeComponent();
-        this.CenterToScreen();
-
-        TextBox TXT_CPF_CLIENTE = new TextBox();
-        TXT_CPF_CLIENTE.MaxLength = 11;
-
-    }
-
-    private void BTN_CONFIRMAR_CLIENTE_Click(object sender, EventArgs e)
-    {
-        DataBaseConnection bd = new DataBaseConnection();
-
-        bd.openConnection();
-
-        if (TXT_CPF_CLIENTE.TextLength > 0)
+        public ExcluirCliente()
         {
-            String nome = "";
+            InitializeComponent();
+            this.CenterToScreen();
 
-            String query = "SELECT * FROM CLIENTE WHERE CPF_CLIENTE ='" + TXT_CPF_CLIENTE.Text + "'";
-            String queryDelete = "DELETE FROM CLIENTE WHERE CPF_CLIENTE ='" + TXT_CPF_CLIENTE.Text + "'";
-            MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+            TextBox TXT_CPF_CLIENTE = new TextBox();
+            TXT_CPF_CLIENTE.MaxLength = 11;
 
-            MySqlDataReader reader = cmd.ExecuteReader();
+        }
+
+        private void TXT_CPF_CLIENTE_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char keypress = e.KeyChar;
+            if (!(char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back)))
+            {
+                MessageBox.Show("DIGITE APENAS NÚMEROS");
+                e.Handled = true;
+            }
+           
+        }
+
+        private void BTN_CANC_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BTN_CONF_Click(object sender, EventArgs e)
+        {
+            DataBaseConnection bd = new DataBaseConnection();
+
+            bd.openConnection();
+
+            if (TXT_CPF_CLIENTE.TextLength > 0)
+            {
+                String nome = "";
+
+                String query = "SELECT * FROM CLIENTE WHERE CPF_CLIENTE ='" + TXT_CPF_CLIENTE.Text + "'";
+                String queryDelete = "DELETE FROM CLIENTE WHERE CPF_CLIENTE ='" + TXT_CPF_CLIENTE.Text + "'";
+                MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+
+                MySqlDataReader reader = cmd.ExecuteReader();
 
 
                 while (reader.Read())
@@ -83,28 +99,8 @@ public partial class ExcluirCliente : Form
                 }
 
 
-        }
-        bd.closeConnection();
-    }
-
-    private void TXT_CPF_CLIENTE_KeyPress(object sender, KeyPressEventArgs e)
-    {
-        char keypress = e.KeyChar;
-        if (char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back))
-        {
-
-
-        }
-        else
-        {
-            MessageBox.Show("DIGITE APENAS NÚMEROS");
-            e.Handled = true;
+            }
+            bd.closeConnection();
         }
     }
-
-    private void BTN_CANCELAR_CLIENTE_Click(object sender, EventArgs e)
-    {
-        this.Close();
-    }
-}
 }

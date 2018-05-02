@@ -132,7 +132,6 @@ namespace Sagrado
             return cpf;
         }
 
-
         private void saveRegister(float saldoAnt)
         {
 

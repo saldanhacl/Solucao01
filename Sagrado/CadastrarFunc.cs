@@ -32,83 +32,7 @@ namespace Sagrado
             TextBox textBox6 = new TextBox();
             textBox6.MaxLength = 10;
 
-        }
-
-        private void BTN_CANCELAR_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void BTN_CONFIRMAR_Click(object sender, EventArgs e)
-        {
-
-       
-            DataBaseConnection bd = new DataBaseConnection();
-
-                bd.openConnection();
-
-
-            
-                String nome = textBox1.Text;
-                String dtnascimento = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss");
-                String rg = textBox3.Text;
-                String cpf = textBox2.Text;
-                String tel = textBox6.Text;
-                String cel = textBox5.Text;
-                String email = textBox4.Text;
-                String senha = textBox7.Text;
-                String confirmasenha = textBox8.Text;
-                String sexo = null;
-                String tipo= null;
-
-                
-
-                if (radioButton1.Checked == true) sexo = "m";
-                else if (radioButton2.Checked == true) sexo = "f";
-
-                if (radioButton3.Checked == true) tipo = "B";
-                else if (radioButton4.Checked == true) tipo = "A";
-
-
-
-            if (Validador.campoPreenchido(rg) &&
-                Validador.campoPreenchido(cpf) &&
-                Validador.campoPreenchido(senha) &&
-                Validador.campoPreenchido(confirmasenha) &&
-                Validador.campoPreenchido(nome)) {
-
-                if (senha == confirmasenha)
-                {
-                    String query = "INSERT INTO USUARIO " +
-                    "(CPF_USER, NOME_USER, TEL_USER, CEL_USER, EMAIL_USER, NIVEL_USER, DTNASCIMENTO_USER, SEXO_USER, RG_USER, SENHA_USER)" +
-                    " VALUES ('" + cpf + "','" + nome + "','" + tel + "','" + cel + "','" +
-                    email + "','" + tipo + "','" + dtnascimento + "','" + sexo + "','" + rg + "','" + senha + "')";
-
-                    //MessageBox.Show(query);
-
-                    MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
-                    cmd.ExecuteNonQuery();
-                    System.Windows.Forms.MessageBox.Show("USUÁRIO CADASTRADO COM SUCESSO");
-
-                    this.Close();
-                }
-                else
-                {
-                    System.Windows.Forms.MessageBox.Show("AS SENHAS DEVEM SER IGUAIS");
-                    textBox7.Text = "";
-                    textBox8.Text = "";
-                }
-            } else
-            {
-                MessageBox.Show("PREENCHA OS CAMPOS OBRIGATÓRIOS");
-            }
-
-
-            bd.closeConnection();
-            
-        }
-
-       
+        }      
 
         private void textBox3_KeyPressed(object sender, KeyPressEventArgs e)
         {
@@ -123,11 +47,6 @@ namespace Sagrado
                 MessageBox.Show("DIGITE APENAS NÚMEROS");
                 e.Handled = true;
             }
-        }
-
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
@@ -175,24 +94,77 @@ namespace Sagrado
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void BTN_CANC_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void label12_Click(object sender, EventArgs e)
+        private void BTN_CONF_Click(object sender, EventArgs e)
         {
+            DataBaseConnection bd = new DataBaseConnection();
 
-        }
+            bd.openConnection();
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
+            String nome = textBox1.Text;
+            String dtnascimento = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss");
+            String rg = textBox3.Text;
+            String cpf = textBox2.Text;
+            String tel = textBox6.Text;
+            String cel = textBox5.Text;
+            String email = textBox4.Text;
+            String senha = textBox7.Text;
+            String confirmasenha = textBox8.Text;
+            String sexo = null;
+            String tipo = null;
 
+
+
+            if (radioButton1.Checked == true) sexo = "m";
+            else if (radioButton2.Checked == true) sexo = "f";
+
+            if (radioButton3.Checked == true) tipo = "B";
+            else if (radioButton4.Checked == true) tipo = "A";
+
+
+
+            if (Validador.campoPreenchido(rg) &&
+                Validador.campoPreenchido(cpf) &&
+                Validador.campoPreenchido(senha) &&
+                Validador.campoPreenchido(confirmasenha) &&
+                Validador.campoPreenchido(nome))
+            {
+
+                if (senha == confirmasenha)
+                {
+                    String query = "INSERT INTO USUARIO " +
+                    "(CPF_USER, NOME_USER, TEL_USER, CEL_USER, EMAIL_USER, NIVEL_USER, DTNASCIMENTO_USER, SEXO_USER, RG_USER, SENHA_USER)" +
+                    " VALUES ('" + cpf + "','" + nome + "','" + tel + "','" + cel + "','" +
+                    email + "','" + tipo + "','" + dtnascimento + "','" + sexo + "','" + rg + "','" + senha + "')";
+
+                    //MessageBox.Show(query);
+
+                    MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+                    cmd.ExecuteNonQuery();
+                    System.Windows.Forms.MessageBox.Show("USUÁRIO CADASTRADO COM SUCESSO");
+
+                    this.Close();
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show("AS SENHAS DEVEM SER IGUAIS");
+                    textBox7.Text = "";
+                    textBox8.Text = "";
+                }
+            }
+            else
+            {
+                MessageBox.Show("PREENCHA OS CAMPOS OBRIGATÓRIOS");
+            }
+
+
+            bd.closeConnection();
         }
     }
 }

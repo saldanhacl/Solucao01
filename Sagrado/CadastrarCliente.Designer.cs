@@ -37,11 +37,9 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.BTN_CONFIRMAR = new System.Windows.Forms.PictureBox();
-            this.BTN_CANCELAR = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
+            this.BTN_CANC = new System.Windows.Forms.Button();
+            this.BTN_CONF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,10 +59,10 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.textBox1.Location = new System.Drawing.Point(202, 253);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.MaxLength = 45;
+            this.textBox1.MaxLength = 40;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(527, 23);
-            this.textBox1.TabIndex = 1;
+            this.textBox1.TabIndex = 2;
             // 
             // label5
             // 
@@ -104,7 +102,7 @@
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.textBox6.Location = new System.Drawing.Point(202, 288);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.MaxLength = 10;
+            this.textBox6.MaxLength = 8;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(220, 24);
             this.textBox6.TabIndex = 3;
@@ -115,7 +113,7 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.textBox2.Location = new System.Drawing.Point(509, 288);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.MaxLength = 10;
+            this.textBox2.MaxLength = 9;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(220, 24);
             this.textBox2.TabIndex = 4;
@@ -132,28 +130,6 @@
             this.textBox4.TabIndex = 1;
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPressed);
             // 
-            // BTN_CONFIRMAR
-            // 
-            this.BTN_CONFIRMAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
-            this.BTN_CONFIRMAR.Location = new System.Drawing.Point(678, 413);
-            this.BTN_CONFIRMAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BTN_CONFIRMAR.Name = "BTN_CONFIRMAR";
-            this.BTN_CONFIRMAR.Size = new System.Drawing.Size(51, 51);
-            this.BTN_CONFIRMAR.TabIndex = 62;
-            this.BTN_CONFIRMAR.TabStop = false;
-            this.BTN_CONFIRMAR.Click += new System.EventHandler(this.BTN_CONFIRMAR_Click);
-            // 
-            // BTN_CANCELAR
-            // 
-            this.BTN_CANCELAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANCELAR.Location = new System.Drawing.Point(605, 413);
-            this.BTN_CANCELAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BTN_CANCELAR.Name = "BTN_CANCELAR";
-            this.BTN_CANCELAR.Size = new System.Drawing.Size(51, 50);
-            this.BTN_CANCELAR.TabIndex = 61;
-            this.BTN_CANCELAR.TabStop = false;
-            this.BTN_CANCELAR.Click += new System.EventHandler(this.BTN_CANCELAR_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_ADD_CLIENTE;
@@ -164,14 +140,40 @@
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
+            // BTN_CANC
+            // 
+            this.BTN_CANC.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
+            this.BTN_CANC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_CANC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_CANC.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_CANC.Location = new System.Drawing.Point(605, 375);
+            this.BTN_CANC.Name = "BTN_CANC";
+            this.BTN_CANC.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CANC.TabIndex = 5;
+            this.BTN_CANC.UseVisualStyleBackColor = true;
+            this.BTN_CANC.Click += new System.EventHandler(this.BTN_CANC_Click);
+            // 
+            // BTN_CONF
+            // 
+            this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
+            this.BTN_CONF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_CONF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_CONF.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_CONF.Location = new System.Drawing.Point(678, 375);
+            this.BTN_CONF.Name = "BTN_CONF";
+            this.BTN_CONF.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CONF.TabIndex = 6;
+            this.BTN_CONF.UseVisualStyleBackColor = true;
+            this.BTN_CONF.Click += new System.EventHandler(this.BTN_CONF_Click);
+            // 
             // CadastrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.BTN_CONFIRMAR);
-            this.Controls.Add(this.BTN_CANCELAR);
+            this.Controls.Add(this.BTN_CANC);
+            this.Controls.Add(this.BTN_CONF);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox6);
@@ -185,8 +187,6 @@
             this.Name = "CadastrarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CADASTRAR CLIENTE";
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -204,7 +204,7 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.PictureBox BTN_CANCELAR;
-        private System.Windows.Forms.PictureBox BTN_CONFIRMAR;
+        private System.Windows.Forms.Button BTN_CANC;
+        private System.Windows.Forms.Button BTN_CONF;
     }
 }

@@ -19,9 +19,23 @@ namespace Sagrado
             InitializeComponent();
         }
 
-        private void BTN_SEARCH_Click(object sender, EventArgs e)
+        private void TXT_CPF_KeyPress(object sender, KeyPressEventArgs e)
         {
+            char keypress = e.KeyChar;
+            if (char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back))
+            {
 
+
+            }
+            else
+            {
+                MessageBox.Show("DIGITE APENAS NÚMEROS");
+                e.Handled = true;
+            }
+        }
+
+        private void BTN_SEARCH2_Click(object sender, EventArgs e)
+        {
             DataBaseConnection bd = new DataBaseConnection();
             bd.openConnection();
 
@@ -50,28 +64,11 @@ namespace Sagrado
             }
 
             bd.closeConnection();
-
-
         }
 
-        private void BTN_CANCELAR_Click(object sender, EventArgs e)
+        private void BTN_CANC_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void TXT_CPF_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char keypress = e.KeyChar;
-            if (char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back))
-            {
-
-
-            }
-            else
-            {
-                MessageBox.Show("DIGITE APENAS NÚMEROS");
-                e.Handled = true;
-            }
         }
     }
 }

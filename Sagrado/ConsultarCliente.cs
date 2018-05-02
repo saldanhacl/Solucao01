@@ -20,6 +20,7 @@ namespace Sagrado
             this.CenterToScreen();
             
         }
+
         string cpf;
         //Mesma ideia do consultar user
         private void botaoConsultar(object sender, EventArgs e)
@@ -51,14 +52,6 @@ namespace Sagrado
             }
             }
         }
-
-    
-
-        private void BTN_CANCELAR_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
        
         private void text_Willer_KeyPressed(object sender, KeyPressEventArgs e)
         {
@@ -75,9 +68,19 @@ namespace Sagrado
             }
         }
 
-        private void BTN_CONFIRMAR_Click(object sender, EventArgs e)
+        private void TXT_DIVIDA_CLIENTE_TextChanged(object sender, EventArgs e)
         {
+            if ((TXT_DIVIDA_CLIENTE.Text).ToString() == "0") TXT_DIVIDA_CLIENTE.ForeColor = Color.MediumSeaGreen;
+            else TXT_DIVIDA_CLIENTE.ForeColor = Color.OrangeRed;
+        }
 
+        private void BTN_CANC_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BTN_CONF_Click(object sender, EventArgs e)
+        {
             if (text_Willer.Text.Equals(""))
                 MessageBox.Show("DIGITE UM VALOR PARA RETIRADA");
             else
@@ -87,27 +90,20 @@ namespace Sagrado
 
 
                 if (valor > divida || valor < 0) MessageBox.Show("DIGITE UM VALOR VÁLIDO");
-        
+
                 else
                 {
-                DataBaseConnection bd = new DataBaseConnection();
-                        bd.openConnection();
-                        divida = divida - valor;
-                        string query = "UPDATE CLIENTE SET SALDO_ATUAL_CLIENTE = '" + divida + "'WHERE CPF_CLIENTE = '" + this.cpf + "'";
-                        MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
-                        cmd.ExecuteNonQuery();
-                        bd.closeConnection();
-                        MessageBox.Show("SALDO FOI ATUALIZADO COM SUCESSO");
-                        this.Close();
+                    DataBaseConnection bd = new DataBaseConnection();
+                    bd.openConnection();
+                    divida = divida - valor;
+                    string query = "UPDATE CLIENTE SET SALDO_ATUAL_CLIENTE = '" + divida + "'WHERE CPF_CLIENTE = '" + this.cpf + "'";
+                    MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+                    cmd.ExecuteNonQuery();
+                    bd.closeConnection();
+                    MessageBox.Show("SALDO FOI ATUALIZADO COM SUCESSO");
+                    this.Close();
                 }
             }
-            
-        }
-
-        private void TXT_DIVIDA_CLIENTE_TextChanged(object sender, EventArgs e)
-        {
-            if ((TXT_DIVIDA_CLIENTE.Text).ToString() == "0") TXT_DIVIDA_CLIENTE.ForeColor = Color.MediumSeaGreen;
-            else TXT_DIVIDA_CLIENTE.ForeColor = Color.OrangeRed;
         }
     }
 

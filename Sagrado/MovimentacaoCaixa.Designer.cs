@@ -32,11 +32,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.IMG_CARTEIRA = new System.Windows.Forms.PictureBox();
             this.dg = new System.Windows.Forms.DataGridView();
-            this.BTN_BUSCAR = new System.Windows.Forms.Button();
             this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VALOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FUNCIONÁRIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BTN_BUSCAR = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.BTN_CANC = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IMG_CARTEIRA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +46,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(252, 180);
+            this.label2.Location = new System.Drawing.Point(252, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(275, 20);
             this.label2.TabIndex = 11;
@@ -54,7 +55,7 @@
             // IMG_CARTEIRA
             // 
             this.IMG_CARTEIRA.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SALDO;
-            this.IMG_CARTEIRA.Location = new System.Drawing.Point(289, 63);
+            this.IMG_CARTEIRA.Location = new System.Drawing.Point(289, 40);
             this.IMG_CARTEIRA.Name = "IMG_CARTEIRA";
             this.IMG_CARTEIRA.Size = new System.Drawing.Size(200, 100);
             this.IMG_CARTEIRA.TabIndex = 18;
@@ -69,24 +70,11 @@
             this.TIPO,
             this.VALOR,
             this.FUNCIONÁRIO});
-            this.dg.Location = new System.Drawing.Point(9, 280);
+            this.dg.Location = new System.Drawing.Point(29, 253);
             this.dg.Name = "dg";
             this.dg.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dg.Size = new System.Drawing.Size(767, 242);
+            this.dg.Size = new System.Drawing.Size(723, 197);
             this.dg.TabIndex = 24;
-            // 
-            // BTN_BUSCAR
-            // 
-            this.BTN_BUSCAR.BackColor = System.Drawing.Color.White;
-            this.BTN_BUSCAR.BackgroundImage = global::Sagrado.Properties.Resources.search;
-            this.BTN_BUSCAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BTN_BUSCAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_BUSCAR.Location = new System.Drawing.Point(497, 210);
-            this.BTN_BUSCAR.Name = "BTN_BUSCAR";
-            this.BTN_BUSCAR.Size = new System.Drawing.Size(30, 30);
-            this.BTN_BUSCAR.TabIndex = 25;
-            this.BTN_BUSCAR.UseVisualStyleBackColor = false;
-            this.BTN_BUSCAR.Click += new System.EventHandler(this.BTN_BUSCAR_Click);
             // 
             // TIPO
             // 
@@ -106,19 +94,47 @@
             this.FUNCIONÁRIO.Name = "FUNCIONÁRIO";
             this.FUNCIONÁRIO.ReadOnly = true;
             // 
+            // BTN_BUSCAR
+            // 
+            this.BTN_BUSCAR.BackColor = System.Drawing.Color.White;
+            this.BTN_BUSCAR.BackgroundImage = global::Sagrado.Properties.Resources.search;
+            this.BTN_BUSCAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTN_BUSCAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_BUSCAR.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_BUSCAR.Location = new System.Drawing.Point(497, 187);
+            this.BTN_BUSCAR.Name = "BTN_BUSCAR";
+            this.BTN_BUSCAR.Size = new System.Drawing.Size(30, 30);
+            this.BTN_BUSCAR.TabIndex = 2;
+            this.BTN_BUSCAR.UseVisualStyleBackColor = false;
+            this.BTN_BUSCAR.Click += new System.EventHandler(this.BTN_BUSCAR_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
+            "",
             "VENDA",
             "FIADO",
             "ENTRADA",
             "RETIRADA"});
-            this.comboBox1.Location = new System.Drawing.Point(256, 215);
+            this.comboBox1.Location = new System.Drawing.Point(256, 192);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(224, 25);
-            this.comboBox1.TabIndex = 28;
+            this.comboBox1.TabIndex = 1;
+            // 
+            // BTN_CANC
+            // 
+            this.BTN_CANC.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
+            this.BTN_CANC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_CANC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_CANC.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_CANC.Location = new System.Drawing.Point(701, 468);
+            this.BTN_CANC.Name = "BTN_CANC";
+            this.BTN_CANC.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CANC.TabIndex = 3;
+            this.BTN_CANC.UseVisualStyleBackColor = true;
+            this.BTN_CANC.Click += new System.EventHandler(this.BTN_CANC_Click);
             // 
             // MovimentacaoCaixa
             // 
@@ -126,6 +142,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.BTN_CANC);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.BTN_BUSCAR);
             this.Controls.Add(this.dg);
@@ -135,7 +152,6 @@
             this.Name = "MovimentacaoCaixa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MOVIMENTAÇÃO DE CAIXA";
-            this.Load += new System.EventHandler(this.MovimentacaoCaixa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IMG_CARTEIRA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
             this.ResumeLayout(false);
@@ -153,5 +169,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn FUNCIONÁRIO;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button BTN_CANC;
     }
 }

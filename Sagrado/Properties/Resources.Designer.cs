@@ -83,6 +83,16 @@ namespace Sagrado.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BTN_ADD_PRODUTO {
+            get {
+                object obj = ResourceManager.GetObject("BTN_ADD_PRODUTO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BTN_ADD_USER {
             get {
                 object obj = ResourceManager.GetObject("BTN_ADD_USER", resourceCulture);
@@ -163,6 +173,16 @@ namespace Sagrado.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BTN_CONSULTAR_PRODUTO {
+            get {
+                object obj = ResourceManager.GetObject("BTN_CONSULTAR_PRODUTO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BTN_CONSULTAR_USER {
             get {
                 object obj = ResourceManager.GetObject("BTN_CONSULTAR_USER", resourceCulture);
@@ -186,6 +206,16 @@ namespace Sagrado.Properties {
         internal static System.Drawing.Bitmap BTN_EDIT_CLIENTE {
             get {
                 object obj = ResourceManager.GetObject("BTN_EDIT_CLIENTE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_EDIT_PROD {
+            get {
+                object obj = ResourceManager.GetObject("BTN_EDIT_PROD", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,6 +263,16 @@ namespace Sagrado.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BTN_EXCLUIR_PROD {
+            get {
+                object obj = ResourceManager.GetObject("BTN_EXCLUIR_PROD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BTN_EXCLUIR_USER {
             get {
                 object obj = ResourceManager.GetObject("BTN_EXCLUIR_USER", resourceCulture);
@@ -246,6 +286,16 @@ namespace Sagrado.Properties {
         internal static System.Drawing.Bitmap BTN_EXCLUIR1 {
             get {
                 object obj = ResourceManager.GetObject("BTN_EXCLUIR1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_GERENCIAR_PRODUTO {
+            get {
+                object obj = ResourceManager.GetObject("BTN_GERENCIAR_PRODUTO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +326,16 @@ namespace Sagrado.Properties {
         internal static System.Drawing.Bitmap BTN_LOGIN {
             get {
                 object obj = ResourceManager.GetObject("BTN_LOGIN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_LOGIN2 {
+            get {
+                object obj = ResourceManager.GetObject("BTN_LOGIN2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

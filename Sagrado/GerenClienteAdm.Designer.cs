@@ -53,7 +53,6 @@
             this.label1.Size = new System.Drawing.Size(140, 16);
             this.label1.TabIndex = 69;
             this.label1.Text = "ADICIONAR CLIENTE";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -64,7 +63,6 @@
             this.label2.Size = new System.Drawing.Size(154, 17);
             this.label2.TabIndex = 67;
             this.label2.Text = "CONSULTAR CLIENTE";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label7
             // 
@@ -75,7 +73,6 @@
             this.label7.Size = new System.Drawing.Size(130, 16);
             this.label7.TabIndex = 65;
             this.label7.Text = "ALTERAR CLIENTE";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -86,7 +83,6 @@
             this.label8.Size = new System.Drawing.Size(127, 17);
             this.label8.TabIndex = 63;
             this.label8.Text = "EXCLUIR CLIENTE";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // menuStrip1
             // 
@@ -97,9 +93,8 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
-            this.menuStrip1.TabIndex = 71;
+            this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // pAINELToolStripMenuItem
             // 
@@ -130,7 +125,7 @@
             this.BTN_ADD_CLIENTE.Location = new System.Drawing.Point(162, 136);
             this.BTN_ADD_CLIENTE.Name = "BTN_ADD_CLIENTE";
             this.BTN_ADD_CLIENTE.Size = new System.Drawing.Size(200, 100);
-            this.BTN_ADD_CLIENTE.TabIndex = 70;
+            this.BTN_ADD_CLIENTE.TabIndex = 2;
             this.BTN_ADD_CLIENTE.UseVisualStyleBackColor = true;
             this.BTN_ADD_CLIENTE.Click += new System.EventHandler(this.BTN_ADD_CLIENTE_Click);
             // 
@@ -140,7 +135,7 @@
             this.BTN_CONSUL_CLIENTE.Location = new System.Drawing.Point(406, 312);
             this.BTN_CONSUL_CLIENTE.Name = "BTN_CONSUL_CLIENTE";
             this.BTN_CONSUL_CLIENTE.Size = new System.Drawing.Size(200, 100);
-            this.BTN_CONSUL_CLIENTE.TabIndex = 68;
+            this.BTN_CONSUL_CLIENTE.TabIndex = 5;
             this.BTN_CONSUL_CLIENTE.UseVisualStyleBackColor = true;
             this.BTN_CONSUL_CLIENTE.Click += new System.EventHandler(this.BTN_CONSUL_CLIENTE_Click);
             // 
@@ -152,7 +147,7 @@
             this.BTN_EDIT_CLIENTE.Location = new System.Drawing.Point(406, 136);
             this.BTN_EDIT_CLIENTE.Name = "BTN_EDIT_CLIENTE";
             this.BTN_EDIT_CLIENTE.Size = new System.Drawing.Size(200, 100);
-            this.BTN_EDIT_CLIENTE.TabIndex = 66;
+            this.BTN_EDIT_CLIENTE.TabIndex = 3;
             this.BTN_EDIT_CLIENTE.UseVisualStyleBackColor = true;
             this.BTN_EDIT_CLIENTE.Click += new System.EventHandler(this.BTN_EDIT_CLIENTE_Click);
             // 
@@ -162,7 +157,7 @@
             this.BTN_EXCLUIR_CLIENTE.Location = new System.Drawing.Point(162, 312);
             this.BTN_EXCLUIR_CLIENTE.Name = "BTN_EXCLUIR_CLIENTE";
             this.BTN_EXCLUIR_CLIENTE.Size = new System.Drawing.Size(200, 100);
-            this.BTN_EXCLUIR_CLIENTE.TabIndex = 64;
+            this.BTN_EXCLUIR_CLIENTE.TabIndex = 4;
             this.BTN_EXCLUIR_CLIENTE.UseVisualStyleBackColor = true;
             this.BTN_EXCLUIR_CLIENTE.Click += new System.EventHandler(this.BTN_EXCLUIR_CLIENTE_Click);
             // 

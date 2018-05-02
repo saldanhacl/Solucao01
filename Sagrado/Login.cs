@@ -86,11 +86,9 @@ namespace Sagrado
             
         }
 
-                
-
-        private void BTN_CONFIRMAR_Click(object sender, EventArgs e)
+    
+        private void BTN_CONF_Click(object sender, EventArgs e)
         {
-
             if (textBox1.Text.Length < 1 || textBox2.Text.Length < 1)
             {
                 MessageBox.Show("PREENCHA OS CAMPOS");
@@ -123,8 +121,6 @@ namespace Sagrado
                     MessageBox.Show("SENHA OU CPF INCORRETO");
                 }
             }
-
-
 
         }
     }

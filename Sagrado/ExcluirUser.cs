@@ -21,31 +21,41 @@ namespace Sagrado
             TXT_CPF.MaxLength = 11;
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void TXT_CPF_KeyPress(object sender, KeyPressEventArgs e)
         {
+            char keypress = e.KeyChar;
+            if (char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back))
+            {
 
+
+            }
+            else
+            {
+                MessageBox.Show("DIGITE APENAS NÚMEROS");
+                e.Handled = true;
+            }
         }
 
-        private void BTN_CONFIRMAR_Click(object sender, EventArgs e)
+        private void BTN_CONF_Click(object sender, EventArgs e)
         {
             DataBaseConnection bd = new DataBaseConnection();
 
             bd.openConnection();
 
-            if(TXT_CPF.TextLength > 0)
+            if (TXT_CPF.TextLength > 0)
             {
                 String nome = "", adm = "A", nivel = "";
 
                 String query = "SELECT * FROM USUARIO WHERE CPF_USER ='" + TXT_CPF.Text + "'";
                 String queryDelete = "DELETE FROM USUARIO WHERE CPF_USER ='" + TXT_CPF.Text + "'";
                 MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
-                
+
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
-                     nome = reader["NOME_USER"].ToString();
-                     nivel = reader["NIVEL_USER"].ToString();
+                    nome = reader["NOME_USER"].ToString();
+                    nivel = reader["NIVEL_USER"].ToString();
                 }
                 bd.closeConnection();
 
@@ -73,25 +83,14 @@ namespace Sagrado
                             break;
                     }
                 }
-                
+
             }
             bd.closeConnection();
-
         }
 
-        private void TXT_CPF_KeyPress(object sender, KeyPressEventArgs e)
+        private void BTN_CANC_Click(object sender, EventArgs e)
         {
-            char keypress = e.KeyChar;
-            if (char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back))
-            {
-
-
-            }
-            else
-            {
-                MessageBox.Show("DIGITE APENAS NÚMEROS");
-                e.Handled = true;
-            }
+            this.Close();
         }
     }
 }

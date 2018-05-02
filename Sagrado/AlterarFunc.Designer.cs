@@ -53,15 +53,12 @@
             this.TXT_NOME = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TXT_CPF = new System.Windows.Forms.TextBox();
-            this.BTN_CONFIRMAR = new System.Windows.Forms.PictureBox();
-            this.BTN_CANCELAR = new System.Windows.Forms.PictureBox();
-            this.BTN_SEARCH = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BTN_SEARCH_PROD = new System.Windows.Forms.Button();
+            this.BTN_CANC = new System.Windows.Forms.Button();
+            this.BTN_CONF = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_SEARCH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,7 +168,7 @@
             this.RD_MASC.Margin = new System.Windows.Forms.Padding(4);
             this.RD_MASC.Name = "RD_MASC";
             this.RD_MASC.Size = new System.Drawing.Size(104, 20);
-            this.RD_MASC.TabIndex = 6;
+            this.RD_MASC.TabIndex = 7;
             this.RD_MASC.Text = "MASCULINO";
             this.RD_MASC.UseVisualStyleBackColor = true;
             // 
@@ -185,7 +182,7 @@
             this.RD_FEM.Margin = new System.Windows.Forms.Padding(4);
             this.RD_FEM.Name = "RD_FEM";
             this.RD_FEM.Size = new System.Drawing.Size(90, 20);
-            this.RD_FEM.TabIndex = 7;
+            this.RD_FEM.TabIndex = 8;
             this.RD_FEM.TabStop = true;
             this.RD_FEM.Text = "FEMININO";
             this.RD_FEM.UseVisualStyleBackColor = true;
@@ -210,7 +207,7 @@
             this.RD_FUNC.Margin = new System.Windows.Forms.Padding(4);
             this.RD_FUNC.Name = "RD_FUNC";
             this.RD_FUNC.Size = new System.Drawing.Size(124, 21);
-            this.RD_FUNC.TabIndex = 2;
+            this.RD_FUNC.TabIndex = 3;
             this.RD_FUNC.TabStop = true;
             this.RD_FUNC.Text = "FUNCIONÁRIO";
             this.RD_FUNC.UseVisualStyleBackColor = true;
@@ -223,7 +220,7 @@
             this.RD_ADMIN.Margin = new System.Windows.Forms.Padding(4);
             this.RD_ADMIN.Name = "RD_ADMIN";
             this.RD_ADMIN.Size = new System.Drawing.Size(139, 20);
-            this.RD_ADMIN.TabIndex = 3;
+            this.RD_ADMIN.TabIndex = 4;
             this.RD_ADMIN.Text = "ADMINISTRADOR";
             this.RD_ADMIN.UseVisualStyleBackColor = true;
             // 
@@ -237,7 +234,7 @@
             this.TXT_SENHA.MaxLength = 8;
             this.TXT_SENHA.Name = "TXT_SENHA";
             this.TXT_SENHA.Size = new System.Drawing.Size(158, 24);
-            this.TXT_SENHA.TabIndex = 11;
+            this.TXT_SENHA.TabIndex = 12;
             this.TXT_SENHA.UseSystemPasswordChar = true;
             // 
             // TXT_TEL
@@ -250,7 +247,7 @@
             this.TXT_TEL.MaxLength = 10;
             this.TXT_TEL.Name = "TXT_TEL";
             this.TXT_TEL.Size = new System.Drawing.Size(241, 24);
-            this.TXT_TEL.TabIndex = 8;
+            this.TXT_TEL.TabIndex = 9;
             this.TXT_TEL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_TEL_KeyPress);
             // 
             // TXT_CEL
@@ -263,7 +260,7 @@
             this.TXT_CEL.MaxLength = 11;
             this.TXT_CEL.Name = "TXT_CEL";
             this.TXT_CEL.Size = new System.Drawing.Size(195, 24);
-            this.TXT_CEL.TabIndex = 9;
+            this.TXT_CEL.TabIndex = 10;
             this.TXT_CEL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CEL_KeyPress);
             // 
             // TXT_EMAIL
@@ -276,7 +273,7 @@
             this.TXT_EMAIL.MaxLength = 50;
             this.TXT_EMAIL.Name = "TXT_EMAIL";
             this.TXT_EMAIL.Size = new System.Drawing.Size(527, 24);
-            this.TXT_EMAIL.TabIndex = 10;
+            this.TXT_EMAIL.TabIndex = 11;
             // 
             // TXT_RG
             // 
@@ -288,7 +285,7 @@
             this.TXT_RG.MaxLength = 8;
             this.TXT_RG.Name = "TXT_RG";
             this.TXT_RG.Size = new System.Drawing.Size(186, 23);
-            this.TXT_RG.TabIndex = 5;
+            this.TXT_RG.TabIndex = 6;
             this.TXT_RG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_RG_KeyPress);
             // 
             // TXT_DATE
@@ -305,7 +302,7 @@
             this.TXT_DATE.MinDate = new System.DateTime(1918, 1, 1, 0, 0, 0, 0);
             this.TXT_DATE.Name = "TXT_DATE";
             this.TXT_DATE.Size = new System.Drawing.Size(158, 23);
-            this.TXT_DATE.TabIndex = 12;
+            this.TXT_DATE.TabIndex = 13;
             this.TXT_DATE.Value = new System.DateTime(2018, 3, 28, 0, 0, 0, 0);
             // 
             // label11
@@ -329,8 +326,7 @@
             this.TXT_NOME.MaxLength = 50;
             this.TXT_NOME.Name = "TXT_NOME";
             this.TXT_NOME.Size = new System.Drawing.Size(527, 23);
-            this.TXT_NOME.TabIndex = 4;
-            this.TXT_NOME.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_NOME_KeyPress);
+            this.TXT_NOME.TabIndex = 5;
             // 
             // label5
             // 
@@ -352,39 +348,7 @@
             this.TXT_CPF.Name = "TXT_CPF";
             this.TXT_CPF.Size = new System.Drawing.Size(200, 27);
             this.TXT_CPF.TabIndex = 1;
-            this.TXT_CPF.TextChanged += new System.EventHandler(this.TXT_CPF_TextChanged);
             this.TXT_CPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CPF_KeyPress);
-            // 
-            // BTN_CONFIRMAR
-            // 
-            this.BTN_CONFIRMAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
-            this.BTN_CONFIRMAR.Location = new System.Drawing.Point(687, 481);
-            this.BTN_CONFIRMAR.Name = "BTN_CONFIRMAR";
-            this.BTN_CONFIRMAR.Size = new System.Drawing.Size(50, 50);
-            this.BTN_CONFIRMAR.TabIndex = 99;
-            this.BTN_CONFIRMAR.TabStop = false;
-            this.BTN_CONFIRMAR.Click += new System.EventHandler(this.BTN_CONFIRMAR_Click);
-            // 
-            // BTN_CANCELAR
-            // 
-            this.BTN_CANCELAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANCELAR.Location = new System.Drawing.Point(619, 481);
-            this.BTN_CANCELAR.Name = "BTN_CANCELAR";
-            this.BTN_CANCELAR.Size = new System.Drawing.Size(50, 50);
-            this.BTN_CANCELAR.TabIndex = 98;
-            this.BTN_CANCELAR.TabStop = false;
-            this.BTN_CANCELAR.Click += new System.EventHandler(this.BTN_CANCELAR_Click);
-            // 
-            // BTN_SEARCH
-            // 
-            this.BTN_SEARCH.BackgroundImage = global::Sagrado.Properties.Resources.search;
-            this.BTN_SEARCH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BTN_SEARCH.Location = new System.Drawing.Point(501, 152);
-            this.BTN_SEARCH.Name = "BTN_SEARCH";
-            this.BTN_SEARCH.Size = new System.Drawing.Size(30, 30);
-            this.BTN_SEARCH.TabIndex = 79;
-            this.BTN_SEARCH.TabStop = false;
-            this.BTN_SEARCH.Click += new System.EventHandler(this.BTN_SEARCH_Click);
             // 
             // pictureBox1
             // 
@@ -395,14 +359,54 @@
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;
             // 
+            // BTN_SEARCH_PROD
+            // 
+            this.BTN_SEARCH_PROD.BackgroundImage = global::Sagrado.Properties.Resources.search;
+            this.BTN_SEARCH_PROD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTN_SEARCH_PROD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_SEARCH_PROD.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_SEARCH_PROD.Location = new System.Drawing.Point(505, 152);
+            this.BTN_SEARCH_PROD.Name = "BTN_SEARCH_PROD";
+            this.BTN_SEARCH_PROD.Size = new System.Drawing.Size(30, 30);
+            this.BTN_SEARCH_PROD.TabIndex = 2;
+            this.BTN_SEARCH_PROD.UseVisualStyleBackColor = true;
+            this.BTN_SEARCH_PROD.Click += new System.EventHandler(this.BTN_SEARCH_PROD_Click);
+            // 
+            // BTN_CANC
+            // 
+            this.BTN_CANC.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
+            this.BTN_CANC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_CANC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_CANC.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_CANC.Location = new System.Drawing.Point(612, 478);
+            this.BTN_CANC.Name = "BTN_CANC";
+            this.BTN_CANC.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CANC.TabIndex = 14;
+            this.BTN_CANC.UseVisualStyleBackColor = true;
+            this.BTN_CANC.Click += new System.EventHandler(this.BTN_CANC_Click);
+            // 
+            // BTN_CONF
+            // 
+            this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
+            this.BTN_CONF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_CONF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_CONF.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_CONF.Location = new System.Drawing.Point(685, 478);
+            this.BTN_CONF.Name = "BTN_CONF";
+            this.BTN_CONF.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CONF.TabIndex = 15;
+            this.BTN_CONF.UseVisualStyleBackColor = true;
+            this.BTN_CONF.Click += new System.EventHandler(this.BTN_CONF_Click);
+            // 
             // AlterarFunc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.BTN_CONFIRMAR);
-            this.Controls.Add(this.BTN_CANCELAR);
+            this.Controls.Add(this.BTN_SEARCH_PROD);
+            this.Controls.Add(this.BTN_CANC);
+            this.Controls.Add(this.BTN_CONF);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
@@ -421,7 +425,6 @@
             this.Controls.Add(this.TXT_DATE);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.TXT_NOME);
-            this.Controls.Add(this.BTN_SEARCH);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TXT_CPF);
             this.Controls.Add(this.pictureBox1);
@@ -433,9 +436,6 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_SEARCH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -443,8 +443,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox BTN_CANCELAR;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
@@ -467,10 +465,11 @@
         private System.Windows.Forms.DateTimePicker TXT_DATE;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox TXT_NOME;
-        private System.Windows.Forms.PictureBox BTN_SEARCH;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TXT_CPF;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox BTN_CONFIRMAR;
+        private System.Windows.Forms.Button BTN_SEARCH_PROD;
+        private System.Windows.Forms.Button BTN_CANC;
+        private System.Windows.Forms.Button BTN_CONF;
     }
 }

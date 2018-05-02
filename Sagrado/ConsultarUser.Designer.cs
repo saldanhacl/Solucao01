@@ -53,13 +53,11 @@
             this.TXT_DATE = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.TXT_NOME = new System.Windows.Forms.TextBox();
-            this.BTN_CANCELAR = new System.Windows.Forms.PictureBox();
-            this.BTN_SEARCH = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BTN_SEARCH2 = new System.Windows.Forms.Button();
+            this.BTN_CANC = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_SEARCH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -354,27 +352,6 @@
             this.TXT_NOME.Size = new System.Drawing.Size(527, 23);
             this.TXT_NOME.TabIndex = 4;
             // 
-            // BTN_CANCELAR
-            // 
-            this.BTN_CANCELAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANCELAR.Location = new System.Drawing.Point(683, 477);
-            this.BTN_CANCELAR.Name = "BTN_CANCELAR";
-            this.BTN_CANCELAR.Size = new System.Drawing.Size(50, 50);
-            this.BTN_CANCELAR.TabIndex = 75;
-            this.BTN_CANCELAR.TabStop = false;
-            this.BTN_CANCELAR.Click += new System.EventHandler(this.BTN_CANCELAR_Click);
-            // 
-            // BTN_SEARCH
-            // 
-            this.BTN_SEARCH.BackgroundImage = global::Sagrado.Properties.Resources.search;
-            this.BTN_SEARCH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BTN_SEARCH.Location = new System.Drawing.Point(498, 149);
-            this.BTN_SEARCH.Name = "BTN_SEARCH";
-            this.BTN_SEARCH.Size = new System.Drawing.Size(30, 30);
-            this.BTN_SEARCH.TabIndex = 51;
-            this.BTN_SEARCH.TabStop = false;
-            this.BTN_SEARCH.Click += new System.EventHandler(this.BTN_SEARCH_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CONSULTAR_USER2;
@@ -384,13 +361,41 @@
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
+            // BTN_SEARCH2
+            // 
+            this.BTN_SEARCH2.BackColor = System.Drawing.Color.White;
+            this.BTN_SEARCH2.BackgroundImage = global::Sagrado.Properties.Resources.search;
+            this.BTN_SEARCH2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_SEARCH2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_SEARCH2.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_SEARCH2.Location = new System.Drawing.Point(504, 149);
+            this.BTN_SEARCH2.Name = "BTN_SEARCH2";
+            this.BTN_SEARCH2.Size = new System.Drawing.Size(30, 30);
+            this.BTN_SEARCH2.TabIndex = 76;
+            this.BTN_SEARCH2.UseVisualStyleBackColor = false;
+            this.BTN_SEARCH2.Click += new System.EventHandler(this.BTN_SEARCH2_Click);
+            // 
+            // BTN_CANC
+            // 
+            this.BTN_CANC.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
+            this.BTN_CANC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_CANC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_CANC.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_CANC.Location = new System.Drawing.Point(682, 471);
+            this.BTN_CANC.Name = "BTN_CANC";
+            this.BTN_CANC.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CANC.TabIndex = 77;
+            this.BTN_CANC.UseVisualStyleBackColor = true;
+            this.BTN_CANC.Click += new System.EventHandler(this.BTN_CANC_Click);
+            // 
             // ConsultarUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.BTN_CANCELAR);
+            this.Controls.Add(this.BTN_CANC);
+            this.Controls.Add(this.BTN_SEARCH2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
@@ -409,7 +414,6 @@
             this.Controls.Add(this.TXT_DATE);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.TXT_NOME);
-            this.Controls.Add(this.BTN_SEARCH);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TXT_CPF);
             this.Controls.Add(this.pictureBox1);
@@ -421,8 +425,6 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_SEARCH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -434,8 +436,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TXT_CPF;
-        private System.Windows.Forms.PictureBox BTN_SEARCH;
-        private System.Windows.Forms.PictureBox BTN_CANCELAR;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
@@ -458,5 +458,7 @@
         private System.Windows.Forms.DateTimePicker TXT_DATE;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox TXT_NOME;
+        private System.Windows.Forms.Button BTN_SEARCH2;
+        private System.Windows.Forms.Button BTN_CANC;
     }
 }

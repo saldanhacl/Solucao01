@@ -45,6 +45,8 @@
             this.BTN_RETIRAR_DINHEIRO = new System.Windows.Forms.Button();
             this.BTN_GERENCIAR_CLIENTE = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.BTN_GEREN_PROD = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +60,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
-            this.menuStrip1.TabIndex = 25;
+            this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // pAINELToolStripMenuItem
@@ -140,7 +142,7 @@
             this.BTN_CONSULTA_MOVI.Location = new System.Drawing.Point(535, 107);
             this.BTN_CONSULTA_MOVI.Name = "BTN_CONSULTA_MOVI";
             this.BTN_CONSULTA_MOVI.Size = new System.Drawing.Size(200, 100);
-            this.BTN_CONSULTA_MOVI.TabIndex = 3;
+            this.BTN_CONSULTA_MOVI.TabIndex = 4;
             this.BTN_CONSULTA_MOVI.UseVisualStyleBackColor = true;
             this.BTN_CONSULTA_MOVI.Click += new System.EventHandler(this.BTN_CONSULTA_MOVI_Click);
             // 
@@ -152,7 +154,7 @@
             this.BTN_REGISTRAR_ENTRADA.Location = new System.Drawing.Point(48, 107);
             this.BTN_REGISTRAR_ENTRADA.Name = "BTN_REGISTRAR_ENTRADA";
             this.BTN_REGISTRAR_ENTRADA.Size = new System.Drawing.Size(200, 100);
-            this.BTN_REGISTRAR_ENTRADA.TabIndex = 1;
+            this.BTN_REGISTRAR_ENTRADA.TabIndex = 2;
             this.BTN_REGISTRAR_ENTRADA.UseVisualStyleBackColor = true;
             this.BTN_REGISTRAR_ENTRADA.Click += new System.EventHandler(this.BTN_REGISTRAR_ENTRADA_Click);
             // 
@@ -162,7 +164,7 @@
             this.BTN_GERENCIAR_USER.Location = new System.Drawing.Point(292, 283);
             this.BTN_GERENCIAR_USER.Name = "BTN_GERENCIAR_USER";
             this.BTN_GERENCIAR_USER.Size = new System.Drawing.Size(200, 100);
-            this.BTN_GERENCIAR_USER.TabIndex = 5;
+            this.BTN_GERENCIAR_USER.TabIndex = 6;
             this.BTN_GERENCIAR_USER.UseVisualStyleBackColor = true;
             this.BTN_GERENCIAR_USER.Click += new System.EventHandler(this.BTN_GERENCIAR_USER_Click);
             // 
@@ -174,7 +176,7 @@
             this.BTN_RETIRAR_DINHEIRO.Location = new System.Drawing.Point(292, 107);
             this.BTN_RETIRAR_DINHEIRO.Name = "BTN_RETIRAR_DINHEIRO";
             this.BTN_RETIRAR_DINHEIRO.Size = new System.Drawing.Size(200, 100);
-            this.BTN_RETIRAR_DINHEIRO.TabIndex = 2;
+            this.BTN_RETIRAR_DINHEIRO.TabIndex = 3;
             this.BTN_RETIRAR_DINHEIRO.UseVisualStyleBackColor = true;
             this.BTN_RETIRAR_DINHEIRO.Click += new System.EventHandler(this.BTN_RETIRAR_DINHEIRO_Click);
             // 
@@ -184,9 +186,29 @@
             this.BTN_GERENCIAR_CLIENTE.Location = new System.Drawing.Point(48, 283);
             this.BTN_GERENCIAR_CLIENTE.Name = "BTN_GERENCIAR_CLIENTE";
             this.BTN_GERENCIAR_CLIENTE.Size = new System.Drawing.Size(200, 100);
-            this.BTN_GERENCIAR_CLIENTE.TabIndex = 4;
+            this.BTN_GERENCIAR_CLIENTE.TabIndex = 5;
             this.BTN_GERENCIAR_CLIENTE.UseVisualStyleBackColor = true;
             this.BTN_GERENCIAR_CLIENTE.Click += new System.EventHandler(this.BTN_GERENCIAR_CLIENTE_Click);
+            // 
+            // BTN_GEREN_PROD
+            // 
+            this.BTN_GEREN_PROD.Image = global::Sagrado.Properties.Resources.BTN_GERENCIAR_PRODUTO;
+            this.BTN_GEREN_PROD.Location = new System.Drawing.Point(535, 283);
+            this.BTN_GEREN_PROD.Name = "BTN_GEREN_PROD";
+            this.BTN_GEREN_PROD.Size = new System.Drawing.Size(200, 100);
+            this.BTN_GEREN_PROD.TabIndex = 7;
+            this.BTN_GEREN_PROD.UseVisualStyleBackColor = true;
+            this.BTN_GEREN_PROD.Click += new System.EventHandler(this.BTN_GEREN_PROD_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(553, 386);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(162, 17);
+            this.label4.TabIndex = 55;
+            this.label4.Text = "GERENCIAR PRODUTO";
             // 
             // MenuAdm
             // 
@@ -194,6 +216,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.BTN_GEREN_PROD);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.BTN_CONSULTA_MOVI);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BTN_REGISTRAR_ENTRADA);
@@ -212,7 +236,6 @@
             this.Name = "MenuAdm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PAINEL ADMINISTRADOR";
-            this.Load += new System.EventHandler(this.MenuAdm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
@@ -237,5 +260,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BTN_CONSULTA_MOVI;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button BTN_GEREN_PROD;
+        private System.Windows.Forms.Label label4;
     }
 }
