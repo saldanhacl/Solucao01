@@ -93,7 +93,7 @@ namespace Sagrado
             String cel = TXT_CEL_CLIENTE.Text;
 
 
-            String query = "UPDATE CLIENTE SET " +
+            String query = "UPDATE caixa SET " +
                 "NOME_CLIENTE = '" + nome +
                 "', CPF_CLIENTE = '" + cpfAnterior +
                 "', TELEFONE_CLIENTE = '" + tel +

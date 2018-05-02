@@ -368,6 +368,7 @@
     <None Include="Resources\BTN_ADD_PRODUTO.png" />
     <None Include="Resources\BTN_GERENCIAR_PRODUTO.png" />
     <None Include="Resources\BTN_LOGIN2.png" />
+    <None Include="Resources\BTN_EDIT.png" />
     <Content Include="TelaPesquisaVendas.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

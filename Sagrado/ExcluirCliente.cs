@@ -67,7 +67,7 @@ public partial class ExcluirCliente : Form
 
                 if (!encontrouCliente)
                 {
-                    System.Windows.Forms.MessageBox.Show("CLIENTE NÃO ENCONTRADO");
+                    MessageBox.Show("CLIENTE NÃO ENCONTRADO");
                     encontrouCliente = false;
                 }
                 else
@@ -75,7 +75,7 @@ public partial class ExcluirCliente : Form
 
                     if (nome.Length < 0)
                     {
-                        System.Windows.Forms.MessageBox.Show("CLIENTE NÃO EXCLUÍDO");
+                        MessageBox.Show("CLIENTE NÃO EXCLUÍDO");
                     }
                     else
                     {
