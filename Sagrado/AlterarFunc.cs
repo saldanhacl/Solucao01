@@ -104,27 +104,34 @@ namespace Sagrado
                 MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
 
                 MySqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                if (!reader.HasRows)
                 {
-                    TXT_NOME.Text = reader["NOME_USER"].ToString();
-                    TXT_TEL.Text = reader["TEL_USER"].ToString();
-                    TXT_CEL.Text = reader["CEL_USER"].ToString();
-                    TXT_EMAIL.Text = reader["EMAIL_USER"].ToString();
-                    TXT_RG.Text = reader["RG_USER"].ToString();
-                    TXT_SENHA.Text = reader["SENHA_USER"].ToString();
-
-                    cpfAnterior = TXT_CPF.Text;
-
-                    String nivel = reader["NIVEL_USER"].ToString();
-                    String sexo = reader["SEXO_USER"].ToString();
-
-                    if (nivel == "A") RD_ADMIN.Checked = true;
-                    else if (nivel == "B") RD_FUNC.Checked = true;
-
-                    if (sexo == "f") RD_FEM.Checked = true;
-                    else if (sexo == "m") RD_MASC.Checked = true;
+                    MessageBox.Show("Usúario não existe.");
                 }
+                else
+                {
+                    while (reader.Read())
+                    {
+                        TXT_NOME.Text = reader["NOME_USER"].ToString();
+                        TXT_TEL.Text = reader["TEL_USER"].ToString();
+                        TXT_CEL.Text = reader["CEL_USER"].ToString();
+                        TXT_EMAIL.Text = reader["EMAIL_USER"].ToString();
+                        TXT_RG.Text = reader["RG_USER"].ToString();
+                        TXT_SENHA.Text = reader["SENHA_USER"].ToString();
+
+                        cpfAnterior = TXT_CPF.Text;
+
+                        String nivel = reader["NIVEL_USER"].ToString();
+                        String sexo = reader["SEXO_USER"].ToString();
+
+                        if (nivel == "A") RD_ADMIN.Checked = true;
+                        else if (nivel == "B") RD_FUNC.Checked = true;
+
+                        if (sexo == "f") RD_FEM.Checked = true;
+                        else if (sexo == "m") RD_MASC.Checked = true;
+                    }
+                }
+                
 
 
             }
