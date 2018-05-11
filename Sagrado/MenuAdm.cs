@@ -16,14 +16,7 @@ namespace Sagrado
         {
             InitializeComponent();
             this.CenterToScreen();
-            //btnComanda.Select();
         }
-
-        private void MenuAdm_Load(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void tROCARUSUÁRIOToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -37,6 +30,7 @@ namespace Sagrado
 
         private void BTN_GERENCIAR_CLIENTE_Click(object sender, EventArgs e)
         {
+         
             new GerenClienteAdm().Show();
             this.Close();
         }
@@ -65,6 +59,12 @@ namespace Sagrado
         private void BTN_CONSULTA_MOVI_Click(object sender, EventArgs e)
         {
             new MovimentacaoCaixa().Show();
+        }
+
+        private void BTN_GEREN_PROD_Click(object sender, EventArgs e)
+        {
+            new GerenProduto().Show();
+            this.Close();
         }
     }
 }

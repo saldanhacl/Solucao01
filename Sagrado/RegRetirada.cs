@@ -106,6 +106,32 @@ namespace Sagrado
             }
         }
 
+
+
+        private String getLastLogin()
+        {
+            String cpf = "";
+
+
+            DataBaseConnection bd = new DataBaseConnection();
+            bd.openConnection();
+
+            String query = "SELECT CPF_USER_LOG FROM controle_log ORDER BY NRSEQLOGIN_LOG DESC LIMIT 1";
+
+            MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+
+            while (reader.Read())
+            {
+                cpf = reader["CPF_USER_LOG"].ToString();
+            }
+            bd.closeConnection();
+
+            return cpf;
+        }
+
         private void saveRegister(float saldoAnt)
         {
 
@@ -126,18 +152,19 @@ namespace Sagrado
 
                     float precoFloat = float.Parse(preco);
                     float saldoAtual;
+                    String cpf = "";
 
                     if (TXT_VALOR_RETIRADA.Text.Length != 0 && saldoAnt >= precoFloat)
                     {
-
+                        cpf = getLastLogin();
                         saldoAtual = saldoAnt - precoFloat;
 
                         //MessageBox.Show("Saldo atual: " + saldoAtual.ToString());
 
 
                         String query = "INSERT INTO CAIXA " +
-                        "(TYPE_ENTRADA_CAIXA, DATE_MODIFY_CAIXA, VALOR_ENTRADA_CAIXA, VALOR_ATUAL_CAIXA)" +
-                        " VALUES ('" + operacao + "', now()," + precoFloat + "," + saldoAtual + ")";
+                        "(TYPE_ENTRADA_CAIXA, DATE_MODIFY_CAIXA, VALOR_ENTRADA_CAIXA, VALOR_ATUAL_CAIXA, CPF_FUNCIONARIO)" +
+                        " VALUES ('" + operacao + "', now()," + precoFloat + "," + saldoAtual + "," + cpf + ")";
 
                         //MessageBox.Show(query);
 

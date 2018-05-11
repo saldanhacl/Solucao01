@@ -55,6 +55,12 @@
     <Compile Include="AlterarCliente.Designer.cs">
       <DependentUpon>AlterarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlterarProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlterarProd.Designer.cs">
+      <DependentUpon>AlterarProd.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,17 +73,41 @@
     <Compile Include="CadastrarFunc.Designer.cs">
       <DependentUpon>CadastrarFunc.cs</DependentUpon>
     </Compile>
+    <Compile Include="CadastrarProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarProd.Designer.cs">
+      <DependentUpon>CadastrarProd.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConsultarCliente.Designer.cs">
       <DependentUpon>ConsultarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarProd.Designer.cs">
+      <DependentUpon>ConsultarProd.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExcluirCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExcluirCliente.Designer.cs">
       <DependentUpon>ExcluirCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcluirProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcluirProd.Designer.cs">
+      <DependentUpon>ExcluirProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerenProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerenProduto.Designer.cs">
+      <DependentUpon>GerenProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaDeConsultaCliente.cs">
       <SubType>Form</SubType>
@@ -175,17 +205,32 @@
     <EmbeddedResource Include="AlterarCliente.resx">
       <DependentUpon>AlterarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AlterarProd.resx">
+      <DependentUpon>AlterarProd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CadastrarCliente.resx">
       <DependentUpon>CadastrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastrarFunc.resx">
       <DependentUpon>CadastrarFunc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarProd.resx">
+      <DependentUpon>CadastrarProd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarCliente.resx">
       <DependentUpon>ConsultarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarProd.resx">
+      <DependentUpon>ConsultarProd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultarUser.resx">
       <DependentUpon>ConsultarUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcluirProd.resx">
+      <DependentUpon>ExcluirProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerenProduto.resx">
+      <DependentUpon>GerenProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovimentacaoCaixa.resx">
       <DependentUpon>MovimentacaoCaixa.cs</DependentUpon>
@@ -315,6 +360,15 @@
     <None Include="Resources\BTN_EDIT_USER2.png" />
     <None Include="Resources\BTN_CONSULTAR_USER2.png" />
     <None Include="Resources\BTN_EDIT_USER22.png" />
+    <None Include="Resources\BTN_PLUS.png" />
+    <None Include="Resources\BTN_PLUS2.png" />
+    <None Include="Resources\BTN_CONSULTAR_PRODUTO.png" />
+    <None Include="Resources\BTN_EDIT_PROD.png" />
+    <None Include="Resources\BTN_EXCLUIR_PROD.png" />
+    <None Include="Resources\BTN_ADD_PRODUTO.png" />
+    <None Include="Resources\BTN_GERENCIAR_PRODUTO.png" />
+    <None Include="Resources\BTN_LOGIN2.png" />
+    <None Include="Resources\BTN_EDIT.png" />
     <Content Include="TelaPesquisaVendas.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

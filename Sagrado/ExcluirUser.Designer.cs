@@ -29,23 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcluirUser));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TXT_CPF = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.BTN_CONFIRMAR = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BTN_CANC = new System.Windows.Forms.Button();
+            this.BTN_CONF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EXCLUIR_USER;
-            this.pictureBox1.Location = new System.Drawing.Point(288, 104);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 100);
-            this.pictureBox1.TabIndex = 48;
-            this.pictureBox1.TabStop = false;
             // 
             // TXT_CPF
             // 
@@ -55,8 +45,7 @@
             this.TXT_CPF.MaxLength = 11;
             this.TXT_CPF.Name = "TXT_CPF";
             this.TXT_CPF.Size = new System.Drawing.Size(195, 24);
-            this.TXT_CPF.TabIndex = 49;
-            this.TXT_CPF.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.TXT_CPF.TabIndex = 1;
             this.TXT_CPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CPF_KeyPress);
             // 
             // label5
@@ -70,16 +59,41 @@
             this.label5.TabIndex = 50;
             this.label5.Text = "CPF:";
             // 
-            // BTN_CONFIRMAR
+            // pictureBox1
             // 
-            this.BTN_CONFIRMAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
-            this.BTN_CONFIRMAR.Location = new System.Drawing.Point(437, 309);
-            this.BTN_CONFIRMAR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BTN_CONFIRMAR.Name = "BTN_CONFIRMAR";
-            this.BTN_CONFIRMAR.Size = new System.Drawing.Size(51, 50);
-            this.BTN_CONFIRMAR.TabIndex = 51;
-            this.BTN_CONFIRMAR.TabStop = false;
-            this.BTN_CONFIRMAR.Click += new System.EventHandler(this.BTN_CONFIRMAR_Click);
+            this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EXCLUIR;
+            this.pictureBox1.Location = new System.Drawing.Point(288, 104);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 100);
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
+            // BTN_CANC
+            // 
+            this.BTN_CANC.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
+            this.BTN_CANC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_CANC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_CANC.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_CANC.Location = new System.Drawing.Point(364, 299);
+            this.BTN_CANC.Name = "BTN_CANC";
+            this.BTN_CANC.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CANC.TabIndex = 2;
+            this.BTN_CANC.UseVisualStyleBackColor = true;
+            this.BTN_CANC.Click += new System.EventHandler(this.BTN_CANC_Click);
+            // 
+            // BTN_CONF
+            // 
+            this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
+            this.BTN_CONF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_CONF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_CONF.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_CONF.Location = new System.Drawing.Point(437, 299);
+            this.BTN_CONF.Name = "BTN_CONF";
+            this.BTN_CONF.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CONF.TabIndex = 3;
+            this.BTN_CONF.UseVisualStyleBackColor = true;
+            this.BTN_CONF.Click += new System.EventHandler(this.BTN_CONF_Click);
             // 
             // ExcluirUser
             // 
@@ -87,7 +101,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.BTN_CONFIRMAR);
+            this.Controls.Add(this.BTN_CANC);
+            this.Controls.Add(this.BTN_CONF);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TXT_CPF);
             this.Controls.Add(this.pictureBox1);
@@ -96,7 +111,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EXCLUIR USUÁRIO";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,6 +121,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox TXT_CPF;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox BTN_CONFIRMAR;
+        private System.Windows.Forms.Button BTN_CANC;
+        private System.Windows.Forms.Button BTN_CONF;
     }
 }

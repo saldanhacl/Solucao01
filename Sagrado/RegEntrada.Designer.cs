@@ -37,10 +37,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TXT_SALDOATUAL = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.LISTA_CLIENTES = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BTN_CANCELAR = new System.Windows.Forms.PictureBox();
             this.BTN_CONFIRMAR = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,7 +54,7 @@
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Location = new System.Drawing.Point(113, 228);
+            this.panel1.Location = new System.Drawing.Point(113, 218);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(347, 49);
             this.panel1.TabIndex = 0;
@@ -66,6 +69,7 @@
             this.radioButton3.TabIndex = 2;
             this.radioButton3.Text = "FUNDO DE CAIXA";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -77,6 +81,7 @@
             this.radioButton2.TabIndex = 1;
             this.radioButton2.Text = "FIADO";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -90,12 +95,13 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "VENDA";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // boxPrice
             // 
             this.boxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.boxPrice.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.boxPrice.Location = new System.Drawing.Point(275, 285);
+            this.boxPrice.Location = new System.Drawing.Point(275, 328);
             this.boxPrice.MaxLength = 3;
             this.boxPrice.Name = "boxPrice";
             this.boxPrice.Size = new System.Drawing.Size(185, 23);
@@ -106,7 +112,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(110, 291);
+            this.label1.Location = new System.Drawing.Point(110, 334);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 17);
             this.label1.TabIndex = 3;
@@ -117,7 +123,7 @@
             this.TXT_SALDOATUAL.BackColor = System.Drawing.Color.White;
             this.TXT_SALDOATUAL.Cursor = System.Windows.Forms.Cursors.Default;
             this.TXT_SALDOATUAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.TXT_SALDOATUAL.Location = new System.Drawing.Point(314, 170);
+            this.TXT_SALDOATUAL.Location = new System.Drawing.Point(321, 170);
             this.TXT_SALDOATUAL.Name = "TXT_SALDOATUAL";
             this.TXT_SALDOATUAL.ReadOnly = true;
             this.TXT_SALDOATUAL.Size = new System.Drawing.Size(139, 35);
@@ -133,10 +139,33 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "SALDO (R$):";
             // 
+            // LISTA_CLIENTES
+            // 
+            this.LISTA_CLIENTES.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
+            this.LISTA_CLIENTES.Enabled = false;
+            this.LISTA_CLIENTES.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.LISTA_CLIENTES.ItemHeight = 16;
+            this.LISTA_CLIENTES.Location = new System.Drawing.Point(165, 281);
+            this.LISTA_CLIENTES.Name = "LISTA_CLIENTES";
+            this.LISTA_CLIENTES.Size = new System.Drawing.Size(295, 24);
+            this.LISTA_CLIENTES.TabIndex = 19;
+            this.LISTA_CLIENTES.Click += new System.EventHandler(this.LISTA_CLIENTES_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Sagrado.Properties.Resources.BTN_PLUS2;
+            this.pictureBox2.InitialImage = global::Sagrado.Properties.Resources.BTN_PLUS2;
+            this.pictureBox2.Location = new System.Drawing.Point(113, 275);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            // 
             // BTN_CANCELAR
             // 
             this.BTN_CANCELAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANCELAR.Location = new System.Drawing.Point(340, 340);
+            this.BTN_CANCELAR.Location = new System.Drawing.Point(340, 374);
             this.BTN_CANCELAR.Name = "BTN_CANCELAR";
             this.BTN_CANCELAR.Size = new System.Drawing.Size(50, 50);
             this.BTN_CANCELAR.TabIndex = 8;
@@ -146,7 +175,7 @@
             // BTN_CONFIRMAR
             // 
             this.BTN_CONFIRMAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
-            this.BTN_CONFIRMAR.Location = new System.Drawing.Point(410, 339);
+            this.BTN_CONFIRMAR.Location = new System.Drawing.Point(410, 373);
             this.BTN_CONFIRMAR.Name = "BTN_CONFIRMAR";
             this.BTN_CONFIRMAR.Size = new System.Drawing.Size(50, 50);
             this.BTN_CONFIRMAR.TabIndex = 7;
@@ -168,6 +197,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.LISTA_CLIENTES);
             this.Controls.Add(this.TXT_SALDOATUAL);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BTN_CANCELAR);
@@ -180,9 +211,9 @@
             this.Name = "RegEntrada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "REGISTRAR ENTRADA";
-            this.Load += new System.EventHandler(this.RegEntrada_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -204,5 +235,7 @@
         private System.Windows.Forms.PictureBox BTN_CANCELAR;
         private System.Windows.Forms.TextBox TXT_SALDOATUAL;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox LISTA_CLIENTES;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

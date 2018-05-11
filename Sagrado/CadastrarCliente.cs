@@ -28,62 +28,6 @@ namespace Sagrado
             textBox2.MaxLength = 11;
         }
 
-        private void BTN_CANCELAR_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void BTN_CONFIRMAR_Click(object sender, EventArgs e)
-        {
-
-
-            DataBaseConnection bd = new DataBaseConnection();
-
-            bd.openConnection();
-
-
-
-            String nome = textBox1.Text;
-            String cpf = textBox4.Text;
-            String tel = textBox6.Text;
-            String cel = textBox2.Text;
-            float saldo = 1000;
-
-
-            if ((Validador.campoPreenchido(cpf) &&
-                Validador.campoPreenchido(nome) &&
-                Validador.campoPreenchido(tel))  ||
-                (Validador.campoPreenchido(cpf) &&
-                Validador.campoPreenchido(nome) &&
-                Validador.campoPreenchido(cel)))
-            
-
-                
-                {
-                    String query = "INSERT INTO CLIENTE " +
-                    "(CPF_CLIENTE, NOME_CLIENTE, TELEFONE_CLIENTE, CEL_CLIENTE, SALDO_ATUAL_CLIENTE)" +
-                    " VALUES ('" + cpf + "','" + nome + "','" + tel + "','" + cel + "','" + saldo+"')";
-
-                    //MessageBox.Show(query);
-
-                    MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
-                    cmd.ExecuteNonQuery();
-                    System.Windows.Forms.MessageBox.Show("Cliente CADASTRADO COM SUCESSO");
-
-                    this.Close();
-                }
-            
-            else
-            {
-                MessageBox.Show("PREENCHA OS CAMPOS OBRIGATÓRIOS");
-            }
-
-
-            bd.closeConnection();
-
-        }
-
-
         private void textBox4_KeyPressed(object sender, KeyPressEventArgs e)
         {
             char keypress = e.KeyChar;
@@ -129,9 +73,57 @@ namespace Sagrado
             }
         }
 
-        private void CadastrarCliente_Load(object sender, EventArgs e)
+        private void BTN_CONF_Click(object sender, EventArgs e)
         {
 
+            DataBaseConnection bd = new DataBaseConnection();
+
+            bd.openConnection();
+
+
+
+            String nome = textBox1.Text;
+            String cpf = textBox4.Text;
+            String tel = textBox6.Text;
+            String cel = textBox2.Text;
+            float saldo = 1000;
+
+
+            if ((Validador.campoPreenchido(cpf) &&
+                Validador.campoPreenchido(nome) &&
+                Validador.campoPreenchido(tel)) ||
+                (Validador.campoPreenchido(cpf) &&
+                Validador.campoPreenchido(nome) &&
+                Validador.campoPreenchido(cel)))
+
+
+
+            {
+                String query = "INSERT INTO CLIENTE " +
+                "(CPF_CLIENTE, NOME_CLIENTE, TELEFONE_CLIENTE, CEL_CLIENTE, SALDO_ATUAL_CLIENTE)" +
+                " VALUES ('" + cpf + "','" + nome + "','" + tel + "','" + cel + "','" + saldo + "')";
+
+                //MessageBox.Show(query);
+
+                MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+                cmd.ExecuteNonQuery();
+                System.Windows.Forms.MessageBox.Show("Cliente CADASTRADO COM SUCESSO");
+
+                this.Close();
+            }
+
+            else
+            {
+                MessageBox.Show("PREENCHA OS CAMPOS OBRIGATÓRIOS");
+            }
+
+
+            bd.closeConnection();
+        }
+
+        private void BTN_CANC_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
