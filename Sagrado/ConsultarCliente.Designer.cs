@@ -195,11 +195,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label9.Location = new System.Drawing.Point(313, 335);
+            this.label9.Location = new System.Drawing.Point(341, 335);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(188, 20);
+            this.label9.Size = new System.Drawing.Size(160, 20);
             this.label9.TabIndex = 31;
-            this.label9.Text = "SALDO DEVEDOR (R$):";
+            this.label9.Text = "DÍVIDA ATUAL (R$):";
             // 
             // TXT_DIVIDA_CLIENTE
             // 

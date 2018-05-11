@@ -31,7 +31,7 @@ namespace Sagrado
         private void BTN_GERENCIAR_CLIENTE_Click(object sender, EventArgs e)
         {
          
-            new GerenClienteAdm().Show();
+            new GraficoVenda_Por_Hora().Show();
             this.Close();
         }
 

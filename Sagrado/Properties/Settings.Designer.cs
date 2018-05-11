@@ -33,5 +33,26 @@ namespace Sagrado.Properties {
                 return ((string)(this["bdsagradoConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=sa2gr0ad1o8;persistsecurityinfo=True;datab" +
+            "ase=bdsagrado")]
+        public string bdsagradoConnectionString1 {
+            get {
+                return ((string)(this["bdsagradoConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=bdsagrado")]
+        public string bdsagradoConnectionString2 {
+            get {
+                return ((string)(this["bdsagradoConnectionString2"]));
+            }
+        }
     }
 }
