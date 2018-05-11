@@ -46,10 +46,11 @@ namespace Sagrado
                     textBox7.Text = reader["CEL_CLIENTE"].ToString();
                 }
                 bd.closeConnection();
-                if (float.Parse(TXT_DIVIDA_CLIENTE.Text) < 0.0) { 
-                label2.Hide();
-                label9.Show();
-            }
+                if (float.Parse(TXT_DIVIDA_CLIENTE.Text) < 0.0)
+                {
+                    label2.Hide();
+                    label9.Show();
+                }
             }
         }
 
@@ -83,37 +84,39 @@ namespace Sagrado
         }
 
         private void BTN_CONFIRMAR_Click(object sender, EventArgs e)
-        {    if (text_Willer.Text.Equals(""))
+        {
+            if (text_Willer.Text.Equals(""))
                 MessageBox.Show("Campo valor(R$) vazio!");
             else
             {
                 float valor = float.Parse(text_Willer.Text);
                 float divida = float.Parse(TXT_DIVIDA_CLIENTE.Text);
-                
-
-                   // if (valor > divida || valor < 0)
-                    //{
-                      //  MessageBox.Show("Digite um valor positivo e  abaixo da dívida do cliente!");
-                    //}
-                    //else
-                    //{
-                        DataBaseConnection bd = new DataBaseConnection();
-                        bd.openConnection();
-                        divida = divida - valor;
-                        string query = "UPDATE CLIENTE SET SALDO_ATUAL_CLIENTE = '" + divida + "'WHERE CPF_CLIENTE = '" + this.cpf + "'";
-                        MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
-                        cmd.ExecuteNonQuery();
-                        bd.closeConnection();
-                        MessageBox.Show("A dívida do cliente foi atualizada!");
-                        this.Close();
-                    }
 
 
-
+                if (valor > divida || valor < 0)
+                {
+                    MessageBox.Show("Digite um valor positivo e  abaixo da dívida do cliente!");
                 }
-            
+                else
+                {
+                    DataBaseConnection bd = new DataBaseConnection();
+                    bd.openConnection();
+                    divida = divida - valor;
+                    string query = "UPDATE CLIENTE SET SALDO_ATUAL_CLIENTE = '" + divida + "'WHERE CPF_CLIENTE = '" + this.cpf + "'";
+                    MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+                    cmd.ExecuteNonQuery();
+                    bd.closeConnection();
+                    MessageBox.Show("A dívida do cliente foi atualizada!");
+                    this.Close();
+                }
+
+
+
+            }
+
         }
     }
+}
 
 
 //}
