@@ -1,6 +1,6 @@
 ﻿namespace Sagrado
 {
-    partial class GraficoVenda_Por_Hora
+    partial class GraficoVendaPorHora
     {
         /// <summary>
         /// Required designer variable.

@@ -104,11 +104,11 @@
     <Compile Include="ExcluirProd.Designer.cs">
       <DependentUpon>ExcluirProd.cs</DependentUpon>
     </Compile>
-    <Compile Include="GraficoVenda_Por_Hora.cs">
+    <Compile Include="GraficoVendaPorHora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GraficoVenda_Por_Hora.Designer.cs">
-      <DependentUpon>GraficoVenda_Por_Hora.cs</DependentUpon>
+    <Compile Include="GraficoVendaPorHora.Designer.cs">
+      <DependentUpon>GraficoVendaPorHora.cs</DependentUpon>
     </Compile>
     <Compile Include="GerenProduto.cs">
       <SubType>Form</SubType>
@@ -239,8 +239,8 @@
     <EmbeddedResource Include="GerenProduto.resx">
       <DependentUpon>GerenProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GraficoVenda_Por_Hora.resx">
-      <DependentUpon>GraficoVenda_Por_Hora.cs</DependentUpon>
+    <EmbeddedResource Include="GraficoVendaPorHora.resx">
+      <DependentUpon>GraficoVendaPorHora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovimentacaoCaixa.resx">
       <DependentUpon>MovimentacaoCaixa.cs</DependentUpon>

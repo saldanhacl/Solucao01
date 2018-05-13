@@ -11,10 +11,10 @@ using MySql.Data.MySqlClient;
 
 namespace Sagrado
 {
-    public partial class GraficoVenda_Por_Hora : Form
+    public partial class GraficoVendaPorHora : Form
     {
         MySqlConnection conectar;
-        public GraficoVenda_Por_Hora()
+        public GraficoVendaPorHora()
         {
             InitializeComponent();
 
@@ -57,16 +57,17 @@ namespace Sagrado
 
         private void GraficoVenda_Por_Hora_Load(object sender, EventArgs e)
         {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             Conectar();
             chart1.Series["Series1"].LegendText = "Grafico De Willer";
             chart1.Series["Series1"].XValueMember = "NOME_USER";
             chart1.Series["Series1"].YValueMembers = "RG_USER";
             chart1.DataSource = EnviarDados("select NOME_USER, RG_USER from usuario");
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void chart1_Click_1(object sender, EventArgs e)
