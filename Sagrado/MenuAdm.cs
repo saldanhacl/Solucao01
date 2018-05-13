@@ -69,7 +69,7 @@ namespace Sagrado
 
         private void BTN_RELAT_VENDAS_Click(object sender, EventArgs e)
         {
-
+            new RelatorioVendas().Show();
         }
     }
 }

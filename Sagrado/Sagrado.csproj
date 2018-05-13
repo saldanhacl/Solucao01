@@ -117,6 +117,12 @@
     <Compile Include="GerenProduto.Designer.cs">
       <DependentUpon>GerenProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="RelatorioVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelatorioVendas.Designer.cs">
+      <DependentUpon>RelatorioVendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaDeConsultaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +295,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioVendas.resx">
+      <DependentUpon>RelatorioVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaDeConsultaCliente.resx">
       <DependentUpon>TelaDeConsultaCliente.cs</DependentUpon>
