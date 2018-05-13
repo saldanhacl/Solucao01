@@ -80,6 +80,7 @@
     <Compile Include="CadastrarProd.Designer.cs">
       <DependentUpon>CadastrarProd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Produto.cs" />
     <Compile Include="ConsultarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +140,12 @@
     </Compile>
     <Compile Include="TelaPesquisaVendasNAO.designer.cs">
       <DependentUpon>TelaPesquisaVendasNAO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionarProdutosComanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarProdutosComanda.Designer.cs">
+      <DependentUpon>AdicionarProdutosComanda.cs</DependentUpon>
     </Compile>
     <Compile Include="Validador.cs" />
     <Compile Include="ConsultarUser.cs">
@@ -288,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TelaPesquisaVendasNAO.resx">
       <DependentUpon>TelaPesquisaVendasNAO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarProdutosComanda.resx">
+      <DependentUpon>AdicionarProdutosComanda.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bdsagradoDataSet.xsc">
       <DependentUpon>bdsagradoDataSet.xsd</DependentUpon>

@@ -251,7 +251,7 @@ namespace Sagrado
 
             while (reader.Read())
             {
-                nome = reader["CPF_CLIENTE"].ToString();
+                nome = reader["NOME_CLIENTE"].ToString();
                 LISTA_CLIENTES.Items.Add(nome);
             }
             bd.closeConnection();
@@ -305,5 +305,36 @@ namespace Sagrado
         {
             atualizarListaCliente();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXT_SALDOATUAL_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LISTA_CLIENTES_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new AdicionarProdutosComanda(this).Show();
+        }
+
+        public void setBoxPriceText(String preco)
+        {
+            boxPrice.Text = preco;
+        }
+
     }
 }

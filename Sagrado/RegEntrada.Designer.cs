@@ -38,12 +38,12 @@
             this.TXT_SALDOATUAL = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.LISTA_CLIENTES = new System.Windows.Forms.ComboBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.BTN_CANCELAR = new System.Windows.Forms.PictureBox();
             this.BTN_CONFIRMAR = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,7 +54,7 @@
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Location = new System.Drawing.Point(113, 218);
+            this.panel1.Location = new System.Drawing.Point(113, 174);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(347, 49);
             this.panel1.TabIndex = 0;
@@ -123,21 +123,23 @@
             this.TXT_SALDOATUAL.BackColor = System.Drawing.Color.White;
             this.TXT_SALDOATUAL.Cursor = System.Windows.Forms.Cursors.Default;
             this.TXT_SALDOATUAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.TXT_SALDOATUAL.Location = new System.Drawing.Point(321, 170);
+            this.TXT_SALDOATUAL.Location = new System.Drawing.Point(321, 133);
             this.TXT_SALDOATUAL.Name = "TXT_SALDOATUAL";
             this.TXT_SALDOATUAL.ReadOnly = true;
             this.TXT_SALDOATUAL.Size = new System.Drawing.Size(139, 35);
             this.TXT_SALDOATUAL.TabIndex = 18;
+            this.TXT_SALDOATUAL.TextChanged += new System.EventHandler(this.TXT_SALDOATUAL_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.label3.Location = new System.Drawing.Point(126, 173);
+            this.label3.Location = new System.Drawing.Point(126, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 29);
             this.label3.TabIndex = 17;
             this.label3.Text = "SALDO (R$):";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // LISTA_CLIENTES
             // 
@@ -149,18 +151,18 @@
             this.LISTA_CLIENTES.Name = "LISTA_CLIENTES";
             this.LISTA_CLIENTES.Size = new System.Drawing.Size(295, 24);
             this.LISTA_CLIENTES.TabIndex = 19;
+            this.LISTA_CLIENTES.SelectedIndexChanged += new System.EventHandler(this.LISTA_CLIENTES_SelectedIndexChanged);
             this.LISTA_CLIENTES.Click += new System.EventHandler(this.LISTA_CLIENTES_Click);
             // 
-            // pictureBox2
+            // label2
             // 
-            this.pictureBox2.BackgroundImage = global::Sagrado.Properties.Resources.BTN_PLUS2;
-            this.pictureBox2.InitialImage = global::Sagrado.Properties.Resources.BTN_PLUS2;
-            this.pictureBox2.Location = new System.Drawing.Point(113, 275);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(113, 286);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Cliente";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // BTN_CANCELAR
             // 
@@ -185,11 +187,21 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_MONEY;
-            this.pictureBox1.Location = new System.Drawing.Point(182, 41);
+            this.pictureBox1.Location = new System.Drawing.Point(190, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 100);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(116, 241);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(344, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Adicionar Produtos";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // RegEntrada
             // 
@@ -197,7 +209,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 461);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.LISTA_CLIENTES);
             this.Controls.Add(this.TXT_SALDOATUAL);
             this.Controls.Add(this.label3);
@@ -213,7 +226,6 @@
             this.Text = "REGISTRAR ENTRADA";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CANCELAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTN_CONFIRMAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -236,6 +248,7 @@
         private System.Windows.Forms.TextBox TXT_SALDOATUAL;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox LISTA_CLIENTES;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }
