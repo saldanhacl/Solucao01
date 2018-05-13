@@ -47,6 +47,8 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.BTN_GEREN_PROD = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -210,12 +212,33 @@
             this.label4.TabIndex = 55;
             this.label4.Text = "GERENCIAR PRODUTO";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(94, 456);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "ir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BTN_RELAT_VENDAS_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(72, 493);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 13);
+            this.label5.TabIndex = 57;
+            this.label5.Text = "RELATÓRIO DE VENDAS";
+            // 
             // MenuAdm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.BTN_GEREN_PROD);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.BTN_CONSULTA_MOVI);
@@ -262,5 +285,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BTN_GEREN_PROD;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
     }
 }
