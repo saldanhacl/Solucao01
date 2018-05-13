@@ -53,11 +53,15 @@ namespace Sagrado
         private void btn_adicionar_produtos_Click(object sender, EventArgs e)
         {
             total = 0;
+            Lista_Comanda.Items.Clear();
 
             foreach (Produto produto in Lista_Produtos.CheckedItems)
             {
-                total += produto.preco;
-                Lista_Comanda.Items.Add(produto);
+                if (!Lista_Comanda.Items.Contains(produto))
+                {
+                    total += produto.preco;
+                    Lista_Comanda.Items.Add(produto);
+                }
 
             }
 
@@ -68,6 +72,21 @@ namespace Sagrado
         {
             ((RegEntrada)regEntrada).setBoxPriceText(total.ToString()); 
             this.Close();
+        }
+
+        private void btn_zerar_comanda_Click(object sender, EventArgs e)
+        {
+            Lista_Comanda.Items.Clear();
+            zerarComanda();
+        }
+
+
+        public void zerarComanda()
+        {
+            foreach(int i in Lista_Produtos.CheckedIndices)
+            {
+                Lista_Produtos.SetItemCheckState(i, CheckState.Unchecked);
+            }
         }
     }
 }

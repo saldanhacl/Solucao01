@@ -34,6 +34,7 @@
             this.txt_total = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_fechar_comanda = new System.Windows.Forms.Button();
+            this.btn_zerar_comanda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Lista_Comanda
@@ -88,11 +89,22 @@
             this.btn_fechar_comanda.UseVisualStyleBackColor = true;
             this.btn_fechar_comanda.Click += new System.EventHandler(this.btn_fechar_comanda_Click);
             // 
+            // btn_zerar_comanda
+            // 
+            this.btn_zerar_comanda.Location = new System.Drawing.Point(308, 199);
+            this.btn_zerar_comanda.Name = "btn_zerar_comanda";
+            this.btn_zerar_comanda.Size = new System.Drawing.Size(106, 23);
+            this.btn_zerar_comanda.TabIndex = 7;
+            this.btn_zerar_comanda.Text = "Zerar Comanda";
+            this.btn_zerar_comanda.UseVisualStyleBackColor = true;
+            this.btn_zerar_comanda.Click += new System.EventHandler(this.btn_zerar_comanda_Click);
+            // 
             // AdicionarProdutosComanda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 507);
+            this.Controls.Add(this.btn_zerar_comanda);
             this.Controls.Add(this.btn_fechar_comanda);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_total);
@@ -114,5 +126,6 @@
         private System.Windows.Forms.TextBox txt_total;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_fechar_comanda;
+        private System.Windows.Forms.Button btn_zerar_comanda;
     }
 }
