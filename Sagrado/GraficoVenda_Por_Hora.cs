@@ -25,7 +25,7 @@ namespace Sagrado
         {
             try
             {
-                conectar = new MySqlConnection();
+                conectar = new MySqlConnection("server=localhost; database=bdsagrado; Uid=root; pwd=sa2gr0ad1o8;");
                 conectar.Open();
             }
             catch (Exception e)
@@ -33,6 +33,15 @@ namespace Sagrado
                 MessageBox.Show(e.Message);
             }
 
+
+        }
+
+        public DataTable EnviarDados(string consulta) {
+            DataTable table = new DataTable();
+            MySqlDataAdapter mda = new MySqlDataAdapter(consulta, conectar);
+            mda.Fill(table);
+            return table;
+  
 
         }
 
@@ -49,6 +58,20 @@ namespace Sagrado
         private void GraficoVenda_Por_Hora_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Conectar();
+            chart1.Series["Series1"].LegendText = "Grafico De Willer";
+            chart1.Series["Series1"].XValueMember = "NOME_USER";
+            chart1.Series["Series1"].YValueMembers = "RG_USER";
+            chart1.DataSource = EnviarDados("select NOME_USER, RG_USER from usuario");
+        }
+
+        private void chart1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

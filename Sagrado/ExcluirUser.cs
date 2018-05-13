@@ -92,5 +92,10 @@ namespace Sagrado
         {
             this.Close();
         }
+
+        private void ExcluirUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

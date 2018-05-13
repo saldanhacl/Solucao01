@@ -110,6 +110,7 @@
             this.Name = "ExcluirUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EXCLUIR USUÁRIO";
+            this.Load += new System.EventHandler(this.ExcluirUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
