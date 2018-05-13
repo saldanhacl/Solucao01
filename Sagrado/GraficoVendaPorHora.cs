@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Sagrado
 {
@@ -25,7 +26,7 @@ namespace Sagrado
         {
             try
             {
-                conectar = new MySqlConnection("server=localhost; database=bdsagrado; Uid=root; pwd=sa2gr0ad1o8;");
+                conectar = new MySqlConnection("server=localhost; database=bdsagrado; Uid=root; pwd=sa2gr0ad1o8; SslMode=none;");
                 conectar.Open();
             }
             catch (Exception e)
@@ -61,6 +62,7 @@ namespace Sagrado
             chart1.Series["Series1"].LegendText = "Grafico De Willer";
             chart1.Series["Series1"].XValueMember = "NOME_USER";
             chart1.Series["Series1"].YValueMembers = "RG_USER";
+            chart1.Series["Series1"].ChartType = SeriesChartType.Pie;
             chart1.DataSource = EnviarDados("select NOME_USER, RG_USER from usuario");
 
         }
