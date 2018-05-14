@@ -14,7 +14,7 @@ namespace Sagrado
     public partial class AlterarCliente : Form
     {
         private String cpfAnterior = "";
-            private bool encontrouCliente = false;
+        private bool encontrouCliente = false;
 
         public AlterarCliente()
         {
@@ -141,22 +141,23 @@ namespace Sagrado
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
-                while (reader.Read())
+                if (!reader.HasRows)
                 {
-                    encontrouCliente = true;
-                    TXT_NOME_CLIENTE.Text = reader["NOME_CLIENTE"].ToString();
-                    TXT_TEL_CLIENTE.Text = reader["TELEFONE_CLIENTE"].ToString();
-                    TXT_CEL_CLIENTE.Text = reader["CEL_CLIENTE"].ToString();
-
-
-                    cpfAnterior = TXT_CPF_CLIENTE.Text;
-
+                    MessageBox.Show("Cliente não encontrado.");
                 }
-
-                if (!encontrouCliente)
+                else
                 {
-                    System.Windows.Forms.MessageBox.Show("CLIENTE NÃO ENCONTRADO");
-                    encontrouCliente = false;
+                    while (reader.Read())
+                    {
+                        encontrouCliente = true;
+                        TXT_NOME_CLIENTE.Text = reader["NOME_CLIENTE"].ToString();
+                        TXT_TEL_CLIENTE.Text = reader["TELEFONE_CLIENTE"].ToString();
+                        TXT_CEL_CLIENTE.Text = reader["CEL_CLIENTE"].ToString();
+
+
+                        cpfAnterior = TXT_CPF_CLIENTE.Text;
+
+                    }
                 }
 
             }

@@ -109,10 +109,10 @@ namespace Sagrado
 
             String nome = textBox1.Text;
             String dtnascimento = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss");
-            String rg = textBox3.Text;
-            String cpf = textBox2.Text;
-            String tel = textBox6.Text;
-            String cel = textBox5.Text;
+            String rg = Validador.FormataCpfAndCnpj(RG_FUNC.Text);
+            String cpf = Validador.FormataCpfAndCnpj(CPF_FUNC.Text);
+            String tel = Validador.FormataTelAndCel(TEL_FUNC.Text);
+            String cel = Validador.FormataTelAndCel(CEL_FUNC.Text);
             String email = textBox4.Text;
             String senha = textBox7.Text;
             String confirmasenha = textBox8.Text;

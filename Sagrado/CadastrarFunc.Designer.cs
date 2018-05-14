@@ -29,16 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarFunc));
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -58,20 +53,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BTN_CANC = new System.Windows.Forms.Button();
             this.BTN_CONF = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CPF_FUNC = new System.Windows.Forms.MaskedTextBox();
+            this.RG_FUNC = new System.Windows.Forms.MaskedTextBox();
+            this.TEL_FUNC = new System.Windows.Forms.MaskedTextBox();
+            this.CEL_FUNC = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox1.Location = new System.Drawing.Point(189, 204);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.MaxLength = 50;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(529, 23);
-            this.textBox1.TabIndex = 3;
             // 
             // label1
             // 
@@ -101,7 +91,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Checked = true;
             this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radioButton2.Location = new System.Drawing.Point(155, 4);
+            this.radioButton2.Location = new System.Drawing.Point(156, 4);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(96, 21);
@@ -118,36 +108,14 @@
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(189, 334);
+            this.dateTimePicker1.Location = new System.Drawing.Point(601, 292);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.MaxDate = new System.DateTime(2018, 3, 28, 0, 0, 0, 0);
             this.dateTimePicker1.MinDate = new System.DateTime(1918, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(159, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(117, 23);
             this.dateTimePicker1.TabIndex = 8;
             this.dateTimePicker1.Value = new System.DateTime(2018, 3, 28, 0, 0, 0, 0);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.textBox2.Location = new System.Drawing.Point(523, 246);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.MaxLength = 11;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 24);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox3.Location = new System.Drawing.Point(189, 247);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.MaxLength = 8;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(241, 23);
-            this.textBox3.TabIndex = 4;
-            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPressed);
             // 
             // textBox4
             // 
@@ -158,28 +126,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(527, 24);
             this.textBox4.TabIndex = 11;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.textBox5.Location = new System.Drawing.Point(523, 290);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.MaxLength = 11;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(195, 24);
-            this.textBox5.TabIndex = 7;
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.textBox6.Location = new System.Drawing.Point(189, 290);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.MaxLength = 10;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(241, 24);
-            this.textBox6.TabIndex = 6;
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // textBox7
             // 
@@ -245,7 +191,7 @@
             // 
             this.panel2.Controls.Add(this.radioButton1);
             this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Location = new System.Drawing.Point(461, 334);
+            this.panel2.Location = new System.Drawing.Point(315, 342);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(256, 28);
@@ -266,7 +212,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label6.Location = new System.Drawing.Point(141, 252);
+            this.label6.Location = new System.Drawing.Point(141, 251);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 18);
@@ -277,7 +223,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label5.Location = new System.Drawing.Point(472, 252);
+            this.label5.Location = new System.Drawing.Point(343, 251);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 18);
@@ -288,7 +234,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label12.Location = new System.Drawing.Point(137, 297);
+            this.label12.Location = new System.Drawing.Point(568, 252);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(39, 18);
@@ -299,7 +245,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label8.Location = new System.Drawing.Point(467, 297);
+            this.label8.Location = new System.Drawing.Point(141, 292);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 18);
@@ -310,7 +256,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label9.Location = new System.Drawing.Point(23, 338);
+            this.label9.Location = new System.Drawing.Point(440, 292);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(153, 18);
@@ -321,7 +267,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label4.Location = new System.Drawing.Point(399, 338);
+            this.label4.Location = new System.Drawing.Point(253, 346);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 18);
@@ -397,6 +343,48 @@
             this.BTN_CONF.UseVisualStyleBackColor = true;
             this.BTN_CONF.Click += new System.EventHandler(this.BTN_CONF_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.textBox1.Location = new System.Drawing.Point(189, 204);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.MaxLength = 50;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(529, 23);
+            this.textBox1.TabIndex = 3;
+            // 
+            // CPF_FUNC
+            // 
+            this.CPF_FUNC.Location = new System.Drawing.Point(392, 251);
+            this.CPF_FUNC.Mask = "000.000.000-00";
+            this.CPF_FUNC.Name = "CPF_FUNC";
+            this.CPF_FUNC.Size = new System.Drawing.Size(150, 22);
+            this.CPF_FUNC.TabIndex = 48;
+            // 
+            // RG_FUNC
+            // 
+            this.RG_FUNC.Location = new System.Drawing.Point(189, 252);
+            this.RG_FUNC.Mask = "00.000.000-0";
+            this.RG_FUNC.Name = "RG_FUNC";
+            this.RG_FUNC.Size = new System.Drawing.Size(137, 22);
+            this.RG_FUNC.TabIndex = 49;
+            // 
+            // TEL_FUNC
+            // 
+            this.TEL_FUNC.Location = new System.Drawing.Point(614, 251);
+            this.TEL_FUNC.Mask = "(31) 0000-0000";
+            this.TEL_FUNC.Name = "TEL_FUNC";
+            this.TEL_FUNC.Size = new System.Drawing.Size(102, 22);
+            this.TEL_FUNC.TabIndex = 50;
+            // 
+            // CEL_FUNC
+            // 
+            this.CEL_FUNC.Location = new System.Drawing.Point(197, 292);
+            this.CEL_FUNC.Mask = "(31) 00000-0000";
+            this.CEL_FUNC.Name = "CEL_FUNC";
+            this.CEL_FUNC.Size = new System.Drawing.Size(196, 22);
+            this.CEL_FUNC.TabIndex = 51;
+            // 
             // CadastrarFunc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -404,6 +392,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.CEL_FUNC);
+            this.Controls.Add(this.TEL_FUNC);
+            this.Controls.Add(this.RG_FUNC);
+            this.Controls.Add(this.CPF_FUNC);
             this.Controls.Add(this.BTN_CANC);
             this.Controls.Add(this.BTN_CONF);
             this.Controls.Add(this.pictureBox1);
@@ -421,11 +413,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -447,16 +435,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.RadioButton radioButton3;
@@ -476,5 +459,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BTN_CANC;
         private System.Windows.Forms.Button BTN_CONF;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.MaskedTextBox CPF_FUNC;
+        private System.Windows.Forms.MaskedTextBox RG_FUNC;
+        private System.Windows.Forms.MaskedTextBox TEL_FUNC;
+        private System.Windows.Forms.MaskedTextBox CEL_FUNC;
     }
 }

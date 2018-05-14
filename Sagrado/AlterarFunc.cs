@@ -106,7 +106,7 @@ namespace Sagrado
                 MySqlDataReader reader = cmd.ExecuteReader();
                 if (!reader.HasRows)
                 {
-                    MessageBox.Show("Usúario não existe.");
+                    MessageBox.Show("Usúario não encontrado.");
                 }
                 else
                 {

@@ -19,5 +19,20 @@ namespace Sagrado
                 return true;
         }
 
+        public static String FormataCpfAndCnpj(String typeFormat)
+        {
+            typeFormat = typeFormat.Replace(",", "");
+            typeFormat = typeFormat.Replace("-", "");
+            return typeFormat;
+        }
+
+        public static String FormataTelAndCel(String typeFormat)
+        {
+            typeFormat = typeFormat.Replace("(", "");
+            typeFormat = typeFormat.Replace(")", "");
+            typeFormat = typeFormat.Replace(" ", "");
+            typeFormat = typeFormat.Replace("-", "");
+            return typeFormat;
+        }
 }
 }

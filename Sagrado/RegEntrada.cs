@@ -248,11 +248,14 @@ namespace Sagrado
             MySqlDataReader reader = cmd.ExecuteReader();
 
             String nome = null;
-
+            String cpf = null;
+                
             while (reader.Read())
             {
                 nome = reader["NOME_CLIENTE"].ToString();
-                LISTA_CLIENTES.Items.Add(nome);
+                cpf = reader["CPF_CLIENTE"].ToString();
+                String cliente = nome + ": " + cpf;
+                LISTA_CLIENTES.Items.Add(cliente);
             }
             bd.closeConnection();
         }

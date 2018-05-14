@@ -37,19 +37,27 @@ namespace Sagrado
                 string Query = "SELECT * FROM CLIENTE WHERE CPF_CLIENTE = '" + this.cpf + "'";
                 MySqlCommand cmd = new MySqlCommand(Query, bd.retornaConexao());
                 MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
+                if (!reader.HasRows)
                 {
-                    textBox2.Text = reader["NOME_CLIENTE"].ToString();
-                    textBox3.Text = reader["CPF_CLIENTE"].ToString();
-                    textBox4.Text = reader["TELEFONE_CLIENTE"].ToString();
-                    TXT_DIVIDA_CLIENTE.Text = reader["SALDO_ATUAL_CLIENTE"].ToString();
-                    textBox7.Text = reader["CEL_CLIENTE"].ToString();
+                    MessageBox.Show("Usúario não existe.");
                 }
-                bd.closeConnection();
-                if (float.Parse(TXT_DIVIDA_CLIENTE.Text) < 0.0) { 
-                //label2.Hide();
-                label9.Show();
-            }
+                else
+                {
+                    while (reader.Read())
+                    {
+                        textBox2.Text = reader["NOME_CLIENTE"].ToString();
+                        textBox3.Text = reader["CPF_CLIENTE"].ToString();
+                        textBox4.Text = reader["TELEFONE_CLIENTE"].ToString();
+                        TXT_DIVIDA_CLIENTE.Text = reader["SALDO_ATUAL_CLIENTE"].ToString();
+                        textBox7.Text = reader["CEL_CLIENTE"].ToString();
+                    }
+                    bd.closeConnection();
+                    if (float.Parse(TXT_DIVIDA_CLIENTE.Text) < 0.0)
+                    {
+                        //label2.Hide();
+                        label9.Show();
+                    }
+                }
             }
         }
        
