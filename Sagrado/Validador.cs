@@ -19,7 +19,7 @@ namespace Sagrado
                 return true;
         }
 
-        public static String FormataCpfAndCnpj(String typeFormat)
+        public static String FormataCpfAndRg(String typeFormat)
         {
             typeFormat = typeFormat.Replace(",", "");
             typeFormat = typeFormat.Replace("-", "");
@@ -34,5 +34,15 @@ namespace Sagrado
             typeFormat = typeFormat.Replace("-", "");
             return typeFormat;
         }
-}
+
+        public static String FormataTel(String typeFormat)
+        {
+            return typeFormat.Substring(2,8);
+        }
+
+        public static String FormataCel(String typeFormat)
+        {
+            return typeFormat.Substring(2, 9);
+        }
+    }
 }

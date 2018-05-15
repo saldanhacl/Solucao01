@@ -18,12 +18,7 @@ namespace Sagrado
         {
             InitializeComponent();
         }
-
-        string theData;
-        string marcado;
-        string cpf;
-                
-
+       
         private void BTN_BUSCAR_Click(object sender, EventArgs e)
         {
 

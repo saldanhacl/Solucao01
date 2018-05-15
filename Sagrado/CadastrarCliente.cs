@@ -83,9 +83,9 @@ namespace Sagrado
 
 
             String nome = textBox1.Text;
-            String cpf = textBox4.Text;
-            String tel = textBox6.Text;
-            String cel = textBox2.Text;
+            String cpf = Validador.FormataCpfAndRg(CPF_CLIE.Text);
+            String tel = Validador.FormataCpfAndRg(TEL_CLIE.Text);
+            String cel = Validador.FormataCpfAndRg(CEL_CLIE.Text);
             float saldo = 1000;
 
 
@@ -124,6 +124,16 @@ namespace Sagrado
         private void BTN_CANC_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

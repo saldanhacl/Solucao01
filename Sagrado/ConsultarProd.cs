@@ -33,8 +33,10 @@ namespace Sagrado
             String query = "";
             dg.Rows.Clear();
 
-            if (LISTA_TIPOS.SelectedItem == null || LISTA_TIPOS.SelectedItem == "" ) query = "SELECT * FROM PRODUTO";
-            else query = "SELECT * FROM PRODUTO WHERE TYPE_PRODUTO = '" + LISTA_TIPOS.SelectedItem.ToString() + "'";
+            if (LISTA_TIPOS.SelectedItem == null || LISTA_TIPOS.SelectedItem.Equals(""))
+                query = "SELECT * FROM PRODUTO";
+            else
+                query = "SELECT * FROM PRODUTO WHERE TYPE_PRODUTO = '" + LISTA_TIPOS.SelectedItem.ToString() + "'";
 
             DataBaseConnection bd = new DataBaseConnection();
             bd.openConnection();

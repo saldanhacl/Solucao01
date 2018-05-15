@@ -14,7 +14,6 @@ namespace Sagrado
     public partial class AlterarCliente : Form
     {
         private String cpfAnterior = "";
-        private bool encontrouCliente = false;
 
         public AlterarCliente()
         {
@@ -136,7 +135,7 @@ namespace Sagrado
             {
                 bd.openConnection();
 
-                String query = "SELECT * FROM CLIENTE WHERE CPF_CLIENTE ='" + TXT_CPF_CLIENTE.Text + "'";
+                String query = "SELECT * FROM CLIENTE WHERE CPF_CLIENTE ='" + Validador.FormataCpfAndRg(TXT_CPF_CLIENTE.Text) + "'";
                 MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
 
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -149,10 +148,9 @@ namespace Sagrado
                 {
                     while (reader.Read())
                     {
-                        encontrouCliente = true;
                         TXT_NOME_CLIENTE.Text = reader["NOME_CLIENTE"].ToString();
-                        TXT_TEL_CLIENTE.Text = reader["TELEFONE_CLIENTE"].ToString();
-                        TXT_CEL_CLIENTE.Text = reader["CEL_CLIENTE"].ToString();
+                        TXT_TEL_CLIENTE.Text = Validador.FormataTel(reader["TELEFONE_CLIENTE"].ToString());
+                        TXT_CEL_CLIENTE.Text = Validador.FormataCel(reader["CEL_CLIENTE"].ToString());
 
 
                         cpfAnterior = TXT_CPF_CLIENTE.Text;

@@ -100,7 +100,7 @@ namespace Sagrado
             {
                 bd.openConnection();
 
-                String query = "SELECT * FROM USUARIO WHERE CPF_USER ='" + TXT_CPF.Text + "'";
+                String query = "SELECT * FROM USUARIO WHERE CPF_USER ='" + Validador.FormataCpfAndRg(TXT_CPF.Text) + "'";
                 MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
 
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -113,8 +113,8 @@ namespace Sagrado
                     while (reader.Read())
                     {
                         TXT_NOME.Text = reader["NOME_USER"].ToString();
-                        TXT_TEL.Text = reader["TEL_USER"].ToString();
-                        TXT_CEL.Text = reader["CEL_USER"].ToString();
+                        TXT_TEL.Text = Validador.FormataTel(reader["TEL_USER"].ToString());
+                        TXT_CEL.Text = Validador.FormataCel(reader["CEL_USER"].ToString());
                         TXT_EMAIL.Text = reader["EMAIL_USER"].ToString();
                         TXT_RG.Text = reader["RG_USER"].ToString();
                         TXT_SENHA.Text = reader["SENHA_USER"].ToString();
@@ -211,6 +211,11 @@ namespace Sagrado
             }
 
             bd.closeConnection();
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

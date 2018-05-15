@@ -141,12 +141,6 @@
     <Compile Include="GerenClienteUser.Designer.cs">
       <DependentUpon>GerenClienteUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaPesquisaVendasNAO.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TelaPesquisaVendasNAO.designer.cs">
-      <DependentUpon>TelaPesquisaVendasNAO.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdicionarProdutosComanda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,9 +296,6 @@
     <EmbeddedResource Include="TelaDeConsultaCliente.resx">
       <DependentUpon>TelaDeConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaPesquisaVendasNAO.resx">
-      <DependentUpon>TelaPesquisaVendasNAO.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AdicionarProdutosComanda.resx">
       <DependentUpon>AdicionarProdutosComanda.cs</DependentUpon>
     </EmbeddedResource>
@@ -428,7 +419,6 @@
     <None Include="Resources\BTN_GERENCIAR_PRODUTO.png" />
     <None Include="Resources\BTN_LOGIN2.png" />
     <None Include="Resources\BTN_EDIT.png" />
-    <Content Include="TelaPesquisaVendas.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -44,19 +44,19 @@
             this.RD_FUNC = new System.Windows.Forms.RadioButton();
             this.RD_ADMIN = new System.Windows.Forms.RadioButton();
             this.TXT_SENHA = new System.Windows.Forms.TextBox();
-            this.TXT_TEL = new System.Windows.Forms.TextBox();
-            this.TXT_CEL = new System.Windows.Forms.TextBox();
             this.TXT_EMAIL = new System.Windows.Forms.TextBox();
-            this.TXT_RG = new System.Windows.Forms.TextBox();
             this.TXT_DATE = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.TXT_NOME = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.TXT_CPF = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BTN_SEARCH_PROD = new System.Windows.Forms.Button();
             this.BTN_CANC = new System.Windows.Forms.Button();
             this.BTN_CONF = new System.Windows.Forms.Button();
+            this.TXT_CPF = new System.Windows.Forms.MaskedTextBox();
+            this.TXT_TEL = new System.Windows.Forms.MaskedTextBox();
+            this.TXT_CEL = new System.Windows.Forms.MaskedTextBox();
+            this.TXT_RG = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -237,32 +237,6 @@
             this.TXT_SENHA.TabIndex = 12;
             this.TXT_SENHA.UseSystemPasswordChar = true;
             // 
-            // TXT_TEL
-            // 
-            this.TXT_TEL.BackColor = System.Drawing.Color.White;
-            this.TXT_TEL.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TXT_TEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_TEL.Location = new System.Drawing.Point(209, 339);
-            this.TXT_TEL.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_TEL.MaxLength = 10;
-            this.TXT_TEL.Name = "TXT_TEL";
-            this.TXT_TEL.Size = new System.Drawing.Size(241, 24);
-            this.TXT_TEL.TabIndex = 9;
-            this.TXT_TEL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_TEL_KeyPress);
-            // 
-            // TXT_CEL
-            // 
-            this.TXT_CEL.BackColor = System.Drawing.Color.White;
-            this.TXT_CEL.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TXT_CEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_CEL.Location = new System.Drawing.Point(541, 339);
-            this.TXT_CEL.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_CEL.MaxLength = 11;
-            this.TXT_CEL.Name = "TXT_CEL";
-            this.TXT_CEL.Size = new System.Drawing.Size(195, 24);
-            this.TXT_CEL.TabIndex = 10;
-            this.TXT_CEL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CEL_KeyPress);
-            // 
             // TXT_EMAIL
             // 
             this.TXT_EMAIL.BackColor = System.Drawing.Color.White;
@@ -274,19 +248,6 @@
             this.TXT_EMAIL.Name = "TXT_EMAIL";
             this.TXT_EMAIL.Size = new System.Drawing.Size(527, 24);
             this.TXT_EMAIL.TabIndex = 11;
-            // 
-            // TXT_RG
-            // 
-            this.TXT_RG.BackColor = System.Drawing.Color.White;
-            this.TXT_RG.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TXT_RG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.TXT_RG.Location = new System.Drawing.Point(209, 295);
-            this.TXT_RG.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_RG.MaxLength = 8;
-            this.TXT_RG.Name = "TXT_RG";
-            this.TXT_RG.Size = new System.Drawing.Size(186, 23);
-            this.TXT_RG.TabIndex = 6;
-            this.TXT_RG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_RG_KeyPress);
             // 
             // TXT_DATE
             // 
@@ -339,17 +300,6 @@
             this.label5.TabIndex = 78;
             this.label5.Text = "CPF:";
             // 
-            // TXT_CPF
-            // 
-            this.TXT_CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.TXT_CPF.Location = new System.Drawing.Point(292, 155);
-            this.TXT_CPF.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_CPF.MaxLength = 11;
-            this.TXT_CPF.Name = "TXT_CPF";
-            this.TXT_CPF.Size = new System.Drawing.Size(200, 27);
-            this.TXT_CPF.TabIndex = 1;
-            this.TXT_CPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CPF_KeyPress);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EDIT_USER22;
@@ -398,12 +348,49 @@
             this.BTN_CONF.UseVisualStyleBackColor = true;
             this.BTN_CONF.Click += new System.EventHandler(this.BTN_CONF_Click);
             // 
+            // TXT_CPF
+            // 
+            this.TXT_CPF.Location = new System.Drawing.Point(292, 158);
+            this.TXT_CPF.Mask = "000.000.000-00";
+            this.TXT_CPF.Name = "TXT_CPF";
+            this.TXT_CPF.Size = new System.Drawing.Size(200, 20);
+            this.TXT_CPF.TabIndex = 98;
+            // 
+            // TXT_TEL
+            // 
+            this.TXT_TEL.Location = new System.Drawing.Point(209, 342);
+            this.TXT_TEL.Mask = "(31) 0000-0000";
+            this.TXT_TEL.Name = "TXT_TEL";
+            this.TXT_TEL.Size = new System.Drawing.Size(212, 20);
+            this.TXT_TEL.TabIndex = 99;
+            this.TXT_TEL.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            // 
+            // TXT_CEL
+            // 
+            this.TXT_CEL.Location = new System.Drawing.Point(535, 342);
+            this.TXT_CEL.Mask = "(31) 000000-0000";
+            this.TXT_CEL.Name = "TXT_CEL";
+            this.TXT_CEL.Size = new System.Drawing.Size(201, 20);
+            this.TXT_CEL.TabIndex = 100;
+            // 
+            // TXT_RG
+            // 
+            this.TXT_RG.Location = new System.Drawing.Point(209, 298);
+            this.TXT_RG.Mask = "00.000.000-0";
+            this.TXT_RG.Name = "TXT_RG";
+            this.TXT_RG.Size = new System.Drawing.Size(203, 20);
+            this.TXT_RG.TabIndex = 101;
+            // 
             // AlterarFunc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.TXT_RG);
+            this.Controls.Add(this.TXT_CEL);
+            this.Controls.Add(this.TXT_TEL);
+            this.Controls.Add(this.TXT_CPF);
             this.Controls.Add(this.BTN_SEARCH_PROD);
             this.Controls.Add(this.BTN_CANC);
             this.Controls.Add(this.BTN_CONF);
@@ -418,15 +405,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.TXT_SENHA);
-            this.Controls.Add(this.TXT_TEL);
-            this.Controls.Add(this.TXT_CEL);
             this.Controls.Add(this.TXT_EMAIL);
-            this.Controls.Add(this.TXT_RG);
             this.Controls.Add(this.TXT_DATE);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.TXT_NOME);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.TXT_CPF);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AlterarFunc";
@@ -458,18 +441,18 @@
         private System.Windows.Forms.RadioButton RD_FUNC;
         private System.Windows.Forms.RadioButton RD_ADMIN;
         private System.Windows.Forms.TextBox TXT_SENHA;
-        private System.Windows.Forms.TextBox TXT_TEL;
-        private System.Windows.Forms.TextBox TXT_CEL;
         private System.Windows.Forms.TextBox TXT_EMAIL;
-        private System.Windows.Forms.TextBox TXT_RG;
         private System.Windows.Forms.DateTimePicker TXT_DATE;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox TXT_NOME;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TXT_CPF;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BTN_SEARCH_PROD;
         private System.Windows.Forms.Button BTN_CANC;
         private System.Windows.Forms.Button BTN_CONF;
+        private System.Windows.Forms.MaskedTextBox TXT_CPF;
+        private System.Windows.Forms.MaskedTextBox TXT_TEL;
+        private System.Windows.Forms.MaskedTextBox TXT_CEL;
+        private System.Windows.Forms.MaskedTextBox TXT_RG;
     }
 }
