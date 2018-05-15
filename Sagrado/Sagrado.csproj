@@ -80,6 +80,18 @@
     <Compile Include="CadastrarProd.Designer.cs">
       <DependentUpon>CadastrarProd.cs</DependentUpon>
     </Compile>
+    <Compile Include="GraficoProdutosVendidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficoProdutosVendidos.Designer.cs">
+      <DependentUpon>GraficoProdutosVendidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraficoVendasPorHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficoVendasPorHorario.Designer.cs">
+      <DependentUpon>GraficoVendasPorHorario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Produto.cs" />
     <Compile Include="ConsultarCliente.cs">
       <SubType>Form</SubType>
@@ -105,11 +117,11 @@
     <Compile Include="ExcluirProd.Designer.cs">
       <DependentUpon>ExcluirProd.cs</DependentUpon>
     </Compile>
-    <Compile Include="GraficoVendaPorHora.cs">
+    <Compile Include="GraficoVendasPorUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GraficoVendaPorHora.Designer.cs">
-      <DependentUpon>GraficoVendaPorHora.cs</DependentUpon>
+    <Compile Include="GraficoVendasPorUsuario.Designer.cs">
+      <DependentUpon>GraficoVendasPorUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="GerenProduto.cs">
       <SubType>Form</SubType>
@@ -246,8 +258,14 @@
     <EmbeddedResource Include="GerenProduto.resx">
       <DependentUpon>GerenProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GraficoVendaPorHora.resx">
-      <DependentUpon>GraficoVendaPorHora.cs</DependentUpon>
+    <EmbeddedResource Include="GraficoProdutosVendidos.resx">
+      <DependentUpon>GraficoProdutosVendidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraficoVendasPorHorario.resx">
+      <DependentUpon>GraficoVendasPorHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraficoVendasPorUsuario.resx">
+      <DependentUpon>GraficoVendasPorUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovimentacaoCaixa.resx">
       <DependentUpon>MovimentacaoCaixa.cs</DependentUpon>

@@ -80,6 +80,7 @@
             this.BTN_VENDA_HORAS.TabIndex = 4;
             this.BTN_VENDA_HORAS.Text = "Gerar gráfico de vendas por horário";
             this.BTN_VENDA_HORAS.UseVisualStyleBackColor = true;
+            this.BTN_VENDA_HORAS.Click += new System.EventHandler(this.BTN_VENDA_HORAS_Click);
             // 
             // RelatorioVendas
             // 
