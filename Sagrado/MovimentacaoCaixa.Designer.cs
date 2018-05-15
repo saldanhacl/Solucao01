@@ -153,6 +153,7 @@
             this.Name = "MovimentacaoCaixa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MOVIMENTAÇÃO DE CAIXA";
+            this.Load += new System.EventHandler(this.MovimentacaoCaixa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IMG_CARTEIRA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
             this.ResumeLayout(false);

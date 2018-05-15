@@ -18,7 +18,31 @@ namespace Sagrado
         {
             InitializeComponent();
         }
-       
+        private void MovimentacaoCaixa_Load(object sender, EventArgs e)
+        {
+            String query;
+            try
+            {
+                DataBaseConnection bd = new DataBaseConnection();
+                query = "select * from caixa";
+                bd.openConnection();
+
+                MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    if (!comboBox1.Items.Contains(reader.GetString("CPF_FUNCIONARIO")) )
+                    {
+                        comboBox1.Items.Add(reader.GetString("CPF_FUNCIONARIO"));
+                    }
+                }
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void BTN_BUSCAR_Click(object sender, EventArgs e)
         {
 
@@ -30,7 +54,8 @@ namespace Sagrado
             else if (comboBox1.SelectedItem.ToString() == "ENTRADA") query = "SELECT * FROM CAIXA WHERE TYPE_ENTRADA_CAIXA = 'e'";
             else if (comboBox1.SelectedItem.ToString() == "RETIRADA") query = "SELECT * FROM CAIXA WHERE TYPE_ENTRADA_CAIXA = 'r'";
             else if (comboBox1.SelectedItem.ToString() == "FIADO") query = "SELECT * FROM CAIXA WHERE TYPE_ENTRADA_CAIXA = 'f'";
-
+            else if (comboBox1.SelectedItem.ToString() == "1") query = "SELECT * FROM CAIXA WHERE CPF_FUNCIONARIO = '1'";
+            else if (comboBox1.SelectedItem.ToString() == "2") query = "SELECT * FROM CAIXA WHERE CPF_FUNCIONARIO = '2'";
 
 
             DataBaseConnection bd = new DataBaseConnection();
@@ -56,16 +81,16 @@ namespace Sagrado
                 dg.Rows[i].Cells["VALOR"].Value = reader["VALOR_ENTRADA_CAIXA"].ToString();
                 dg.Rows[i].Cells["FUNCIONÁRIO"].Value = reader["CPF_FUNCIONARIO"].ToString();
 
-                i++; ;
+                i++; 
             }
 
 
             bd.closeConnection();
         }
-
         private void BTN_CANC_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
     }
 }
