@@ -113,6 +113,11 @@ namespace Sagrado
                 }
             }
         }
+
+        private void ConsultarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

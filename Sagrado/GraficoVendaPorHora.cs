@@ -58,13 +58,17 @@ namespace Sagrado
 
         private void GraficoVenda_Por_Hora_Load(object sender, EventArgs e)
         {
-            chart1.Series.Clear();
+          
             Conectar();
             chart1.Series["Series1"].LegendText = "Willer";
-            chart1.Series["Series1"].XValueMember = "TYPE_ENTRADA_CAIXA";
+            chart1.Series["Series1"].XValueMember = "CPF_FUNCIONARIO";
             chart1.Series["Series1"].YValueMembers = "VALOR_ENTRADA_CAIXA";
-          //  chart1.Series["Series1"].ChartType = SeriesChartType.Pie;
-            chart1.DataSource = EnviarDados("select TYPE_ENTRADA_CAIXA, VALOR_ENTRADA_CAIXA from caixa");
+            //chart1.Series["Series1"].ChartType = SeriesChartType.Pie;
+            chart1.DataSource = EnviarDados("select CPF_FUNCIONARIO, VALOR_ENTRADA_CAIXA from caixa where TYPE_ENTRADA_CAIXA = 'v' or TYPE_ENTRADA_CAIXA = 'f'");
+           // chart1.DataSource = EnviarDados("select CPF_USER from usuario");
+            //chart1.Series["Series1"].Points.Add(1);
+            //chart1.Series["Series1"].Points.Add(50);
+            // chart1.Series["Series1"].Points.Add(30);
 
         }
 

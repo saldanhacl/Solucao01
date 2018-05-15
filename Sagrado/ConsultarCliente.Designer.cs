@@ -280,6 +280,7 @@
             this.Name = "ConsultarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CONSULTAR CLIENTE";
+            this.Load += new System.EventHandler(this.ConsultarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IMG_CONSULT_CLIENTE)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

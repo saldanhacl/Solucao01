@@ -70,6 +70,7 @@
             this.BTN_VENDA_USER.TabIndex = 3;
             this.BTN_VENDA_USER.Text = "Gerar gráfico número vendas usuário";
             this.BTN_VENDA_USER.UseVisualStyleBackColor = true;
+            this.BTN_VENDA_USER.Click += new System.EventHandler(this.BTN_VENDA_USER_Click);
             // 
             // BTN_VENDA_HORAS
             // 
