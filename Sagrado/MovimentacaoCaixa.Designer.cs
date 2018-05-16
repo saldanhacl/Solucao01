@@ -38,6 +38,9 @@
             this.BTN_BUSCAR = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.BTN_CANC = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.BTN_BUSCA_CPF = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.IMG_CARTEIRA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
@@ -137,12 +140,48 @@
             this.BTN_CANC.UseVisualStyleBackColor = true;
             this.BTN_CANC.Click += new System.EventHandler(this.BTN_CANC_Click);
             // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(256, 223);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(224, 25);
+            this.comboBox2.TabIndex = 25;
+            // 
+            // BTN_BUSCA_CPF
+            // 
+            this.BTN_BUSCA_CPF.BackColor = System.Drawing.Color.White;
+            this.BTN_BUSCA_CPF.BackgroundImage = global::Sagrado.Properties.Resources.search;
+            this.BTN_BUSCA_CPF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTN_BUSCA_CPF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_BUSCA_CPF.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_BUSCA_CPF.Location = new System.Drawing.Point(497, 223);
+            this.BTN_BUSCA_CPF.Name = "BTN_BUSCA_CPF";
+            this.BTN_BUSCA_CPF.Size = new System.Drawing.Size(30, 30);
+            this.BTN_BUSCA_CPF.TabIndex = 26;
+            this.BTN_BUSCA_CPF.UseVisualStyleBackColor = false;
+            this.BTN_BUSCA_CPF.Click += new System.EventHandler(this.BTN_BUSCA_CPF_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(139, 232);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 13);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Pesquisar por usuário:";
+            // 
             // MovimentacaoCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BTN_BUSCA_CPF);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.BTN_CANC);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.BTN_BUSCAR);
@@ -172,5 +211,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FUNCIONÁRIO;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button BTN_CANC;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button BTN_BUSCA_CPF;
+        private System.Windows.Forms.Label label1;
     }
 }

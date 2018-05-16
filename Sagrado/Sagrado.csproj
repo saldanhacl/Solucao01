@@ -160,6 +160,7 @@
     <Compile Include="AdicionarProdutosComanda.Designer.cs">
       <DependentUpon>AdicionarProdutosComanda.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="Validador.cs" />
     <Compile Include="ConsultarUser.cs">
       <SubType>Form</SubType>
