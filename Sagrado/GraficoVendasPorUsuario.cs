@@ -67,43 +67,9 @@ namespace Sagrado
             chart1.Series["Series1"].XValueMember = "CPF_FUNCIONARIO";
             chart1.Series["Series1"].YValueMembers = "NumeroVenda";
             chart1.Series["Series1"].ChartType = SeriesChartType.Pie;
-            DataBaseConnection bd = new DataBaseConnection();
-            bd.openConnection();
 
             chart1.DataSource = EnviarDados("SELECT VALOR_ENTRADA_CAIXA, CPF_FUNCIONARIO, Count(TYPE_ENTRADA_CAIXA) As NumeroVenda From caixa where TYPE_ENTRADA_CAIXA = 'v' or TYPE_ENTRADA_CAIXA = 'f' group by CPF_FUNCIONARIO");
-            string Query = "SELECT VALOR_ENTRADA_CAIXA, CPF_FUNCIONARIO, Count(TYPE_ENTRADA_CAIXA) As NumeroVenda From caixa where TYPE_ENTRADA_CAIXA = 'v' or TYPE_ENTRADA_CAIXA = 'f' group by CPF_FUNCIONARIO";
-           /* MySqlCommand cmd = new MySqlCommand(Query, bd.retornaConexao());
-            MySqlDataReader reader = cmd.ExecuteReader();
-            if (!reader.HasRows)
-            {
-                MessageBox.Show("Erro no banco de dados.");
-            }
-            else
-            {
-                while (reader.Read())
-                {
-                    chart1.Series["Series1"].Label = reader["NumeroVenda"].ToString();
-                }
-            }
-                bd.closeConnection();
-                DataBaseConnection bd2 = new DataBaseConnection();
-            bd2.openConnection();
-            string Query2 = "SELECT NOME_USER from usuario where 'CPF_USER = '" + chart1.Series["Series1"].Label + "'";
-            MySqlCommand cmd2 = new MySqlCommand(Query2, bd2.retornaConexao());
-            MySqlDataReader reader2 = cmd2.ExecuteReader();
-
-            if (!reader2.HasRows)
-            {
-                MessageBox.Show("Erro no banco de dados.");
-            }
-            else
-            {
-                while (reader2.Read())
-                {
-                    chart1.Series["Series1"].LegendText = reader2["NOME_USER"].ToString();
-                }
-            }
-            bd2.closeConnection();*/
+          
 
         }
 
@@ -115,6 +81,11 @@ namespace Sagrado
         private void chart1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void BTN_CANC_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

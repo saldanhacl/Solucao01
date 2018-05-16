@@ -33,6 +33,7 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
+            this.BTN_CANC = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(132, 40);
+            this.chart1.Location = new System.Drawing.Point(12, 49);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -56,11 +57,24 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(300, 9);
+            this.label1.Location = new System.Drawing.Point(159, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(398, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "VENDAS POR USUÁRIO";
+            // 
+            // BTN_CANC
+            // 
+            this.BTN_CANC.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
+            this.BTN_CANC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_CANC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_CANC.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_CANC.Location = new System.Drawing.Point(781, 319);
+            this.BTN_CANC.Name = "BTN_CANC";
+            this.BTN_CANC.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CANC.TabIndex = 3;
+            this.BTN_CANC.UseVisualStyleBackColor = true;
+            this.BTN_CANC.Click += new System.EventHandler(this.BTN_CANC_Click);
             // 
             // GraficoVendasPorUsuario
             // 
@@ -68,6 +82,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(915, 455);
+            this.Controls.Add(this.BTN_CANC);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chart1);
             this.Name = "GraficoVendasPorUsuario";
@@ -84,5 +99,6 @@
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BTN_CANC;
     }
 }

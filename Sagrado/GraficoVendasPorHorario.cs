@@ -53,13 +53,17 @@ namespace Sagrado
             chart1.Series["Series1"].XValueMember = "HOUR(DATE_MODIFY_CAIXA)";
             chart1.Series["Series1"].YValueMembers = "NumeroVenda";
             chart1.Series["Series1"].ChartType = SeriesChartType.Pie;
-            DataBaseConnection bd = new DataBaseConnection();
-            bd.openConnection();
+           // DataBaseConnection bd = new DataBaseConnection();
+           // bd.openConnection();
             //chart1.Series["Series1"].LegendText = "SELECT CONCAT(HOUR(DATE_TIME_MODIFY), ' to ', CONCAT(HOUR(DATE_TIME_MODIFY), ':59:59')) as time_frame from caixa group by HOUR(DATE_MODIFY_CAIXA)";
-            chart1.Series["Series1"].ChartType = SeriesChartType.Pie;
             chart1.DataSource = EnviarDados("SELECT VALOR_ENTRADA_CAIXA, HOUR(DATE_MODIFY_CAIXA), Count(TYPE_ENTRADA_CAIXA) As NumeroVenda From caixa where TYPE_ENTRADA_CAIXA = 'v' or TYPE_ENTRADA_CAIXA = 'f' group by HOUR(DATE_MODIFY_CAIXA)");
-            string Query = "SELECT VALOR_ENTRADA_CAIXA, CPF_FUNCIONARIO, Count(TYPE_ENTRADA_CAIXA) As NumeroVenda From caixa where TYPE_ENTRADA_CAIXA = 'v' or TYPE_ENTRADA_CAIXA = 'f' group by CPF_FUNCIONARIO";
-            MySqlCommand cmd = new MySqlCommand(Query, bd.retornaConexao());
+            //string Query = "SELECT VALOR_ENTRADA_CAIXA, CPF_FUNCIONARIO, Count(TYPE_ENTRADA_CAIXA) As NumeroVenda From caixa where TYPE_ENTRADA_CAIXA = 'v' or TYPE_ENTRADA_CAIXA = 'f' group by CPF_FUNCIONARIO";
+          //  MySqlCommand cmd = new MySqlCommand(Query, bd.retornaConexao());
+        }
+
+        private void BTN_CANC_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

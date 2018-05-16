@@ -61,6 +61,7 @@
             this.BTN_VENDA_PRODUTOS.TabIndex = 2;
             this.BTN_VENDA_PRODUTOS.Text = "Gerar gráfico de  produtos vendidos";
             this.BTN_VENDA_PRODUTOS.UseVisualStyleBackColor = true;
+            this.BTN_VENDA_PRODUTOS.Click += new System.EventHandler(this.BTN_VENDA_PRODUTOS_Click);
             // 
             // BTN_VENDA_USER
             // 

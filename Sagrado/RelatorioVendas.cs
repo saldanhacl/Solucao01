@@ -20,13 +20,18 @@ namespace Sagrado
         private void BTN_VENDA_USER_Click(object sender, EventArgs e)
         {
             new GraficoVendasPorUsuario().Show();
-            this.Close();
+            
         }
 
         private void BTN_VENDA_HORAS_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
             new GraficoVendasPorHorario().Show();
+        }
+
+        private void BTN_VENDA_PRODUTOS_Click(object sender, EventArgs e)
+        {
+          new  GraficoProdutosVendidos().Show();
         }
     }
 }
