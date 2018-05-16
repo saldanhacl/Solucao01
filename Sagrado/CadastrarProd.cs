@@ -27,11 +27,11 @@ namespace Sagrado
 
             String tipo = textBox1.Text.ToString().ToUpper();
             String nome = textBox2.Text.ToString().ToUpper();
-            int quantidade = int.Parse(textBox3.Text.ToString());
+            int quantidade = 0;
             float preco = float.Parse(textBox4.Text.ToString());
 
 
-            if (textBox1.Text.Length > 0 && textBox2.Text.Length > 0 && textBox3.Text.Length > 0 && textBox4.Text.Length > 0)
+            if (textBox1.Text.Length > 0 && textBox2.Text.Length > 0 && textBox4.Text.Length > 0)
             {
                 String query = "INSERT INTO PRODUTO " +
                 "(TYPE_PRODUTO, QTD_PRODUTO, PRECO_PRODUTO, NOME_PRODUTO)" +
@@ -58,10 +58,7 @@ namespace Sagrado
             this.Close();
         }
 
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            VerificarTecla(e, "numero", textBox3);
-        }
+       
 
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -72,7 +69,6 @@ namespace Sagrado
         {
             textBox1.Text = "";
             textBox2.Text = "";
-            textBox3.Text = "";
             textBox4.Text = "";
         }
 
@@ -95,7 +91,6 @@ namespace Sagrado
             
         }
 
-
-
+        
     }
 }

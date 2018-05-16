@@ -34,11 +34,10 @@
             this.N = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QUANTIDADE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PREÇO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
+            this.EXCLUIR = new System.Windows.Forms.Button();
             this.BTN_CONF = new System.Windows.Forms.Button();
-            this.BTN_CANC = new System.Windows.Forms.Button();
             this.BTN_BUSCAR = new System.Windows.Forms.Button();
             this.IMG_CARTEIRA = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
@@ -64,6 +63,9 @@
             // 
             // dg
             // 
+            this.dg.AllowUserToAddRows = false;
+            this.dg.AllowUserToResizeColumns = false;
+            this.dg.AllowUserToResizeRows = false;
             this.dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg.BackgroundColor = System.Drawing.Color.White;
             this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -71,11 +73,13 @@
             this.N,
             this.TIPO,
             this.NOME,
-            this.QUANTIDADE,
             this.PREÇO});
-            this.dg.Location = new System.Drawing.Point(29, 253);
+            this.dg.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.dg.Location = new System.Drawing.Point(29, 251);
+            this.dg.MultiSelect = false;
             this.dg.Name = "dg";
             this.dg.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg.Size = new System.Drawing.Size(723, 197);
             this.dg.TabIndex = 31;
             this.dg.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_CellEndEdit);
@@ -99,12 +103,6 @@
             this.NOME.HeaderText = "NOME";
             this.NOME.Name = "NOME";
             // 
-            // QUANTIDADE
-            // 
-            this.QUANTIDADE.FillWeight = 10F;
-            this.QUANTIDADE.HeaderText = "QTD";
-            this.QUANTIDADE.Name = "QUANTIDADE";
-            // 
             // PREÇO
             // 
             this.PREÇO.FillWeight = 15F;
@@ -121,6 +119,19 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "SELECIONE O TIPO DO PRODUTO:";
             // 
+            // EXCLUIR
+            // 
+            this.EXCLUIR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EX_PROD;
+            this.EXCLUIR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EXCLUIR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EXCLUIR.ForeColor = System.Drawing.Color.Transparent;
+            this.EXCLUIR.Location = new System.Drawing.Point(644, 473);
+            this.EXCLUIR.Name = "EXCLUIR";
+            this.EXCLUIR.Size = new System.Drawing.Size(51, 51);
+            this.EXCLUIR.TabIndex = 36;
+            this.EXCLUIR.UseVisualStyleBackColor = true;
+            this.EXCLUIR.Click += new System.EventHandler(this.EXCLUIR_Click);
+            // 
             // BTN_CONF
             // 
             this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EDIT;
@@ -133,19 +144,6 @@
             this.BTN_CONF.TabIndex = 33;
             this.BTN_CONF.UseVisualStyleBackColor = true;
             this.BTN_CONF.Click += new System.EventHandler(this.BTN_CONF_Click);
-            // 
-            // BTN_CANC
-            // 
-            this.BTN_CANC.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BTN_CANC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_CANC.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CANC.Location = new System.Drawing.Point(625, 473);
-            this.BTN_CANC.Name = "BTN_CANC";
-            this.BTN_CANC.Size = new System.Drawing.Size(51, 51);
-            this.BTN_CANC.TabIndex = 3;
-            this.BTN_CANC.UseVisualStyleBackColor = true;
-            this.BTN_CANC.Click += new System.EventHandler(this.BTN_CANC_Click);
             // 
             // BTN_BUSCAR
             // 
@@ -176,8 +174,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.EXCLUIR);
             this.Controls.Add(this.BTN_CONF);
-            this.Controls.Add(this.BTN_CANC);
             this.Controls.Add(this.LISTA_TIPOS);
             this.Controls.Add(this.BTN_BUSCAR);
             this.Controls.Add(this.dg);
@@ -203,12 +201,11 @@
         private System.Windows.Forms.DataGridView dg;
         private System.Windows.Forms.PictureBox IMG_CARTEIRA;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button BTN_CANC;
         private System.Windows.Forms.Button BTN_CONF;
+        private System.Windows.Forms.Button EXCLUIR;
         private System.Windows.Forms.DataGridViewTextBoxColumn N;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QUANTIDADE;
         private System.Windows.Forms.DataGridViewTextBoxColumn PREÇO;
     }
 }

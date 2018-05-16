@@ -64,7 +64,7 @@ namespace Sagrado
         private void BTN_GEREN_PROD_Click(object sender, EventArgs e)
         {
             new GerenProduto().Show();
-            this.Close();
+            
         }
 
         private void BTN_RELAT_VENDAS_Click(object sender, EventArgs e)

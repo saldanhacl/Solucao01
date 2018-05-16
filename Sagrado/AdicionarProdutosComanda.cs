@@ -47,7 +47,7 @@ namespace Sagrado
 
                 Produto produto = new Produto(idProduto, nome, preco);
 
-                Lista_Produtos.Items.Add(produto);
+                PRODUTOS.Items.Add(produto);
             }
             bd.closeConnection();
         }
@@ -90,11 +90,11 @@ namespace Sagrado
 
         private void Lista_Produtos_DoubleClick(object sender, EventArgs e)
         {
-            if (Lista_Produtos.SelectedItem != null)
+            if (PRODUTOS.SelectedItem != null)
             {
-                Lista_Comanda.Items.Add(Lista_Produtos.SelectedItem);
-                total += ((Produto)Lista_Produtos.SelectedItem).preco;
-                ((Produto)Lista_Produtos.SelectedItem).quantidade++;
+                Lista_Comanda.Items.Add(PRODUTOS.SelectedItem);
+                total += ((Produto)PRODUTOS.SelectedItem).preco;
+                ((Produto)PRODUTOS.SelectedItem).quantidade++;
                 txt_total.Text = total.ToString();
             }
 

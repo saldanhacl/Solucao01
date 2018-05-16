@@ -47,7 +47,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label8.Location = new System.Drawing.Point(461, 328);
+            this.label8.Location = new System.Drawing.Point(422, 321);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 18);
@@ -58,7 +58,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label12.Location = new System.Drawing.Point(157, 328);
+            this.label12.Location = new System.Drawing.Point(156, 321);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(39, 18);
@@ -69,7 +69,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label11.Location = new System.Drawing.Point(48, 283);
+            this.label11.Location = new System.Drawing.Point(48, 281);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(147, 18);
@@ -92,7 +92,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.label5.Location = new System.Drawing.Point(246, 232);
+            this.label5.Location = new System.Drawing.Point(261, 220);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 20);
@@ -142,7 +142,7 @@
             this.BTN_SEARCH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_SEARCH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_SEARCH.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_SEARCH.Location = new System.Drawing.Point(472, 228);
+            this.BTN_SEARCH.Location = new System.Drawing.Point(496, 211);
             this.BTN_SEARCH.Name = "BTN_SEARCH";
             this.BTN_SEARCH.Size = new System.Drawing.Size(30, 30);
             this.BTN_SEARCH.TabIndex = 2;
@@ -151,26 +151,29 @@
             // 
             // TXT_CPF_CLIENTE
             // 
-            this.TXT_CPF_CLIENTE.Location = new System.Drawing.Point(300, 234);
+            this.TXT_CPF_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.TXT_CPF_CLIENTE.Location = new System.Drawing.Point(324, 217);
             this.TXT_CPF_CLIENTE.Mask = "000.000.000-00";
             this.TXT_CPF_CLIENTE.Name = "TXT_CPF_CLIENTE";
-            this.TXT_CPF_CLIENTE.Size = new System.Drawing.Size(139, 20);
+            this.TXT_CPF_CLIENTE.Size = new System.Drawing.Size(159, 23);
             this.TXT_CPF_CLIENTE.TabIndex = 125;
             // 
             // TXT_TEL_CLIENTE
             // 
-            this.TXT_TEL_CLIENTE.Location = new System.Drawing.Point(209, 325);
+            this.TXT_TEL_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.TXT_TEL_CLIENTE.Location = new System.Drawing.Point(209, 316);
             this.TXT_TEL_CLIENTE.Mask = "(31) 0000-0000";
             this.TXT_TEL_CLIENTE.Name = "TXT_TEL_CLIENTE";
-            this.TXT_TEL_CLIENTE.Size = new System.Drawing.Size(177, 20);
+            this.TXT_TEL_CLIENTE.Size = new System.Drawing.Size(177, 23);
             this.TXT_TEL_CLIENTE.TabIndex = 126;
             // 
             // TXT_CEL_CLIENTE
             // 
-            this.TXT_CEL_CLIENTE.Location = new System.Drawing.Point(509, 328);
+            this.TXT_CEL_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.TXT_CEL_CLIENTE.Location = new System.Drawing.Point(472, 316);
             this.TXT_CEL_CLIENTE.Mask = "(31) 00000-0000";
             this.TXT_CEL_CLIENTE.Name = "TXT_CEL_CLIENTE";
-            this.TXT_CEL_CLIENTE.Size = new System.Drawing.Size(173, 20);
+            this.TXT_CEL_CLIENTE.Size = new System.Drawing.Size(205, 23);
             this.TXT_CEL_CLIENTE.TabIndex = 127;
             // 
             // AlterarCliente

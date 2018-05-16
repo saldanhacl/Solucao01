@@ -19,7 +19,6 @@ namespace Sagrado
 
         private void pAINELToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new MenuAdm().Show();
             this.Close();
         }
 
@@ -38,19 +37,16 @@ namespace Sagrado
             new CadastrarProd().Show();
         }
 
-        private void BTN_EDIT_PRODUTO_Click(object sender, EventArgs e)
-        {
-            new AlterarProd().Show();
-        }
+        
 
         private void BTN_EXCLUIR_PRODUTO_Click(object sender, EventArgs e)
         {
-            new ExcluirProd().Show();
+            new ExcluirProd().ShowDialog();
         }
 
         private void BTN_CONSUL_PRODUTO_Click(object sender, EventArgs e)
         {
-            new ConsultarProd().Show();
+            new ConsultarProd().ShowDialog();
         }
 
        

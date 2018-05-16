@@ -149,7 +149,6 @@
             this.BTN_EDIT_PRODUTO.Size = new System.Drawing.Size(200, 100);
             this.BTN_EDIT_PRODUTO.TabIndex = 3;
             this.BTN_EDIT_PRODUTO.UseVisualStyleBackColor = true;
-            this.BTN_EDIT_PRODUTO.Click += new System.EventHandler(this.BTN_EDIT_PRODUTO_Click);
             // 
             // BTN_EXCLUIR_PRODUTO
             // 

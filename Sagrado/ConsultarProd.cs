@@ -53,7 +53,7 @@ namespace Sagrado
                 dg.Rows.Add();
                 dg.Rows[i].Cells["TIPO"].Value = reader["TYPE_PRODUTO"].ToString();
                 dg.Rows[i].Cells["NOME"].Value = reader["NOME_PRODUTO"].ToString();
-                dg.Rows[i].Cells["QUANTIDADE"].Value = reader["QTD_PRODUTO"].ToString();
+                //dg.Rows[i].Cells["QUANTIDADE"].Value = reader["QTD_PRODUTO"].ToString();
                 dg.Rows[i].Cells["PREÇO"].Value = reader["PRECO_PRODUTO"].ToString();
                 dg.Rows[i].Cells["N"].Value = reader["NRSEQPRODUTO"].ToString();
 
@@ -99,73 +99,71 @@ namespace Sagrado
             int linha = e.RowIndex;
 
             if (!(linhaAlter.Contains(linha))) linhaAlter.Add(linha);
-            MessageBox.Show(linhaAlter.Count.ToString());
+            //MessageBox.Show(linhaAlter.Count.ToString());
         }
 
         private void BTN_CONF_Click(object sender, EventArgs e)
         {
+            if(dg.CurrentRow != null)
+            {
+                int linha = int.Parse(dg.CurrentRow.Index.ToString());
+                MessageBox.Show(linha.ToString());
 
+                int id = int.Parse(dg.Rows[linha].Cells["N"].Value.ToString());
 
-            if (linhaAlter.Count <= 0) MessageBox.Show("NÃO EXISTEM ALTERAÇÕES PARA SEREM SALVAS");
+                String tipo = dg.Rows[linha].Cells["TIPO"].Value.ToString();
+                String nome = dg.Rows[linha].Cells["NOME"].Value.ToString();
+                String preco = dg.Rows[linha].Cells["PREÇO"].Value.ToString();
+
+                new AlterarProd(preco, nome, tipo, id).ShowDialog();
+
+            }
             else
             {
-                DialogResult dr = MessageBox.Show("DESEJA SALVAR OS DADOS ALTERADOS?",
-                            "CONFIRMAÇÃO:", MessageBoxButtons.YesNo);
-                switch (dr)
-                {
-                    case DialogResult.Yes:
+                MessageBox.Show("SELECIONE UMA LINHA PARA ALTERAR");
+            }
 
+
+        }
+
+        private void EXCLUIR_Click(object sender, EventArgs e)
+        {
+            int linha = int.Parse(dg.CurrentRow.Index.ToString());
+            int id = int.Parse(dg.Rows[linha].Cells["N"].Value.ToString());
+
+            DialogResult dr = MessageBox.Show("DESEJA EXCLUIR A LINHA SELECIONADA?",
+                            "CONFIRMAÇÃO:", MessageBoxButtons.YesNo);
+        
+            switch (dr)
+            {
+                case DialogResult.Yes:
+
+                    if (linha >= 0)
+                    {
                         DataBaseConnection bd = new DataBaseConnection();
                         bd.openConnection();
 
+                        String query = "DELETE FROM PRODUTO WHERE NRSEQPRODUTO ='" + id.ToString() + "'";
+                        MessageBox.Show(query);
 
-                        while (linhaAlter.Count > 0)
-                        {
-                            int linhaTabela = linhaAlter.ElementAt(0);
-
-                            String tipoRecebido = dg.Rows[linhaTabela].Cells["TIPO"].Value.ToString().ToUpper();
-                            String nomeRecebido = dg.Rows[linhaTabela].Cells["NOME"].Value.ToString().ToUpper();
-
-                            float precoRecebido = float.Parse(dg.Rows[linhaTabela].Cells["PREÇO"].Value.ToString());
-
-                            int qtdRecebido = int.Parse(dg.Rows[linhaTabela].Cells["QUANTIDADE"].Value.ToString());
-                            int id = int.Parse(dg.Rows[linhaTabela].Cells["N"].Value.ToString());
-
-                            String query = "UPDATE PRODUTO SET " +
-                            "TYPE_PRODUTO = '" + tipoRecebido +
-                            "', NOME_PRODUTO = '" + nomeRecebido +
-                            "', PRECO_PRODUTO = " + precoRecebido +
-                            ", QTD_PRODUTO = " + qtdRecebido +
-                            " WHERE NRSEQPRODUTO = " + id;
-
-                            MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
-
-                            cmd.ExecuteNonQuery();
-
-                            linhaAlter.RemoveAt(0);
-
-                        }
+                        MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("PRODUTO EXCLUÍDO COM SUCESSO");
                         bd.closeConnection();
+                        atualizarListaTipos();
+                        dg.Rows.RemoveAt(linha);
+                    }
+                    break;
 
-                        MessageBox.Show("PRODUTO ALTERADO COM SUCESSO");
-                        this.atualizarListaTipos();
-                        
-                        
+                case DialogResult.No:
+                    MessageBox.Show("EXCLUSÃO CANCELADA");
+                    break;
 
-
-                        break;
-                    case DialogResult.No:
-                        MessageBox.Show("EXCLUSÃO CANCELADA");
-                        break;
-                }
             }
-            
 
 
             
+           
         }
-
-
-
     }
 }

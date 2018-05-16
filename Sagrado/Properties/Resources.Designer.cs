@@ -263,6 +263,16 @@ namespace Sagrado.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BTN_EX_PROD {
+            get {
+                object obj = ResourceManager.GetObject("BTN_EX_PROD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BTN_EXCLUIR {
             get {
                 object obj = ResourceManager.GetObject("BTN_EXCLUIR", resourceCulture);

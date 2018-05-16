@@ -438,5 +438,8 @@
     <None Include="Resources\BTN_LOGIN2.png" />
     <None Include="Resources\BTN_EDIT.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_EX_PROD.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
