@@ -12,7 +12,7 @@ using MySql.Data.MySqlClient;
 
 namespace Sagrado
 {
-    public partial class AdicionarProdutosComanda : Form
+    partial class AdicionarProdutosComanda : Form
     {
 
         Double total = 0;
@@ -37,56 +37,72 @@ namespace Sagrado
 
             String nome = null;
             Double preco = 0;
+            long idProduto;
 
             while (reader.Read())
             {
                 preco = Double.Parse(reader["PRECO_PRODUTO"].ToString());
                 nome = reader["NOME_PRODUTO"].ToString();
+                idProduto = long.Parse(reader["NRSEQPRODUTO"].ToString());
 
-                Produto produto = new Produto(nome, preco);
+                Produto produto = new Produto(idProduto, nome, preco);
 
                 Lista_Produtos.Items.Add(produto);
             }
             bd.closeConnection();
         }
 
-        private void btn_adicionar_produtos_Click(object sender, EventArgs e)
+        public List<Produto> getListaProdutosComanda()
         {
-            total = 0;
-            Lista_Comanda.Items.Clear();
+            List<Produto> produtosComanda = new List<Produto>();
+            int qtdProdutos = Lista_Comanda.Items.Count;
 
-            foreach (Produto produto in Lista_Produtos.CheckedItems)
+            for(int i=0; i < qtdProdutos; i++)
             {
-                if (!Lista_Comanda.Items.Contains(produto))
+                if (!produtosComanda.Contains((Produto)Lista_Comanda.Items[i]))
                 {
-                    total += produto.preco;
-                    Lista_Comanda.Items.Add(produto);
-                }
-
+                    produtosComanda.Add((Produto)Lista_Comanda.Items[i]);
+                } 
             }
 
-            txt_total.Text = "R$ " + total.ToString();
+            return produtosComanda;
+
         }
 
+
+     
         private void btn_fechar_comanda_Click(object sender, EventArgs e)
         {
-            ((RegEntrada)regEntrada).setBoxPriceText(total.ToString()); 
+            ((RegEntrada)regEntrada).setBoxPriceText(total.ToString());
+            ((RegEntrada)regEntrada).setListaProdutos( this.getListaProdutosComanda() );
             this.Close();
         }
 
         private void btn_zerar_comanda_Click(object sender, EventArgs e)
         {
             Lista_Comanda.Items.Clear();
-            zerarComanda();
         }
 
-
-        public void zerarComanda()
+        private void Lista_Produtos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach(int i in Lista_Produtos.CheckedIndices)
+
+        }
+
+        private void Lista_Produtos_DoubleClick(object sender, EventArgs e)
+        {
+            if (Lista_Produtos.SelectedItem != null)
             {
-                Lista_Produtos.SetItemCheckState(i, CheckState.Unchecked);
+                Lista_Comanda.Items.Add(Lista_Produtos.SelectedItem);
+                total += ((Produto)Lista_Produtos.SelectedItem).preco;
+                ((Produto)Lista_Produtos.SelectedItem).quantidade++;
+                txt_total.Text = total.ToString();
             }
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

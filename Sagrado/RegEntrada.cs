@@ -11,14 +11,31 @@ using MySql.Data.MySqlClient;
 
 namespace Sagrado
 {
-    public partial class RegEntrada : Form
+     partial class RegEntrada : Form
     {
+
+        Form adicionarProdutosComanda;
+        List<Produto> produtosComanda;
+
         public RegEntrada()
         {
             InitializeComponent();
             this.atualizarSaldoTela();
             this.atualizarListaCliente();
                     
+        }
+
+        public RegEntrada(Form form)
+        {
+            InitializeComponent();
+            this.atualizarSaldoTela();
+            this.atualizarListaCliente();
+            adicionarProdutosComanda = form;
+        }
+
+        public void setListaProdutos(List<Produto> produtos)
+        {
+            produtosComanda = produtos;
         }
 
         private String getLastLogin()
@@ -145,6 +162,7 @@ namespace Sagrado
 
                     MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
                     cmd.ExecuteNonQuery();
+                    salvarVendaBanco(bd);
                     MessageBox.Show("REGISTRO CADASTRADO COM SUCESSO");
 
                     new RegEntrada().Show();
@@ -195,6 +213,22 @@ namespace Sagrado
 
             }
 
+            
+            
+        }
+
+        private void salvarVendaBanco(DataBaseConnection bd)
+        {
+
+           foreach(Produto p in produtosComanda){
+
+                String query = "INSERT INTO venda" +
+                    "(VALOR, NRSEQ_PRODUTO)" +
+                    " VALUES ('" + p.preco * p.quantidade + "', " + p.idProduto + ")";
+
+                MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+                cmd.ExecuteNonQuery();
+            }     
             
             
         }
