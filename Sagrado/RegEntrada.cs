@@ -207,12 +207,11 @@ namespace Sagrado
 
                 if(radioButton2.Checked == true)
                 {
-                    String nomeCliente = LISTA_CLIENTES.SelectedItem.ToString();
-                    saveCliente(nomeCliente, valorTextBox);
+                    Cliente cliente = (Cliente)LISTA_CLIENTES.SelectedItem;
+                    saveCliente(cliente.cpf, valorTextBox);
                 }
 
             }
-
             
             
         }
@@ -288,7 +287,7 @@ namespace Sagrado
             {
                 nome = reader["NOME_CLIENTE"].ToString();
                 cpf = reader["CPF_CLIENTE"].ToString();
-                String cliente = nome + ": " + cpf;
+                Cliente cliente = new Cliente(nome, cpf);
                 LISTA_CLIENTES.Items.Add(cliente);
             }
             bd.closeConnection();
