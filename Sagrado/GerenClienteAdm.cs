@@ -19,8 +19,7 @@ namespace Sagrado
 
         private void pAINELToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new MenuAdm().Show();
-            this.Close();
+           this.Close();
         }
 
         private void tROCARUSUÁRIOToolStripMenuItem_Click(object sender, EventArgs e)

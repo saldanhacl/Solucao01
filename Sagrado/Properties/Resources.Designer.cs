@@ -73,6 +73,16 @@ namespace Sagrado.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BTN_ADD {
+            get {
+                object obj = ResourceManager.GetObject("BTN_ADD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BTN_ADD_CLIENTE {
             get {
                 object obj = ResourceManager.GetObject("BTN_ADD_CLIENTE", resourceCulture);
@@ -106,6 +116,16 @@ namespace Sagrado.Properties {
         internal static System.Drawing.Bitmap BTN_ADD_USER2 {
             get {
                 object obj = ResourceManager.GetObject("BTN_ADD_USER2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_ADD2 {
+            get {
+                object obj = ResourceManager.GetObject("BTN_ADD2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,6 +413,16 @@ namespace Sagrado.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BTN_RELATORIO {
+            get {
+                object obj = ResourceManager.GetObject("BTN_RELATORIO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BTN_RETIRAR_DINHEIRO2 {
             get {
                 object obj = ResourceManager.GetObject("BTN_RETIRAR_DINHEIRO2", resourceCulture);
@@ -406,6 +436,16 @@ namespace Sagrado.Properties {
         internal static System.Drawing.Bitmap BTN_SALDO {
             get {
                 object obj = ResourceManager.GetObject("BTN_SALDO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_SET {
+            get {
+                object obj = ResourceManager.GetObject("BTN_SET", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

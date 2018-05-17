@@ -39,16 +39,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.BTN_GEREN_PROD = new System.Windows.Forms.Button();
             this.BTN_CONSULTA_MOVI = new System.Windows.Forms.Button();
             this.BTN_REGISTRAR_ENTRADA = new System.Windows.Forms.Button();
             this.BTN_GERENCIAR_USER = new System.Windows.Forms.Button();
             this.BTN_RETIRAR_DINHEIRO = new System.Windows.Forms.Button();
             this.BTN_GERENCIAR_CLIENTE = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.BTN_GEREN_PROD = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +90,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(312, 211);
+            this.label7.Location = new System.Drawing.Point(307, 175);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(159, 16);
             this.label7.TabIndex = 47;
@@ -100,7 +100,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(72, 386);
+            this.label8.Location = new System.Drawing.Point(100, 319);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(149, 17);
             this.label8.TabIndex = 45;
@@ -110,7 +110,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 211);
+            this.label1.Location = new System.Drawing.Point(100, 175);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 16);
             this.label1.TabIndex = 51;
@@ -120,7 +120,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(316, 386);
+            this.label2.Location = new System.Drawing.Point(307, 319);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 17);
             this.label2.TabIndex = 49;
@@ -130,20 +130,61 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(543, 211);
+            this.label3.Location = new System.Drawing.Point(510, 175);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(181, 16);
             this.label3.TabIndex = 53;
             this.label3.Text = "MOVIMENTAÇÃO DO CAIXA";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(522, 319);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(162, 17);
+            this.label4.TabIndex = 55;
+            this.label4.Text = "GERENCIAR PRODUTO";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label5.Location = new System.Drawing.Point(91, 467);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(171, 17);
+            this.label5.TabIndex = 57;
+            this.label5.Text = "RELATÓRIO DE VENDAS";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_RELATORIO;
+            this.button1.Location = new System.Drawing.Point(87, 374);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 90);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "ir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BTN_RELAT_VENDAS_Click);
+            // 
+            // BTN_GEREN_PROD
+            // 
+            this.BTN_GEREN_PROD.Image = global::Sagrado.Properties.Resources.BTN_GERENCIAR_PRODUTO;
+            this.BTN_GEREN_PROD.Location = new System.Drawing.Point(513, 226);
+            this.BTN_GEREN_PROD.Name = "BTN_GEREN_PROD";
+            this.BTN_GEREN_PROD.Size = new System.Drawing.Size(180, 90);
+            this.BTN_GEREN_PROD.TabIndex = 7;
+            this.BTN_GEREN_PROD.UseVisualStyleBackColor = true;
+            this.BTN_GEREN_PROD.Click += new System.EventHandler(this.BTN_GEREN_PROD_Click);
             // 
             // BTN_CONSULTA_MOVI
             // 
             this.BTN_CONSULTA_MOVI.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SALDO;
             this.BTN_CONSULTA_MOVI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_CONSULTA_MOVI.ForeColor = System.Drawing.Color.White;
-            this.BTN_CONSULTA_MOVI.Location = new System.Drawing.Point(535, 107);
+            this.BTN_CONSULTA_MOVI.Location = new System.Drawing.Point(510, 82);
             this.BTN_CONSULTA_MOVI.Name = "BTN_CONSULTA_MOVI";
-            this.BTN_CONSULTA_MOVI.Size = new System.Drawing.Size(200, 100);
+            this.BTN_CONSULTA_MOVI.Size = new System.Drawing.Size(180, 90);
             this.BTN_CONSULTA_MOVI.TabIndex = 4;
             this.BTN_CONSULTA_MOVI.UseVisualStyleBackColor = true;
             this.BTN_CONSULTA_MOVI.Click += new System.EventHandler(this.BTN_CONSULTA_MOVI_Click);
@@ -153,9 +194,9 @@
             this.BTN_REGISTRAR_ENTRADA.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CAIXA2;
             this.BTN_REGISTRAR_ENTRADA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_REGISTRAR_ENTRADA.ForeColor = System.Drawing.Color.White;
-            this.BTN_REGISTRAR_ENTRADA.Location = new System.Drawing.Point(48, 107);
+            this.BTN_REGISTRAR_ENTRADA.Location = new System.Drawing.Point(87, 82);
             this.BTN_REGISTRAR_ENTRADA.Name = "BTN_REGISTRAR_ENTRADA";
-            this.BTN_REGISTRAR_ENTRADA.Size = new System.Drawing.Size(200, 100);
+            this.BTN_REGISTRAR_ENTRADA.Size = new System.Drawing.Size(180, 90);
             this.BTN_REGISTRAR_ENTRADA.TabIndex = 2;
             this.BTN_REGISTRAR_ENTRADA.UseVisualStyleBackColor = true;
             this.BTN_REGISTRAR_ENTRADA.Click += new System.EventHandler(this.BTN_REGISTRAR_ENTRADA_Click);
@@ -163,9 +204,9 @@
             // BTN_GERENCIAR_USER
             // 
             this.BTN_GERENCIAR_USER.Image = global::Sagrado.Properties.Resources.BTN_GERENCIAR_USUARIO2;
-            this.BTN_GERENCIAR_USER.Location = new System.Drawing.Point(292, 283);
+            this.BTN_GERENCIAR_USER.Location = new System.Drawing.Point(297, 226);
             this.BTN_GERENCIAR_USER.Name = "BTN_GERENCIAR_USER";
-            this.BTN_GERENCIAR_USER.Size = new System.Drawing.Size(200, 100);
+            this.BTN_GERENCIAR_USER.Size = new System.Drawing.Size(180, 90);
             this.BTN_GERENCIAR_USER.TabIndex = 6;
             this.BTN_GERENCIAR_USER.UseVisualStyleBackColor = true;
             this.BTN_GERENCIAR_USER.Click += new System.EventHandler(this.BTN_GERENCIAR_USER_Click);
@@ -175,9 +216,9 @@
             this.BTN_RETIRAR_DINHEIRO.BackgroundImage = global::Sagrado.Properties.Resources.BTN_RETIRAR_DINHEIRO2;
             this.BTN_RETIRAR_DINHEIRO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_RETIRAR_DINHEIRO.ForeColor = System.Drawing.Color.White;
-            this.BTN_RETIRAR_DINHEIRO.Location = new System.Drawing.Point(292, 107);
+            this.BTN_RETIRAR_DINHEIRO.Location = new System.Drawing.Point(297, 82);
             this.BTN_RETIRAR_DINHEIRO.Name = "BTN_RETIRAR_DINHEIRO";
-            this.BTN_RETIRAR_DINHEIRO.Size = new System.Drawing.Size(200, 100);
+            this.BTN_RETIRAR_DINHEIRO.Size = new System.Drawing.Size(180, 90);
             this.BTN_RETIRAR_DINHEIRO.TabIndex = 3;
             this.BTN_RETIRAR_DINHEIRO.UseVisualStyleBackColor = true;
             this.BTN_RETIRAR_DINHEIRO.Click += new System.EventHandler(this.BTN_RETIRAR_DINHEIRO_Click);
@@ -185,51 +226,12 @@
             // BTN_GERENCIAR_CLIENTE
             // 
             this.BTN_GERENCIAR_CLIENTE.Image = global::Sagrado.Properties.Resources.BTN_ACERTO_CLIENTE;
-            this.BTN_GERENCIAR_CLIENTE.Location = new System.Drawing.Point(48, 283);
+            this.BTN_GERENCIAR_CLIENTE.Location = new System.Drawing.Point(87, 226);
             this.BTN_GERENCIAR_CLIENTE.Name = "BTN_GERENCIAR_CLIENTE";
-            this.BTN_GERENCIAR_CLIENTE.Size = new System.Drawing.Size(200, 100);
+            this.BTN_GERENCIAR_CLIENTE.Size = new System.Drawing.Size(180, 90);
             this.BTN_GERENCIAR_CLIENTE.TabIndex = 5;
             this.BTN_GERENCIAR_CLIENTE.UseVisualStyleBackColor = true;
             this.BTN_GERENCIAR_CLIENTE.Click += new System.EventHandler(this.BTN_GERENCIAR_CLIENTE_Click);
-            // 
-            // BTN_GEREN_PROD
-            // 
-            this.BTN_GEREN_PROD.Image = global::Sagrado.Properties.Resources.BTN_GERENCIAR_PRODUTO;
-            this.BTN_GEREN_PROD.Location = new System.Drawing.Point(535, 283);
-            this.BTN_GEREN_PROD.Name = "BTN_GEREN_PROD";
-            this.BTN_GEREN_PROD.Size = new System.Drawing.Size(200, 100);
-            this.BTN_GEREN_PROD.TabIndex = 7;
-            this.BTN_GEREN_PROD.UseVisualStyleBackColor = true;
-            this.BTN_GEREN_PROD.Click += new System.EventHandler(this.BTN_GEREN_PROD_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(553, 386);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 17);
-            this.label4.TabIndex = 55;
-            this.label4.Text = "GERENCIAR PRODUTO";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(94, 456);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "ir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.BTN_RELAT_VENDAS_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(72, 493);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 13);
-            this.label5.TabIndex = 57;
-            this.label5.Text = "RELATÓRIO DE VENDAS";
             // 
             // MenuAdm
             // 

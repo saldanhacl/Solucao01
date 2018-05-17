@@ -32,7 +32,7 @@ namespace Sagrado
         {
          
             new GerenClienteAdm().Show();
-            this.Close();
+            //this.Close();
         }
 
         private void pAINELToolStripMenuItem_Click(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace Sagrado
         private void BTN_GERENCIAR_USER_Click(object sender, EventArgs e)
         {
             new GerenUser().Show();
-            this.Close();
+            //this.Close();
         }
 
         private void BTN_RETIRAR_DINHEIRO_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace Sagrado
 
         private void BTN_GEREN_PROD_Click(object sender, EventArgs e)
         {
-            new GerenProduto().Show();
+            new ConsultarProd().Show();
             
         }
 

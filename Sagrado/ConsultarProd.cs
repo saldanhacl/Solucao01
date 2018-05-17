@@ -159,11 +159,12 @@ namespace Sagrado
                     MessageBox.Show("EXCLUSÃO CANCELADA");
                     break;
 
-            }
+            }    
+        }
 
-
-            
-           
+        private void BTN_ADD_Click(object sender, EventArgs e)
+        {
+            new CadastrarProd().Show();
         }
     }
 }

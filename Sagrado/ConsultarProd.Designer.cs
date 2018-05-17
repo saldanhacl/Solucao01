@@ -36,6 +36,7 @@
             this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PREÇO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
+            this.BTN_ADD = new System.Windows.Forms.Button();
             this.EXCLUIR = new System.Windows.Forms.Button();
             this.BTN_CONF = new System.Windows.Forms.Button();
             this.BTN_BUSCAR = new System.Windows.Forms.Button();
@@ -119,13 +120,26 @@
             this.label2.TabIndex = 29;
             this.label2.Text = "SELECIONE O TIPO DO PRODUTO:";
             // 
+            // BTN_ADD
+            // 
+            this.BTN_ADD.BackgroundImage = global::Sagrado.Properties.Resources.BTN_ADD2;
+            this.BTN_ADD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_ADD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_ADD.ForeColor = System.Drawing.Color.Transparent;
+            this.BTN_ADD.Location = new System.Drawing.Point(701, 474);
+            this.BTN_ADD.Name = "BTN_ADD";
+            this.BTN_ADD.Size = new System.Drawing.Size(51, 51);
+            this.BTN_ADD.TabIndex = 37;
+            this.BTN_ADD.UseVisualStyleBackColor = true;
+            this.BTN_ADD.Click += new System.EventHandler(this.BTN_ADD_Click);
+            // 
             // EXCLUIR
             // 
             this.EXCLUIR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EX_PROD;
             this.EXCLUIR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.EXCLUIR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EXCLUIR.ForeColor = System.Drawing.Color.Transparent;
-            this.EXCLUIR.Location = new System.Drawing.Point(644, 473);
+            this.EXCLUIR.Location = new System.Drawing.Point(587, 474);
             this.EXCLUIR.Name = "EXCLUIR";
             this.EXCLUIR.Size = new System.Drawing.Size(51, 51);
             this.EXCLUIR.TabIndex = 36;
@@ -134,11 +148,11 @@
             // 
             // BTN_CONF
             // 
-            this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EDIT;
+            this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SET;
             this.BTN_CONF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_CONF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_CONF.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CONF.Location = new System.Drawing.Point(701, 473);
+            this.BTN_CONF.Location = new System.Drawing.Point(644, 474);
             this.BTN_CONF.Name = "BTN_CONF";
             this.BTN_CONF.Size = new System.Drawing.Size(51, 51);
             this.BTN_CONF.TabIndex = 33;
@@ -170,10 +184,14 @@
             // 
             // ConsultarProd
             // 
+            this.AccessibleDescription = "ALTERAR";
+            this.AccessibleName = "ALTERAR";
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.BTN_ADD);
             this.Controls.Add(this.EXCLUIR);
             this.Controls.Add(this.BTN_CONF);
             this.Controls.Add(this.LISTA_TIPOS);
@@ -207,5 +225,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
         private System.Windows.Forms.DataGridViewTextBoxColumn PREÇO;
+        private System.Windows.Forms.Button BTN_ADD;
     }
 }
