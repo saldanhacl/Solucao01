@@ -33,5 +33,10 @@ namespace Sagrado
         {
           new  GraficoProdutosVendidos().Show();
         }
+
+        private void BTN_VENDA_FIADO_Click(object sender, EventArgs e)
+        {
+            new GraficoVendasTipoFiado().Show();
+        }
     }
 }

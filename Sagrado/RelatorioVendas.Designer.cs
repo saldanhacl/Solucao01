@@ -52,6 +52,7 @@
             this.BTN_VENDA_FIADO.TabIndex = 1;
             this.BTN_VENDA_FIADO.Text = "Gerar gráfico da vendas fiadas";
             this.BTN_VENDA_FIADO.UseVisualStyleBackColor = true;
+            this.BTN_VENDA_FIADO.Click += new System.EventHandler(this.BTN_VENDA_FIADO_Click);
             // 
             // BTN_VENDA_PRODUTOS
             // 
