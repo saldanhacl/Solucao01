@@ -361,7 +361,7 @@
             // 
             this.TXT_CEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.TXT_CEL.Location = new System.Drawing.Point(535, 342);
-            this.TXT_CEL.Mask = "(00) 000000-0000";
+            this.TXT_CEL.Mask = "(00) 00000-0000";
             this.TXT_CEL.Name = "TXT_CEL";
             this.TXT_CEL.Size = new System.Drawing.Size(201, 24);
             this.TXT_CEL.TabIndex = 100;

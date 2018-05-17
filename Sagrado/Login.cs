@@ -60,7 +60,7 @@ namespace Sagrado
 
             DataBaseConnection bd = new DataBaseConnection();
             bd.openConnection();
-            String query = "SELECT * FROM USUARIO WHERE CPF_USER =" + textBox1.Text;
+            String query = "SELECT * FROM USUARIO WHERE CPF_USER =" + Validador.FormataCpfAndRg(TXT_CPF_CLIENTE.Text);
             MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
             MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -89,7 +89,7 @@ namespace Sagrado
     
         private void BTN_CONF_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length < 1 || textBox2.Text.Length < 1)
+            if (TXT_CPF_CLIENTE.Text.Length < 1 || textBox2.Text.Length < 1)
             {
                 MessageBox.Show("PREENCHA OS CAMPOS");
             }
@@ -125,6 +125,11 @@ namespace Sagrado
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -29,24 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcluirUser));
-            this.TXT_CPF = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BTN_CANC = new System.Windows.Forms.Button();
             this.BTN_CONF = new System.Windows.Forms.Button();
+            this.TXT_CPF = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // TXT_CPF
-            // 
-            this.TXT_CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_CPF.Location = new System.Drawing.Point(293, 246);
-            this.TXT_CPF.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_CPF.MaxLength = 11;
-            this.TXT_CPF.Name = "TXT_CPF";
-            this.TXT_CPF.Size = new System.Drawing.Size(195, 24);
-            this.TXT_CPF.TabIndex = 1;
-            this.TXT_CPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CPF_KeyPress);
             // 
             // label5
             // 
@@ -95,16 +84,26 @@
             this.BTN_CONF.UseVisualStyleBackColor = true;
             this.BTN_CONF.Click += new System.EventHandler(this.BTN_CONF_Click);
             // 
+            // TXT_CPF
+            // 
+            this.TXT_CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.TXT_CPF.Location = new System.Drawing.Point(291, 249);
+            this.TXT_CPF.Mask = "000.000.000-00";
+            this.TXT_CPF.Name = "TXT_CPF";
+            this.TXT_CPF.Size = new System.Drawing.Size(200, 24);
+            this.TXT_CPF.TabIndex = 99;
+            this.TXT_CPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ExcluirUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.TXT_CPF);
             this.Controls.Add(this.BTN_CANC);
             this.Controls.Add(this.BTN_CONF);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.TXT_CPF);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ExcluirUser";
@@ -120,9 +119,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox TXT_CPF;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button BTN_CANC;
         private System.Windows.Forms.Button BTN_CONF;
+        private System.Windows.Forms.MaskedTextBox TXT_CPF;
     }
 }

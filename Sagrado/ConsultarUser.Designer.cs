@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarUser));
             this.label5 = new System.Windows.Forms.Label();
-            this.TXT_CPF = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,16 +45,17 @@
             this.RD_FUNC = new System.Windows.Forms.RadioButton();
             this.RD_ADMIN = new System.Windows.Forms.RadioButton();
             this.TXT_SENHA = new System.Windows.Forms.TextBox();
-            this.TXT_TEL = new System.Windows.Forms.TextBox();
-            this.TXT_CEL = new System.Windows.Forms.TextBox();
             this.TXT_EMAIL = new System.Windows.Forms.TextBox();
-            this.TXT_RG = new System.Windows.Forms.TextBox();
             this.TXT_DATE = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.TXT_NOME = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BTN_SEARCH2 = new System.Windows.Forms.Button();
             this.BTN_CANC = new System.Windows.Forms.Button();
+            this.TXT_CPF = new System.Windows.Forms.MaskedTextBox();
+            this.TXT_RG = new System.Windows.Forms.MaskedTextBox();
+            this.TXT_TEL = new System.Windows.Forms.MaskedTextBox();
+            this.TXT_CEL = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,17 +71,6 @@
             this.label5.Size = new System.Drawing.Size(47, 20);
             this.label5.TabIndex = 50;
             this.label5.Text = "CPF:";
-            // 
-            // TXT_CPF
-            // 
-            this.TXT_CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
-            this.TXT_CPF.Location = new System.Drawing.Point(289, 152);
-            this.TXT_CPF.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_CPF.MaxLength = 11;
-            this.TXT_CPF.Name = "TXT_CPF";
-            this.TXT_CPF.Size = new System.Drawing.Size(200, 27);
-            this.TXT_CPF.TabIndex = 1;
-            this.TXT_CPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CPF_KeyPress);
             // 
             // label7
             // 
@@ -259,32 +248,6 @@
             this.TXT_SENHA.TabIndex = 11;
             this.TXT_SENHA.UseSystemPasswordChar = true;
             // 
-            // TXT_TEL
-            // 
-            this.TXT_TEL.BackColor = System.Drawing.Color.White;
-            this.TXT_TEL.Cursor = System.Windows.Forms.Cursors.Default;
-            this.TXT_TEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_TEL.Location = new System.Drawing.Point(206, 336);
-            this.TXT_TEL.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_TEL.MaxLength = 10;
-            this.TXT_TEL.Name = "TXT_TEL";
-            this.TXT_TEL.ReadOnly = true;
-            this.TXT_TEL.Size = new System.Drawing.Size(241, 24);
-            this.TXT_TEL.TabIndex = 8;
-            // 
-            // TXT_CEL
-            // 
-            this.TXT_CEL.BackColor = System.Drawing.Color.White;
-            this.TXT_CEL.Cursor = System.Windows.Forms.Cursors.Default;
-            this.TXT_CEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_CEL.Location = new System.Drawing.Point(538, 336);
-            this.TXT_CEL.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_CEL.MaxLength = 11;
-            this.TXT_CEL.Name = "TXT_CEL";
-            this.TXT_CEL.ReadOnly = true;
-            this.TXT_CEL.Size = new System.Drawing.Size(195, 24);
-            this.TXT_CEL.TabIndex = 9;
-            // 
             // TXT_EMAIL
             // 
             this.TXT_EMAIL.BackColor = System.Drawing.Color.White;
@@ -297,19 +260,6 @@
             this.TXT_EMAIL.ReadOnly = true;
             this.TXT_EMAIL.Size = new System.Drawing.Size(527, 24);
             this.TXT_EMAIL.TabIndex = 10;
-            // 
-            // TXT_RG
-            // 
-            this.TXT_RG.BackColor = System.Drawing.Color.White;
-            this.TXT_RG.Cursor = System.Windows.Forms.Cursors.Default;
-            this.TXT_RG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.TXT_RG.Location = new System.Drawing.Point(206, 292);
-            this.TXT_RG.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_RG.MaxLength = 8;
-            this.TXT_RG.Name = "TXT_RG";
-            this.TXT_RG.ReadOnly = true;
-            this.TXT_RG.Size = new System.Drawing.Size(186, 23);
-            this.TXT_RG.TabIndex = 5;
             // 
             // TXT_DATE
             // 
@@ -388,12 +338,56 @@
             this.BTN_CANC.UseVisualStyleBackColor = true;
             this.BTN_CANC.Click += new System.EventHandler(this.BTN_CANC_Click);
             // 
+            // TXT_CPF
+            // 
+            this.TXT_CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.TXT_CPF.Location = new System.Drawing.Point(289, 155);
+            this.TXT_CPF.Mask = "000.000.000-00";
+            this.TXT_CPF.Name = "TXT_CPF";
+            this.TXT_CPF.Size = new System.Drawing.Size(200, 24);
+            this.TXT_CPF.TabIndex = 99;
+            this.TXT_CPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TXT_RG
+            // 
+            this.TXT_RG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.TXT_RG.Location = new System.Drawing.Point(199, 295);
+            this.TXT_RG.Mask = "00.000.000-0";
+            this.TXT_RG.Name = "TXT_RG";
+            this.TXT_RG.Size = new System.Drawing.Size(203, 24);
+            this.TXT_RG.TabIndex = 102;
+            this.TXT_RG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TXT_TEL
+            // 
+            this.TXT_TEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.TXT_TEL.Location = new System.Drawing.Point(199, 339);
+            this.TXT_TEL.Mask = "(00) 0000-0000";
+            this.TXT_TEL.Name = "TXT_TEL";
+            this.TXT_TEL.Size = new System.Drawing.Size(212, 24);
+            this.TXT_TEL.TabIndex = 103;
+            this.TXT_TEL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TXT_CEL
+            // 
+            this.TXT_CEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.TXT_CEL.Location = new System.Drawing.Point(527, 339);
+            this.TXT_CEL.Mask = "(00) 00000-0000";
+            this.TXT_CEL.Name = "TXT_CEL";
+            this.TXT_CEL.Size = new System.Drawing.Size(201, 24);
+            this.TXT_CEL.TabIndex = 104;
+            this.TXT_CEL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ConsultarUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.TXT_CEL);
+            this.Controls.Add(this.TXT_TEL);
+            this.Controls.Add(this.TXT_RG);
+            this.Controls.Add(this.TXT_CPF);
             this.Controls.Add(this.BTN_CANC);
             this.Controls.Add(this.BTN_SEARCH2);
             this.Controls.Add(this.label7);
@@ -407,15 +401,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.TXT_SENHA);
-            this.Controls.Add(this.TXT_TEL);
-            this.Controls.Add(this.TXT_CEL);
             this.Controls.Add(this.TXT_EMAIL);
-            this.Controls.Add(this.TXT_RG);
             this.Controls.Add(this.TXT_DATE);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.TXT_NOME);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.TXT_CPF);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConsultarUser";
@@ -435,7 +425,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TXT_CPF;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
@@ -451,14 +440,15 @@
         private System.Windows.Forms.RadioButton RD_FUNC;
         private System.Windows.Forms.RadioButton RD_ADMIN;
         private System.Windows.Forms.TextBox TXT_SENHA;
-        private System.Windows.Forms.TextBox TXT_TEL;
-        private System.Windows.Forms.TextBox TXT_CEL;
         private System.Windows.Forms.TextBox TXT_EMAIL;
-        private System.Windows.Forms.TextBox TXT_RG;
         private System.Windows.Forms.DateTimePicker TXT_DATE;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox TXT_NOME;
         private System.Windows.Forms.Button BTN_SEARCH2;
         private System.Windows.Forms.Button BTN_CANC;
+        private System.Windows.Forms.MaskedTextBox TXT_CPF;
+        private System.Windows.Forms.MaskedTextBox TXT_RG;
+        private System.Windows.Forms.MaskedTextBox TXT_TEL;
+        private System.Windows.Forms.MaskedTextBox TXT_CEL;
     }
 }

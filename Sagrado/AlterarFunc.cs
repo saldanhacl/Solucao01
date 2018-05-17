@@ -113,8 +113,8 @@ namespace Sagrado
                     while (reader.Read())
                     {
                         TXT_NOME.Text = reader["NOME_USER"].ToString();
-                        TXT_TEL.Text = Validador.FormataTel(reader["TEL_USER"].ToString());
-                        TXT_CEL.Text = Validador.FormataCel(reader["CEL_USER"].ToString());
+                        TXT_TEL.Text = reader["TEL_USER"].ToString();
+                        TXT_CEL.Text = reader["CEL_USER"].ToString();
                         TXT_EMAIL.Text = reader["EMAIL_USER"].ToString();
                         TXT_RG.Text = reader["RG_USER"].ToString();
                         TXT_SENHA.Text = reader["SENHA_USER"].ToString();
@@ -152,11 +152,11 @@ namespace Sagrado
 
             String nome = TXT_NOME.Text;
             String cpf = TXT_CPF.Text;
-            String tel = TXT_TEL.Text;
-            String cel = TXT_CEL.Text;
+            String tel = Validador.FormataTelAndCel(TXT_TEL.Text);
+            String cel = Validador.FormataTelAndCel(TXT_CEL.Text);
             String email = TXT_EMAIL.Text;
             String senha = TXT_SENHA.Text;
-            String rg = TXT_RG.Text;
+            String rg = Validador.FormataCpfAndRg(TXT_RG.Text);
             String datanascimento = TXT_DATE.Value.ToString("yyyy-MM-dd HH:mm:ss");
 
             String nivel = null;
@@ -167,6 +167,8 @@ namespace Sagrado
 
             if (RD_FEM.Checked == true) sexo = "f";
             else if (RD_MASC.Checked == true) sexo = "m";
+
+            cpfAnterior = Validador.FormataCpfAndRg(cpfAnterior);
 
             String query = "UPDATE USUARIO SET " +
                 "NOME_USER = '" + nome +

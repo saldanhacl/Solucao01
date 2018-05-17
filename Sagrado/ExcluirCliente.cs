@@ -52,8 +52,8 @@ public partial class ExcluirCliente : Form
             {
                 String nome = "";
 
-                String query = "SELECT * FROM CLIENTE WHERE CPF_CLIENTE ='" + TXT_CPF_CLIENTE.Text + "'";
-                String queryDelete = "DELETE FROM CLIENTE WHERE CPF_CLIENTE ='" + TXT_CPF_CLIENTE.Text + "'";
+                String query = "SELECT * FROM CLIENTE WHERE CPF_CLIENTE ='" + Validador.FormataCpfAndRg(TXT_CPF_CLIENTE.Text) + "'";
+                String queryDelete = "DELETE FROM CLIENTE WHERE CPF_CLIENTE ='" + Validador.FormataCpfAndRg(TXT_CPF_CLIENTE.Text) + "'";
                 MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
 
                 MySqlDataReader reader = cmd.ExecuteReader();

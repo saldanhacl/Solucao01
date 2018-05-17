@@ -29,14 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarCliente));
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.TXT_DIVIDA_CLIENTE = new System.Windows.Forms.TextBox();
@@ -44,17 +41,11 @@
             this.BTN_CONF = new System.Windows.Forms.Button();
             this.IMG_CONSULT_CLIENTE = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.TXT_CPF_CLIENTE = new System.Windows.Forms.MaskedTextBox();
+            this.TXT_TEL_CLIENTE = new System.Windows.Forms.MaskedTextBox();
+            this.TXT_CEL_CLIENTE = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IMG_CONSULT_CLIENTE)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.textBox1.Location = new System.Drawing.Point(193, 170);
-            this.textBox1.MaxLength = 11;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 24);
-            this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
@@ -106,28 +97,6 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(401, 24);
             this.textBox2.TabIndex = 3;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.textBox4.Location = new System.Drawing.Point(128, 255);
-            this.textBox4.MaxLength = 10;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(159, 24);
-            this.textBox4.TabIndex = 4;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.textBox7.Location = new System.Drawing.Point(370, 255);
-            this.textBox7.MaxLength = 10;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(159, 24);
-            this.textBox7.TabIndex = 5;
             // 
             // label8
             // 
@@ -210,26 +179,61 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.botaoConsultar);
             // 
+            // TXT_CPF_CLIENTE
+            // 
+            this.TXT_CPF_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.TXT_CPF_CLIENTE.Location = new System.Drawing.Point(193, 171);
+            this.TXT_CPF_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_CPF_CLIENTE.Mask = "000.000.000-00";
+            this.TXT_CPF_CLIENTE.Name = "TXT_CPF_CLIENTE";
+            this.TXT_CPF_CLIENTE.Size = new System.Drawing.Size(211, 24);
+            this.TXT_CPF_CLIENTE.TabIndex = 50;
+            this.TXT_CPF_CLIENTE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TXT_TEL_CLIENTE
+            // 
+            this.TXT_TEL_CLIENTE.Enabled = false;
+            this.TXT_TEL_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.TXT_TEL_CLIENTE.Location = new System.Drawing.Point(128, 258);
+            this.TXT_TEL_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_TEL_CLIENTE.Mask = "(00) 0000-0000";
+            this.TXT_TEL_CLIENTE.Name = "TXT_TEL_CLIENTE";
+            this.TXT_TEL_CLIENTE.Size = new System.Drawing.Size(160, 24);
+            this.TXT_TEL_CLIENTE.TabIndex = 51;
+            this.TXT_TEL_CLIENTE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TXT_CEL_CLIENTE
+            // 
+            this.TXT_CEL_CLIENTE.Enabled = false;
+            this.TXT_CEL_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.TXT_CEL_CLIENTE.Location = new System.Drawing.Point(365, 258);
+            this.TXT_CEL_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_CEL_CLIENTE.Mask = "(00) 00000-0000";
+            this.TXT_CEL_CLIENTE.Name = "TXT_CEL_CLIENTE";
+            this.TXT_CEL_CLIENTE.Size = new System.Drawing.Size(160, 24);
+            this.TXT_CEL_CLIENTE.TabIndex = 52;
+            this.TXT_CEL_CLIENTE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ConsultarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.TXT_CEL_CLIENTE);
+            this.Controls.Add(this.TXT_TEL_CLIENTE);
+            this.Controls.Add(this.TXT_CPF_CLIENTE);
             this.Controls.Add(this.BTN_CONF);
             this.Controls.Add(this.text_Willer);
             this.Controls.Add(this.TXT_DIVIDA_CLIENTE);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.IMG_CONSULT_CLIENTE);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConsultarCliente";
@@ -245,19 +249,19 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.PictureBox IMG_CONSULT_CLIENTE;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TXT_DIVIDA_CLIENTE;
         private System.Windows.Forms.TextBox text_Willer;
         private System.Windows.Forms.Button BTN_CONF;
+        private System.Windows.Forms.MaskedTextBox TXT_CPF_CLIENTE;
+        private System.Windows.Forms.MaskedTextBox TXT_TEL_CLIENTE;
+        private System.Windows.Forms.MaskedTextBox TXT_CEL_CLIENTE;
     }
 }

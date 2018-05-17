@@ -87,12 +87,13 @@ namespace Sagrado
             bd.openConnection();
 
             String nome = TXT_NOME_CLIENTE.Text;
-            String cpf = TXT_CPF_CLIENTE.Text;
-            String tel = TXT_TEL_CLIENTE.Text;
-            String cel = TXT_CEL_CLIENTE.Text;
+            String cpf = Validador.FormataCpfAndRg(TXT_CPF_CLIENTE.Text);
+            String tel = Validador.FormataTelAndCel(TXT_TEL_CLIENTE.Text);
+            String cel = Validador.FormataTelAndCel(TXT_CEL_CLIENTE.Text);
 
+            cpfAnterior = Validador.FormataCpfAndRg(cpfAnterior);
 
-            String query = "UPDATE caixa SET " +
+            String query = "UPDATE cliente SET " +
                 "NOME_CLIENTE = '" + nome +
                 "', CPF_CLIENTE = '" + cpfAnterior +
                 "', TELEFONE_CLIENTE = '" + tel +
@@ -149,8 +150,8 @@ namespace Sagrado
                     while (reader.Read())
                     {
                         TXT_NOME_CLIENTE.Text = reader["NOME_CLIENTE"].ToString();
-                        TXT_TEL_CLIENTE.Text = Validador.FormataTel(reader["TELEFONE_CLIENTE"].ToString());
-                        TXT_CEL_CLIENTE.Text = Validador.FormataCel(reader["CEL_CLIENTE"].ToString());
+                        TXT_TEL_CLIENTE.Text = reader["TELEFONE_CLIENTE"].ToString();
+                        TXT_CEL_CLIENTE.Text = reader["CEL_CLIENTE"].ToString();
 
 
                         cpfAnterior = TXT_CPF_CLIENTE.Text;

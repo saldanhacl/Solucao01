@@ -38,7 +38,7 @@ namespace Sagrado
             }
             else
             {
-                MessageBox.Show("DIGITE APENAS NÚMEROS");
+                MessageBox.Show("Digite os números");
                 e.Handled = true;
             }
         }
@@ -53,7 +53,7 @@ namespace Sagrado
             }
             else
             {
-                MessageBox.Show("DIGITE APENAS NÚMEROS");
+                MessageBox.Show("Digite apenas números");
                 e.Handled = true;
             }
         }
@@ -68,7 +68,7 @@ namespace Sagrado
             }
             else
             {
-                MessageBox.Show("DIGITE APENAS NÚMEROS");
+                MessageBox.Show("Digite apenas numeros");
                 e.Handled = true;
             }
         }
@@ -84,8 +84,8 @@ namespace Sagrado
 
             String nome = textBox1.Text;
             String cpf = Validador.FormataCpfAndRg(CPF_CLIE.Text);
-            String tel = Validador.FormataCpfAndRg(TEL_CLIE.Text);
-            String cel = Validador.FormataCpfAndRg(CEL_CLIE.Text);
+            String tel = Validador.FormataTelAndCel(TEL_CLIE.Text);
+            String cel = Validador.FormataTelAndCel(CEL_CLIE.Text);
             float saldo = 1000;
 
 
@@ -107,14 +107,14 @@ namespace Sagrado
 
                 MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
                 cmd.ExecuteNonQuery();
-                System.Windows.Forms.MessageBox.Show("Cliente CADASTRADO COM SUCESSO");
+                System.Windows.Forms.MessageBox.Show("Cliente cadastrado com sucesso");
 
                 this.Close();
             }
 
             else
             {
-                MessageBox.Show("PREENCHA OS CAMPOS OBRIGATÓRIOS");
+                MessageBox.Show("Preencha os campos obrigatorios");
             }
 
 

@@ -34,15 +34,5 @@ namespace Sagrado
             typeFormat = typeFormat.Replace("-", "");
             return typeFormat;
         }
-
-        public static String FormataTel(String typeFormat)
-        {
-            return typeFormat.Substring(2,8);
-        }
-
-        public static String FormataCel(String typeFormat)
-        {
-            return typeFormat.Substring(2, 9);
-        }
     }
 }

@@ -32,12 +32,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.BTN_CONF = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TXT_CPF_CLIENTE = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,16 +72,6 @@
             this.textBox2.Size = new System.Drawing.Size(236, 24);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "1";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.textBox1.Location = new System.Drawing.Point(206, 132);
-            this.textBox1.MaxLength = 11;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 24);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "1";
             // 
             // panel1
             // 
@@ -140,16 +130,27 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // TXT_CPF_CLIENTE
+            // 
+            this.TXT_CPF_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.TXT_CPF_CLIENTE.Location = new System.Drawing.Point(206, 138);
+            this.TXT_CPF_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_CPF_CLIENTE.Mask = "000.000.000-00";
+            this.TXT_CPF_CLIENTE.Name = "TXT_CPF_CLIENTE";
+            this.TXT_CPF_CLIENTE.Size = new System.Drawing.Size(236, 24);
+            this.TXT_CPF_CLIENTE.TabIndex = 13;
+            this.TXT_CPF_CLIENTE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.TXT_CPF_CLIENTE);
             this.Controls.Add(this.BTN_CONF);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -169,12 +170,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
-        //private System.Windows.Forms.Button btnAdm;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button BTN_CONF;
+        private System.Windows.Forms.MaskedTextBox TXT_CPF_CLIENTE;
     }
 }

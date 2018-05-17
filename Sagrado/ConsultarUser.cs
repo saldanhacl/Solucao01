@@ -39,7 +39,7 @@ namespace Sagrado
             DataBaseConnection bd = new DataBaseConnection();
             bd.openConnection();
 
-            String query = "SELECT * FROM USUARIO WHERE CPF_USER ='" + TXT_CPF.Text + "'";
+            String query = "SELECT * FROM USUARIO WHERE CPF_USER ='" + Validador.FormataCpfAndRg(TXT_CPF.Text) + "'";
             MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
 
             MySqlDataReader reader = cmd.ExecuteReader();

@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcluirCliente));
             this.label5 = new System.Windows.Forms.Label();
-            this.TXT_CPF_CLIENTE = new System.Windows.Forms.TextBox();
             this.BTN_CONF = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.TXT_CPF_CLIENTE = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,17 +46,6 @@
             this.label5.Size = new System.Drawing.Size(42, 18);
             this.label5.TabIndex = 54;
             this.label5.Text = "CPF:";
-            // 
-            // TXT_CPF_CLIENTE
-            // 
-            this.TXT_CPF_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_CPF_CLIENTE.Location = new System.Drawing.Point(197, 228);
-            this.TXT_CPF_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
-            this.TXT_CPF_CLIENTE.MaxLength = 11;
-            this.TXT_CPF_CLIENTE.Name = "TXT_CPF_CLIENTE";
-            this.TXT_CPF_CLIENTE.Size = new System.Drawing.Size(200, 24);
-            this.TXT_CPF_CLIENTE.TabIndex = 1;
-            this.TXT_CPF_CLIENTE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_CPF_CLIENTE_KeyPress);
             // 
             // BTN_CONF
             // 
@@ -81,16 +70,27 @@
             this.pictureBox1.TabIndex = 66;
             this.pictureBox1.TabStop = false;
             // 
+            // TXT_CPF_CLIENTE
+            // 
+            this.TXT_CPF_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.TXT_CPF_CLIENTE.Location = new System.Drawing.Point(186, 225);
+            this.TXT_CPF_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
+            this.TXT_CPF_CLIENTE.Mask = "000.000.000-00";
+            this.TXT_CPF_CLIENTE.Name = "TXT_CPF_CLIENTE";
+            this.TXT_CPF_CLIENTE.Size = new System.Drawing.Size(211, 24);
+            this.TXT_CPF_CLIENTE.TabIndex = 67;
+            this.TXT_CPF_CLIENTE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // ExcluirCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.TXT_CPF_CLIENTE);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BTN_CONF);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.TXT_CPF_CLIENTE);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ExcluirCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -103,8 +103,8 @@
 
         #endregion
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TXT_CPF_CLIENTE;
         private System.Windows.Forms.Button BTN_CONF;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MaskedTextBox TXT_CPF_CLIENTE;
     }
 }

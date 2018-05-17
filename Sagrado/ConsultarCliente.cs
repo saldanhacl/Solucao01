@@ -25,7 +25,7 @@ namespace Sagrado
         //Mesma ideia do consultar user
         private void botaoConsultar(object sender, EventArgs e)
         {
-            cpf = textBox1.Text;
+            cpf = Validador.FormataCpfAndRg(TXT_CPF_CLIENTE.Text);
             if (cpf.Equals(""))
             {
                 MessageBox.Show("DIGITE O CPF");
@@ -47,9 +47,9 @@ namespace Sagrado
                     {
                         textBox2.Text = reader["NOME_CLIENTE"].ToString();
                         //textBox3.Text = reader["CPF_CLIENTE"].ToString();
-                        textBox4.Text = reader["TELEFONE_CLIENTE"].ToString();
+                        TXT_TEL_CLIENTE.Text = reader["TELEFONE_CLIENTE"].ToString();
                         TXT_DIVIDA_CLIENTE.Text = reader["SALDO_ATUAL_CLIENTE"].ToString();
-                        textBox7.Text = reader["CEL_CLIENTE"].ToString();
+                        TXT_CEL_CLIENTE.Text = reader["CEL_CLIENTE"].ToString();
                     }
                     bd.closeConnection();
                     if (float.Parse(TXT_DIVIDA_CLIENTE.Text) < 0.0)
