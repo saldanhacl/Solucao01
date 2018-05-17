@@ -81,6 +81,12 @@
       <DependentUpon>CadastrarProd.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente.cs" />
+    <Compile Include="GraficoVendasTipoFiado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraficoVendasTipoFiado.Designer.cs">
+      <DependentUpon>GraficoVendasTipoFiado.cs</DependentUpon>
+    </Compile>
     <Compile Include="GraficoProdutosVendidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GraficoVendasPorUsuario.resx">
       <DependentUpon>GraficoVendasPorUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraficoVendasTipoFiado.resx">
+      <DependentUpon>GraficoVendasTipoFiado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovimentacaoCaixa.resx">
       <DependentUpon>MovimentacaoCaixa.cs</DependentUpon>

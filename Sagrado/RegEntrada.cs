@@ -16,6 +16,9 @@ namespace Sagrado
 
         Form adicionarProdutosComanda;
         List<Produto> produtosComanda;
+        String cpfUser = "";
+        String operacao = "";
+        Double total;
 
         public RegEntrada()
         {
@@ -40,8 +43,6 @@ namespace Sagrado
 
         private String getLastLogin()
         {
-            String cpf ="";
-
 
             DataBaseConnection bd = new DataBaseConnection();
             bd.openConnection();
@@ -55,11 +56,11 @@ namespace Sagrado
            
             while (reader.Read())
             {
-                cpf = reader["CPF_USER_LOG"].ToString();  
+                cpfUser = reader["CPF_USER_LOG"].ToString();  
             }
             bd.closeConnection();
 
-            return cpf;
+            return cpfUser;
         }
 
 
@@ -134,7 +135,6 @@ namespace Sagrado
                 bd.openConnection();
 
                 String preco = boxPrice.Text;
-                String operacao = null;
 
                 if (radioButton1.Checked) operacao = "v";
                 else if (radioButton2.Checked) operacao = "f";
@@ -162,7 +162,6 @@ namespace Sagrado
 
                     MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
                     cmd.ExecuteNonQuery();
-                    salvarVendaBanco(bd);
                     MessageBox.Show("REGISTRO CADASTRADO COM SUCESSO");
 
                     new RegEntrada().Show();
@@ -179,14 +178,16 @@ namespace Sagrado
             {
                 MessageBox.Show("ERRO NO BANCO DE DADOS");
             }
-
             bd.closeConnection();
+            salvarVendaBanco();
         }
 
-        
+
 
         private void BTN_CONFIRMAR_Click(object sender, EventArgs e)
         {
+            total = Double.Parse(boxPrice.Text);
+
             if (boxPrice.Text.Length == 0) MessageBox.Show("DIGITE UM VALOR");
             else{
                 String valorTextBox = boxPrice.Text.ToString();
@@ -216,21 +217,44 @@ namespace Sagrado
             
         }
 
-        private void salvarVendaBanco(DataBaseConnection bd)
+        private void salvarVendaBanco()
         {
 
-           foreach(Produto p in produtosComanda){
+            DataBaseConnection bd = new DataBaseConnection();
+            try
+            {
+                bd.openConnection();
 
-                String query = "INSERT INTO venda" +
-                    "(VALOR, NRSEQ_PRODUTO)" +
-                    " VALUES ('" + p.preco * p.quantidade + "', " + p.idProduto + ")";
+                if (produtosComanda != null)
+                {
+                    foreach (Produto p in produtosComanda)
+                    {
 
-                MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
-                cmd.ExecuteNonQuery();
-            }     
-            
-            
+                        String query = "INSERT INTO VENDA " +
+                            "(VALOR, NRSEQ_PRODUTO, TIPO_VENDA, CPF_USER_VENDA)" +
+                            " VALUES (" + p.preco * p.quantidade + "," + p.idProduto + ",'" + operacao + "'," + cpfUser + ")";
+
+                        MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+                        cmd.ExecuteNonQuery();
+                    }
+                } else
+                {
+                    String query = "INSERT INTO VENDA " +
+                            "(VALOR, TIPO_VENDA, CPF_USER_VENDA)" +
+                            " VALUES (" + total + ",'" + operacao + "'," + cpfUser + ")";
+
+                    MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+                    cmd.ExecuteNonQuery();
+                }
+
+            }
+            catch (MySqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            bd.closeConnection();
         }
+
 
         private void BTN_CANCELAR_Click(object sender, EventArgs e)
         {
