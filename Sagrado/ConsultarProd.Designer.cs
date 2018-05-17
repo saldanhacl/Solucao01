@@ -32,15 +32,15 @@
             this.LISTA_TIPOS = new System.Windows.Forms.ComboBox();
             this.dg = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.N = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PREÇO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BTN_ADD = new System.Windows.Forms.Button();
             this.EXCLUIR = new System.Windows.Forms.Button();
             this.BTN_CONF = new System.Windows.Forms.Button();
             this.BTN_BUSCAR = new System.Windows.Forms.Button();
             this.IMG_CARTEIRA = new System.Windows.Forms.PictureBox();
-            this.N = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PREÇO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IMG_CARTEIRA)).BeginInit();
             this.SuspendLayout();
@@ -95,6 +95,38 @@
             this.label2.Size = new System.Drawing.Size(272, 20);
             this.label2.TabIndex = 29;
             this.label2.Text = "SELECIONE O TIPO DO PRODUTO:";
+            // 
+            // N
+            // 
+            this.N.FillWeight = 10F;
+            this.N.HeaderText = "N°";
+            this.N.MaxInputLength = 40;
+            this.N.Name = "N";
+            this.N.ReadOnly = true;
+            // 
+            // TIPO
+            // 
+            this.TIPO.FillWeight = 25F;
+            this.TIPO.HeaderText = "TIPO";
+            this.TIPO.MaxInputLength = 40;
+            this.TIPO.Name = "TIPO";
+            this.TIPO.ReadOnly = true;
+            // 
+            // NOME
+            // 
+            this.NOME.FillWeight = 40F;
+            this.NOME.HeaderText = "NOME";
+            this.NOME.MaxInputLength = 40;
+            this.NOME.Name = "NOME";
+            this.NOME.ReadOnly = true;
+            // 
+            // PREÇO
+            // 
+            this.PREÇO.FillWeight = 15F;
+            this.PREÇO.HeaderText = "PREÇO";
+            this.PREÇO.MaxInputLength = 10;
+            this.PREÇO.Name = "PREÇO";
+            this.PREÇO.ReadOnly = true;
             // 
             // BTN_ADD
             // 
@@ -158,38 +190,6 @@
             this.IMG_CARTEIRA.TabIndex = 30;
             this.IMG_CARTEIRA.TabStop = false;
             // 
-            // N
-            // 
-            this.N.FillWeight = 10F;
-            this.N.HeaderText = "N°";
-            this.N.MaxInputLength = 40;
-            this.N.Name = "N";
-            this.N.ReadOnly = true;
-            // 
-            // TIPO
-            // 
-            this.TIPO.FillWeight = 25F;
-            this.TIPO.HeaderText = "TIPO";
-            this.TIPO.MaxInputLength = 40;
-            this.TIPO.Name = "TIPO";
-            this.TIPO.ReadOnly = true;
-            // 
-            // NOME
-            // 
-            this.NOME.FillWeight = 40F;
-            this.NOME.HeaderText = "NOME";
-            this.NOME.MaxInputLength = 40;
-            this.NOME.Name = "NOME";
-            this.NOME.ReadOnly = true;
-            // 
-            // PREÇO
-            // 
-            this.PREÇO.FillWeight = 15F;
-            this.PREÇO.HeaderText = "PREÇO";
-            this.PREÇO.MaxInputLength = 10;
-            this.PREÇO.Name = "PREÇO";
-            this.PREÇO.ReadOnly = true;
-            // 
             // ConsultarProd
             // 
             this.AccessibleDescription = "ALTERAR";
@@ -212,7 +212,7 @@
             this.MaximizeBox = false;
             this.Name = "ConsultarProd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CONSULTAR PRODUTO";
+            this.Text = "GERENCIAR PRODUTO";
             ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IMG_CARTEIRA)).EndInit();
             this.ResumeLayout(false);
