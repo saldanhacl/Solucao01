@@ -46,7 +46,7 @@ namespace Sagrado
                     while (reader.Read())
                     {
                         textBox2.Text = reader["NOME_CLIENTE"].ToString();
-                        textBox3.Text = reader["CPF_CLIENTE"].ToString();
+                        //textBox3.Text = reader["CPF_CLIENTE"].ToString();
                         textBox4.Text = reader["TELEFONE_CLIENTE"].ToString();
                         TXT_DIVIDA_CLIENTE.Text = reader["SALDO_ATUAL_CLIENTE"].ToString();
                         textBox7.Text = reader["CEL_CLIENTE"].ToString();
@@ -115,6 +115,11 @@ namespace Sagrado
         }
 
         private void ConsultarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IMG_CONSULT_CLIENTE_Click(object sender, EventArgs e)
         {
 
         }

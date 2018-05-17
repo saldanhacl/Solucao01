@@ -184,38 +184,7 @@ namespace Sagrado
 
 
 
-        private void BTN_CONFIRMAR_Click(object sender, EventArgs e)
-        {
-            total = Double.Parse(boxPrice.Text);
-
-            if (boxPrice.Text.Length == 0) MessageBox.Show("DIGITE UM VALOR");
-            else{
-                String valorTextBox = boxPrice.Text.ToString();
-                String numero = getLastIndex();
-                //MessageBox.Show("Número de retorno vazio"+numero);
-
-                //se não houver registros, não ha saldo anterior para somar.
-                if (numero == "")
-                {
-                    saveRegister(0);
-                }
-                else
-                {
-                    String ultSaldo = getLastValue(numero);
-                    float ultSaldoF = float.Parse(ultSaldo);
-                    saveRegister(ultSaldoF);
-                }
-
-                if(radioButton2.Checked == true)
-                {
-                    Cliente cliente = (Cliente)LISTA_CLIENTES.SelectedItem;
-                    saveCliente(cliente.cpf, valorTextBox);
-                }
-
-            }
-            
-            
-        }
+       
 
         private void salvarVendaBanco()
         {
@@ -396,5 +365,37 @@ namespace Sagrado
             boxPrice.Text = preco;
         }
 
+        private void BTN_SAVE_Click(object sender, EventArgs e)
+        {
+            total = Double.Parse(boxPrice.Text);
+
+            if (boxPrice.Text.Length == 0) MessageBox.Show("DIGITE UM VALOR");
+            else
+            {
+                String valorTextBox = boxPrice.Text.ToString();
+                String numero = getLastIndex();
+                //MessageBox.Show("Número de retorno vazio"+numero);
+
+                //se não houver registros, não ha saldo anterior para somar.
+                if (numero == "")
+                {
+                    saveRegister(0);
+                }
+                else
+                {
+                    String ultSaldo = getLastValue(numero);
+                    float ultSaldoF = float.Parse(ultSaldo);
+                    saveRegister(ultSaldoF);
+                }
+
+                if (radioButton2.Checked == true)
+                {
+                    Cliente cliente = (Cliente)LISTA_CLIENTES.SelectedItem;
+                    saveCliente(cliente.cpf, valorTextBox);
+                }
+
+            }
+
+        }
     }
 }

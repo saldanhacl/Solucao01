@@ -21,6 +21,7 @@ namespace Sagrado
         {
             
             this.Close();
+            
 
         }
 

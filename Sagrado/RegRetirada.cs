@@ -192,7 +192,8 @@ namespace Sagrado
             bd.closeConnection();
         }
 
-        private void BTN_CONFIRMAR_Click(object sender, EventArgs e)
+
+        private void BTN_SAVE_Click(object sender, EventArgs e)
         {
             String numero = getLastIndex();
             //MessageBox.Show("Número de retorno vazio" + numero);
@@ -209,11 +210,6 @@ namespace Sagrado
                 //MessageBox.Show("Saldo anterior: " + ultSaldo);
                 saveRegister(ultSaldoF);
             }
-        }
-
-        private void RegRetirada_Load(object sender, EventArgs e)
-        {
-
         }
     }
 

@@ -164,5 +164,10 @@ namespace Sagrado
             TXT_CPF_CLIENTE.Text = "";
             bd.closeConnection();
         }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
