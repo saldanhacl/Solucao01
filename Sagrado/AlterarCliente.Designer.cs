@@ -47,7 +47,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label8.Location = new System.Drawing.Point(305, 237);
+            this.label8.Location = new System.Drawing.Point(305, 272);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 18);
@@ -58,7 +58,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label12.Location = new System.Drawing.Point(71, 237);
+            this.label12.Location = new System.Drawing.Point(71, 272);
             this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(39, 18);
@@ -70,7 +70,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label11.Location = new System.Drawing.Point(52, 194);
+            this.label11.Location = new System.Drawing.Point(52, 229);
             this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 18);
@@ -82,8 +82,8 @@
             this.TXT_NOME_CLIENTE.BackColor = System.Drawing.Color.White;
             this.TXT_NOME_CLIENTE.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TXT_NOME_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_NOME_CLIENTE.Location = new System.Drawing.Point(123, 188);
-            this.TXT_NOME_CLIENTE.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TXT_NOME_CLIENTE.Location = new System.Drawing.Point(123, 223);
+            this.TXT_NOME_CLIENTE.Margin = new System.Windows.Forms.Padding(5);
             this.TXT_NOME_CLIENTE.MaxLength = 45;
             this.TXT_NOME_CLIENTE.Name = "TXT_NOME_CLIENTE";
             this.TXT_NOME_CLIENTE.Size = new System.Drawing.Size(401, 24);
@@ -93,7 +93,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label5.Location = new System.Drawing.Point(126, 141);
+            this.label5.Location = new System.Drawing.Point(126, 176);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 18);
@@ -103,8 +103,8 @@
             // TXT_CPF_CLIENTE
             // 
             this.TXT_CPF_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_CPF_CLIENTE.Location = new System.Drawing.Point(181, 136);
-            this.TXT_CPF_CLIENTE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_CPF_CLIENTE.Location = new System.Drawing.Point(181, 171);
+            this.TXT_CPF_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_CPF_CLIENTE.Mask = "000.000.000-00";
             this.TXT_CPF_CLIENTE.Name = "TXT_CPF_CLIENTE";
             this.TXT_CPF_CLIENTE.Size = new System.Drawing.Size(211, 24);
@@ -114,8 +114,8 @@
             // TXT_TEL_CLIENTE
             // 
             this.TXT_TEL_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_TEL_CLIENTE.Location = new System.Drawing.Point(123, 231);
-            this.TXT_TEL_CLIENTE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_TEL_CLIENTE.Location = new System.Drawing.Point(123, 266);
+            this.TXT_TEL_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_TEL_CLIENTE.Mask = "(00) 0000-0000";
             this.TXT_TEL_CLIENTE.Name = "TXT_TEL_CLIENTE";
             this.TXT_TEL_CLIENTE.Size = new System.Drawing.Size(160, 24);
@@ -125,8 +125,8 @@
             // TXT_CEL_CLIENTE
             // 
             this.TXT_CEL_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_CEL_CLIENTE.Location = new System.Drawing.Point(364, 231);
-            this.TXT_CEL_CLIENTE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_CEL_CLIENTE.Location = new System.Drawing.Point(364, 266);
+            this.TXT_CEL_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_CEL_CLIENTE.Mask = "(00) 00000-0000";
             this.TXT_CEL_CLIENTE.Name = "TXT_CEL_CLIENTE";
             this.TXT_CEL_CLIENTE.Size = new System.Drawing.Size(160, 24);
@@ -136,7 +136,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EDIT_CLIENTE;
-            this.pictureBox1.Location = new System.Drawing.Point(187, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(187, 65);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 100);
@@ -149,7 +149,7 @@
             this.BTN_SEARCH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_SEARCH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_SEARCH.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_SEARCH.Location = new System.Drawing.Point(409, 134);
+            this.BTN_SEARCH.Location = new System.Drawing.Point(409, 169);
             this.BTN_SEARCH.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_SEARCH.Name = "BTN_SEARCH";
             this.BTN_SEARCH.Size = new System.Drawing.Size(30, 30);
@@ -163,7 +163,7 @@
             this.BTN_CONF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_CONF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_CONF.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CONF.Location = new System.Drawing.Point(484, 283);
+            this.BTN_CONF.Location = new System.Drawing.Point(484, 318);
             this.BTN_CONF.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_CONF.Name = "BTN_CONF";
             this.BTN_CONF.Size = new System.Drawing.Size(40, 40);
@@ -176,7 +176,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TXT_CEL_CLIENTE);
             this.Controls.Add(this.TXT_TEL_CLIENTE);
@@ -190,7 +190,7 @@
             this.Controls.Add(this.label5);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AlterarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ALTERAR CLIENTE";

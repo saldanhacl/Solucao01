@@ -47,7 +47,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label1.Location = new System.Drawing.Point(52, 192);
+            this.label1.Location = new System.Drawing.Point(52, 228);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 18);
@@ -57,7 +57,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.textBox1.Location = new System.Drawing.Point(123, 187);
+            this.textBox1.Location = new System.Drawing.Point(123, 223);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.MaxLength = 40;
             this.textBox1.Name = "textBox1";
@@ -68,7 +68,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label5.Location = new System.Drawing.Point(68, 153);
+            this.label5.Location = new System.Drawing.Point(68, 189);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 18);
@@ -79,7 +79,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label12.Location = new System.Drawing.Point(304, 231);
+            this.label12.Location = new System.Drawing.Point(304, 267);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(41, 18);
@@ -90,7 +90,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label2.Location = new System.Drawing.Point(71, 231);
+            this.label2.Location = new System.Drawing.Point(71, 267);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 18);
@@ -100,7 +100,7 @@
             // CPF_CLIE
             // 
             this.CPF_CLIE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.CPF_CLIE.Location = new System.Drawing.Point(123, 148);
+            this.CPF_CLIE.Location = new System.Drawing.Point(123, 184);
             this.CPF_CLIE.Mask = "000.000.000-00";
             this.CPF_CLIE.Name = "CPF_CLIE";
             this.CPF_CLIE.Size = new System.Drawing.Size(200, 24);
@@ -111,7 +111,7 @@
             // TEL_CLIE
             // 
             this.TEL_CLIE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TEL_CLIE.Location = new System.Drawing.Point(123, 226);
+            this.TEL_CLIE.Location = new System.Drawing.Point(123, 262);
             this.TEL_CLIE.Mask = "(00) 0000-0000";
             this.TEL_CLIE.Name = "TEL_CLIE";
             this.TEL_CLIE.Size = new System.Drawing.Size(160, 24);
@@ -122,7 +122,7 @@
             // CEL_CLIE
             // 
             this.CEL_CLIE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.CEL_CLIE.Location = new System.Drawing.Point(364, 226);
+            this.CEL_CLIE.Location = new System.Drawing.Point(364, 262);
             this.CEL_CLIE.Mask = "(00) 00000-0000";
             this.CEL_CLIE.Name = "CEL_CLIE";
             this.CEL_CLIE.Size = new System.Drawing.Size(160, 24);
@@ -135,7 +135,7 @@
             this.BTN_CANC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_CANC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_CANC.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CANC.Location = new System.Drawing.Point(395, 280);
+            this.BTN_CANC.Location = new System.Drawing.Point(395, 316);
             this.BTN_CANC.Name = "BTN_CANC";
             this.BTN_CANC.Size = new System.Drawing.Size(0, 0);
             this.BTN_CANC.TabIndex = 5;
@@ -148,7 +148,7 @@
             this.BTN_CONF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_CONF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_CONF.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CONF.Location = new System.Drawing.Point(484, 280);
+            this.BTN_CONF.Location = new System.Drawing.Point(484, 316);
             this.BTN_CONF.Name = "BTN_CONF";
             this.BTN_CONF.Size = new System.Drawing.Size(40, 40);
             this.BTN_CONF.TabIndex = 6;
@@ -158,7 +158,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_ADD_CLIENTE;
-            this.pictureBox1.Location = new System.Drawing.Point(187, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(187, 66);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 100);
@@ -170,7 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.CEL_CLIE);
             this.Controls.Add(this.TEL_CLIE);
             this.Controls.Add(this.CPF_CLIE);

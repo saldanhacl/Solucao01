@@ -21,18 +21,22 @@ namespace Sagrado
 
         private void BTN_CONF_Click(object sender, EventArgs e)
         {
-            DataBaseConnection bd = new DataBaseConnection();
-
-            bd.openConnection();
-
-            String tipo = textBox1.Text.ToString().ToUpper();
-            String nome = textBox2.Text.ToString().ToUpper();
-            int quantidade = 0;
-            float preco = float.Parse(textBox4.Text.ToString());
+           
 
 
             if (textBox1.Text.Length > 0 && textBox2.Text.Length > 0 && textBox4.Text.Length > 0)
             {
+
+                DataBaseConnection bd = new DataBaseConnection();
+
+                bd.openConnection();
+
+                String tipo = textBox1.Text.ToString().ToUpper();
+                String nome = textBox2.Text.ToString().ToUpper();
+                int quantidade = 0;
+                float preco = float.Parse(textBox4.Text.ToString());
+
+
                 String query = "INSERT INTO PRODUTO " +
                 "(TYPE_PRODUTO, QTD_PRODUTO, PRECO_PRODUTO, NOME_PRODUTO)" +
                 " VALUES ('" + tipo + "','" + quantidade + "','" + preco + "','" + nome + "')";
@@ -40,7 +44,7 @@ namespace Sagrado
                 MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("PRODUTO CADASTRADO COM SUCESSO");
-
+                bd.closeConnection();
                 limpaCampos();
             }
 
@@ -50,7 +54,7 @@ namespace Sagrado
             }
 
 
-            bd.closeConnection();
+            
         }
 
         private void BTN_CANC_Click(object sender, EventArgs e)
@@ -58,8 +62,7 @@ namespace Sagrado
             this.Close();
         }
 
-       
-
+      
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
             VerificarTecla(e, "preco", textBox4);
@@ -76,19 +79,18 @@ namespace Sagrado
         //SÓ PASSAR O TIPO DE BOX PRECISA ASSIM A GENTE NÃO PRECISA FICAR REPETINDO CÓDIGO OU FAZENDO DIFERENTE.
         private void VerificarTecla(KeyPressEventArgs e, String tipo, TextBox box)
         {
-            char keypress = e.KeyChar;
-            if ( tipo == "numero" &&  !( char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back)  )  )
+            char ch = e.KeyChar;
+            if (ch == 46 && box.Text.IndexOf('.') != -1)
             {
-                MessageBox.Show("DIGITE APENAS NÚMEROS");
+                e.Handled = true;
+                return;
+            }
+
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
                 e.Handled = true;
             }
 
-            else if (tipo == "preco" && !(  char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back) )  && box.Text.IndexOf('.') != -1)
-            {
-                MessageBox.Show("DIGITE PREÇO VÁLIDO");
-                e.Handled = true;
-            }
-            
         }
 
        

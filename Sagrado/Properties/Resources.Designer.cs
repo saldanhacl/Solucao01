@@ -93,6 +93,16 @@ namespace Sagrado.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BTN_ADD_2 {
+            get {
+                object obj = ResourceManager.GetObject("BTN_ADD_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BTN_ADD_CLIENTE {
             get {
                 object obj = ResourceManager.GetObject("BTN_ADD_CLIENTE", resourceCulture);
@@ -243,6 +253,16 @@ namespace Sagrado.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BTN_DELETE {
+            get {
+                object obj = ResourceManager.GetObject("BTN_DELETE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BTN_EDIT {
             get {
                 object obj = ResourceManager.GetObject("BTN_EDIT", resourceCulture);
@@ -296,6 +316,16 @@ namespace Sagrado.Properties {
         internal static System.Drawing.Bitmap BTN_EDIT_USER22 {
             get {
                 object obj = ResourceManager.GetObject("BTN_EDIT_USER22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_EDIT2 {
+            get {
+                object obj = ResourceManager.GetObject("BTN_EDIT2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -526,6 +556,16 @@ namespace Sagrado.Properties {
         internal static System.Drawing.Bitmap BTN_SET {
             get {
                 object obj = ResourceManager.GetObject("BTN_SET", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_SET2 {
+            get {
+                object obj = ResourceManager.GetObject("BTN_SET2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -82,22 +82,22 @@ namespace Sagrado
 
         private void VerificarTecla(KeyPressEventArgs e, String tipo, TextBox box)
         {
-                       
-            char keypress = e.KeyChar;
-            if (tipo == "numero" && !(char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back)))
+
+            char ch = e.KeyChar;
+            if (ch == 46 && text_preco.Text.IndexOf('.') != -1)
             {
-                MessageBox.Show("DIGITE APENAS NÚMEROS");
                 e.Handled = true;
+                return;
             }
 
-            else if (tipo == "preco" && !(char.IsDigit(keypress) || e.KeyChar == Convert.ToChar(Keys.Back)) && box.Text.IndexOf('.') != -1)
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
             {
-                MessageBox.Show("DIGITE PREÇO VÁLIDO");
                 e.Handled = true;
             }
 
         }
 
+       
     }
   
 }

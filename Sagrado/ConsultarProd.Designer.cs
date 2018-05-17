@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarProd));
             this.LISTA_TIPOS = new System.Windows.Forms.ComboBox();
             this.dg = new System.Windows.Forms.DataGridView();
-            this.N = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PREÇO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.BTN_ADD = new System.Windows.Forms.Button();
             this.EXCLUIR = new System.Windows.Forms.Button();
             this.BTN_CONF = new System.Windows.Forms.Button();
             this.BTN_BUSCAR = new System.Windows.Forms.Button();
             this.IMG_CARTEIRA = new System.Windows.Forms.PictureBox();
+            this.N = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PREÇO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IMG_CARTEIRA)).BeginInit();
             this.SuspendLayout();
@@ -79,36 +79,12 @@
             this.dg.Location = new System.Drawing.Point(29, 251);
             this.dg.MultiSelect = false;
             this.dg.Name = "dg";
+            this.dg.ReadOnly = true;
             this.dg.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg.Size = new System.Drawing.Size(723, 197);
-            this.dg.TabIndex = 31;
+            this.dg.TabIndex = 3;
             this.dg.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_CellEndEdit);
-            // 
-            // N
-            // 
-            this.N.FillWeight = 10F;
-            this.N.HeaderText = "N°";
-            this.N.Name = "N";
-            this.N.ReadOnly = true;
-            // 
-            // TIPO
-            // 
-            this.TIPO.FillWeight = 25F;
-            this.TIPO.HeaderText = "TIPO";
-            this.TIPO.Name = "TIPO";
-            // 
-            // NOME
-            // 
-            this.NOME.FillWeight = 40F;
-            this.NOME.HeaderText = "NOME";
-            this.NOME.Name = "NOME";
-            // 
-            // PREÇO
-            // 
-            this.PREÇO.FillWeight = 15F;
-            this.PREÇO.HeaderText = "PREÇO";
-            this.PREÇO.Name = "PREÇO";
             // 
             // label2
             // 
@@ -122,48 +98,48 @@
             // 
             // BTN_ADD
             // 
-            this.BTN_ADD.BackgroundImage = global::Sagrado.Properties.Resources.BTN_ADD2;
+            this.BTN_ADD.BackgroundImage = global::Sagrado.Properties.Resources.BTN_ADD_2;
             this.BTN_ADD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_ADD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_ADD.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_ADD.Location = new System.Drawing.Point(701, 474);
+            this.BTN_ADD.Location = new System.Drawing.Point(712, 469);
             this.BTN_ADD.Name = "BTN_ADD";
-            this.BTN_ADD.Size = new System.Drawing.Size(51, 51);
-            this.BTN_ADD.TabIndex = 37;
+            this.BTN_ADD.Size = new System.Drawing.Size(40, 40);
+            this.BTN_ADD.TabIndex = 6;
             this.BTN_ADD.UseVisualStyleBackColor = true;
             this.BTN_ADD.Click += new System.EventHandler(this.BTN_ADD_Click);
             // 
             // EXCLUIR
             // 
-            this.EXCLUIR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EX_PROD;
+            this.EXCLUIR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_DELETE;
             this.EXCLUIR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.EXCLUIR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EXCLUIR.ForeColor = System.Drawing.Color.Transparent;
-            this.EXCLUIR.Location = new System.Drawing.Point(587, 474);
+            this.EXCLUIR.Location = new System.Drawing.Point(591, 469);
             this.EXCLUIR.Name = "EXCLUIR";
-            this.EXCLUIR.Size = new System.Drawing.Size(51, 51);
-            this.EXCLUIR.TabIndex = 36;
+            this.EXCLUIR.Size = new System.Drawing.Size(40, 40);
+            this.EXCLUIR.TabIndex = 4;
             this.EXCLUIR.UseVisualStyleBackColor = true;
             this.EXCLUIR.Click += new System.EventHandler(this.EXCLUIR_Click);
             // 
             // BTN_CONF
             // 
-            this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SET;
+            this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EDIT2;
             this.BTN_CONF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_CONF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_CONF.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CONF.Location = new System.Drawing.Point(644, 474);
+            this.BTN_CONF.Location = new System.Drawing.Point(654, 469);
             this.BTN_CONF.Name = "BTN_CONF";
-            this.BTN_CONF.Size = new System.Drawing.Size(51, 51);
-            this.BTN_CONF.TabIndex = 33;
+            this.BTN_CONF.Size = new System.Drawing.Size(40, 40);
+            this.BTN_CONF.TabIndex = 5;
             this.BTN_CONF.UseVisualStyleBackColor = true;
             this.BTN_CONF.Click += new System.EventHandler(this.BTN_CONF_Click);
             // 
             // BTN_BUSCAR
             // 
             this.BTN_BUSCAR.BackColor = System.Drawing.Color.White;
-            this.BTN_BUSCAR.BackgroundImage = global::Sagrado.Properties.Resources.search;
-            this.BTN_BUSCAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTN_BUSCAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SEARCH2;
+            this.BTN_BUSCAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BTN_BUSCAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_BUSCAR.ForeColor = System.Drawing.Color.Transparent;
             this.BTN_BUSCAR.Location = new System.Drawing.Point(497, 187);
@@ -181,6 +157,38 @@
             this.IMG_CARTEIRA.Size = new System.Drawing.Size(200, 100);
             this.IMG_CARTEIRA.TabIndex = 30;
             this.IMG_CARTEIRA.TabStop = false;
+            // 
+            // N
+            // 
+            this.N.FillWeight = 10F;
+            this.N.HeaderText = "N°";
+            this.N.MaxInputLength = 40;
+            this.N.Name = "N";
+            this.N.ReadOnly = true;
+            // 
+            // TIPO
+            // 
+            this.TIPO.FillWeight = 25F;
+            this.TIPO.HeaderText = "TIPO";
+            this.TIPO.MaxInputLength = 40;
+            this.TIPO.Name = "TIPO";
+            this.TIPO.ReadOnly = true;
+            // 
+            // NOME
+            // 
+            this.NOME.FillWeight = 40F;
+            this.NOME.HeaderText = "NOME";
+            this.NOME.MaxInputLength = 40;
+            this.NOME.Name = "NOME";
+            this.NOME.ReadOnly = true;
+            // 
+            // PREÇO
+            // 
+            this.PREÇO.FillWeight = 15F;
+            this.PREÇO.HeaderText = "PREÇO";
+            this.PREÇO.MaxInputLength = 10;
+            this.PREÇO.Name = "PREÇO";
+            this.PREÇO.ReadOnly = true;
             // 
             // ConsultarProd
             // 
@@ -221,10 +229,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BTN_CONF;
         private System.Windows.Forms.Button EXCLUIR;
+        private System.Windows.Forms.Button BTN_ADD;
         private System.Windows.Forms.DataGridViewTextBoxColumn N;
         private System.Windows.Forms.DataGridViewTextBoxColumn TIPO;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOME;
         private System.Windows.Forms.DataGridViewTextBoxColumn PREÇO;
-        private System.Windows.Forms.Button BTN_ADD;
     }
 }

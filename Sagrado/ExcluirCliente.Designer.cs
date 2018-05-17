@@ -40,7 +40,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label5.Location = new System.Drawing.Point(139, 195);
+            this.label5.Location = new System.Drawing.Point(139, 231);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 18);
@@ -50,7 +50,7 @@
             // TXT_CPF_CLIENTE
             // 
             this.TXT_CPF_CLIENTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_CPF_CLIENTE.Location = new System.Drawing.Point(197, 192);
+            this.TXT_CPF_CLIENTE.Location = new System.Drawing.Point(197, 228);
             this.TXT_CPF_CLIENTE.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_CPF_CLIENTE.MaxLength = 11;
             this.TXT_CPF_CLIENTE.Name = "TXT_CPF_CLIENTE";
@@ -64,7 +64,7 @@
             this.BTN_CONF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_CONF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_CONF.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CONF.Location = new System.Drawing.Point(357, 241);
+            this.BTN_CONF.Location = new System.Drawing.Point(357, 277);
             this.BTN_CONF.Name = "BTN_CONF";
             this.BTN_CONF.Size = new System.Drawing.Size(40, 40);
             this.BTN_CONF.TabIndex = 3;
@@ -74,7 +74,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EXCLUIR1;
-            this.pictureBox1.Location = new System.Drawing.Point(178, 60);
+            this.pictureBox1.Location = new System.Drawing.Point(178, 96);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 100);
@@ -86,7 +86,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BTN_CONF);
             this.Controls.Add(this.label5);

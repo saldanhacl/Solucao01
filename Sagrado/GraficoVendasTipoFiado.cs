@@ -83,6 +83,11 @@ namespace Sagrado
             chart1.DataSource = EnviarDados("SELECT (SELECT count(vt.NRSEQVENDA) FROM venda vt where TIPO_VENDA = 'f') as Total_Por_Tipo, (SELECT count(vt.NRSEQVENDA) FROM venda vt) as Total_Tabela FROM venda v GROUP BY v.TIPO_VENDA; ");
           
         }
+
+        private void chart1_Click_2(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

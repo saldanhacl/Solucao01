@@ -34,7 +34,7 @@ namespace Sagrado
             dg.Rows.Clear();
 
             if (LISTA_TIPOS.SelectedItem == null || LISTA_TIPOS.SelectedItem.Equals(""))
-                query = "SELECT * FROM PRODUTO";
+                query = "SELECT * FROM PRODUTO WHERE IDATIVO_PRODUTO != 'N'";
             else
                 query = "SELECT * FROM PRODUTO WHERE TYPE_PRODUTO = '" + LISTA_TIPOS.SelectedItem.ToString() + "'";
 
@@ -76,19 +76,21 @@ namespace Sagrado
             DataBaseConnection bd = new DataBaseConnection();
             bd.openConnection();
 
-            String query = "SELECT DISTINCT TYPE_PRODUTO FROM produto";
+            String query = "SELECT DISTINCT TYPE_PRODUTO FROM produto WHERE IDATIVO_PRODUTO != 'N'";
 
             MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
 
             MySqlDataReader reader = cmd.ExecuteReader();
 
-            String nome = null;
+            String tipo = null;
             LISTA_TIPOS.Items.Add("");
 
             while (reader.Read())
             {
-                nome = reader["TYPE_PRODUTO"].ToString();
-                LISTA_TIPOS.Items.Add(nome);
+                
+
+                tipo = reader["TYPE_PRODUTO"].ToString();
+                LISTA_TIPOS.Items.Add(tipo);
             }
             bd.closeConnection();
         }
@@ -107,7 +109,7 @@ namespace Sagrado
             if(dg.CurrentRow != null)
             {
                 int linha = int.Parse(dg.CurrentRow.Index.ToString());
-                MessageBox.Show(linha.ToString());
+                //MessageBox.Show(linha.ToString());
 
                 int id = int.Parse(dg.Rows[linha].Cells["N"].Value.ToString());
 
@@ -128,38 +130,50 @@ namespace Sagrado
 
         private void EXCLUIR_Click(object sender, EventArgs e)
         {
-            int linha = int.Parse(dg.CurrentRow.Index.ToString());
-            int id = int.Parse(dg.Rows[linha].Cells["N"].Value.ToString());
-
-            DialogResult dr = MessageBox.Show("DESEJA EXCLUIR A LINHA SELECIONADA?",
-                            "CONFIRMAÇÃO:", MessageBoxButtons.YesNo);
-        
-            switch (dr)
+            if (dg.CurrentRow != null)
             {
-                case DialogResult.Yes:
+                int linha = int.Parse(dg.CurrentRow.Index.ToString());
+                int id = int.Parse(dg.Rows[linha].Cells["N"].Value.ToString());
 
-                    if (linha >= 0)
-                    {
-                        DataBaseConnection bd = new DataBaseConnection();
-                        bd.openConnection();
+                DialogResult dr = MessageBox.Show("DESEJA EXCLUIR A LINHA SELECIONADA?",
+                                "CONFIRMAÇÃO:", MessageBoxButtons.YesNo);
 
-                        String query = "DELETE FROM PRODUTO WHERE NRSEQPRODUTO ='" + id.ToString() + "'";
-                        MessageBox.Show(query);
+                switch (dr)
+                {
+                    case DialogResult.Yes:
 
-                        MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("PRODUTO EXCLUÍDO COM SUCESSO");
-                        bd.closeConnection();
-                        atualizarListaTipos();
-                        dg.Rows.RemoveAt(linha);
-                    }
-                    break;
+                        if (linha >= 0)
+                        {
+                            DataBaseConnection bd = new DataBaseConnection();
+                            bd.openConnection();
 
-                case DialogResult.No:
-                    MessageBox.Show("EXCLUSÃO CANCELADA");
-                    break;
+                            String query = "UPDATE PRODUTO SET IDATIVO_PRODUTO = 'N' WHERE NRSEQPRODUTO = '" + id.ToString() + "'";
 
-            }    
+                            MessageBox.Show(query);
+
+                            MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("PRODUTO EXCLUÍDO COM SUCESSO");
+                            bd.closeConnection();
+                            atualizarListaTipos();
+                            dg.Rows.RemoveAt(linha);
+                        }
+                        break;
+
+                    case DialogResult.No:
+                        MessageBox.Show("EXCLUSÃO CANCELADA");
+                        break;
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("SELECIONE UMA LINHA PARA EXCLUIR");
+            }
+
+
+
+                
         }
 
         private void BTN_ADD_Click(object sender, EventArgs e)
