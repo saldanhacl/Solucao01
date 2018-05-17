@@ -37,12 +37,12 @@
             this.FUNCIONÁRIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BTN_BUSCAR = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.BTN_BUSCA_CPF = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.RB_TIPO = new System.Windows.Forms.RadioButton();
+            this.RB_FUNC = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.IMG_CARTEIRA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -77,11 +77,13 @@
             this.FUNCIONÁRIO});
             this.dg.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dg.Location = new System.Drawing.Point(29, 253);
+            this.dg.MultiSelect = false;
             this.dg.Name = "dg";
             this.dg.ReadOnly = true;
             this.dg.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg.Size = new System.Drawing.Size(723, 259);
-            this.dg.TabIndex = 3;
+            this.dg.TabIndex = 5;
             // 
             // TIPO
             // 
@@ -108,10 +110,10 @@
             this.BTN_BUSCAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BTN_BUSCAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_BUSCAR.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_BUSCAR.Location = new System.Drawing.Point(543, 168);
+            this.BTN_BUSCAR.Location = new System.Drawing.Point(498, 210);
             this.BTN_BUSCAR.Name = "BTN_BUSCAR";
             this.BTN_BUSCAR.Size = new System.Drawing.Size(30, 30);
-            this.BTN_BUSCAR.TabIndex = 2;
+            this.BTN_BUSCAR.TabIndex = 4;
             this.BTN_BUSCAR.UseVisualStyleBackColor = false;
             this.BTN_BUSCAR.Click += new System.EventHandler(this.BTN_BUSCAR_Click);
             // 
@@ -120,63 +122,46 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "",
-            "VENDA",
-            "FIADO",
-            "ENTRADA",
-            "RETIRADA"});
-            this.comboBox1.Location = new System.Drawing.Point(303, 173);
+            this.comboBox1.Location = new System.Drawing.Point(245, 215);
             this.comboBox1.MaxDropDownItems = 4;
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(224, 25);
-            this.comboBox1.TabIndex = 1;
+            this.comboBox1.Size = new System.Drawing.Size(244, 25);
+            this.comboBox1.TabIndex = 3;
             // 
-            // comboBox2
+            // RB_TIPO
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ItemHeight = 17;
-            this.comboBox2.Location = new System.Drawing.Point(303, 204);
-            this.comboBox2.MaxDropDownItems = 4;
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(224, 25);
-            this.comboBox2.TabIndex = 25;
+            this.RB_TIPO.AutoSize = true;
+            this.RB_TIPO.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.RB_TIPO.Location = new System.Drawing.Point(140, 12);
+            this.RB_TIPO.Name = "RB_TIPO";
+            this.RB_TIPO.Size = new System.Drawing.Size(157, 21);
+            this.RB_TIPO.TabIndex = 2;
+            this.RB_TIPO.TabStop = true;
+            this.RB_TIPO.Text = "TIPO DE REGISTRO";
+            this.RB_TIPO.UseVisualStyleBackColor = true;
+            this.RB_TIPO.CheckedChanged += new System.EventHandler(this.RB_TIPO_CheckedChanged);
             // 
-            // BTN_BUSCA_CPF
+            // RB_FUNC
             // 
-            this.BTN_BUSCA_CPF.BackColor = System.Drawing.Color.White;
-            this.BTN_BUSCA_CPF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SEARCH2;
-            this.BTN_BUSCA_CPF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BTN_BUSCA_CPF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_BUSCA_CPF.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_BUSCA_CPF.Location = new System.Drawing.Point(543, 201);
-            this.BTN_BUSCA_CPF.Name = "BTN_BUSCA_CPF";
-            this.BTN_BUSCA_CPF.Size = new System.Drawing.Size(30, 30);
-            this.BTN_BUSCA_CPF.TabIndex = 26;
-            this.BTN_BUSCA_CPF.UseVisualStyleBackColor = false;
-            this.BTN_BUSCA_CPF.Click += new System.EventHandler(this.BTN_BUSCA_CPF_Click);
+            this.RB_FUNC.AutoSize = true;
+            this.RB_FUNC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.RB_FUNC.Location = new System.Drawing.Point(12, 12);
+            this.RB_FUNC.Name = "RB_FUNC";
+            this.RB_FUNC.Size = new System.Drawing.Size(120, 21);
+            this.RB_FUNC.TabIndex = 1;
+            this.RB_FUNC.TabStop = true;
+            this.RB_FUNC.Text = "FUNCIONÁRIO";
+            this.RB_FUNC.UseVisualStyleBackColor = true;
+            this.RB_FUNC.CheckedChanged += new System.EventHandler(this.RB_FUNC_CheckedChanged);
             // 
-            // label3
+            // panel1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(168, 208);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 20);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "FUNCIONÁRIO: ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(194, 176);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 20);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "REGISTRO:";
+            this.panel1.Controls.Add(this.RB_FUNC);
+            this.panel1.Controls.Add(this.RB_TIPO);
+            this.panel1.Location = new System.Drawing.Point(233, 164);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(307, 45);
+            this.panel1.TabIndex = 32;
             // 
             // MovimentacaoCaixa
             // 
@@ -184,10 +169,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.BTN_BUSCA_CPF);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.BTN_BUSCAR);
             this.Controls.Add(this.dg);
@@ -197,9 +179,10 @@
             this.Name = "MovimentacaoCaixa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MOVIMENTAÇÃO DE CAIXA";
-            this.Load += new System.EventHandler(this.MovimentacaoCaixa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IMG_CARTEIRA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,9 +198,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn FUNCIONÁRIO;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button BTN_BUSCA_CPF;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton RB_TIPO;
+        private System.Windows.Forms.RadioButton RB_FUNC;
+        private System.Windows.Forms.Panel panel1;
     }
 }
