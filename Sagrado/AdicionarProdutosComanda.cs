@@ -55,13 +55,13 @@ namespace Sagrado
         public List<Produto> getListaProdutosComanda()
         {
             List<Produto> produtosComanda = new List<Produto>();
-            int qtdProdutos = Lista_Comanda.Items.Count;
+            int qtdProdutos = LISTA.Items.Count;
 
             for(int i=0; i < qtdProdutos; i++)
             {
-                if (!produtosComanda.Contains((Produto)Lista_Comanda.Items[i]))
+                if (!produtosComanda.Contains((Produto)LISTA.Items[i]))
                 {
-                    produtosComanda.Add((Produto)Lista_Comanda.Items[i]);
+                    produtosComanda.Add((Produto)LISTA.Items[i]);
                 } 
             }
 
@@ -80,7 +80,8 @@ namespace Sagrado
 
         private void btn_zerar_comanda_Click(object sender, EventArgs e)
         {
-            Lista_Comanda.Items.Clear();
+            LISTA.Items.Clear();
+            txt_total.Text = "0";
         }
 
         private void Lista_Produtos_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,7 +93,7 @@ namespace Sagrado
         {
             if (PRODUTOS.SelectedItem != null)
             {
-                Lista_Comanda.Items.Add(PRODUTOS.SelectedItem);
+                LISTA.Items.Add(PRODUTOS.SelectedItem);
                 total += ((Produto)PRODUTOS.SelectedItem).preco;
                 ((Produto)PRODUTOS.SelectedItem).quantidade++;
                 txt_total.Text = total.ToString();

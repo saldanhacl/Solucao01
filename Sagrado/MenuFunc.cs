@@ -78,7 +78,7 @@ namespace Sagrado
         private void BTN_GEREN_CLIENTE_Click(object sender, EventArgs e)
         {
             new GerenClienteUser().Show();
-            this.Close();
+            
         }
     }
 }

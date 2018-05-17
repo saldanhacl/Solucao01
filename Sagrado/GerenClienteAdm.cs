@@ -15,6 +15,7 @@ namespace Sagrado
         public GerenClienteAdm()
         {
             InitializeComponent();
+            
         }
 
         private void pAINELToolStripMenuItem_Click(object sender, EventArgs e)

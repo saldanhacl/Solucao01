@@ -34,13 +34,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.pAINELToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tROCARUSUÁRIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eNCERRARSISTEMAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BTN_ADD_CLIENTE = new System.Windows.Forms.Button();
             this.BTN_CONSUL_CLIENTE = new System.Windows.Forms.Button();
             this.BTN_EDIT_CLIENTE = new System.Windows.Forms.Button();
             this.BTN_EXCLUIR_CLIENTE = new System.Windows.Forms.Button();
+            this.tROCARUSUÁRIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,40 +85,17 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pAINELToolStripMenuItem,
-            this.tROCARUSUÁRIOToolStripMenuItem,
-            this.eNCERRARSISTEMAToolStripMenuItem});
+            this.tROCARUSUÁRIOToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // pAINELToolStripMenuItem
-            // 
-            this.pAINELToolStripMenuItem.Name = "pAINELToolStripMenuItem";
-            this.pAINELToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.pAINELToolStripMenuItem.Text = "PAINEL";
-            this.pAINELToolStripMenuItem.Click += new System.EventHandler(this.pAINELToolStripMenuItem_Click);
-            // 
-            // tROCARUSUÁRIOToolStripMenuItem
-            // 
-            this.tROCARUSUÁRIOToolStripMenuItem.Name = "tROCARUSUÁRIOToolStripMenuItem";
-            this.tROCARUSUÁRIOToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
-            this.tROCARUSUÁRIOToolStripMenuItem.Text = "TROCAR USUÁRIO";
-            this.tROCARUSUÁRIOToolStripMenuItem.Click += new System.EventHandler(this.tROCARUSUÁRIOToolStripMenuItem_Click);
-            // 
-            // eNCERRARSISTEMAToolStripMenuItem
-            // 
-            this.eNCERRARSISTEMAToolStripMenuItem.Name = "eNCERRARSISTEMAToolStripMenuItem";
-            this.eNCERRARSISTEMAToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
-            this.eNCERRARSISTEMAToolStripMenuItem.Text = "ENCERRAR SISTEMA";
-            this.eNCERRARSISTEMAToolStripMenuItem.Click += new System.EventHandler(this.eNCERRARSISTEMAToolStripMenuItem_Click);
-            // 
             // BTN_ADD_CLIENTE
             // 
             this.BTN_ADD_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_ADD_CLIENTE;
-            this.BTN_ADD_CLIENTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_ADD_CLIENTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTN_ADD_CLIENTE.ForeColor = System.Drawing.Color.White;
             this.BTN_ADD_CLIENTE.Location = new System.Drawing.Point(162, 123);
             this.BTN_ADD_CLIENTE.Name = "BTN_ADD_CLIENTE";
@@ -131,7 +106,8 @@
             // 
             // BTN_CONSUL_CLIENTE
             // 
-            this.BTN_CONSUL_CLIENTE.Image = global::Sagrado.Properties.Resources.BTN_CONSULTAR_CLIENTE;
+            this.BTN_CONSUL_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CONSULTAR_CLIENTE;
+            this.BTN_CONSUL_CLIENTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTN_CONSUL_CLIENTE.Location = new System.Drawing.Point(406, 299);
             this.BTN_CONSUL_CLIENTE.Name = "BTN_CONSUL_CLIENTE";
             this.BTN_CONSUL_CLIENTE.Size = new System.Drawing.Size(200, 100);
@@ -142,7 +118,7 @@
             // BTN_EDIT_CLIENTE
             // 
             this.BTN_EDIT_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EDIT_CLIENTE;
-            this.BTN_EDIT_CLIENTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_EDIT_CLIENTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTN_EDIT_CLIENTE.ForeColor = System.Drawing.Color.White;
             this.BTN_EDIT_CLIENTE.Location = new System.Drawing.Point(406, 123);
             this.BTN_EDIT_CLIENTE.Name = "BTN_EDIT_CLIENTE";
@@ -153,13 +129,21 @@
             // 
             // BTN_EXCLUIR_CLIENTE
             // 
-            this.BTN_EXCLUIR_CLIENTE.Image = global::Sagrado.Properties.Resources.BTN_EXCLUIR;
+            this.BTN_EXCLUIR_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EXCLUIR;
+            this.BTN_EXCLUIR_CLIENTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTN_EXCLUIR_CLIENTE.Location = new System.Drawing.Point(162, 299);
             this.BTN_EXCLUIR_CLIENTE.Name = "BTN_EXCLUIR_CLIENTE";
             this.BTN_EXCLUIR_CLIENTE.Size = new System.Drawing.Size(200, 100);
             this.BTN_EXCLUIR_CLIENTE.TabIndex = 4;
             this.BTN_EXCLUIR_CLIENTE.UseVisualStyleBackColor = true;
             this.BTN_EXCLUIR_CLIENTE.Click += new System.EventHandler(this.BTN_EXCLUIR_CLIENTE_Click);
+            // 
+            // tROCARUSUÁRIOToolStripMenuItem
+            // 
+            this.tROCARUSUÁRIOToolStripMenuItem.Name = "tROCARUSUÁRIOToolStripMenuItem";
+            this.tROCARUSUÁRIOToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
+            this.tROCARUSUÁRIOToolStripMenuItem.Text = "TROCAR USUÁRIO";
+            this.tROCARUSUÁRIOToolStripMenuItem.Click += new System.EventHandler(this.tROCARUSUÁRIOToolStripMenuItem_Click);
             // 
             // GerenClienteAdm
             // 
@@ -198,8 +182,6 @@
         private System.Windows.Forms.Button BTN_EXCLUIR_CLIENTE;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem pAINELToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tROCARUSUÁRIOToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eNCERRARSISTEMAToolStripMenuItem;
     }
 }

@@ -38,7 +38,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tROCARUSUÁRIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eNCERRARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnGerencia = new System.Windows.Forms.Button();
             this.BTN_GEREN_CLIENTE = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
@@ -70,8 +69,7 @@
             this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tROCARUSUÁRIOToolStripMenuItem,
-            this.eNCERRARToolStripMenuItem});
+            this.tROCARUSUÁRIOToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -87,13 +85,6 @@
             this.tROCARUSUÁRIOToolStripMenuItem.Text = "TROCAR USUÁRIO";
             this.tROCARUSUÁRIOToolStripMenuItem.Click += new System.EventHandler(this.tROCARUSUÁRIOToolStripMenuItem_Click);
             // 
-            // eNCERRARToolStripMenuItem
-            // 
-            this.eNCERRARToolStripMenuItem.Name = "eNCERRARToolStripMenuItem";
-            this.eNCERRARToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
-            this.eNCERRARToolStripMenuItem.Text = "ENCERRAR SISTEMA";
-            this.eNCERRARToolStripMenuItem.Click += new System.EventHandler(this.eNCERRARToolStripMenuItem_Click);
-            // 
             // btnGerencia
             // 
             this.btnGerencia.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CAIXA2;
@@ -108,7 +99,7 @@
             // 
             // BTN_GEREN_CLIENTE
             // 
-            this.BTN_GEREN_CLIENTE.Image = global::Sagrado.Properties.Resources.BTN_ACERTO_CLIENTE;
+            this.BTN_GEREN_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_ACERTO_CLIENTE;
             this.BTN_GEREN_CLIENTE.Location = new System.Drawing.Point(409, 203);
             this.BTN_GEREN_CLIENTE.Name = "BTN_GEREN_CLIENTE";
             this.BTN_GEREN_CLIENTE.Size = new System.Drawing.Size(200, 100);
@@ -147,6 +138,5 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tROCARUSUÁRIOToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eNCERRARToolStripMenuItem;
     }
 }

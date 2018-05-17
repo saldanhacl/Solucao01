@@ -77,5 +77,10 @@ namespace Sagrado
         {
             this.Close();
         }
+
+        private void RD_FUNC_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

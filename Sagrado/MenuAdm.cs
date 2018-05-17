@@ -71,5 +71,10 @@ namespace Sagrado
         {
             new RelatorioVendas().Show();
         }
+
+        private void MenuAdm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

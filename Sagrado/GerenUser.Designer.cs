@@ -35,9 +35,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.pAINELToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tROCARUSUÁRIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eNCERRARSISTEMAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BTN_ADD_USER = new System.Windows.Forms.Button();
             this.BTN_CONSUL_USER = new System.Windows.Forms.Button();
             this.BTN_EDIT_USER = new System.Windows.Forms.Button();
@@ -90,21 +88,12 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pAINELToolStripMenuItem,
-            this.tROCARUSUÁRIOToolStripMenuItem,
-            this.eNCERRARSISTEMAToolStripMenuItem});
+            this.tROCARUSUÁRIOToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // pAINELToolStripMenuItem
-            // 
-            this.pAINELToolStripMenuItem.Name = "pAINELToolStripMenuItem";
-            this.pAINELToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.pAINELToolStripMenuItem.Text = "PAINEL";
-            this.pAINELToolStripMenuItem.Click += new System.EventHandler(this.pAINELToolStripMenuItem_Click);
             // 
             // tROCARUSUÁRIOToolStripMenuItem
             // 
@@ -112,13 +101,6 @@
             this.tROCARUSUÁRIOToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
             this.tROCARUSUÁRIOToolStripMenuItem.Text = "TROCAR USUÁRIO";
             this.tROCARUSUÁRIOToolStripMenuItem.Click += new System.EventHandler(this.tROCARUSUÁRIOToolStripMenuItem_Click);
-            // 
-            // eNCERRARSISTEMAToolStripMenuItem
-            // 
-            this.eNCERRARSISTEMAToolStripMenuItem.Name = "eNCERRARSISTEMAToolStripMenuItem";
-            this.eNCERRARSISTEMAToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
-            this.eNCERRARSISTEMAToolStripMenuItem.Text = "ENCERRAR SISTEMA";
-            this.eNCERRARSISTEMAToolStripMenuItem.Click += new System.EventHandler(this.eNCERRARSISTEMAToolStripMenuItem_Click);
             // 
             // BTN_ADD_USER
             // 
@@ -203,8 +185,6 @@
         private System.Windows.Forms.Button BTN_EXCLUIR_USER;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem pAINELToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tROCARUSUÁRIOToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eNCERRARSISTEMAToolStripMenuItem;
     }
 }
