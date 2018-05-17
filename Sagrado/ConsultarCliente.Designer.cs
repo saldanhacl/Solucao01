@@ -98,6 +98,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.textBox2.Location = new System.Drawing.Point(128, 215);
@@ -109,6 +110,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox4.Enabled = false;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.textBox4.Location = new System.Drawing.Point(128, 255);
@@ -120,6 +122,7 @@
             // 
             // textBox7
             // 
+            this.textBox7.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox7.Enabled = false;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.textBox7.Location = new System.Drawing.Point(370, 255);

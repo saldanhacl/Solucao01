@@ -46,7 +46,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label2.Location = new System.Drawing.Point(139, 138);
+            this.label2.Location = new System.Drawing.Point(145, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 18);
             this.label2.TabIndex = 2;
@@ -56,7 +56,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label3.Location = new System.Drawing.Point(122, 176);
+            this.label3.Location = new System.Drawing.Point(128, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 18);
             this.label3.TabIndex = 3;
@@ -65,30 +65,28 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.textBox2.Location = new System.Drawing.Point(206, 170);
+            this.textBox2.Location = new System.Drawing.Point(212, 197);
             this.textBox2.MaxLength = 8;
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '•';
-            this.textBox2.Size = new System.Drawing.Size(236, 24);
+            this.textBox2.Size = new System.Drawing.Size(218, 24);
             this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "1";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.textBox1.Location = new System.Drawing.Point(206, 132);
+            this.textBox1.Location = new System.Drawing.Point(212, 159);
             this.textBox1.MaxLength = 11;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 24);
+            this.textBox1.Size = new System.Drawing.Size(218, 24);
             this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "1";
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Location = new System.Drawing.Point(192, 209);
+            this.panel1.Location = new System.Drawing.Point(198, 236);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(164, 50);
             this.panel1.TabIndex = 12;
@@ -124,7 +122,7 @@
             this.BTN_CONF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_CONF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_CONF.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CONF.Location = new System.Drawing.Point(402, 217);
+            this.BTN_CONF.Location = new System.Drawing.Point(390, 244);
             this.BTN_CONF.Name = "BTN_CONF";
             this.BTN_CONF.Size = new System.Drawing.Size(40, 40);
             this.BTN_CONF.TabIndex = 5;
@@ -134,7 +132,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_LOGIN2;
-            this.pictureBox1.Location = new System.Drawing.Point(192, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(187, 53);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 100);
             this.pictureBox1.TabIndex = 11;

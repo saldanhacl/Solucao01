@@ -31,9 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAdm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.pAINELToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tROCARUSUÁRIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eNCERRARSISTEMAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,21 +54,13 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pAINELToolStripMenuItem,
-            this.tROCARUSUÁRIOToolStripMenuItem,
-            this.eNCERRARSISTEMAToolStripMenuItem});
+            this.tROCARUSUÁRIOToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // pAINELToolStripMenuItem
-            // 
-            this.pAINELToolStripMenuItem.Name = "pAINELToolStripMenuItem";
-            this.pAINELToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.pAINELToolStripMenuItem.Text = "PAINEL";
-            this.pAINELToolStripMenuItem.Click += new System.EventHandler(this.pAINELToolStripMenuItem_Click);
             // 
             // tROCARUSUÁRIOToolStripMenuItem
             // 
@@ -79,18 +69,11 @@
             this.tROCARUSUÁRIOToolStripMenuItem.Text = "TROCAR USUÁRIO";
             this.tROCARUSUÁRIOToolStripMenuItem.Click += new System.EventHandler(this.tROCARUSUÁRIOToolStripMenuItem_Click);
             // 
-            // eNCERRARSISTEMAToolStripMenuItem
-            // 
-            this.eNCERRARSISTEMAToolStripMenuItem.Name = "eNCERRARSISTEMAToolStripMenuItem";
-            this.eNCERRARSISTEMAToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
-            this.eNCERRARSISTEMAToolStripMenuItem.Text = "ENCERRAR SISTEMA";
-            this.eNCERRARSISTEMAToolStripMenuItem.Click += new System.EventHandler(this.eNCERRARSISTEMAToolStripMenuItem_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(307, 175);
+            this.label7.Location = new System.Drawing.Point(285, 171);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(159, 16);
             this.label7.TabIndex = 47;
@@ -100,7 +83,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(100, 319);
+            this.label8.Location = new System.Drawing.Point(78, 465);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(149, 17);
             this.label8.TabIndex = 45;
@@ -110,7 +93,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(100, 175);
+            this.label1.Location = new System.Drawing.Point(78, 171);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 16);
             this.label1.TabIndex = 51;
@@ -120,7 +103,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(307, 319);
+            this.label2.Location = new System.Drawing.Point(285, 465);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 17);
             this.label2.TabIndex = 49;
@@ -130,7 +113,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(510, 175);
+            this.label3.Location = new System.Drawing.Point(64, 316);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(181, 16);
             this.label3.TabIndex = 53;
@@ -140,7 +123,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(522, 319);
+            this.label4.Location = new System.Drawing.Point(284, 315);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(162, 17);
             this.label4.TabIndex = 55;
@@ -150,7 +133,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label5.Location = new System.Drawing.Point(91, 467);
+            this.label5.Location = new System.Drawing.Point(540, 315);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(171, 17);
             this.label5.TabIndex = 57;
@@ -159,30 +142,32 @@
             // button1
             // 
             this.button1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_RELATORIO;
-            this.button1.Location = new System.Drawing.Point(87, 374);
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(536, 222);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 90);
-            this.button1.TabIndex = 56;
+            this.button1.TabIndex = 8;
             this.button1.Text = "ir";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.BTN_RELAT_VENDAS_Click);
             // 
             // BTN_GEREN_PROD
             // 
-            this.BTN_GEREN_PROD.Image = global::Sagrado.Properties.Resources.BTN_GERENCIAR_PRODUTO;
-            this.BTN_GEREN_PROD.Location = new System.Drawing.Point(513, 226);
+            this.BTN_GEREN_PROD.BackgroundImage = global::Sagrado.Properties.Resources.BTN_GERENCIAR_PRODUTO;
+            this.BTN_GEREN_PROD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTN_GEREN_PROD.Location = new System.Drawing.Point(275, 222);
             this.BTN_GEREN_PROD.Name = "BTN_GEREN_PROD";
             this.BTN_GEREN_PROD.Size = new System.Drawing.Size(180, 90);
-            this.BTN_GEREN_PROD.TabIndex = 7;
+            this.BTN_GEREN_PROD.TabIndex = 5;
             this.BTN_GEREN_PROD.UseVisualStyleBackColor = true;
             this.BTN_GEREN_PROD.Click += new System.EventHandler(this.BTN_GEREN_PROD_Click);
             // 
             // BTN_CONSULTA_MOVI
             // 
             this.BTN_CONSULTA_MOVI.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SALDO;
-            this.BTN_CONSULTA_MOVI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_CONSULTA_MOVI.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTN_CONSULTA_MOVI.ForeColor = System.Drawing.Color.White;
-            this.BTN_CONSULTA_MOVI.Location = new System.Drawing.Point(510, 82);
+            this.BTN_CONSULTA_MOVI.Location = new System.Drawing.Point(65, 222);
             this.BTN_CONSULTA_MOVI.Name = "BTN_CONSULTA_MOVI";
             this.BTN_CONSULTA_MOVI.Size = new System.Drawing.Size(180, 90);
             this.BTN_CONSULTA_MOVI.TabIndex = 4;
@@ -192,9 +177,9 @@
             // BTN_REGISTRAR_ENTRADA
             // 
             this.BTN_REGISTRAR_ENTRADA.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CAIXA2;
-            this.BTN_REGISTRAR_ENTRADA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_REGISTRAR_ENTRADA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTN_REGISTRAR_ENTRADA.ForeColor = System.Drawing.Color.White;
-            this.BTN_REGISTRAR_ENTRADA.Location = new System.Drawing.Point(87, 82);
+            this.BTN_REGISTRAR_ENTRADA.Location = new System.Drawing.Point(65, 78);
             this.BTN_REGISTRAR_ENTRADA.Name = "BTN_REGISTRAR_ENTRADA";
             this.BTN_REGISTRAR_ENTRADA.Size = new System.Drawing.Size(180, 90);
             this.BTN_REGISTRAR_ENTRADA.TabIndex = 2;
@@ -203,20 +188,21 @@
             // 
             // BTN_GERENCIAR_USER
             // 
-            this.BTN_GERENCIAR_USER.Image = global::Sagrado.Properties.Resources.BTN_GERENCIAR_USUARIO2;
-            this.BTN_GERENCIAR_USER.Location = new System.Drawing.Point(297, 226);
+            this.BTN_GERENCIAR_USER.BackgroundImage = global::Sagrado.Properties.Resources.BTN_GERENCIAR_USUARIO2;
+            this.BTN_GERENCIAR_USER.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTN_GERENCIAR_USER.Location = new System.Drawing.Point(275, 372);
             this.BTN_GERENCIAR_USER.Name = "BTN_GERENCIAR_USER";
             this.BTN_GERENCIAR_USER.Size = new System.Drawing.Size(180, 90);
-            this.BTN_GERENCIAR_USER.TabIndex = 6;
+            this.BTN_GERENCIAR_USER.TabIndex = 7;
             this.BTN_GERENCIAR_USER.UseVisualStyleBackColor = true;
             this.BTN_GERENCIAR_USER.Click += new System.EventHandler(this.BTN_GERENCIAR_USER_Click);
             // 
             // BTN_RETIRAR_DINHEIRO
             // 
             this.BTN_RETIRAR_DINHEIRO.BackgroundImage = global::Sagrado.Properties.Resources.BTN_RETIRAR_DINHEIRO2;
-            this.BTN_RETIRAR_DINHEIRO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_RETIRAR_DINHEIRO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BTN_RETIRAR_DINHEIRO.ForeColor = System.Drawing.Color.White;
-            this.BTN_RETIRAR_DINHEIRO.Location = new System.Drawing.Point(297, 82);
+            this.BTN_RETIRAR_DINHEIRO.Location = new System.Drawing.Point(275, 78);
             this.BTN_RETIRAR_DINHEIRO.Name = "BTN_RETIRAR_DINHEIRO";
             this.BTN_RETIRAR_DINHEIRO.Size = new System.Drawing.Size(180, 90);
             this.BTN_RETIRAR_DINHEIRO.TabIndex = 3;
@@ -225,11 +211,12 @@
             // 
             // BTN_GERENCIAR_CLIENTE
             // 
-            this.BTN_GERENCIAR_CLIENTE.Image = global::Sagrado.Properties.Resources.BTN_ACERTO_CLIENTE;
-            this.BTN_GERENCIAR_CLIENTE.Location = new System.Drawing.Point(87, 226);
+            this.BTN_GERENCIAR_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_ACERTO_CLIENTE;
+            this.BTN_GERENCIAR_CLIENTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTN_GERENCIAR_CLIENTE.Location = new System.Drawing.Point(65, 372);
             this.BTN_GERENCIAR_CLIENTE.Name = "BTN_GERENCIAR_CLIENTE";
             this.BTN_GERENCIAR_CLIENTE.Size = new System.Drawing.Size(180, 90);
-            this.BTN_GERENCIAR_CLIENTE.TabIndex = 5;
+            this.BTN_GERENCIAR_CLIENTE.TabIndex = 6;
             this.BTN_GERENCIAR_CLIENTE.UseVisualStyleBackColor = true;
             this.BTN_GERENCIAR_CLIENTE.Click += new System.EventHandler(this.BTN_GERENCIAR_CLIENTE_Click);
             // 
@@ -261,6 +248,7 @@
             this.Name = "MenuAdm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PAINEL ADMINISTRADOR";
+            this.Load += new System.EventHandler(this.MenuAdm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
@@ -273,8 +261,6 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tROCARUSUÁRIOToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eNCERRARSISTEMAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pAINELToolStripMenuItem;
         private System.Windows.Forms.Button BTN_RETIRAR_DINHEIRO;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button BTN_GERENCIAR_CLIENTE;

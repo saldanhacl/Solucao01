@@ -107,9 +107,9 @@ namespace Sagrado
                     }
                     else if (getLogar == "B" && radioButton2.Checked == true)
                     {
-                        new MenuFunc().Show();
+                        new MenuFunc().ShowDialog();
                         saveLog();
-                        this.Hide();
+                        this.Close();
                     }
                     else
                     {

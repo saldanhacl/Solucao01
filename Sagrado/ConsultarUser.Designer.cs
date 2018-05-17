@@ -87,7 +87,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label7.Location = new System.Drawing.Point(129, 434);
+            this.label7.Location = new System.Drawing.Point(94, 440);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 18);
@@ -98,7 +98,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label2.Location = new System.Drawing.Point(132, 386);
+            this.label2.Location = new System.Drawing.Point(97, 392);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 18);
@@ -109,7 +109,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label4.Location = new System.Drawing.Point(416, 295);
+            this.label4.Location = new System.Drawing.Point(381, 301);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 18);
@@ -120,7 +120,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label9.Location = new System.Drawing.Point(408, 431);
+            this.label9.Location = new System.Drawing.Point(373, 437);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(153, 18);
@@ -131,7 +131,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label8.Location = new System.Drawing.Point(483, 342);
+            this.label8.Location = new System.Drawing.Point(448, 348);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 18);
@@ -142,7 +142,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label12.Location = new System.Drawing.Point(153, 342);
+            this.label12.Location = new System.Drawing.Point(118, 348);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(39, 18);
@@ -153,7 +153,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label6.Location = new System.Drawing.Point(157, 297);
+            this.label6.Location = new System.Drawing.Point(122, 303);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 18);
@@ -164,7 +164,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label3.Location = new System.Drawing.Point(146, 204);
+            this.label3.Location = new System.Drawing.Point(111, 210);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 18);
@@ -175,7 +175,8 @@
             // 
             this.panel2.Controls.Add(this.RD_MASC);
             this.panel2.Controls.Add(this.RD_FEM);
-            this.panel2.Location = new System.Drawing.Point(478, 290);
+            this.panel2.Enabled = false;
+            this.panel2.Location = new System.Drawing.Point(443, 298);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(256, 28);
@@ -212,10 +213,11 @@
             // 
             this.panel1.Controls.Add(this.RD_FUNC);
             this.panel1.Controls.Add(this.RD_ADMIN);
-            this.panel1.Location = new System.Drawing.Point(209, 198);
+            this.panel1.Enabled = false;
+            this.panel1.Location = new System.Drawing.Point(165, 204);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(315, 30);
+            this.panel1.Size = new System.Drawing.Size(324, 30);
             this.panel1.TabIndex = 62;
             // 
             // RD_FUNC
@@ -224,7 +226,7 @@
             this.RD_FUNC.Checked = true;
             this.RD_FUNC.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.RD_FUNC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.RD_FUNC.Location = new System.Drawing.Point(9, 5);
+            this.RD_FUNC.Location = new System.Drawing.Point(6, 4);
             this.RD_FUNC.Margin = new System.Windows.Forms.Padding(4);
             this.RD_FUNC.Name = "RD_FUNC";
             this.RD_FUNC.Size = new System.Drawing.Size(124, 21);
@@ -232,6 +234,7 @@
             this.RD_FUNC.TabStop = true;
             this.RD_FUNC.Text = "FUNCIONÁRIO";
             this.RD_FUNC.UseVisualStyleBackColor = true;
+            this.RD_FUNC.CheckedChanged += new System.EventHandler(this.RD_FUNC_CheckedChanged);
             // 
             // RD_ADMIN
             // 
@@ -247,24 +250,25 @@
             // 
             // TXT_SENHA
             // 
-            this.TXT_SENHA.BackColor = System.Drawing.Color.White;
+            this.TXT_SENHA.BackColor = System.Drawing.SystemColors.Control;
             this.TXT_SENHA.Cursor = System.Windows.Forms.Cursors.Default;
+            this.TXT_SENHA.Enabled = false;
             this.TXT_SENHA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_SENHA.Location = new System.Drawing.Point(206, 427);
+            this.TXT_SENHA.Location = new System.Drawing.Point(171, 433);
             this.TXT_SENHA.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_SENHA.MaxLength = 8;
             this.TXT_SENHA.Name = "TXT_SENHA";
             this.TXT_SENHA.ReadOnly = true;
             this.TXT_SENHA.Size = new System.Drawing.Size(158, 24);
             this.TXT_SENHA.TabIndex = 11;
-            this.TXT_SENHA.UseSystemPasswordChar = true;
             // 
             // TXT_TEL
             // 
-            this.TXT_TEL.BackColor = System.Drawing.Color.White;
+            this.TXT_TEL.BackColor = System.Drawing.SystemColors.Control;
             this.TXT_TEL.Cursor = System.Windows.Forms.Cursors.Default;
+            this.TXT_TEL.Enabled = false;
             this.TXT_TEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_TEL.Location = new System.Drawing.Point(206, 336);
+            this.TXT_TEL.Location = new System.Drawing.Point(171, 342);
             this.TXT_TEL.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_TEL.MaxLength = 10;
             this.TXT_TEL.Name = "TXT_TEL";
@@ -274,10 +278,11 @@
             // 
             // TXT_CEL
             // 
-            this.TXT_CEL.BackColor = System.Drawing.Color.White;
+            this.TXT_CEL.BackColor = System.Drawing.SystemColors.Control;
             this.TXT_CEL.Cursor = System.Windows.Forms.Cursors.Default;
+            this.TXT_CEL.Enabled = false;
             this.TXT_CEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_CEL.Location = new System.Drawing.Point(538, 336);
+            this.TXT_CEL.Location = new System.Drawing.Point(503, 342);
             this.TXT_CEL.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_CEL.MaxLength = 11;
             this.TXT_CEL.Name = "TXT_CEL";
@@ -287,10 +292,11 @@
             // 
             // TXT_EMAIL
             // 
-            this.TXT_EMAIL.BackColor = System.Drawing.Color.White;
+            this.TXT_EMAIL.BackColor = System.Drawing.SystemColors.Control;
             this.TXT_EMAIL.Cursor = System.Windows.Forms.Cursors.Default;
+            this.TXT_EMAIL.Enabled = false;
             this.TXT_EMAIL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.TXT_EMAIL.Location = new System.Drawing.Point(206, 380);
+            this.TXT_EMAIL.Location = new System.Drawing.Point(171, 386);
             this.TXT_EMAIL.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_EMAIL.MaxLength = 50;
             this.TXT_EMAIL.Name = "TXT_EMAIL";
@@ -300,10 +306,11 @@
             // 
             // TXT_RG
             // 
-            this.TXT_RG.BackColor = System.Drawing.Color.White;
+            this.TXT_RG.BackColor = System.Drawing.SystemColors.Control;
             this.TXT_RG.Cursor = System.Windows.Forms.Cursors.Default;
+            this.TXT_RG.Enabled = false;
             this.TXT_RG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.TXT_RG.Location = new System.Drawing.Point(206, 292);
+            this.TXT_RG.Location = new System.Drawing.Point(171, 298);
             this.TXT_RG.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_RG.MaxLength = 8;
             this.TXT_RG.Name = "TXT_RG";
@@ -317,9 +324,10 @@
             this.TXT_DATE.CalendarForeColor = System.Drawing.Color.Maroon;
             this.TXT_DATE.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.TXT_DATE.CalendarTitleForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TXT_DATE.Enabled = false;
             this.TXT_DATE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.TXT_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.TXT_DATE.Location = new System.Drawing.Point(575, 426);
+            this.TXT_DATE.Location = new System.Drawing.Point(540, 432);
             this.TXT_DATE.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_DATE.MaxDate = new System.DateTime(2018, 3, 28, 0, 0, 0, 0);
             this.TXT_DATE.MinDate = new System.DateTime(1918, 1, 1, 0, 0, 0, 0);
@@ -332,19 +340,20 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label11.Location = new System.Drawing.Point(45, 254);
+            this.label11.Location = new System.Drawing.Point(99, 258);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(147, 18);
+            this.label11.Size = new System.Drawing.Size(58, 18);
             this.label11.TabIndex = 53;
-            this.label11.Text = "NOME COMPLETO:";
+            this.label11.Text = "NOME:";
             // 
             // TXT_NOME
             // 
-            this.TXT_NOME.BackColor = System.Drawing.Color.White;
+            this.TXT_NOME.BackColor = System.Drawing.SystemColors.Control;
             this.TXT_NOME.Cursor = System.Windows.Forms.Cursors.Default;
+            this.TXT_NOME.Enabled = false;
             this.TXT_NOME.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.TXT_NOME.Location = new System.Drawing.Point(206, 247);
+            this.TXT_NOME.Location = new System.Drawing.Point(171, 253);
             this.TXT_NOME.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_NOME.MaxLength = 50;
             this.TXT_NOME.Name = "TXT_NOME";
@@ -364,8 +373,8 @@
             // BTN_SEARCH2
             // 
             this.BTN_SEARCH2.BackColor = System.Drawing.Color.White;
-            this.BTN_SEARCH2.BackgroundImage = global::Sagrado.Properties.Resources.search;
-            this.BTN_SEARCH2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BTN_SEARCH2.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SEARCH2;
+            this.BTN_SEARCH2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BTN_SEARCH2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_SEARCH2.ForeColor = System.Drawing.Color.Transparent;
             this.BTN_SEARCH2.Location = new System.Drawing.Point(504, 149);
@@ -381,9 +390,9 @@
             this.BTN_CANC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_CANC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_CANC.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CANC.Location = new System.Drawing.Point(682, 471);
+            this.BTN_CANC.Location = new System.Drawing.Point(647, 477);
             this.BTN_CANC.Name = "BTN_CANC";
-            this.BTN_CANC.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CANC.Size = new System.Drawing.Size(0, 0);
             this.BTN_CANC.TabIndex = 77;
             this.BTN_CANC.UseVisualStyleBackColor = true;
             this.BTN_CANC.Click += new System.EventHandler(this.BTN_CANC_Click);
