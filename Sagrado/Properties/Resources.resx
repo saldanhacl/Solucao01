@@ -121,6 +121,9 @@
   <data name="BTN_LOGIN2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_LOGIN2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BTN_EDIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN_EDIT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BTN_CONSULTAR_PRODUTO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_CONSULTAR_PRODUTO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,11 +142,17 @@
   <data name="BTN_SEARCH2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_SEARCH2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BTN_GRAPH_PROD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN_GRAPH_PROD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BTN_SAVE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_SAVE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BTN_EXCLUIR_PROD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_EXCLUIR_PROD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BTN_CONSULTAR_USER" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN_CONSULTAR_USER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BTN_SALDO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_SALDO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,14 +211,17 @@
   <data name="BTN_EXCLUIR" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_EXCLUIR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BTN_EDIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BTN_EDIT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BTN_ADD_USER" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN_ADD_USER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BTN_EDIT_USER2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_EDIT_USER2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BTN_EDIT_USER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_EDIT_USER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BTN_ADD_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN_ADD_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BTN_CHECK" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_CHECK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,11 +238,14 @@
   <data name="BTN_CONSULTAR_CLIENTE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_CONSULTAR_CLIENTE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BTN_ADD_USER" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BTN_ADD_USER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BTN_GRAPH_USER" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN_GRAPH_USER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BTN_CONSULTAR_USER" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BTN_CONSULTAR_USER.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BTN_GRAPH_TIME" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN_GRAPH_TIME.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BTN_CHECK2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN_CHECK2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BTN_SET" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_SET.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,7 +259,7 @@
   <data name="BTN_RETIRAR_DINHEIRO2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTN_RETIRAR_DINHEIRO2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BTN_ADD_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BTN_ADD_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BTN_GRAPH_VENDA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN_GRAPH_VENDA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

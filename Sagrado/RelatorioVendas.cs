@@ -38,5 +38,10 @@ namespace Sagrado
         {
             new GraficoVendasTipoFiado().Show();
         }
+
+        private void RelatorioVendas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

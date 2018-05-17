@@ -51,7 +51,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BTN_SEARCH_PROD = new System.Windows.Forms.Button();
-            this.BTN_CANC = new System.Windows.Forms.Button();
             this.BTN_CONF = new System.Windows.Forms.Button();
             this.TXT_CPF = new System.Windows.Forms.MaskedTextBox();
             this.TXT_TEL = new System.Windows.Forms.MaskedTextBox();
@@ -154,6 +153,7 @@
             // 
             this.panel2.Controls.Add(this.RD_MASC);
             this.panel2.Controls.Add(this.RD_FEM);
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.panel2.Location = new System.Drawing.Point(481, 293);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
@@ -191,6 +191,7 @@
             // 
             this.panel1.Controls.Add(this.RD_FUNC);
             this.panel1.Controls.Add(this.RD_ADMIN);
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.panel1.Location = new System.Drawing.Point(212, 201);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
@@ -255,14 +256,14 @@
             this.TXT_DATE.CalendarForeColor = System.Drawing.Color.Maroon;
             this.TXT_DATE.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
             this.TXT_DATE.CalendarTitleForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.TXT_DATE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TXT_DATE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.TXT_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.TXT_DATE.Location = new System.Drawing.Point(578, 429);
             this.TXT_DATE.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_DATE.MaxDate = new System.DateTime(2018, 3, 28, 0, 0, 0, 0);
             this.TXT_DATE.MinDate = new System.DateTime(1918, 1, 1, 0, 0, 0, 0);
             this.TXT_DATE.Name = "TXT_DATE";
-            this.TXT_DATE.Size = new System.Drawing.Size(158, 23);
+            this.TXT_DATE.Size = new System.Drawing.Size(158, 24);
             this.TXT_DATE.TabIndex = 13;
             this.TXT_DATE.Value = new System.DateTime(2018, 3, 28, 0, 0, 0, 0);
             // 
@@ -281,22 +282,22 @@
             // 
             this.TXT_NOME.BackColor = System.Drawing.Color.White;
             this.TXT_NOME.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TXT_NOME.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.TXT_NOME.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.TXT_NOME.Location = new System.Drawing.Point(209, 250);
             this.TXT_NOME.Margin = new System.Windows.Forms.Padding(4);
             this.TXT_NOME.MaxLength = 50;
             this.TXT_NOME.Name = "TXT_NOME";
-            this.TXT_NOME.Size = new System.Drawing.Size(527, 23);
+            this.TXT_NOME.Size = new System.Drawing.Size(527, 24);
             this.TXT_NOME.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.label5.Location = new System.Drawing.Point(238, 159);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 20);
+            this.label5.Size = new System.Drawing.Size(42, 18);
             this.label5.TabIndex = 78;
             this.label5.Text = "CPF:";
             // 
@@ -311,75 +312,70 @@
             // 
             // BTN_SEARCH_PROD
             // 
-            this.BTN_SEARCH_PROD.BackgroundImage = global::Sagrado.Properties.Resources.search;
-            this.BTN_SEARCH_PROD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTN_SEARCH_PROD.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SEARCH2;
+            this.BTN_SEARCH_PROD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BTN_SEARCH_PROD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_SEARCH_PROD.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_SEARCH_PROD.Location = new System.Drawing.Point(505, 152);
+            this.BTN_SEARCH_PROD.Location = new System.Drawing.Point(507, 155);
             this.BTN_SEARCH_PROD.Name = "BTN_SEARCH_PROD";
             this.BTN_SEARCH_PROD.Size = new System.Drawing.Size(30, 30);
             this.BTN_SEARCH_PROD.TabIndex = 2;
             this.BTN_SEARCH_PROD.UseVisualStyleBackColor = true;
             this.BTN_SEARCH_PROD.Click += new System.EventHandler(this.BTN_SEARCH_PROD_Click);
             // 
-            // BTN_CANC
-            // 
-            this.BTN_CANC.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BTN_CANC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_CANC.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CANC.Location = new System.Drawing.Point(612, 478);
-            this.BTN_CANC.Name = "BTN_CANC";
-            this.BTN_CANC.Size = new System.Drawing.Size(51, 51);
-            this.BTN_CANC.TabIndex = 14;
-            this.BTN_CANC.UseVisualStyleBackColor = true;
-            this.BTN_CANC.Click += new System.EventHandler(this.BTN_CANC_Click);
-            // 
             // BTN_CONF
             // 
-            this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
+            this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SAVE;
             this.BTN_CONF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_CONF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_CONF.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CONF.Location = new System.Drawing.Point(685, 478);
+            this.BTN_CONF.Location = new System.Drawing.Point(696, 473);
             this.BTN_CONF.Name = "BTN_CONF";
-            this.BTN_CONF.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CONF.Size = new System.Drawing.Size(40, 40);
             this.BTN_CONF.TabIndex = 15;
             this.BTN_CONF.UseVisualStyleBackColor = true;
             this.BTN_CONF.Click += new System.EventHandler(this.BTN_CONF_Click);
             // 
             // TXT_CPF
             // 
+            this.TXT_CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.TXT_CPF.Location = new System.Drawing.Point(292, 158);
             this.TXT_CPF.Mask = "000.000.000-00";
             this.TXT_CPF.Name = "TXT_CPF";
-            this.TXT_CPF.Size = new System.Drawing.Size(200, 20);
+            this.TXT_CPF.Size = new System.Drawing.Size(200, 24);
             this.TXT_CPF.TabIndex = 98;
+            this.TXT_CPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TXT_TEL
             // 
+            this.TXT_TEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.TXT_TEL.Location = new System.Drawing.Point(209, 342);
-            this.TXT_TEL.Mask = "(31) 0000-0000";
+            this.TXT_TEL.Mask = "(00) 0000-0000";
             this.TXT_TEL.Name = "TXT_TEL";
-            this.TXT_TEL.Size = new System.Drawing.Size(212, 20);
+            this.TXT_TEL.Size = new System.Drawing.Size(212, 24);
             this.TXT_TEL.TabIndex = 99;
+            this.TXT_TEL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TXT_TEL.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // TXT_CEL
             // 
+            this.TXT_CEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.TXT_CEL.Location = new System.Drawing.Point(535, 342);
-            this.TXT_CEL.Mask = "(31) 000000-0000";
+            this.TXT_CEL.Mask = "(00) 000000-0000";
             this.TXT_CEL.Name = "TXT_CEL";
-            this.TXT_CEL.Size = new System.Drawing.Size(201, 20);
+            this.TXT_CEL.Size = new System.Drawing.Size(201, 24);
             this.TXT_CEL.TabIndex = 100;
+            this.TXT_CEL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TXT_RG
             // 
+            this.TXT_RG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.TXT_RG.Location = new System.Drawing.Point(209, 298);
             this.TXT_RG.Mask = "00.000.000-0";
             this.TXT_RG.Name = "TXT_RG";
-            this.TXT_RG.Size = new System.Drawing.Size(203, 20);
+            this.TXT_RG.Size = new System.Drawing.Size(203, 24);
             this.TXT_RG.TabIndex = 101;
+            this.TXT_RG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AlterarFunc
             // 
@@ -392,7 +388,6 @@
             this.Controls.Add(this.TXT_TEL);
             this.Controls.Add(this.TXT_CPF);
             this.Controls.Add(this.BTN_SEARCH_PROD);
-            this.Controls.Add(this.BTN_CANC);
             this.Controls.Add(this.BTN_CONF);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
@@ -448,7 +443,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BTN_SEARCH_PROD;
-        private System.Windows.Forms.Button BTN_CANC;
         private System.Windows.Forms.Button BTN_CONF;
         private System.Windows.Forms.MaskedTextBox TXT_CPF;
         private System.Windows.Forms.MaskedTextBox TXT_TEL;

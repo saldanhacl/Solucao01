@@ -210,7 +210,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SEARCH2;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Location = new System.Drawing.Point(411, 130);

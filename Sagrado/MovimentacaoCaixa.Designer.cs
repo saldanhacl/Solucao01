@@ -37,10 +37,10 @@
             this.FUNCIONÁRIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BTN_BUSCAR = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.BTN_CANC = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.BTN_BUSCA_CPF = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.IMG_CARTEIRA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
@@ -49,16 +49,16 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(252, 157);
+            this.label2.Location = new System.Drawing.Point(252, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 20);
+            this.label2.Size = new System.Drawing.Size(271, 20);
             this.label2.TabIndex = 11;
-            this.label2.Text = "SELECIONE O TIPO DE PESQUISA:";
+            this.label2.Text = "SELECIONE O TIPO DE PESQUISA";
             // 
             // IMG_CARTEIRA
             // 
             this.IMG_CARTEIRA.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SALDO;
-            this.IMG_CARTEIRA.Location = new System.Drawing.Point(289, 40);
+            this.IMG_CARTEIRA.Location = new System.Drawing.Point(289, 25);
             this.IMG_CARTEIRA.Name = "IMG_CARTEIRA";
             this.IMG_CARTEIRA.Size = new System.Drawing.Size(200, 100);
             this.IMG_CARTEIRA.TabIndex = 18;
@@ -66,6 +66,8 @@
             // 
             // dg
             // 
+            this.dg.AllowUserToAddRows = false;
+            this.dg.AllowUserToDeleteRows = false;
             this.dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg.BackgroundColor = System.Drawing.Color.White;
             this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -73,11 +75,13 @@
             this.TIPO,
             this.VALOR,
             this.FUNCIONÁRIO});
+            this.dg.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dg.Location = new System.Drawing.Point(29, 253);
             this.dg.Name = "dg";
+            this.dg.ReadOnly = true;
             this.dg.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dg.Size = new System.Drawing.Size(723, 197);
-            this.dg.TabIndex = 24;
+            this.dg.Size = new System.Drawing.Size(723, 259);
+            this.dg.TabIndex = 3;
             // 
             // TIPO
             // 
@@ -100,11 +104,11 @@
             // BTN_BUSCAR
             // 
             this.BTN_BUSCAR.BackColor = System.Drawing.Color.White;
-            this.BTN_BUSCAR.BackgroundImage = global::Sagrado.Properties.Resources.search;
-            this.BTN_BUSCAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTN_BUSCAR.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SEARCH2;
+            this.BTN_BUSCAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BTN_BUSCAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_BUSCAR.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_BUSCAR.Location = new System.Drawing.Point(497, 187);
+            this.BTN_BUSCAR.Location = new System.Drawing.Point(543, 168);
             this.BTN_BUSCAR.Name = "BTN_BUSCAR";
             this.BTN_BUSCAR.Size = new System.Drawing.Size(30, 30);
             this.BTN_BUSCAR.TabIndex = 2;
@@ -122,30 +126,20 @@
             "FIADO",
             "ENTRADA",
             "RETIRADA"});
-            this.comboBox1.Location = new System.Drawing.Point(256, 192);
+            this.comboBox1.Location = new System.Drawing.Point(303, 173);
+            this.comboBox1.MaxDropDownItems = 4;
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(224, 25);
             this.comboBox1.TabIndex = 1;
-            // 
-            // BTN_CANC
-            // 
-            this.BTN_CANC.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BTN_CANC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_CANC.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CANC.Location = new System.Drawing.Point(701, 468);
-            this.BTN_CANC.Name = "BTN_CANC";
-            this.BTN_CANC.Size = new System.Drawing.Size(51, 51);
-            this.BTN_CANC.TabIndex = 3;
-            this.BTN_CANC.UseVisualStyleBackColor = true;
-            this.BTN_CANC.Click += new System.EventHandler(this.BTN_CANC_Click);
             // 
             // comboBox2
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(256, 223);
+            this.comboBox2.ItemHeight = 17;
+            this.comboBox2.Location = new System.Drawing.Point(303, 204);
+            this.comboBox2.MaxDropDownItems = 4;
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(224, 25);
             this.comboBox2.TabIndex = 25;
@@ -153,25 +147,36 @@
             // BTN_BUSCA_CPF
             // 
             this.BTN_BUSCA_CPF.BackColor = System.Drawing.Color.White;
-            this.BTN_BUSCA_CPF.BackgroundImage = global::Sagrado.Properties.Resources.search;
-            this.BTN_BUSCA_CPF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BTN_BUSCA_CPF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SEARCH2;
+            this.BTN_BUSCA_CPF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BTN_BUSCA_CPF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_BUSCA_CPF.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_BUSCA_CPF.Location = new System.Drawing.Point(497, 223);
+            this.BTN_BUSCA_CPF.Location = new System.Drawing.Point(543, 201);
             this.BTN_BUSCA_CPF.Name = "BTN_BUSCA_CPF";
             this.BTN_BUSCA_CPF.Size = new System.Drawing.Size(30, 30);
             this.BTN_BUSCA_CPF.TabIndex = 26;
             this.BTN_BUSCA_CPF.UseVisualStyleBackColor = false;
             this.BTN_BUSCA_CPF.Click += new System.EventHandler(this.BTN_BUSCA_CPF_Click);
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(139, 232);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Pesquisar por usuário:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(168, 208);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(129, 20);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "FUNCIONÁRIO: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(194, 176);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 20);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "REGISTRO:";
             // 
             // MovimentacaoCaixa
             // 
@@ -179,10 +184,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.BTN_BUSCA_CPF);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.BTN_CANC);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.BTN_BUSCAR);
             this.Controls.Add(this.dg);
@@ -210,9 +215,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn VALOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn FUNCIONÁRIO;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button BTN_CANC;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button BTN_BUSCA_CPF;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlterarProd));
-            this.BTN_CANC = new System.Windows.Forms.Button();
             this.BTN_CONF = new System.Windows.Forms.Button();
             this.text_tipo = new System.Windows.Forms.TextBox();
             this.text_preco = new System.Windows.Forms.TextBox();
@@ -41,27 +40,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // BTN_CANC
-            // 
-            this.BTN_CANC.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CANCEL;
-            this.BTN_CANC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BTN_CANC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTN_CANC.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CANC.Location = new System.Drawing.Point(441, 257);
-            this.BTN_CANC.Name = "BTN_CANC";
-            this.BTN_CANC.Size = new System.Drawing.Size(51, 51);
-            this.BTN_CANC.TabIndex = 4;
-            this.BTN_CANC.UseVisualStyleBackColor = true;
-            // 
             // BTN_CONF
             // 
-            this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
+            this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_SAVE;
             this.BTN_CONF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_CONF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_CONF.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CONF.Location = new System.Drawing.Point(498, 257);
+            this.BTN_CONF.Location = new System.Drawing.Point(509, 262);
             this.BTN_CONF.Name = "BTN_CONF";
-            this.BTN_CONF.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CONF.Size = new System.Drawing.Size(40, 40);
             this.BTN_CONF.TabIndex = 5;
             this.BTN_CONF.UseVisualStyleBackColor = true;
             this.BTN_CONF.Click += new System.EventHandler(this.BTN_CONF_Click);
@@ -146,7 +133,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 361);
-            this.Controls.Add(this.BTN_CANC);
             this.Controls.Add(this.BTN_CONF);
             this.Controls.Add(this.text_tipo);
             this.Controls.Add(this.text_preco);
@@ -166,8 +152,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BTN_CANC;
         private System.Windows.Forms.Button BTN_CONF;
         private System.Windows.Forms.TextBox text_tipo;
         private System.Windows.Forms.TextBox text_preco;

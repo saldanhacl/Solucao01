@@ -166,5 +166,10 @@ namespace Sagrado
 
             bd.closeConnection();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

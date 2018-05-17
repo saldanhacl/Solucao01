@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(186, 240);
+            this.label1.Location = new System.Drawing.Point(186, 227);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 16);
             this.label1.TabIndex = 69;
@@ -58,7 +58,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(430, 415);
+            this.label2.Location = new System.Drawing.Point(430, 402);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 17);
             this.label2.TabIndex = 67;
@@ -68,7 +68,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(439, 240);
+            this.label7.Location = new System.Drawing.Point(439, 227);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(130, 16);
             this.label7.TabIndex = 65;
@@ -78,7 +78,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(197, 415);
+            this.label8.Location = new System.Drawing.Point(197, 402);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(127, 17);
             this.label8.TabIndex = 63;
@@ -122,7 +122,7 @@
             this.BTN_ADD_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_ADD_CLIENTE;
             this.BTN_ADD_CLIENTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_ADD_CLIENTE.ForeColor = System.Drawing.Color.White;
-            this.BTN_ADD_CLIENTE.Location = new System.Drawing.Point(162, 136);
+            this.BTN_ADD_CLIENTE.Location = new System.Drawing.Point(162, 123);
             this.BTN_ADD_CLIENTE.Name = "BTN_ADD_CLIENTE";
             this.BTN_ADD_CLIENTE.Size = new System.Drawing.Size(200, 100);
             this.BTN_ADD_CLIENTE.TabIndex = 2;
@@ -132,7 +132,7 @@
             // BTN_CONSUL_CLIENTE
             // 
             this.BTN_CONSUL_CLIENTE.Image = global::Sagrado.Properties.Resources.BTN_CONSULTAR_CLIENTE;
-            this.BTN_CONSUL_CLIENTE.Location = new System.Drawing.Point(406, 312);
+            this.BTN_CONSUL_CLIENTE.Location = new System.Drawing.Point(406, 299);
             this.BTN_CONSUL_CLIENTE.Name = "BTN_CONSUL_CLIENTE";
             this.BTN_CONSUL_CLIENTE.Size = new System.Drawing.Size(200, 100);
             this.BTN_CONSUL_CLIENTE.TabIndex = 5;
@@ -144,7 +144,7 @@
             this.BTN_EDIT_CLIENTE.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EDIT_CLIENTE;
             this.BTN_EDIT_CLIENTE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_EDIT_CLIENTE.ForeColor = System.Drawing.Color.White;
-            this.BTN_EDIT_CLIENTE.Location = new System.Drawing.Point(406, 136);
+            this.BTN_EDIT_CLIENTE.Location = new System.Drawing.Point(406, 123);
             this.BTN_EDIT_CLIENTE.Name = "BTN_EDIT_CLIENTE";
             this.BTN_EDIT_CLIENTE.Size = new System.Drawing.Size(200, 100);
             this.BTN_EDIT_CLIENTE.TabIndex = 3;
@@ -154,7 +154,7 @@
             // BTN_EXCLUIR_CLIENTE
             // 
             this.BTN_EXCLUIR_CLIENTE.Image = global::Sagrado.Properties.Resources.BTN_EXCLUIR;
-            this.BTN_EXCLUIR_CLIENTE.Location = new System.Drawing.Point(162, 312);
+            this.BTN_EXCLUIR_CLIENTE.Location = new System.Drawing.Point(162, 299);
             this.BTN_EXCLUIR_CLIENTE.Name = "BTN_EXCLUIR_CLIENTE";
             this.BTN_EXCLUIR_CLIENTE.Size = new System.Drawing.Size(200, 100);
             this.BTN_EXCLUIR_CLIENTE.TabIndex = 4;

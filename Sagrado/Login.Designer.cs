@@ -46,7 +46,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label2.Location = new System.Drawing.Point(246, 306);
+            this.label2.Location = new System.Drawing.Point(139, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 18);
             this.label2.TabIndex = 2;
@@ -56,7 +56,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.label3.Location = new System.Drawing.Point(229, 344);
+            this.label3.Location = new System.Drawing.Point(122, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 18);
             this.label3.TabIndex = 3;
@@ -65,41 +65,42 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.textBox2.Location = new System.Drawing.Point(313, 338);
+            this.textBox2.Location = new System.Drawing.Point(206, 170);
             this.textBox2.MaxLength = 8;
             this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = 'x';
+            this.textBox2.PasswordChar = '•';
             this.textBox2.Size = new System.Drawing.Size(236, 24);
-            this.textBox2.TabIndex = 4;
+            this.textBox2.TabIndex = 2;
             this.textBox2.Text = "1";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.textBox1.Location = new System.Drawing.Point(313, 300);
+            this.textBox1.Location = new System.Drawing.Point(206, 132);
             this.textBox1.MaxLength = 11;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(236, 24);
-            this.textBox1.TabIndex = 3;
+            this.textBox1.TabIndex = 1;
             this.textBox1.Text = "1";
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Location = new System.Drawing.Point(249, 222);
+            this.panel1.Location = new System.Drawing.Point(192, 209);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 45);
+            this.panel1.Size = new System.Drawing.Size(164, 50);
             this.panel1.TabIndex = 12;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioButton2.Location = new System.Drawing.Point(177, 16);
+            this.radioButton2.Location = new System.Drawing.Point(14, 27);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(120, 21);
-            this.radioButton2.TabIndex = 2;
+            this.radioButton2.TabIndex = 4;
             this.radioButton2.Text = "FUNCIONÁRIO";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
@@ -108,23 +109,24 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radioButton1.Location = new System.Drawing.Point(3, 16);
+            this.radioButton1.Location = new System.Drawing.Point(14, 3);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(140, 21);
-            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "ADMINISTRADOR";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // BTN_CONF
             // 
-            this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK;
+            this.BTN_CONF.BackgroundImage = global::Sagrado.Properties.Resources.BTN_CHECK2;
             this.BTN_CONF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BTN_CONF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTN_CONF.ForeColor = System.Drawing.Color.Transparent;
-            this.BTN_CONF.Location = new System.Drawing.Point(498, 387);
+            this.BTN_CONF.Location = new System.Drawing.Point(402, 217);
             this.BTN_CONF.Name = "BTN_CONF";
-            this.BTN_CONF.Size = new System.Drawing.Size(51, 51);
+            this.BTN_CONF.Size = new System.Drawing.Size(40, 40);
             this.BTN_CONF.TabIndex = 5;
             this.BTN_CONF.UseVisualStyleBackColor = true;
             this.BTN_CONF.Click += new System.EventHandler(this.BTN_CONF_Click);
@@ -132,7 +134,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Sagrado.Properties.Resources.BTN_LOGIN2;
-            this.pictureBox1.Location = new System.Drawing.Point(297, 98);
+            this.pictureBox1.Location = new System.Drawing.Point(192, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 100);
             this.pictureBox1.TabIndex = 11;
@@ -143,7 +145,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.BTN_CONF);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);

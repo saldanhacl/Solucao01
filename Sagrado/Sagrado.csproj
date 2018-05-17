@@ -118,23 +118,11 @@
     <Compile Include="ExcluirCliente.Designer.cs">
       <DependentUpon>ExcluirCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcluirProd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ExcluirProd.Designer.cs">
-      <DependentUpon>ExcluirProd.cs</DependentUpon>
-    </Compile>
     <Compile Include="GraficoVendasPorUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GraficoVendasPorUsuario.Designer.cs">
       <DependentUpon>GraficoVendasPorUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GerenProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GerenProduto.Designer.cs">
-      <DependentUpon>GerenProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="RelatorioVendas.cs">
       <SubType>Form</SubType>
@@ -259,12 +247,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarUser.resx">
       <DependentUpon>ConsultarUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ExcluirProd.resx">
-      <DependentUpon>ExcluirProd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GerenProduto.resx">
-      <DependentUpon>GerenProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GraficoProdutosVendidos.resx">
       <DependentUpon>GraficoProdutosVendidos.cs</DependentUpon>
@@ -472,6 +454,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BTN_ADD_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_CHECK2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_GRAPH_TIME.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_GRAPH_PROD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_GRAPH_USER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_GRAPH_VENDA.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
