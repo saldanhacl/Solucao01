@@ -149,7 +149,13 @@ namespace Sagrado
                 if (boxPrice.Text.Length != 0)
                 {
 
-                    saldoAtual = precoFloat + saldoAnt;
+                    if (operacao != "f")
+                    {
+                        saldoAtual = precoFloat + saldoAnt;
+                    } else
+                    {
+                        saldoAtual = saldoAnt;
+                    }
 
                     //MessageBox.Show("Saldo atual: " + saldoAtual.ToString());
 
@@ -188,40 +194,73 @@ namespace Sagrado
 
         private void salvarVendaBanco()
         {
+            long idVenda = -1;
+            Double valorVenda = 0;
+            String query;
+            MySqlCommand cmd;
 
             DataBaseConnection bd = new DataBaseConnection();
+            DataBaseConnection bd2 = new DataBaseConnection();
             try
             {
                 bd.openConnection();
+
+                 query = "INSERT INTO VENDA " +
+                "(VALOR_VENDA, TYPE_VENDA)" +
+                " VALUES (" + 0 + ",'" + operacao + "')";
+
+
+                cmd = new MySqlCommand(query, bd.retornaConexao());
+                cmd.ExecuteNonQuery();
+
+                query = "SELECT MAX(NRSEQVENDA) FROM VENDA;";
+                cmd = new MySqlCommand(query, bd.retornaConexao());
+                cmd.ExecuteNonQuery();
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    idVenda = long.Parse(reader["MAX(NRSEQVENDA)"].ToString());
+                }
+
+                bd.closeConnection();
+
+                bd2.openConnection();
 
                 if (produtosComanda != null)
                 {
                     foreach (Produto p in produtosComanda)
                     {
+                            valorVenda += p.preco * p.quantidade;
+                            query = "INSERT INTO QUANTIDADE_PRODUTO " +
+                            "(QUANTIDADE, NRSEQPRODUTO, NRSEQVENDA)" +
+                            " VALUES (" + p.quantidade + "," + p.idProduto + "," + idVenda + ")";
 
-                        String query = "INSERT INTO VENDA " +
-                            "(VALOR, NRSEQ_PRODUTO, TIPO_VENDA, CPF_USER_VENDA)" +
-                            " VALUES (" + p.preco * p.quantidade + "," + p.idProduto + ",'" + operacao + "'," + cpfUser + ")";
 
-                        MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
-                        cmd.ExecuteNonQuery();
+                            cmd = new MySqlCommand(query, bd2.retornaConexao());
+                            cmd.ExecuteNonQuery();
                     }
                 } else
                 {
-                    String query = "INSERT INTO VENDA " +
-                            "(VALOR, TIPO_VENDA, CPF_USER_VENDA)" +
-                            " VALUES (" + total + ",'" + operacao + "'," + cpfUser + ")";
+                            query = "INSERT INTO VENDA " +
+                            "(VALOR_VENDA, TYPE_VENDA)" +
+                            " VALUES (" + total + ",'" + operacao + "')";
 
-                    MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
-                    cmd.ExecuteNonQuery();
+                            cmd = new MySqlCommand(query, bd2.retornaConexao());
+                            cmd.ExecuteNonQuery();
                 }
+                query = "UPDATE venda SET VALOR_VENDA = " + valorVenda + " where NRSEQVENDA = " + idVenda + " ;";
 
+                cmd = new MySqlCommand(query, bd2.retornaConexao());
+                cmd.ExecuteNonQuery();
             }
+
             catch (MySqlException e)
             {
                 MessageBox.Show(e.Message);
             }
-            bd.closeConnection();
+            bd2.closeConnection();
         }
 
 

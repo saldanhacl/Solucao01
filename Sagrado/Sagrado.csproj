@@ -81,6 +81,12 @@
       <DependentUpon>CadastrarProd.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente.cs" />
+    <Compile Include="DividasClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DividasClientes.Designer.cs">
+      <DependentUpon>DividasClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="GraficoVendasTipoFiado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarUser.resx">
       <DependentUpon>ConsultarUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DividasClientes.resx">
+      <DependentUpon>DividasClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GraficoProdutosVendidos.resx">
       <DependentUpon>GraficoProdutosVendidos.cs</DependentUpon>

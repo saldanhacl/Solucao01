@@ -82,6 +82,7 @@ namespace Sagrado
         {
             LISTA.Items.Clear();
             txt_total.Text = "0";
+            total = 0;
         }
 
         private void Lista_Produtos_SelectedIndexChanged(object sender, EventArgs e)

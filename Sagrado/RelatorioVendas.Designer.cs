@@ -37,13 +37,15 @@
             this.BTN_VENDA_USER = new System.Windows.Forms.Button();
             this.BTN_VENDA_PRODUTOS = new System.Windows.Forms.Button();
             this.BTN_VENDA_FIADO = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.BTN_DIVIDAS_CLIENTES = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(189, 238);
+            this.label1.Location = new System.Drawing.Point(184, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 16);
             this.label1.TabIndex = 62;
@@ -53,7 +55,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(454, 238);
+            this.label2.Location = new System.Drawing.Point(449, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 16);
             this.label2.TabIndex = 63;
@@ -63,7 +65,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(177, 411);
+            this.label3.Location = new System.Drawing.Point(172, 329);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(158, 16);
             this.label3.TabIndex = 64;
@@ -73,7 +75,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(454, 411);
+            this.label4.Location = new System.Drawing.Point(449, 329);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 16);
             this.label4.TabIndex = 65;
@@ -82,7 +84,7 @@
             // BTN_VENDA_HORAS
             // 
             this.BTN_VENDA_HORAS.BackgroundImage = global::Sagrado.Properties.Resources.BTN_GRAPH_TIME;
-            this.BTN_VENDA_HORAS.Location = new System.Drawing.Point(429, 299);
+            this.BTN_VENDA_HORAS.Location = new System.Drawing.Point(424, 217);
             this.BTN_VENDA_HORAS.Name = "BTN_VENDA_HORAS";
             this.BTN_VENDA_HORAS.Size = new System.Drawing.Size(200, 100);
             this.BTN_VENDA_HORAS.TabIndex = 4;
@@ -92,7 +94,7 @@
             // BTN_VENDA_USER
             // 
             this.BTN_VENDA_USER.BackgroundImage = global::Sagrado.Properties.Resources.BTN_GRAPH_USER;
-            this.BTN_VENDA_USER.Location = new System.Drawing.Point(429, 125);
+            this.BTN_VENDA_USER.Location = new System.Drawing.Point(424, 43);
             this.BTN_VENDA_USER.Name = "BTN_VENDA_USER";
             this.BTN_VENDA_USER.Size = new System.Drawing.Size(200, 100);
             this.BTN_VENDA_USER.TabIndex = 3;
@@ -102,7 +104,7 @@
             // BTN_VENDA_PRODUTOS
             // 
             this.BTN_VENDA_PRODUTOS.BackgroundImage = global::Sagrado.Properties.Resources.BTN_GRAPH_PROD;
-            this.BTN_VENDA_PRODUTOS.Location = new System.Drawing.Point(157, 299);
+            this.BTN_VENDA_PRODUTOS.Location = new System.Drawing.Point(152, 217);
             this.BTN_VENDA_PRODUTOS.Name = "BTN_VENDA_PRODUTOS";
             this.BTN_VENDA_PRODUTOS.Size = new System.Drawing.Size(200, 100);
             this.BTN_VENDA_PRODUTOS.TabIndex = 2;
@@ -112,12 +114,33 @@
             // BTN_VENDA_FIADO
             // 
             this.BTN_VENDA_FIADO.BackgroundImage = global::Sagrado.Properties.Resources.BTN_GRAPH_VENDA;
-            this.BTN_VENDA_FIADO.Location = new System.Drawing.Point(157, 125);
+            this.BTN_VENDA_FIADO.Location = new System.Drawing.Point(152, 43);
             this.BTN_VENDA_FIADO.Name = "BTN_VENDA_FIADO";
             this.BTN_VENDA_FIADO.Size = new System.Drawing.Size(200, 100);
             this.BTN_VENDA_FIADO.TabIndex = 1;
             this.BTN_VENDA_FIADO.UseVisualStyleBackColor = true;
             this.BTN_VENDA_FIADO.Click += new System.EventHandler(this.BTN_VENDA_FIADO_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(305, 499);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(161, 16);
+            this.label5.TabIndex = 67;
+            this.label5.Text = "DÍVIDAS DOS CLIENTES";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // BTN_DIVIDAS_CLIENTES
+            // 
+            this.BTN_DIVIDAS_CLIENTES.BackgroundImage = global::Sagrado.Properties.Resources.BTN_EDIT_CLIENTE;
+            this.BTN_DIVIDAS_CLIENTES.Location = new System.Drawing.Point(286, 386);
+            this.BTN_DIVIDAS_CLIENTES.Name = "BTN_DIVIDAS_CLIENTES";
+            this.BTN_DIVIDAS_CLIENTES.Size = new System.Drawing.Size(200, 100);
+            this.BTN_DIVIDAS_CLIENTES.TabIndex = 66;
+            this.BTN_DIVIDAS_CLIENTES.UseVisualStyleBackColor = true;
+            this.BTN_DIVIDAS_CLIENTES.Click += new System.EventHandler(this.BTN_DIVIDAS_CLIENTES_Click);
             // 
             // RelatorioVendas
             // 
@@ -125,6 +148,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.BTN_DIVIDAS_CLIENTES);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -151,5 +176,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button BTN_DIVIDAS_CLIENTES;
     }
 }

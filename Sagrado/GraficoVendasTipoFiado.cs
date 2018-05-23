@@ -80,7 +80,7 @@ namespace Sagrado
             chart1.Series["Series1"].YValueMembers = "Total_Tabela";
             chart1.Series["Series1"].ChartType = SeriesChartType.Pie;
 
-            chart1.DataSource = EnviarDados("SELECT (SELECT count(vt.NRSEQVENDA) FROM venda vt where TIPO_VENDA = 'f') as Total_Por_Tipo, (SELECT count(vt.NRSEQVENDA) FROM venda vt) as Total_Tabela FROM venda v GROUP BY v.TIPO_VENDA; ");
+            chart1.DataSource = EnviarDados("SELECT (SELECT count(vt.NRSEQVENDA) FROM venda vt where TYPE_VENDA = 'f') as Total_Por_Tipo, (SELECT count(vt.NRSEQVENDA) FROM venda vt) as Total_Tabela FROM venda v GROUP BY v.TYPE_VENDA; ");
           
         }
 

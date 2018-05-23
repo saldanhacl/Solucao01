@@ -43,5 +43,15 @@ namespace Sagrado
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_DIVIDAS_CLIENTES_Click(object sender, EventArgs e)
+        {
+            new DividasClientes().Show();
+        }
     }
 }
