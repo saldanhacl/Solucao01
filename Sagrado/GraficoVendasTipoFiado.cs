@@ -76,16 +76,82 @@ namespace Sagrado
             chart1.Series.Clear();
             chart1.Series.Add("Series1");
 
-            chart1.Series["Series1"].XValueMember = "Total_Por_Tipo";
-            chart1.Series["Series1"].YValueMembers = "Total_Tabela";
-            chart1.Series["Series1"].ChartType = SeriesChartType.Pie;
+            long[] total = { getTotalVendasFiado(), getTotalVendas() };
 
-            chart1.DataSource = EnviarDados("SELECT (SELECT count(vt.NRSEQVENDA) FROM venda vt where TYPE_VENDA = 'f') as Total_Por_Tipo, (SELECT count(vt.NRSEQVENDA) FROM venda vt) as Total_Tabela FROM venda v GROUP BY v.TYPE_VENDA; ");
-          
+            string[] strTotal = { "Total Fiado" , "Total Vendas" };
+
+
+            chart1.Series["Series1"].ChartType = SeriesChartType.Pie;
+            chart1.Series["Series1"].Points.DataBindXY(strTotal, total);
+
+
+
         }
 
         private void chart1_Click_2(object sender, EventArgs e)
         {
+
+        }
+
+        private long getTotalVendasFiado()
+        {
+            long totalFiado = 0;
+            DataBaseConnection bd = new DataBaseConnection();
+            try
+            {
+                bd.openConnection();
+
+                String query = "SELECT COUNT(NRSEQVENDA) AS TOTAL_FIADO FROM VENDA WHERE TYPE_VENDA = 'f'";
+
+                MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    totalFiado = long.Parse(reader["TOTAL_FIADO"].ToString());
+                }
+            }
+            catch (MySqlException)
+            {
+                MessageBox.Show("ERRO NO BANCO DE DADOS");
+            }
+
+
+            bd.closeConnection();
+            return totalFiado;
+
+        }
+
+        private long getTotalVendas()
+        {
+            long totalVendas = 0;
+            DataBaseConnection bd = new DataBaseConnection();
+            try
+            {
+                bd.openConnection();
+
+                String query = "SELECT COUNT(NRSEQVENDA) AS TOTAL_VENDAS FROM VENDA;";
+
+                MySqlCommand cmd = new MySqlCommand(query, bd.retornaConexao());
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+                while (reader.Read())
+                {
+                    totalVendas = long.Parse(reader["TOTAL_VENDAS"].ToString());
+                }
+            }
+            catch (MySqlException)
+            {
+                MessageBox.Show("ERRO NO BANCO DE DADOS");
+            }
+
+
+            bd.closeConnection();
+            return totalVendas;
 
         }
     }

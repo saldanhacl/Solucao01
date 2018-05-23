@@ -68,8 +68,10 @@ namespace Sagrado
             chart1.Series["Series1"].YValueMembers = "NumeroVenda";
             chart1.Series["Series1"].ChartType = SeriesChartType.Pie;
 
+
             chart1.DataSource = EnviarDados("SELECT VALOR_ENTRADA_CAIXA, CPF_FUNCIONARIO, Count(TYPE_ENTRADA_CAIXA) As NumeroVenda From caixa where TYPE_ENTRADA_CAIXA = 'v' or TYPE_ENTRADA_CAIXA = 'f' group by CPF_FUNCIONARIO");
           
+
 
         }
 
