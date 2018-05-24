@@ -17,11 +17,13 @@ namespace Sagrado
 
         Double total = 0;
         Form regEntrada;
+        
 
         public AdicionarProdutosComanda(Form regEntradaForm)
         {
             InitializeComponent();
             regEntrada = regEntradaForm;
+            txt_total.Text = "0";
         }
 
         private void UserControl1_Load(object sender, EventArgs e)
@@ -105,6 +107,36 @@ namespace Sagrado
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPratoKg_Click(object sender, EventArgs e)
+        {
+            double preco = double.Parse(txtPratoKg.Text);
+            Produto p = new Produto(9999999, "Prato Kg", preco);
+            LISTA.Items.Add(p);
+            total += preco;
+            txt_total.Text = total.ToString();
+            txtPratoKg.Text = "";
+        }
+
+        private void btnOutros_Click(object sender, EventArgs e)
+        {
+            double preco = double.Parse(txtOutros.Text);
+            Produto p = new Produto(9999998, "Outros", preco);
+            LISTA.Items.Add(p);
+            total += preco;
+            txt_total.Text = total.ToString();
+            txtOutros.Text = "";
         }
     }
 }

@@ -180,9 +180,10 @@ namespace Sagrado
                 }
 
             }
-            catch (MySqlException)
+            catch (MySqlException e)
             {
-                MessageBox.Show("ERRO NO BANCO DE DADOS");
+                
+                MessageBox.Show(e.Message);
             }
             bd.closeConnection();
             salvarVendaBanco();
