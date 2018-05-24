@@ -280,12 +280,12 @@ namespace Sagrado
             
             if (numero == "")
             {
-                TXT_SALDOATUAL.Text = "0";
+                TXT_SALDOATUAL.Text = "SALDO ATUAL: R$0.00";
             }
             else
             {
                 String ultSaldo = getLastValue(numero);
-                TXT_SALDOATUAL.Text = ultSaldo;
+                TXT_SALDOATUAL.Text = "SALDO ATUAL: R$" + ultSaldo;
             }
         }
          
@@ -440,6 +440,11 @@ namespace Sagrado
                 }
 
             }
+
+        }
+
+        private void RegEntrada_Load(object sender, EventArgs e)
+        {
 
         }
     }
