@@ -100,7 +100,8 @@ namespace Sagrado
 
                 while (reader.Read())
                 {
-                    TXT_TOTAL_DIVIDA.Text = reader["TOTAL_DIVIDA"].ToString();
+                    double divida = Math.Round(Double.Parse(reader["TOTAL_DIVIDA"].ToString()), 2);
+                    TXT_TOTAL_DIVIDA.Text = divida.ToString();
                 }
             }
             catch (MySqlException)
