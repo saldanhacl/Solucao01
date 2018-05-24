@@ -39,16 +39,7 @@ namespace Sagrado
             new GraficoVendasTipoFiado().Show();
         }
 
-        private void RelatorioVendas_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void BTN_DIVIDAS_CLIENTES_Click(object sender, EventArgs e)
         {
             new DividasClientes().Show();

@@ -497,5 +497,14 @@
   <ItemGroup>
     <None Include="Resources\BTN_COMANDA.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_DIVIDA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_DIVIDA2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_DIV.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

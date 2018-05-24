@@ -41,7 +41,7 @@ namespace Sagrado
                 {
 
                     gridDividaClientes.Rows.Add();
-                    gridDividaClientes.Rows[i].Cells["CLIENTE"].Value = reader["NOME_CLIENTE"].ToString();
+                    gridDividaClientes.Rows[i].Cells["CLIENTE"].Value = reader["NOME_CLIENTE"].ToString().ToUpper();
                     gridDividaClientes.Rows[i].Cells["VALOR"].Value = reader["SALDO_ATUAL_CLIENTE"].ToString();
 
                     i++;
@@ -112,6 +112,15 @@ namespace Sagrado
 
         }
 
+        private void TXT_TOTAL_CAIXA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXT_TOTAL_DIVIDA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
