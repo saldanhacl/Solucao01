@@ -122,7 +122,8 @@ namespace Sagrado
         private void btnPratoKg_Click(object sender, EventArgs e)
         {
             double preco = double.Parse(txtPratoKg.Text);
-            Produto p = new Produto(9999999, "Prato Kg", preco);
+            Produto p = new Produto(7, "Prato Kg", preco);
+            p.quantidade++;
             LISTA.Items.Add(p);
             total += preco;
             txt_total.Text = total.ToString();
@@ -132,11 +133,17 @@ namespace Sagrado
         private void btnOutros_Click(object sender, EventArgs e)
         {
             double preco = double.Parse(txtOutros.Text);
-            Produto p = new Produto(9999998, "Outros", preco);
+            Produto p = new Produto(8, "Outros", preco);
+            p.quantidade++;
             LISTA.Items.Add(p);
             total += preco;
             txt_total.Text = total.ToString();
             txtOutros.Text = "";
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

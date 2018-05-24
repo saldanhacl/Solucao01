@@ -159,10 +159,12 @@ namespace Sagrado
 
                     //MessageBox.Show("Saldo atual: " + saldoAtual.ToString());
 
+                    String strSaldo = saldoAtual.ToString().Replace(",", ".");
+                    String strPreco = precoFloat.ToString().Replace(",", ".");
 
                     String query = "INSERT INTO CAIXA " +
                     "(TYPE_ENTRADA_CAIXA, DATE_MODIFY_CAIXA, VALOR_ENTRADA_CAIXA, VALOR_ATUAL_CAIXA, CPF_FUNCIONARIO)" +
-                    " VALUES ('" + operacao + "', now()," + precoFloat + "," + saldoAtual + "," + cpf + ")";
+                    " VALUES ('" + operacao + "', now()," + strPreco + "," + strSaldo + "," + cpf + ")";
 
                     //MessageBox.Show(query);
 
@@ -244,14 +246,16 @@ namespace Sagrado
                     }
                 } else
                 {
+                            String strTotal = total.ToString().Replace(",", ".");
                             query = "INSERT INTO VENDA " +
                             "(VALOR_VENDA, TYPE_VENDA)" +
-                            " VALUES (" + total + ",'" + operacao + "')";
+                            " VALUES (" + strTotal + ",'" + operacao + "')";
 
                             cmd = new MySqlCommand(query, bd2.retornaConexao());
                             cmd.ExecuteNonQuery();
                 }
-                query = "UPDATE venda SET VALOR_VENDA = " + valorVenda + " where NRSEQVENDA = " + idVenda + " ;";
+                String strValorVenda = valorVenda.ToString().Replace(",", ".");
+                query = "UPDATE venda SET VALOR_VENDA = " + strValorVenda + " where NRSEQVENDA = " + idVenda + " ;";
 
                 cmd = new MySqlCommand(query, bd2.retornaConexao());
                 cmd.ExecuteNonQuery();
@@ -332,8 +336,9 @@ namespace Sagrado
             DataBaseConnection bd = new DataBaseConnection();
             bd.openConnection();
 
+            saldo = saldo.Replace(",", ".");
             String query = "UPDATE CLIENTE SET " +
-                "SALDO_ATUAL_CLIENTE = SALDO_ATUAL_CLIENTE + '" + float.Parse(saldo) +
+                "SALDO_ATUAL_CLIENTE = SALDO_ATUAL_CLIENTE + '" + saldo +
                 "' WHERE CPF_CLIENTE = " + cpf;
 
 
