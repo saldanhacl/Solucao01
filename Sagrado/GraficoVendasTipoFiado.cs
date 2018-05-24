@@ -83,6 +83,8 @@ namespace Sagrado
 
             chart1.Series["Series1"].ChartType = SeriesChartType.Pie;
             chart1.Series["Series1"].Points.DataBindXY(strTotal, total);
+            chart1.Series["Series1"].LegendText = "#VALX";
+            chart1.Series["Series1"].Label = "#VALY";
 
 
 

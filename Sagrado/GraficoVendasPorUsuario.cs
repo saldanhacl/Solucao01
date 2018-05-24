@@ -67,9 +67,16 @@ namespace Sagrado
             chart1.Series["Series1"].XValueMember = "CPF_FUNCIONARIO";
             chart1.Series["Series1"].YValueMembers = "NumeroVenda";
             chart1.Series["Series1"].ChartType = SeriesChartType.Pie;
+            chart1.Series["Series1"].XValueMember = "NomeProduto";
+            chart1.Series["Series1"].Label = "#VALY";
+            chart1.Series["Series1"].LegendText = "#VALX";
+            //chart1.Series["Series1"].Is
+            //DataBaseConnection bd = new DataBaseConnection();
+            // bd.openConnection
 
+            chart1.DataSource = EnviarDados("SELECT QUANTIDADE, QP.NRSEQPRODUTO, Count(QUANTIDADE) As NumeroVenda, P.NOME_PRODUTO as NomeProduto From quantidade_produto QP INNER JOIN produto P ON P.NRSEQPRODUTO= QP.NRSEQPRODUTO group by P.NOME_PRODUTO");
 
-            chart1.DataSource = EnviarDados("SELECT VALOR_ENTRADA_CAIXA, CPF_FUNCIONARIO, Count(TYPE_ENTRADA_CAIXA) As NumeroVenda From caixa where TYPE_ENTRADA_CAIXA = 'v' or TYPE_ENTRADA_CAIXA = 'f' group by CPF_FUNCIONARIO");
+            chart1.DataSource = EnviarDados("SELECT VALOR_ENTRADA_CAIXA, CPF_FUNCIONARIO, Count(TYPE_ENTRADA_CAIXA) As NumeroVenda, U.NOME_USER as NomeFunc From caixa CU INNER JOIN usuario U ON U.CPF_USER= CU.CPF_FUNCIONARIO where TYPE_ENTRADA_CAIXA = 'v' or TYPE_ENTRADA_CAIXA = 'f' group by U.NOME_USER");
           
 
 
