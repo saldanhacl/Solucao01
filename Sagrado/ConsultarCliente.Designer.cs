@@ -89,6 +89,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
             this.textBox2.Location = new System.Drawing.Point(128, 215);
@@ -97,6 +98,28 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(401, 24);
             this.textBox2.TabIndex = 3;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Enabled = false;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.textBox4.Location = new System.Drawing.Point(128, 255);
+            this.textBox4.MaxLength = 10;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(159, 24);
+            this.textBox4.TabIndex = 4;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Enabled = false;
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.textBox7.Location = new System.Drawing.Point(370, 255);
+            this.textBox7.MaxLength = 10;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(159, 24);
+            this.textBox7.TabIndex = 5;
             // 
             // label8
             // 
