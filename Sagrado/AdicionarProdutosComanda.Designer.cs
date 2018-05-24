@@ -157,7 +157,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(52, 345);
+            this.label3.Location = new System.Drawing.Point(52, 342);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 24);
             this.label3.TabIndex = 13;
@@ -205,7 +205,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.2F);
-            this.label5.Location = new System.Drawing.Point(313, 273);
+            this.label5.Location = new System.Drawing.Point(311, 273);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 26);
             this.label5.TabIndex = 17;
@@ -235,6 +235,7 @@
             this.Controls.Add(this.LISTA);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdicionarProdutosComanda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "COMANDA";
             this.Load += new System.EventHandler(this.UserControl1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

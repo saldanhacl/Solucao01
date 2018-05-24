@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegRetirada));
             this.label2 = new System.Windows.Forms.Label();
             this.TXT_VALOR_RETIRADA = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.TXT_SALDOATUAL = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BTN_SAVE = new System.Windows.Forms.Button();
@@ -58,26 +57,21 @@
             this.TXT_VALOR_RETIRADA.TabIndex = 1;
             this.TXT_VALOR_RETIRADA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXT_VALOR_RETIRADA_KeyPress);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.label3.Location = new System.Drawing.Point(119, 175);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 29);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "SALDO (R$):";
-            // 
             // TXT_SALDOATUAL
             // 
             this.TXT_SALDOATUAL.BackColor = System.Drawing.Color.White;
+            this.TXT_SALDOATUAL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TXT_SALDOATUAL.Cursor = System.Windows.Forms.Cursors.Default;
-            this.TXT_SALDOATUAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.TXT_SALDOATUAL.Location = new System.Drawing.Point(307, 172);
+            this.TXT_SALDOATUAL.Enabled = false;
+            this.TXT_SALDOATUAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.TXT_SALDOATUAL.Location = new System.Drawing.Point(124, 159);
             this.TXT_SALDOATUAL.Name = "TXT_SALDOATUAL";
             this.TXT_SALDOATUAL.ReadOnly = true;
-            this.TXT_SALDOATUAL.Size = new System.Drawing.Size(139, 35);
+            this.TXT_SALDOATUAL.Size = new System.Drawing.Size(322, 32);
             this.TXT_SALDOATUAL.TabIndex = 16;
+            this.TXT_SALDOATUAL.TabStop = false;
+            this.TXT_SALDOATUAL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TXT_SALDOATUAL.TextChanged += new System.EventHandler(this.TXT_SALDOATUAL_TextChanged);
             // 
             // pictureBox1
             // 
@@ -109,7 +103,6 @@
             this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.BTN_SAVE);
             this.Controls.Add(this.TXT_SALDOATUAL);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TXT_VALOR_RETIRADA);
@@ -127,7 +120,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TXT_VALOR_RETIRADA;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TXT_SALDOATUAL;
         private System.Windows.Forms.Button BTN_SAVE;
     }

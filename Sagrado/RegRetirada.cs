@@ -75,12 +75,12 @@ namespace Sagrado
             //se não houver registros, não ha saldo anterior para somar.
             if (numero == "")
             {
-                TXT_SALDOATUAL.Text = "0";
+                TXT_SALDOATUAL.Text = "SALDO ATUAL: R$0.0";
             }
             else
             {
                 String ultSaldo = getLastValue(numero);
-                TXT_SALDOATUAL.Text = ultSaldo;
+                TXT_SALDOATUAL.Text = "SALDO ATUAL: R$" + ultSaldo;
             }
 
 
@@ -210,6 +210,11 @@ namespace Sagrado
                 //MessageBox.Show("Saldo anterior: " + ultSaldo);
                 saveRegister(ultSaldoF);
             }
+        }
+
+        private void TXT_SALDOATUAL_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
